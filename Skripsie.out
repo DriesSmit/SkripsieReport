@@ -1,0 +1,57 @@
+\BOOKMARK [0][]{Doc-Start}{ECSA Outcomes Reference}{}% 1
+\BOOKMARK [0][]{Doc-Start}{Abstract}{}% 2
+\BOOKMARK [0][]{Doc-Start}{Opsomming}{}% 3
+\BOOKMARK [0][]{chapter*.2}{List of Figures}{}% 4
+\BOOKMARK [0][]{chapter*.3}{List of Tables}{}% 5
+\BOOKMARK [0][]{chapter*.4}{Nomenclature}{}% 6
+\BOOKMARK [0][]{chapter.1}{1 Introduction}{}% 7
+\BOOKMARK [1][]{section.1.1}{1.1 Problem background}{chapter.1}% 8
+\BOOKMARK [1][]{section.1.2}{1.2 Problem statement}{chapter.1}% 9
+\BOOKMARK [1][]{section.1.3}{1.3 Project scope and assumptions}{chapter.1}% 10
+\BOOKMARK [1][]{section.1.4}{1.4 Project objectives}{chapter.1}% 11
+\BOOKMARK [1][]{section.1.5}{1.5 Research methodology}{chapter.1}% 12
+\BOOKMARK [1][]{section.1.6}{1.6 Graphical overview of system}{chapter.1}% 13
+\BOOKMARK [2][]{subsection.1.6.1}{1.6.1 System overview}{section.1.6}% 14
+\BOOKMARK [2][]{subsection.1.6.2}{1.6.2 Graphical representation}{section.1.6}% 15
+\BOOKMARK [0][]{chapter.2}{2 Literature Study}{}% 16
+\BOOKMARK [1][]{section.2.1}{2.1 Existing systems}{chapter.2}% 17
+\BOOKMARK [2][]{subsection.2.1.1}{2.1.1 Standard OMR techniques}{section.2.1}% 18
+\BOOKMARK [1][]{section.2.2}{2.2 Additional techniques}{chapter.2}% 19
+\BOOKMARK [2][]{subsection.2.2.1}{2.2.1 Contour detection}{section.2.2}% 20
+\BOOKMARK [2][]{subsection.2.2.2}{2.2.2 Character recognition}{section.2.2}% 21
+\BOOKMARK [1][]{section.2.3}{2.3 Conclusion: System requirements}{chapter.2}% 22
+\BOOKMARK [0][]{chapter.3}{3 Image Processing}{}% 23
+\BOOKMARK [1][]{section.3.1}{3.1 Orientation Detection}{chapter.3}% 24
+\BOOKMARK [2][]{subsection.3.1.1}{3.1.1 Initial filtering and orientation detection}{section.3.1}% 25
+\BOOKMARK [2][]{subsection.3.1.2}{3.1.2 Radon Transform}{section.3.1}% 26
+\BOOKMARK [1][]{section.3.2}{3.2 Bubble detection and processing}{chapter.3}% 27
+\BOOKMARK [1][]{section.3.3}{3.3 Data processing and grading}{chapter.3}% 28
+\BOOKMARK [1][]{section.3.4}{3.4 Conclusion}{chapter.3}% 29
+\BOOKMARK [0][]{chapter.4}{4 Machine learning approach}{}% 30
+\BOOKMARK [1][]{section.4.1}{4.1 Character recognition using a neural network}{chapter.4}% 31
+\BOOKMARK [2][]{subsection.4.1.1}{4.1.1 Introduction}{section.4.1}% 32
+\BOOKMARK [2][]{subsection.4.1.2}{4.1.2 Neural Network Basics}{section.4.1}% 33
+\BOOKMARK [3][]{subsubsection.4.1.2.1}{4.1.2.1 The artificial neuron}{subsection.4.1.2}% 34
+\BOOKMARK [3][]{subsubsection.4.1.2.2}{4.1.2.2 Getting a output from the network}{subsection.4.1.2}% 35
+\BOOKMARK [3][]{subsubsection.4.1.2.3}{4.1.2.3 Training of neural network}{subsection.4.1.2}% 36
+\BOOKMARK [2][]{subsection.4.1.3}{4.1.3 Preprocessing on image}{section.4.1}% 37
+\BOOKMARK [1][]{section.4.2}{4.2 Probabilistic Graphical Models}{chapter.4}% 38
+\BOOKMARK [2][]{subsection.4.2.1}{4.2.1 Structure of the graph}{section.4.2}% 39
+\BOOKMARK [2][]{subsection.4.2.2}{4.2.2 Determining the intended digit}{section.4.2}% 40
+\BOOKMARK [2][]{subsection.4.2.3}{4.2.3 Training the model}{section.4.2}% 41
+\BOOKMARK [2][]{subsection.4.2.4}{4.2.4 Student number identification}{section.4.2}% 42
+\BOOKMARK [1][]{section.4.3}{4.3 Conclusion}{chapter.4}% 43
+\BOOKMARK [0][]{chapter.5}{5 Analysis of results}{}% 44
+\BOOKMARK [1][]{section.5.1}{5.1 Future improvements}{chapter.5}% 45
+\BOOKMARK [0][]{chapter.6}{6 Summary and conclusions}{}% 46
+\BOOKMARK [1][]{section.6.1}{6.1 Project summary}{chapter.6}% 47
+\BOOKMARK [1][]{section.6.2}{6.2 How this final year project benefits society}{chapter.6}% 48
+\BOOKMARK [1][]{section.6.3}{6.3 What the student learned}{chapter.6}% 49
+\BOOKMARK [1][]{section.6.4}{6.4 Conclusion: Summary and conclusions}{chapter.6}% 50
+\BOOKMARK [0][]{chapter*.23}{References}{}% 51
+\BOOKMARK [0][]{appendix.A}{A Graphical overview of system as a whole}{}% 52
+\BOOKMARK [0][]{appendix.B}{B Mathematical derivation of system as a whole}{}% 53
+\BOOKMARK [0][]{appendix.C}{C Implementation/Algorithms}{}% 54
+\BOOKMARK [1][]{section.C.1}{C.1 Deep Convolutional Neural Network}{appendix.C}% 55
+\BOOKMARK [0][]{appendix.D}{D Validation and results}{}% 56
+\BOOKMARK [0][]{appendix.E}{E Project plan}{}% 57

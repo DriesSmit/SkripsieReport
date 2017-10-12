@@ -1,0 +1,610 @@
+\chapter{Styles to follow when writing a report}
+\label{ch:MOO}
+%\ifpdf
+    \graphicspath{{Chapter2/Chapter2Figures/}}
+%\else
+    %\graphicspath{{Chapter2/Chapter2Figures/}}
+%\fi
+
+\citet{BekkerDewaldDemo} is nou net ingesit.
+The final year project was introduced in the previous chapter. It stated the problem, laid out the research rationale and motivation, and reviewed literature on ... The project objectives were introduced and the research methodology was developed.
+This chapter will provide information about basic multi-objective optimisation (MOO) concepts. Discrete-event modelling will be discussed as it can be seen as a MOO problem solving tool. Finally, the two objective functions for the project are broken down.
+
+\section{Stylistic requirements}\label{sec:Styles}
+
+\citet{BekkerSimulasie} is die beste boek op aarde. Lees ook \citet{LaraDemoBib}. Jy kan ook gaan slaap \citep{LaraDemoBib}.
+
+This section gives guidelines on stylistic requirements. I want you to read these (my skripsie students, other students must agree about style with their study leaders), then apply them when writing your report. Sometimes junk text will be part of the presentation to provide some necessary filling of space.
+
+So here are some detail stylistic demands, in no particular order:
+
+\begin{enumerate}
+  \item Equations must be part of sentences and must be punctuated:  Let $x=4$, then
+\begin{eqnarray*}
+% \nonumber to remove numbering (before each equation)
+  f(x) &=& 2y+1 \\
+   &=& \delta +\rho \\
+   &=& \sqrt{4\phi},
+\end{eqnarray*}
+  for values of $\delta<2$.
+
+  An equation is part of the sentence, so we can punctuate it using a full stop as in
+  \begin{eqnarray*}
+  % \nonumber to remove numbering (before each equation)
+    y &=& mx+c \\
+      &=& 2x+1.
+  \end{eqnarray*}
+
+\item Do not use a colon before an equation: (wrong)
+  \begin{eqnarray*}
+  % \nonumber to remove numbering (before each equation)
+    f(x) &=& 2x+1 \\
+         &=& 4.
+  \end{eqnarray*}
+
+  \item Only number equations if you refer to them in the text.
+
+  \item We may also use inline equations, for example $\sqrt{\pi}=1.7725$, and so on and so forth. It is not good practice to do large equations in line, say $y=\frac{\sin \theta}{\frac{\cos(\theta+\omega)}{2 \pi \nu}}$. Does it look nice? I do not know -- you must decide.
+
+  \item Use  \verb"\eqref{reftag}" to refer to equations. That is the right thing to do. We do not say ``Eq. (2)" or ``Eqn. (2)" or ``Equation (2)". We say ``(2)". My earth-quaking calculation is
+        \begin{eqnarray}\label{Eqn:PeaceIndex}
+        % \nonumber to remove numbering (before each equation)
+        \nonumber  z &=& \zeta+1 \\
+        \nonumber   &=& \int_{-\pi}^\pi \sin \theta d\theta \\
+           &=& \xi, \label{eqn:earthquake}
+        \end{eqnarray}
+    where $\theta$ is the angle of \ldots Also shown in \eqref{eqn:earthquake} is $\zeta$, which forms part of the main estimation.
+
+  \item Always use \textbf{double quotes}, and not \textbf{''}this'',  \textbf{``}but this''. The left quote can be made by typing the single quote on the left of your keyboard twice, usually to the left of the ``1'' button. So you type \verb" `` ". The second quote is simply the double quote ".
+
+  \item Single quotes follow the same principles: not \textbf{'}this' but \textbf{`}this'.
+
+  \item To force ``$\backslash$'', ``\{'', ``\}'', ``\%" and ``\&'', type \verb| $\backslash$|, \verb| \{|,  \verb| \}|, \verb"\%" and \verb| \&|. The backslash before the character is a command and \LaTeX \, will then obey.
+
+  \item An \textbf{in-line reference} is made with \verb"\citet{Name}" and a reference in brackets with \verb"\citep{Name}". I beg you to note the ``\textbf{t}" and ``\textbf{p}". Use \verb"\citet{book_AntSystem}" to refer \citet{Blou_Combinatorial_Optimization_Boek}, or \verb"\citep{book_AntSystem}" to refer \citep{Blou_Combinatorial_Optimization_Boek}. Did you spot the difference? I didn't.
+
+  \item The hyphen is obtained using ``\verb"--"" which gives ``--", not a \mbox{``-"}. We use ``en-dashes" and some people even use ``em-dashes" with \verb"---" which is ``---".
+
+  \item Also, in your references, separate page ranges with ``\verb"--"", e.g. ``pp. 445\verb"--"456". This will show as ``pp. 445--456".
+
+  \item Space thousands with a short space using \verb"\,", like in \verb"234\,456.08", which gives 234\,456.08.
+
+  \item Do not use informal language like ``The results \textbf{don't} show a clear trend."
+
+  \item Avoid footnotes. Yes, \LaTeX \ can handle them pretty well, you simply use \\ \verb"\footnote{Footnote text}".   \footnote{Footnotes are distracting when reading.}
+
+  \item Make sure you use English correctly: ``The list of results are shown in Table 1." vs. ``The list of results is shown in Table 1." I am not a skool juffrou who must check your grammar. More than two errors in your document -- rejection by me.
+
+  \item Please use British English: \textit{optimise}, \textit{minimise}, \textit{utilise}. If in doubt, consult the Oxford Dictionary.
+
+  \item Do not use single words for captions. Typical idiotic captions are \textit{Data}, \textit{Information}, \textit{Results}, \textit{Conclusion}. Sometimes these captions are repeated, so if one looks at the ``Table of Contents", you see several occurrences of \textit{Data}, \textit{Conclusions} \textit{etc}.
+
+  \item Make Latin abbreviations italics, for example \textit{e.g.}, \textit{i.e.} and \textit{etc}.
+
+  \item Show terms that are not widely known in italics on first use. These terms are typically related to the field of study, \textit{e.g.} in inventory management, we calculate the \textit{customer service level}. You, the author, decide when terms are important.
+
+  \item When typing monetary amounts, there is no space between `R' and the amount: R1\,000-00, but we space the thousands as usual with \verb"\,", \textit{e.g.} \verb"R1\,234\,987\,123-00" which gives R1\,234\,987\,123-00.
+
+  \item Use \verb"\ldots" to obtain \ldots, not ``..."
+
+  \item Which editor to use? I do not know, but check \url{http://tex.stackexchange.com/questions/339/latex-editors\\ -ides?newsletter=1&nlcode=93445\%7c5101}.
+
+  \item I use WinEdt, but I paid for it (\$35 or so).
+
+  \item For all your \LaTeX\ related questions, visit \url{http://tex.stackexchange.com} for answers.
+
+  \item Use the package \verb"url" for web addresses, \textit{e.g.} \verb"\url{http://tex.stackexchange.com}". Often, the web address will be very long and you need to separate it yourself, or find a fix by searching the web. Insert a \verb"\\" where you want to chop the address. The \verb"\\" is an ``enter" command.
+
+  \item If you do not need to provide the full url in a printed document, you can make a hyperlink to the url, and a reader can click on it when reading the e-document. So, use \verb"\href{url}{text}", \textit{e.g.} \verb"\href{http://www.netwerk24.com}{Netwerk24}". Your text will read: ``According to \href{http://www.netwerk24.com}{Netwerk24}, the minister of \ldots".
+
+  \item You can find symbols easily using \url{http://detexify.kirelabs.org/classify.html}.
+  \item If you want to type ``\LaTeX\" in your document, type \verb"\LaTeX\".
+\end{enumerate}
+
+\section{Figures}
+Vandag het ons 'n lesing by dosent JB \nomenclature[Zjbekker]{JB}{Dosent} en dis warm en ek verlang huistoe \citep{ArenaBoekv4}. Die stappe in 'n simulasiestudie word getoon in Figuur \ref{fig:SimulationProcess}. Hier sien ons dat \LaTeX \ die figuur self na 'n volgende bladsy skuif. Aanvaar \LaTeX\ se manier van doen.
+
+\begin{enumerate}
+  \item \textbf{Verwys dus na figuurnommers in die teks en moenie ``Die figuur hieronder toon..." gebruik nie. Dikwels skryf studente ``See the figure bellow\ldots", dan bulk ek so kwaad maak dit my.}
+  \item \textbf{Captions end with a full stop.}
+  \item \textbf{Do not show the caption on the figure again, like in Excel. It is redundant and looks silly.}
+\end{enumerate}
+
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.75, trim=0 105 0 0, clip]{Figure11SimHandbookPDF}
+\caption{Steps in a simulation study.}
+\label{fig:SimulationProcess}
+\end{figure}
+
+For more information on simulation, the reader is referred to \citet{ArenaBoek}, \citet{SimioBoek} and \citet{SimulationHandbook}.
+In Chapter \ref{ch:Knapsack} we discuss something.
+These responses make up $\textbf{Z}_{i}$ \nomenclature[rResponseSet]{$\textbf{Z}_{i}$}{Set of objective function values serving as the solution space for a MOOP} a set of objective function values serving as the solution space for the MOOP. From the solution space, a Pareto front containing ef{f}icient solutions can be obtained. Figure \ref{fig:SimulationMOODSS} shows this process: scenarios serve as input to the simulation model which yields the solution space. \textbf{This is an example of TikZ use (very simple)}.
+
+
+\citep{Xu2013423} said that Maths is great. Also, \citet{JamesDemo}
+
+Figure \ref{fig:MOOPMapping} shows how scenarios chosen for the simulation study map onto the responses produced by the simulation model.
+
+
+\begin{figure}
+  % Requires \usepackage{graphicx}
+\centering
+\tikzstyle{A_Machine}=[draw, minimum size=6em]
+\begin{tikzpicture}[node distance=4cm,auto,>=latex']
+    \node [A_Machine] (b) {$\textbf{X}_{i}$};
+    \node (a) [left of=b,node distance=4cm, coordinate] {a};
+    \node [A_Machine] (d) [right of=b] {Simulation};
+    \node (c) [left of=d,node distance=2.85cm, coordinate] {c};
+    \node [A_Machine] (f) [right of=d] {$\textbf{Z}_{i}$};
+    \node (e) [left of=f,node distance=2.85cm, coordinate] {e};
+    %\node [A_Machine] (h) [right of=f, node distance=2cm] {$M_{m}$};
+    %\node (g) [left of=h,node distance=1.55cm, coordinate] {g};
+    \node [coordinate] (end) [right of=f, node distance=4cm]{};
+    %\path[->] (a) edge node {$B_{0}=\infty$} (b);
+    \path[->] (c) edge node {} (d);
+    \path[->] (e) edge node {} (f);
+    %\path[->] (e) edge node {$B_{m-1}$} (end);
+    %\draw[->] (f) edge node {$B_{m} = \infty$} (end) ;
+\end{tikzpicture}
+  \caption{Simulation as a MOO decision support system.}\label{fig:SimulationMOODSS}
+\end{figure}
+
+
+
+\citet{ArenaBoekv4} said that ... It is hot today \citep{Bentz2013409}.
+
+\citet{ATanja} doen \textbf{vandag} latex.
+
+\begin{figure}
+  % Requires \usepackage{graphicx}
+  \includegraphics[width=8cm]{benji}\\
+  \caption{Hier is 'n hond en $\epsilon=3$ vir hierdie hond.}\label{fig:Hond1}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.1, trim=0 105 0 0, clip]{benji}
+\caption{Woef woef. Chekkie punt aan die einde van die caption.}\label{fig:lalalala}
+\end{figure}
+
+\nomenclature[rRRRR]{$\textbf{R}_{z}$}{Set of rabbits}
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\draw [thick] (3,0) edge [-latex'] (0,0); \draw [thick] (3,0) edge [-latex'] (6,0);  %x-axis 1
+\draw [thick] (10,0) edge [-latex'] (7,0);  \draw [thick] (10,0) edge [-latex'] (13,0);  %x-axis 2
+\draw [thick] (3,0) edge [-latex'] (3,-3); \draw [thick] (3,0) edge [-latex'] (3,3);
+\draw [thick] (10,0) edge [-latex'] (10,-3); \draw [thick] (10,0) edge [-latex'] (10, 3);
+\node at (6,0) [below] {$x_1$};
+\node at (3,3) [left] {$x_2$};
+\node at (13,0) [below] {$z_1$};
+\node at (10, 3) [left] {$z_2$};
+\node at (3,  3.5) [above] {Decision space};
+\node at (10, 3.5) [above] {Objective space};
+\fill [fill=blue] (4.6, 2.2) circle (0.08);
+\fill [fill=red] (11, 2.5) rectangle (11.1, 2.6);  \draw (4.66, 2.2) edge [-latex'] (11, 2.55);
+\fill [fill=blue] (3.5, 2) circle (0.08);
+\fill [fill=red] (12, 1) rectangle (12.1, 1.1);  \draw (3.56,2) edge [-latex'] (12, 1.05);
+\fill [fill=blue] (5.5, 0.5) circle (0.08);
+\fill [fill=red] (10.5, 0.7) rectangle (10.6, 0.8);  \draw (5.56, 0.5) edge [-latex'] (10.5, 0.75);
+\end{tikzpicture}
+  \caption{MOO mapping.}\label{fig:MOOPMapping}
+\end{figure}
+
+\section{Tables}
+Tables are often difficult to manage, but you can source techniques to make them pretty. There are \textit{e.g.} nice Add-Ins for Excel, which allow you to import results into your document with little effort.
+
+We never do  ``Refer to the table below.", it is ``The names are shown in Table \ref{TableWhatNot} and the column descriptions were made bold."
+
+
+\begin{table}
+  \centering
+\begin{tabular}{|c|c|c|r|}
+\hline
+\textbf{Naam} & \textit{Van} & \textbf{Rigting} & Lara \\
+\hline
+Ebert & Otto & BIng & is \\
+\hline
+James & Bekker &   BA & vandag\\
+Andr\'{e} & Watt & BIng & hier\\
+\hline
+\end{tabular}
+  \caption{My first table in \LaTeX and the caption ends with a ``.".} \label{TableWhatNot} % EXPON Table 6.2 in Rub & Kroese
+\end{table}
+
+In Table \ref{Table_Results1_2_CEM} we see how cells can be merged using the command \textsf{multicolumn}. Tables in \LaTeX \ are tricky, but we can use the Excel add-in as first-aid.
+
+\begin{table}
+  \centering
+ % \scriptsize
+  \begin{tabular}{c  r |c|c|c|| c | c |c|}
+  \cline{3-8}
+         &    & \multicolumn{3}{|c||}{Exponential} & \multicolumn{3}{|c|}{Erlang$_2$} \\
+   \hline
+    \multicolumn{1}{|c|}{Buffer} & \multicolumn{1}{|c|}{Problem} & Number of       & Size  & Size  & Number of         & Size  & Size  \\
+    \multicolumn{1}{|c|}{size}   &  \multicolumn{1}{|c|}{size}    & evaluations$^{1}$ & Elite &  PF  & evaluations$^{1}$ & Elite & PF   \\
+    \hline
+    \multicolumn{1}{|r|}{$n=10$} &     286  & 192  &  18 & 31 & 255  & 23 & 33  \\
+    \multicolumn{1}{|r|}{$n=20$} &   1 771  & 210  &  22 & 42 & 575  & 32 & 42 \\
+    \multicolumn{1}{|r|}{$n=40$} &  12 341  & 625  &  57 & 70 & 625  & 57 & 70 \\
+    \hline
+    \multicolumn{8}{l}{\small{$^{[1]}$ To obtain Elite set.}}
+  \end{tabular}
+  \caption{Simulated MOO CEM results for some reference problems (Set 1 and 2)} \label{Table_Results1_2_CEM} % EXPON Table 6.2 in Rub & Kroese
+\end{table}
+
+
+% Table generated by Excel2LaTeX from sheet 'Sheet2'
+\begin{table}[htbp]
+  \centering
+    \begin{tabular}{|l|c|}
+    \hline
+    n=    & 10 \\
+    \hline
+    $\overline{X}$= & 2.37734 \\
+    StddevXbar = & 1.52415 \\
+    t=    & 2.26216 \\
+    h=    & 1.09031 \\
+    h*=   & 0.5 \\
+    n*=   & 48 \\
+    \hline
+    \end{tabular}%
+      \caption{My table to you.}
+  \label{tab:addlabel}%
+\end{table}%
+
+
+``Service level" for this problem is the ratio of the total number of customers satisfactorily served to the total number of customers requiring service. Service level is expressed in \eqref{eqn:ServiceLevel}:
+
+\begin{equation}
+\label{eqn:ServiceLevel}
+\textit{Service level} = \frac{\textit{Total customers requiring service} - \textit{Total number of cash outs}}{\textit{Total customers requiring service}}.
+\end{equation}
+
+Equations like \eqref{eqn:ServiceLevel} are bad. Why? Sommer man, dit lyk horriebaahul.
+
+Not all the elements taken into account by \citet{Daganzo} are applicable to the current problem. The following elements do not have to be taken into consideration:
+\begin{itemize}
+\item \textbf{Overcoming ``Time" -- Holding -- Rent:} There is no indication in Du Toit's work that the cash in ATMs is insured or protected. The cost associated with renting facilities are not influenced by either the inventory or routing models.
+\item \textbf{Overcoming ``Time" -- Waiting -- Loss of value:} Lost interest will be considered as `cost of capital'.
+\item \textbf{Overcoming ``Distance" -- Transportation -- Mode:} Only the scenario where dedicated vehicles are used will be considered.
+\item \textbf{Overcoming ``Distance" -- Handling -- Ordering:} It is assumed that there is no special ordering cost involved with orders from ATMs to the count house. Costs involved with ordering are primarily administrative and therefore ``fixed" irrespective of the inventory and routing models in use.
+\end{itemize}
+Costs which have to be taken into consideration are:
+\begin{itemize}
+\item \textbf{Overcoming ``Time" -- Waiting -- Cost of capital:} Cash kept in ATMs earns no interest. This should be taken into account. A nominal yearly rate of 6\% is assumed. For the purposes of this study, the cost of capital will be referred to as `opportunity cost'.
+\item \textbf{Overcoming ``Distance" -- Transportation -- Capacity:} Increasing capacity (adding an extra vehicle) will impact total cost significantly. A dedicated vehicle costs R78 710 per month.
+\item \textbf{Overcoming ``Distance" -- Transportation -- Distance:} The first 4500 km covered by a vehicle in a month is free. After that every kilometer costs R3.18.
+\item \textbf{Overcoming ``Distance" -- Handling -- Packing:} The only packing cost applicable is that of re-banking which occurs when notes are left in an ATM at the time the ATM is replenished. A re-banking cost of R0.21 per R100 re-banked needs to be taken into consideration.
+\end{itemize}
+
+\nomenclature[rCostPerKm]{$c_{km}$}{Cost per kilometer} Another example:
+Furthermore, distance cost $C_{D}$ is the sum of the distance cost $C_{Di}$ per vehicle with $i=1, \ldots, K$. $C_{Di}$ is a function of the distance $D_{i}$ travelled by each vehicle and is dependent on $f$, the number of free kilometers available, and $c_{km}$, the unit cost per kilometer. Distance cost is calculated using  \eqref{eqn:DistanceCost_1} and \eqref{eqn:DistanceCost_2}:
+\begin{align}
+\label{eqn:DistanceCost_1}
+C_{Di}(D_i) &=
+\begin{cases}
+0 \tab\tab\tab\tab \text{if } D_{i} \leq f,\\
+(D_{i} - f)\times c_{km} \tab \text{if } D_{i} > f, \tab \text{for} \tab i = 1, \ldots, K,
+\end{cases}\\
+\vspace{0.2cm}
+\label{eqn:DistanceCost_2}
+C_{D} &= \displaystyle{\sum_{i = 1}^{K} C_{Di}(D_i)}.
+\end{align}
+
+An example of a TiKZ picture is shown in Figure \ref{fig:ThreeRoutingMethods}. It is really beautiful. Thank you, you may cease the applause.
+
+\begin{figure}
+\begin{minipage}[b]{0.5\linewidth} % A minipage that covers half the page
+\begin{tikzpicture}
+\tikzstyle{A_CountHouse}=[draw, fill=blue!20, inner sep=1pt,minimum size=5mm]
+\tikzstyle{A_ATM}=[draw, circle, inner sep=1pt,minimum size=7mm]
+\tikzstyle{every node}=[font=\scriptsize]
+\matrix[row sep=5mm,column sep=8mm] {
+% First row:
+& & & & \node (atm2) [A_ATM] {ATM 2}; \\
+% Second row:
+& \node (atm3) [A_ATM] {ATM 3}; & & & \\
+% Third row:
+ & & \node (ch) [A_CountHouse] {CH}; & & \\
+% Fourth row:
+\node (atm1) [A_ATM] {ATM 1}; & &  \node (atm5) [A_ATM]  {ATM 5}; & & \\
+%Fifth row:
+& & & &\node (atm4) [A_ATM] {ATM 4};  \\
+};
+\node at (0mm,35mm) {A. One-ATM-at-a-time method. };
+\draw (ch.south) edge [-latex', out=225] node[in=90, pos=.5,above, xshift=1mm, yshift=-2mm] {\tiny{4}}  (atm5.north);
+\draw (atm5.north) edge [-latex', out=45, in=315]   (ch.south);
+\draw (ch.east) edge [-latex', bend right] node[pos=.5,sloped,above] {\tiny{3}}  (atm2.south west);
+\draw (atm2.south west) edge [-latex', bend right] (ch.east);
+\draw (ch.south east) edge [-latex', bend right]  node[pos=.5,sloped,above] {\tiny{2}}  (atm4.north);
+\draw (atm4.north) edge [-latex', bend right]   (ch.south east);
+\draw (ch.north west) edge [-latex', bend right] node[pos=.5,sloped,above] {\tiny{5}}  (atm3.south east);
+\draw (atm3.south east) edge [-latex', bend right]  (ch.north west);
+\draw (ch.south west) edge [-latex', bend right] node[pos=.5,sloped,above] {\tiny{1}}  (atm1.north east);
+\draw (atm1.north east) edge [-latex', bend right]   (ch.south west);
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}[b]{0.5\linewidth}
+\begin{tikzpicture}
+\tikzstyle{A_CountHouse}=[draw, fill=blue!20, inner sep=1pt,minimum size=5mm]
+\tikzstyle{A_ATM}=[draw, circle, inner sep=1pt,minimum size=7mm]
+\tikzstyle{every node}=[font=\scriptsize]
+\matrix[row sep=5mm,column sep=8mm] {
+% First row:
+& & & & \node (atm2) [A_ATM] {ATM 2}; \\
+% Second row:
+& \node (atm3) [A_ATM] {ATM 3}; & & & \\
+% Third row:
+ & & \node (ch) [A_CountHouse] {CH}; & & \\
+% Fourth row:
+\node (atm1) [A_ATM] {ATM 1}; & &  \node (atm5) [A_ATM]  {ATM 5}; & & \\
+%Fifth row:
+& & & & \node (atm4) [A_ATM] {ATM 4};  \\
+};
+\node at (0mm,35mm) {B. First-come-first-served method. };
+\draw (ch.west) edge [-latex'] node[pos=.5,above] {\tiny{1}}  (atm1);
+\draw (atm1) edge [-latex'] node[pos=.5,sloped,above] {\tiny{2}}  (atm4);
+\draw (atm4) edge [-latex']  node[pos=.5,sloped,above] {\tiny{3}}  (atm2);
+\draw (atm2) edge [-latex'] node[pos=.5,sloped,above] {\tiny{4}}  (atm5);
+\draw (atm5) edge [-latex'] node[pos=.5,sloped,above] {\tiny{5}}  (atm3);
+\draw (atm3) edge [-latex'] node[pos=.5,sloped,above] {\tiny{6}}  (ch.west);
+\end{tikzpicture}
+\end{minipage}
+\vspace{1.5cm}
+\begin{minipage}[b]{1\linewidth} % A minipage that covers half the page
+\begin{tikzpicture}
+\tikzstyle{A_CountHouse}=[draw, fill=blue!20, inner sep=1pt,minimum size=5mm]
+\tikzstyle{A_ATM}=[draw, circle, inner sep=1pt,minimum size=7mm]
+\tikzstyle{every node}=[font=\scriptsize]
+\matrix[row sep=5mm,column sep=8mm] {
+% First row:
+& & & & \node (atm2) [A_ATM] {ATM 2}; \\
+% Second row:
+& \node (atm3) [A_ATM] {ATM 3}; & & & \\
+% Third row:
+ & & \node (ch) [A_CountHouse] {CH}; & & \\
+% Fourth row:
+\node (atm1) [A_ATM] {ATM 1}; & &  \node (atm5) [A_ATM]  {ATM 5}; & & \\
+%Fifth row:
+& & & & \node (atm4) [A_ATM] {ATM 4};  \\
+};
+\node at (0mm,35mm) {C. Algorithmic vehicle routing method. };
+\draw (ch) edge [-latex'] node[pos=.5,above, xshift=2mm, yshift=-2mm] {\tiny{1}}  (atm5);
+\draw (atm5) edge [-latex'] node[pos=.5,sloped,above] {\tiny{2}}  (atm4);
+\draw (atm4) edge [-latex']  node[pos=.5,sloped,above] {\tiny{3}}  (atm2);
+\draw (atm2) edge [-latex'] node[pos=.5,sloped,above] {\tiny{4}}  (atm3);
+\draw (atm3) edge [-latex'] node[pos=.5,sloped,above] {\tiny{5}}  (atm1);
+\draw (atm1) edge [-latex'] node[pos=.5,sloped,above] {\tiny{6}}  (ch.west);
+\end{tikzpicture}
+\end{minipage}
+\vspace{3mm}
+\caption{The three routing methods used.} \label{fig:ThreeRoutingMethods}
+\end{figure}
+\nomenclature[Aq]{q}{Queue}
+\begin{tikzpicture}[yscale=1.5]
+\draw [help lines, <->] (0,0) -- (6.5,0);
+\draw [help lines, ->] (0,-1.1) -- (0,1.1);
+\draw [green,domain=0:2*pi] plot (\x, {(sin(\x r)* ln(\x+1))/2});
+\draw [blue, domain=0:6] plot (\x, {exp(-\x/2)});
+\draw [fill=red, thick] (1,0) rectangle (2,1);
+\draw [fill=green, thick] (3,0) rectangle (4,1);
+\draw [blue, fill=blue] (4,0) -- (5,1) -- (4.75,0.15) -- (4,0);
+\draw [thick, violet, ->] (4.75,0.15) to [out=70,in=135] (1,1);
+\draw [thick, purple, ->] (1.75,0.15) to [out=20,in=225] (3,1.45);
+\end{tikzpicture}
+
+\begin{eqnarray}
+\label{eqn:SuggestedBKP_1}
+\textrm{Minimise }  &&  u_1 + u_2 + u_3 + u_4 \\
+\label{eqn:SuggestedBKP_2}
+\textrm{subject to } && 20u_1 + 50u_2 + 100u_3 + 200u_4 = A_c \\
+\label{eqn:SuggestedBKP_3}
+  && 0 \leq  u_{j} \leq b_{j}, \\
+\nonumber  && u_{j} \textrm{ integer, }  j = 1,2,3,4.
+\end{eqnarray}
+
+\subsection{A looong table}
+In this section we present an example of using a long table. The headers are repeated on each new page.
+\begin{longtable}[c]{p{1in}p{3.2in}p{0.44in}p{0.46in}}
+\caption{Face validation issues}\label{FaceVal}\\
+
+\hline
+ \textbf{Carrier Function} & \textbf{Criteria} & \textbf{Fixed} & \textbf{Roam- ing}\\
+\hline
+\\
+\endfirsthead
+
+\hline
+\textbf{Carrier Function} & \textbf{Criteria} & \textbf{Fixed} & \textbf{Roam- ing}\\
+\hline
+\\
+\endhead
+
+
+\hline
+\multicolumn{4}{r}{{Continued on next page}} \\
+\hline
+\endfoot
+
+%\hline \hline
+
+\endlastfoot
+
+Loading & Correct number of orders loaded according to carrier capacity? & $\surd$& $\surd$ \\
+\nopagebreak[3]
+& Correct orders loaded for correct destination, and at the correct place? & $\surd$& $\surd$ \\
+\nopagebreak[3]
+&  Do Carrier Capacity and Capacity Left decrease incrementally as supposed to? & $\surd$& $\surd$ \\
+\\
+\nopagebreak[3]
+\hline
+
+\\
+Unloading & Correct orders dropped at correct destination? & $\surd$& $\surd$ \\
+\nopagebreak[4]
+& Correct quantity dropped? & $\surd$& $\surd$ \\
+\nopagebreak[4]
+& Does Capacity Left increase incrementally as supposed to? & $\surd$& $\surd$ \\
+\\
+\nopagebreak[4]
+\hline
+\\
+Following &	For route 1, 2, 3, 4, 5, 6 and 7.& $\surd$& NA \\
+route && &\\
+sequences && &\\
+correctly & & &\\
+\nopagebreak[3]
+\\
+\hline
+
+\\
+Correct assignment of destination(s) & Fixed (for 2 and 3 destination Sequences) carriers: Is destination assigned to carrier the next planned station in sequence. & $\surd$& $\surd$ \\
+\nopagebreak[4]
+& Fixed (3 destination sequences): Is destination 2 also assigned correctly? & $\surd$& $\surd$\\ \nopagebreak[4]
+& Roaming: Is destination assigned correctly according to selected policy? & $\surd$& $\surd$\\ \nopagebreak[3]
+
+
+\\
+Correct & Correct station capacity assigned to carrier? & $\surd$& $\surd$\\ \nopagebreak[4]
+Overall & Does carrier wait where it is supposed to? & $\surd$& $\surd$\\ \nopagebreak[4]
+functioning & Does carrier follow correct logic? & $\surd$& $\surd$\\ \nopagebreak[4]
+& Are the correct attributes assigned? & $\surd$& $\surd$\\ \nopagebreak[3]
+\\
+\hline
+\\
+14 day  & Is `Offduty' assigned appropriately? & $\surd$& $\surd$\\ \nopagebreak[4]
+Schedule & Carrier goes to `Home' station and takes leave correctly? & $\surd$& $\surd$\\ \nopagebreak[4]
+& Carrier takes leave when unloaded? & $\surd$& $\surd$\\ \nopagebreak[3]
+\\
+\hline
+\\
+
+Carrier & Carrier departs for CT station when Servicing is &$\surd$& $\surd$\\
+servicing & due, and when carrier is unloaded. & &\\ \nopagebreak[4]
+ & After 1 day, carrier departs from CT for the planned destination. & $\surd$& $\surd$\\ \nopagebreak[3]
+\\
+\hline
+
+\\
+Correct & Data from the Auto Carriers is Correct and & $\surd$& $\surd$\\ \nopagebreak[4]
+Input & Valid. &&\\
+Data& Data is read correctly from Excel into Arena. & $\surd$& $\surd$\\ \nopagebreak[4]
+ & Data is converted correctly into entities (cars) in model? & $\surd$& $\surd$\\ \nopagebreak[3]
+\\
+\hline
+\\
+Other System & Changes in queue lengths: does it make sense? & $\surd$& $\surd$\\ \nopagebreak[4]
+state variables&  Change in the number of carriers on individual routes: correct system response? & $\surd$& $\surd$\\ \nopagebreak[4]
+& Increase/decrease in available carriers: correct system response? & $\surd$& $\surd$\\ \nopagebreak[4]
+& Carrier occupation and utilisation levels acceptable. & $\surd$& $\surd$\\ \nopagebreak[3]
+& Order disposal count. & $\surd$& $\surd$\\
+\nopagebreak[3]
+\\
+\hline
+
+\\
+`Sleep' state & Operations stop between 23:00 - 05:00? & $\surd$& $\surd$\\ \nopagebreak[4]
+of system & Correct partial travelling. & $\surd$& $\surd$\\ \nopagebreak[3]
+\\
+%\hline
+
+\\
+Extreme &  Only 3 carriers, 10 orders. & $\surd$& $\surd$\\ \nopagebreak[3]
+situations & 200 Carriers and a few orders. & $\surd$& $\surd$\\ \nopagebreak[4]
+& Carriers with a capacity of one vehicle space and a high number of orders. & $\surd$& $\surd$\\ \nopagebreak[4]
+& Tuning the input data: extremely high demand, and excessively low demand. & $\surd$& $\surd$\\ \nopagebreak[3]
+\\
+\hline
+\end{longtable}
+
+\nomenclature[Zm]{$m$}{Index $m$ for maximisation process}
+
+
+
+And now, for a sideways table (A sideways table can also be longtable). This hero uses  the package ``rotating'', which is included in \textsf{skripsie.tex}.
+
+An example of a sideways table is shown in Table \ref{Table:IndicatorValuesComparativeTesting}. You can also make the sideways table a long table. No, I do not know how, but if I have to, I find out.
+
+\begin{sidewaystable} %Table values come from Testing_Against_Matlab.xlsx
+\centering
+\footnotesize{
+\begin{tabular}{l|r|r|r|r|r|r|r|r|}
+\cline{2-9}
+& \multicolumn{4}{|c|}{MOO CEM} & \multicolumn{4}{|c|}{Matlab\textregistered MOO GA} \\
+\hline
+\multicolumn{1}{|l|}{Test problem}    & \multicolumn{1}{|c|}{$SP$} 	& \multicolumn{1}{|c|}{$ME$}	& \multicolumn{1}{|c|}{$GD$}   & \multicolumn{1}{|c|}{$CV$} & \multicolumn{1}{|c|}{$SP$} 	& \multicolumn{1}{|c|}{$ME$}	 & \multicolumn{1}{|c|}{$GD$}   & \multicolumn{1}{|c|}{$CV$} \\
+\hline
+\multicolumn{1}{|l|}{MOP1} & 0.0351 & 0.1004 & 0.0027 & 0.0116 & 0.0291 & 0.0605 & 0.0031 & 0.0225  \\
+\multicolumn{1}{|l|}{MOP2} & 0.001 & 0.0065 & 0.0004 & 0.0009 & 0.0059 & 0.0253 & 0.0012 & 0.0104  \\
+\multicolumn{1}{|l|}{MOP3} & 0.0296 & 0.0554 & 0.0005 & 0.0036 & 0.0864 & 0.0985 & 0.0103 & 0.034  \\
+\multicolumn{1}{|l|}{MOP4} & 0.0502 & 0.3254 & 0.002 & 0.0061 & 0.0794 & 0.2583 & 0.0117 & 0.0294  \\
+\multicolumn{1}{|l|}{MOP6} & 0.0028 & 0.0243 & 0 & 0.0011 & 0.0145 & 0.0534 & 0.0112 & 0.0108  \\
+\multicolumn{1}{|l|}{ZDT1} & 0.0024 & 0.0175 & 0.0003 & 0.002 & 0.0174 & 0.0776 & 0.1447 & 0.0139  \\
+\multicolumn{1}{|l|}{ZDT2} & 0.0067 & 0.0318 & 0.0023 & 0.0058 & 0 & 1000.0965 & 0.326 & 1000.013  \\
+\multicolumn{1}{|l|}{ZDT3} & 0.0095 & 0.0514 & 0.0007 & 0.0049 & 0.0182 & 0.0674 & 0.1484 & 0.013  \\
+\multicolumn{1}{|l|}{BAP1} &0.1402 & 0.2511 & 0.0121 & 0.072 & 0.1064 & 0.1858 & 0.0123 & 0.0372  \\
+\multicolumn{1}{|l|}{BAP2} &0.1487 & 0.2407 & 0.0136 & 0.0564 & 0.1552 & 0.1856 & 0.0155 & 0.0621  \\
+\multicolumn{1}{|l|}{BAP3} &0.195 & 0.2961 & 0.0141 & 0.0428 & 0.2397 & 0.2161 & 0.0231 & 0.0787  \\
+\multicolumn{1}{|l|}{BAP4} &0.1747 & 0.326 & 0.0187 & 0.0946 & 0.0347 & 0.0768 & 0.0158 & 0.0092  \\
+\multicolumn{1}{|l|}{BAP5} &0.2625 & 0.3609 & 0.0349 & 0.1321 & 0.0889 & 0.1536 & 0.0313 & 0.0143  \\
+\multicolumn{1}{|l|}{BAP6} &0.4739 & 0.5072 & 0.043 & 0.1488 & 0.1548 & 0.1785 & 0.0386 & 0.0265  \\
+\multicolumn{1}{|l|}{BAP7} &0.5898 & 0.6264 & 0.0947 & 0.1658 & 0.1737 & 0.1758 & 0.107 & 0.0253  \\
+\multicolumn{1}{|l|}{BAP8} &0.3312 & 0.4707 & 0.0611 & 0.1128 & 0.1398 & 0.204 & 0.0697 & 0.038  \\
+\multicolumn{1}{|l|}{BAP9} &0.5075 & 0.5946 & 0.0512 & 0.1439 & 0.2147 & 0.2244 & 0.0132 & 0.0638  \\
+\multicolumn{1}{|l|}{BAP10} &0.5926 & 0.6957 & 0.0636 & 0.1136 & 0.3226 & 0.275 & 0.0983 & 0.0792  \\
+\multicolumn{1}{|l|}{BAP11} &0.6284 & 0.6155 & 0.0397 & 0.1162 & 0.4362 & 0.3154 & 0.0528 & 0.0937  \\
+\multicolumn{1}{|l|}{BAP12} &0.6717 & 0.6399 & 0.1063 & 0.1157 & 0.4435 & 0.3105 & 0.1617 & 0.0975  \\
+\multicolumn{1}{|l|}{BAP13} &1.7412 & 1.4215 & 0.0621 & 0.2038 & 0.7388 & 0.5772 & 0.0811 & 0.0884  \\
+\multicolumn{1}{|l|}{BAP14} &0.1294 & 0.2482 & 0.018 & 0.0576 & 0.1036 & 0.1936 & 0.0182 & 0.0421  \\
+\multicolumn{1}{|l|}{BAP15} &0.1641 & 0.2612 & 0.0128 & 0.0584 & 0.171 & 0.1934 & 0.0194 & 0.0612  \\
+\multicolumn{1}{|l|}{BAP16} &0.1598 & 0.2723 & 0.0125 & 0.0373 & 0.2503 & 0.2218 & 0.0362 & 0.0802  \\
+\multicolumn{1}{|l|}{INVN} &52.0778 & 5.2197 & 34.829 & 1.3040 & 35.7459 & 2.8955 & 36.4917 & 0.7238  \\
+\multicolumn{1}{|l|}{RMS} &12.443 & 2.751 & 0.958 & 0.6230 & 7.260 & 1.165 & 1.051 & 0.3150  \\
+\hline
+\end{tabular}}
+  \caption{Indicator values found during comparative testing}\label{Table:IndicatorValuesComparativeTesting}
+\end{sidewaystable}
+
+
+
+\subsection{Lists}
+
+Numbered and bullet lists can have phrases or full sentences. Phrases do not end with full stops or commas, but full sentences do. The teams are
+\begin{itemize}
+  \item The Spiders
+  \item The Cockroaches
+  \item The Incredibles.
+\end{itemize}
+
+The steps towards success are
+\begin{enumerate}
+  \item Get up early in the morning and work hard all day.
+  \item Develop a positive attitude and eat right and drink wrong.
+  \item Surround yourself with weird people to inspire your creativity.
+  \item A bad attitude is like a flat tyre -- you ain't gonna get anywhere unless you change it.
+\end{enumerate}
+
+I do not know what Prof. Comm. 123 taught you. Lists are often a point of dispute due to stylistic differences. Some people prefer semicolons after each entry, except the last, which ends with a period. Check with your study leader and apply consistently.
+
+\subsection{References}
+
+Copy references from a web sources to your \textsf{references.bib} file, or maintain them in JabRef. Mendeley is also great. Check for the en-dash between page numbers, as well as special characters. Change the special characters. \citet{Bentz2013409} is 'n nuwe byvoeging.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=14cm]{cyanide}\\
+  \caption{The life of a student.}
+\end{figure}
+
+
+
+\section{Conclusion: Stylistic requirements}
+
+This chapter highlighted some important stylistic requirements. Please refer to them often.
+
+The following chapter will concentrate on further issues.

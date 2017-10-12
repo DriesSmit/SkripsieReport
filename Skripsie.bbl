@@ -1,0 +1,28 @@
+\begin{thebibliography}{7}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{Google(2017)}]{Tensor}
+{\sc Google} (2017). Deep mnist for experts.
+
+\bibitem[{Ivetic \& Dragan(2003)}]{DraganI2003}
+{\sc Ivetic, D. \& Dragan, D.} (2003). Projections based omr algorithm.
+
+\bibitem[{Karpathy(2017)}]{karpathy2017}
+{\sc Karpathy} (2017). Cs231n convolutional neural networks for visual
+  recognition.
+
+\bibitem[{{Nielsen}(2015)}]{MichealN2015}
+{\sc {Nielsen}, M.A.} (2015). {\em Neural Networks and Deep Learning\/},
+  vol.~1. Determination Press.
+
+\bibitem[{Rosebrock(2016)}]{AdrianR2016}
+{\sc Rosebrock, A.} (2016). Bubble sheet multiple choice scanner and test
+  grader using omr, python and opencv.
+
+\bibitem[{Tensorflow(2017)}]{tensor2017}
+{\sc Tensorflow} (2017). Mnist for ml beginners.
+
+\bibitem[{VijayaForm(2017)}]{stdTemplate}
+{\sc VijayaForm} (2017). Omr sheet.
+
+\end{thebibliography}

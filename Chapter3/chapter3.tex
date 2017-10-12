@@ -1,0 +1,87 @@
+\chapter{Image Processing}
+\label{ch:ImageProcessing}
+
+The previous chapter focused on already existing methods of grading tests automatically. It was found that most systems only use image processing, without a machine learning component, to grade these test. In this chapter the core techniques behind processing these answer sheets, using image processing, will be described. By using only these image processing techniques a reasonably accurate system can already be constructed.
+
+For further improvements in accuracy two machine learning approaches will be investigate and implemented. These approaches will be discussed in Chapter \textbf{\ref{ch:MachineLearning}}.
+
+\section{Orientation Detection}
+
+As mentioned in Section \ref{sec:StandardTech} there are two main parts in OMR grading. The first challenge with grading a scanned in answer sheet, is finding the orientation of the test sheet in the image. This can be done by finding five values, including the rotation, offset(xOff,yOff) and a reference point(xRef,yRef). In Chapter \ref{ch:LiteratureStudy} it was found that the common way to implement this is to include specific reference markers on the page. a Disadvantage with this method is that if their is to little markers on the page, the student might accidentally write over them or write something that resembles a marker and confuse the system. To compensate for this the markers that will be chose, are already present on the template paper. They are the two longest horizontal lines as well as the two vertical lines on the comment box. Together these lines have enough information to determine the size, offset and rotation of the template. The reason these lines are chosen as references is due to the fact that a Radon transform can easily be applied to determine where they are, as seen in Section \ref{sec:RadonTransform}. But before the orientation of the image can be determined it is a good idea to quickly check if the image might be upside down. This is done to make it easier to find the orientation afterwards. To do this some initial image filtering will be required and will be discussed next.
+
+\subsection{Initial filtering and orientation detection}
+\label{sec:InitImageFilter}
+
+To check if and image is upside down the software will first find relevant contours on the page and then filter out those it thinks probably does not contain bubbles or character information. This is done in 5 steps:
+
+\begin{enumerate}
+\item Threshold the image by making all the pixel values either white(lower that mean) or black(higher that mean)
+\item Do contour analysis on the image to find all the contours, using the python library OpenCV.
+\item Filter through the contour array to filter out all contours that are not approximately the size and aspect ratios desired.
+\item Save these contours for later use.
+\item Determine if more contours lie above the middle of the image(This is true if the image is the right way around). Rotate the image by 180$^{\circ}$. otherwise.
+\end{enumerate}
+
+It is important to note that there are still unwanted contours in the list, but for now this list will be sufficient. Once the list is found the software counts the number of contour centerpoints below and above the image center. Looking at Figure \ref{fig:reduced} it can easily be seen that more bubbles should be below the middle, if the image is not upside down. The next step will now be to determine the location of the answers the student wrote down. To do this the template must first be found in the image. This will now be done in Section \ref{sec:RadonTransform}.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=14cm]{Reduced}\\
+  \caption{Reduced contours in image.}
+  \label{fig:reduced}
+\end{figure}
+
+\subsection{Radon Transform}
+\label{sec:RadonTransform}
+
+And Radon transform is an integral transform that converts an 2 dimensional image into a 1 dimensional array. An example of this transform can be seen in Figure \ref{fig:RadonT}. This transform is always done over a chosen axis. In this case we will chose the horizontal axis to sum over. By counting up all the pixel values corresponding to the same horizontal row a single value is observed. By repeating this process for each row an resulting 1 dimensional array is created. This array provides information about the total concentration of that line. In the case of the test grader, this can be used to identify where the lines on the pages are, by looking at the maximum values. By transforming the image one can also look at the maximum values of each Radon transform, as this will almost always occur when the template is rotated to be aligned with the horizontal axis.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=14cm]{RadonT}\\
+  \caption{Radon transform applied on a 2 dimensional area.}
+  \label{fig:RadonT}
+\end{figure}
+
+%Image Reference: https://edoras.sdsu.edu/doc/matlab/toolbox/images/transf14.gif
+To find the template inside the image, the image needs to be rotated correctly first. To do this we apply a Radon transform at different angles until convergence, where the Radon transform has the highest maximum. Once the image is rotate correctly the two maximum values of the radon transform will indicate the two horizontal lines present on the image. Using those two lines the relative size of the template in the image can be determined and a y offset value. The last step is thus to determine the x-offset of the image. To do this a vertical Radon transform is applied to detect the two vertical lines of the comment box. This will provide the last x-offset value needed to find the template inside the image as well as additional size evidence to confirm the previous estimate. Once the template is found the bubble values can be determined, using preprocessing done on an empty template. Figure \ref{fig:FinalEstimate} illustrates the final estimation of all the bubbles in the template. The estimated bubbles are colored red while the green points represent the centers of all the remaining contours.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=14cm]{FinalEstimate}\\
+  \caption{Detection of template in image and estimation of bubble locations.}
+  \label{fig:FinalEstimate}
+\end{figure}
+
+In Figure \ref{fig:reduced} The final rotation after applying consecutive Radon transforms can be seen.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=14cm]{Rotation}\\
+  \caption{Result in rotation after applying radon transform.}
+  \label{fig:reduced}
+\end{figure}
+
+In the next step a contour will be assigned to each bubble and then stored.
+
+\section{Bubble detection and processing}
+
+To find the location of each bubble in the image, the system simply takes the contour closest to the estimated bubble location. This can be done in an efficient manner by sorting the contours by there locations. Searching through the contours now becomes linear and of rank O(n), where n is the number of bubbles. Next the data in each contour needs to be processed and stored. The first type of evidence is calculating the average pixel intensity inside the contours. If this value is high the bubble is most likely colored in or crossed out. The advantage of using the closest contour in the bubble's estimated location, over conventional methods of just using  a area where the bubble is probably located now becomes apparent. By drawing the smallest block around the contour, that still covers every value inside the contour, an area can be calculated. This area will become large when a answer is crossed out, due to the lines stretching outside the initial bubble. By applying a threshold to this area value the system can successfully determine between filled-in and crossed out answers.
+
+\section{Data processing and grading}
+
+The previous section now allows each bubble to be classified into 3 categories namely, empty, completely filled-in and crossed out. An additional category of partially filled in will also be added as it aids grading of tests where students write lightly. An algorithm to determine what bubble was chosen can now be described as follows:
+
+\begin{enumerate}
+\item Detect the number of completely filled-in answers in each column.
+\item If there are no completely filled-in answers, check the amount of partially filled-in answers and override the previous value.
+\item If the previous result is 0, set the output value for that column to 0.
+\item If step 2 or 3 presents more that 1 answer save the answer sheet to a clashlist to be evaluated manually once the automatic grading of the test are completed.
+\end{enumerate}
+
+
+\section{Conclusion}
+
+This chapter provided an overview of a basic automatic test grading system using image processing and computer vision. The system can achieve acceptable results using only these techniques.
+
+The following chapter will focus on applying additional machine learning techniques to further improve the accuracy of grading these test. Two new test templates will also be introduced. (maak seker jy het daaroor gepraat).

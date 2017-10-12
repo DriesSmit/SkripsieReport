@@ -1,0 +1,192 @@
+%input macros (i.e. write your own macros file called MacroFile1.tex)
+%\include{Macros/MacroFile1}
+
+\documentclass[oneside,12pt]{article}
+
+
+% turn of those nasty overfull and underfull hboxes
+\hbadness=10000
+\hfuzz=50pt
+
+% Put all the style files you want in the directory StyleFiles and usepackage like this:
+%\usepackage{StyleFiles/watermark}
+\usepackage{url}
+\usepackage{nomencl}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\usepackage{longtable}
+\usepackage{amssymb, amsmath}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{float}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{tikz}
+
+
+\usetikzlibrary{patterns}
+\usetikzlibrary{arrows,positioning,fit}
+
+%\usepackage{glossary}
+%\makenomenclature
+%\makeindex
+%\makeglossary
+%\usepackage{natbib}
+
+\newcommand{\uvec}{\mathbf{u}}
+\newcommand{\vvec}{\mathbf{v}}
+\newcommand{\tab}{\hspace*{2em}}
+
+\begin{document}
+
+\renewcommand\baselinestretch{1.2}
+\baselineskip=18pt plus1pt
+
+\pgfplotsset{
+every axis/.append style={
+        legend pos=south east,
+        scaled ticks=false,
+        xlabel=Total cost (ZAR),
+        ylabel=Service level,
+        xtick={400000,600000,800000,1000000,1200000}
+        }
+        }
+
+\begin{figure}
+\label{fig:ReorderPoint}
+\centering
+    \begin{tikzpicture}
+        \begin{axis}[
+        %legend cell align=left,
+%legend pos=south east,
+        %scaled ticks=false,
+        %xlabel=Total cost (ZAR),
+        %ylabel=Service level,
+        %xtick={400000,600000,800000,1000000,1200000}
+        ]
+        \addplot[
+        color=red,only marks, mark options={
+        fill=white,
+        scale=0.75},
+        mark=o
+        ]
+        coordinates{
+(344900,0.7058)
+(347290,0.73187)
+(609960,0.88915)
+(603850,0.86673)
+(852110,0.91763)
+(845710,0.89513)
+(338540,0.64934)
+(342550,0.68068)
+(608380,0.87831)
+(597800,0.84216)
+(854340,0.92357)
+(840110,0.87795)
+(343250,0.63491)
+(630350,0.91086)
+(874290,0.95281)
+(325600,0.7058)
+(322730,0.73187)
+(444980,0.88915)
+(415010,0.86673)
+(505630,0.91763)
+(493400,0.89513)
+(324070,0.64934)
+(324050,0.68068)
+(478300,0.87831)
+(430720,0.84216)
+(537590,0.92357)
+(496270,0.87795)
+(346780,0.63491)
+(551660,0.91086)
+(607800,0.95281)
+        };
+         \addplot[
+        color=blue,only marks, mark options={
+        fill=white,
+        scale=0.75},
+        mark=o
+        ]
+        coordinates{
+        (360190,0.73737)
+(362750,0.75933)
+(686960,0.94346)
+(668190,0.92459)
+(939310,0.96023)
+(920940,0.94323)
+(344500,0.66141)
+(351330,0.70025)
+(678570,0.93434)
+(652640,0.91626)
+(941970,0.96501)
+(903940,0.93706)
+(346570,0.63739)
+(713440,0.94987)
+(979310,0.97505)
+(349410,0.73737)
+(346450,0.75933)
+(560300,0.94346)
+(518450,0.92459)
+(617000,0.96023)
+(582050,0.94323)
+(334550,0.66141)
+(338790,0.70025)
+(596500,0.93434)
+(532700,0.91626)
+(675420,0.96501)
+(587850,0.93706)
+(352390,0.63739)
+(680600,0.94987)
+(783850,0.97505)
+            };
+            \addplot[
+        color=green,only marks, mark options={
+        fill=white,
+        scale=0.75},
+        mark=o
+        ]
+        coordinates{
+        (367250,0.74169)
+(375510,0.7684)
+(794190,0.96191)
+(762760,0.95519)
+(1020100,0.98046)
+(1052100,0.97741)
+(347670,0.66136)
+(357260,0.69781)
+(747620,0.94962)
+(736140,0.94812)
+(1064100,0.98118)
+(1017400,0.97236)
+(350070,0.63922)
+(767430,0.94747)
+(1126000,0.98824)
+(357050,0.74169)
+(364020,0.7684)
+(710760,0.96191)
+(664060,0.95519)
+(817240,0.98046)
+(771020,0.97741)
+(339160,0.66136)
+(349010,0.69781)
+(699130,0.94962)
+(664210,0.94812)
+(874940,0.98118)
+(770980,0.97236)
+(357310,0.63922)
+(754600,0.94747)
+(1018500,0.98824)
+        };
+            \legend{R150 000, R350 000, R550 000}
+        \end{axis}
+    \end{tikzpicture}
+%\caption{Overall effect of the reorder point}
+\end{figure}
+
+
+\end{document}

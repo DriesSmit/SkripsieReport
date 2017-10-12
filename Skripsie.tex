@@ -1,0 +1,183 @@
+%input macros (i.e. write your own macros file called MacroFile1.tex)
+%\include{Macros/MacroFile1}
+\documentclass[oneside,11pt]{classes/CUEDthesisPSnPDF}
+% THIS IS THE MAIN FILE.
+% It is dependent on the folder structure provided to you.
+
+\title{Automatic Test Grader Using Image Processing And Machine Learning Techniques}
+
+  \author{Andries Petrus Smit\linebreak 18183085}
+  \collegeordept{\href{http://www.ie.sun.ac.za}{Department of Electrical and Electronic Engineering}}
+  \university{\href{http://www.sun.ac.za}{University of Stellenbosch}}
+% insert below the file name that contains the crest in-place of 'UnivShield'
+  \crest{\includegraphics[width=30mm]{USwapencrestalone}}
+
+% insert below the file name that contains the crest in-place of 'UnivShield'
+% \crest{\IncludeGraphicsW{UnivShield}{40mm}{14 14 73 81}}
+%
+%\renewcommand{\submittedtext}{change the default text here if needed}
+\degree{B.Eng Electrical and Electronic}
+\promotor{Study leader: JA du Preez}
+\degreedate{December 2017}
+
+% turn of those nasty overfull and underfull hboxes
+\hbadness=10000
+\hfuzz=50pt
+
+% Put all the style files you want in the directory StyleFiles and usepackage like this:
+%\usepackage{StyleFiles/watermark}
+\usepackage{verbatim, fixltx2e, xspace}
+\usepackage{nomencl}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\usepackage{longtable}
+\usepackage{amssymb, amsmath}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{float}
+\usepackage{subfig}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+\usepackage{StyleFiles/mcode}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{morefloats}
+\usepackage[section] {placeins}
+\usepackage{hyperref}
+\usepackage{url}
+\usetikzlibrary{arrows,positioning,fit,patterns,plotmarks}
+
+% You may ignore these commands, but do not delete them
+\newenvironment{dedication}
+{
+   \cleardoublepage
+   \thispagestyle{plain}
+   \vspace*{\stretch{1}}
+   \hfill\begin{minipage}[t]{0.8\textwidth}
+   \raggedright
+}%
+{
+   \end{minipage}
+   \vspace*{\stretch{3}}
+   \clearpage
+}
+
+\usetikzlibrary{patterns}
+\lstset{language=Matlab}
+\usetikzlibrary{arrows,positioning,fit}
+
+\newcommand{\uvec}{\mathbf{u}}
+\newcommand{\vvec}{\mathbf{v}}
+\newcommand{\tab}{\hspace*{2em}}
+\newcommand{\halftab}{\hspace*{1em}}
+\newcommand{\Naso}{Na\textsubscript{2}SO\textsubscript{4}\xspace}
+
+%If you want to compile only a specific chapter, use this. It saves time when your document becomes %large.
+%\includeonly{Chapter2/chapter2}
+%\includeonly{Chapter1/chapter1}
+
+%Hierdie command bou die Nomenclature. Die naam "skripsie" moet verander as jou hoofdokument se naam verander, bv "MarykeSkripsie.tex".
+\immediate\write18{makeindex skripsie.nlo -s nomencl.ist -o skripsie.nls}
+\makenomenclature
+
+
+
+\begin{document}
+
+%\renewcommand{\nomname}{Glossary}\check{}
+%\renewcommand{\nomentryend}{.}
+\renewcommand{\nompreamble}{\markboth{Nomenclature}{Nomenclature}}
+
+\renewcommand\baselinestretch{1.2}
+\baselineskip=18pt plus1pt
+
+% Using the watermark package which is in StyleFiles/
+% and to remove DRAFT COPY ONLY appearing on the top of all pages comment out below line
+%\watermark{DRAFT COPY ONLY}
+
+\maketitle
+
+%set the number of sectioning levels that get number and appear in the contents
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+\frontmatter
+
+% Chapters will be included in this order:
+%----------------------------------------
+
+%\begin{dedication}
+%Dedicated to (If you don't want to, comment this section out).
+%\end{dedication}
+
+%\addcontentsline{toc}{chapter}{Acknowledgement}
+\include{Acknowledgement/acknowledgement}
+
+\include{Declaration/declaration}
+\addcontentsline{toc}{chapter}{ECSA Outcomes Reference}
+\include{ECSAOutcomes/ECSAOutcomes}
+
+\addcontentsline{toc}{chapter}{Abstract}
+\include{Abstract/abstract}
+\addcontentsline{toc}{chapter}{Opsomming}
+\include{Abstract/opsomming}
+
+\tableofcontents
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+\printnomenclature[5cm]
+\addcontentsline{toc}{chapter}{Nomenclature}
+\mainmatter
+%\onehalfspacing
+
+%\printnomenclature  %% Print the nomenclature
+%\printglossary
+
+% The chapters will be included in this order, and also numbered 1, 2, 3, 4,, 5, 6, 7. The file name % does not matter. I suggest you give your chapters names like "LitStudy", "Analysis", "Results" etc. If your study leader suggests a different order then it is easier to relate to the new order. The order  below is confusing, but it will still work.
+\include{Chapter1/chapter1}        	%Intro
+\include{Chapter2/chapter2}			%Literature study
+\include{Chapter3/chapter3}			%Image processing
+\include{Chapter4/chapter4}			%Machine learning approach
+\include{Chapter5/chapter5}			%Results
+%\include{Chapter6/chapter6}
+%\include{Chapter7/chapter7}
+
+\include{Conclusions/conclusions}	%Conclusion
+
+%\bibliographystyle{natbib}
+\renewcommand{\bibname}{References} % changes default name Bibliography to References
+%NB! Hierdie path moet reg wees op jou laptop! Die dotjies (..) is om 'n relatiewe pad laer in die
+%hierargie aan te dui. Gebruik forward slashes en nie backslashes nie!
+\bibliography{C:/Users/User/Desktop/MyFolders/Universiteit/Skripsie/FinalReport/LatexReport/V7MachineLearning/References/references}
+%Jy kan ook die references aandui met 'n volledige path:
+%\bibliography{C:/Users/User/Desktop/MyFolders/Universiteit/Skripsie/FinalReport/LatexReport/V2/References/references}
+
+% I took this style form the Journal of Microbiology, you may use your own. See the user manual of
+% the natbib style by Patrick Daly.
+\bibliographystyle{Classes/jmb}
+\addcontentsline{toc}{chapter}{References} %adds References to contents page
+
+\appendix
+\include{Appendix1/appendix1} %Graphical overview of system
+\include{Appendix2/appendix2} %Mathematical derivation of whole system
+\include{Appendix3/appendix3} %Implementation/Algorithms
+\include{Appendix4/appendix4} %Results and validation
+\include{Appendix5/appendix5} %ProjectPlan
+
+
+%\include{Appendix7/appendix7} %Experiments
+
+%\include{Appendix3/appendix3} %DelynoMinutes
+%\include{Appendix4/appendix4} %BekkerMinutes
+
+
+\end{document}
+
+

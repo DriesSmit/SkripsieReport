@@ -1,0 +1,147 @@
+%input macros (i.e. write your own macros file called MacroFile1.tex)
+%\include{Macros/MacroFile1}
+
+\documentclass[oneside,12pt]{article}
+
+
+% turn of those nasty overfull and underfull hboxes
+\hbadness=10000
+\hfuzz=50pt
+
+% Put all the style files you want in the directory StyleFiles and usepackage like this:
+%\usepackage{StyleFiles/watermark}
+\usepackage{url}
+\usepackage{nomencl}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\usepackage{longtable}
+\usepackage{amssymb, amsmath}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{float}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{tikz}
+
+
+\usetikzlibrary{patterns}
+\usetikzlibrary{arrows,positioning,fit}
+
+%\usepackage{glossary}
+%\makenomenclature
+%\makeindex
+%\makeglossary
+%\usepackage{natbib}
+
+\newcommand{\uvec}{\mathbf{u}}
+\newcommand{\vvec}{\mathbf{v}}
+\newcommand{\tab}{\hspace*{2em}}
+
+\begin{document}
+
+\renewcommand\baselinestretch{1.2}
+\baselineskip=18pt plus1pt
+
+\pgfplotsset{
+every axis/.append style={
+        legend pos=south east,
+        scaled ticks=false,
+        xlabel=Total cost (ZAR),
+        ylabel=Service level,
+        xtick={400000,600000,800000,1000000,1200000}
+        }
+        }
+
+
+\begin{figure}
+\centering
+\label{fig:RoutingMethodStatusQuo}
+    \begin{tikzpicture}
+        \begin{axis}[
+        %legend cell align=left,
+        %legend pos=south east,
+        %scaled ticks=false,
+        %xlabel=Total cost (ZAR),
+        %ylabel=Service level,
+        %xtick={400000,600000,800000,1000000,1200000}
+        ]
+        \addplot[
+        color=red,only marks, mark options={
+        fill=white,
+        scale=0.75},
+        mark=o
+        ]
+        coordinates{
+(344940,0.70634)
+(360190,0.73737)
+(367250,0.74169)
+(347290,0.73187)
+(362920,0.75926)
+(375510,0.76852)
+(609890,0.8891)
+(686790,0.94323)
+(794190,0.96191)
+(603850,0.86673)
+(668190,0.92459)
+(762760,0.95519)
+(852160,0.9177)
+(939310,0.96023)
+(1020100,0.98046)
+(845710,0.89513)
+(920940,0.94323)
+(1052100,0.97741)
+        };
+         \addplot[
+        color=blue,only marks, mark options={
+        fill=white,
+        scale=0.75},
+        mark=o
+        ]
+        coordinates{
+        (338540,0.64934)
+(344500,0.66141)
+(347670,0.66136)
+(342550,0.68068)
+(351330,0.70025)
+(357260,0.69781)
+(608380,0.87831)
+(678570,0.93434)
+(747620,0.94962)
+(597800,0.84216)
+(652640,0.91626)
+(736140,0.94812)
+(854340,0.92357)
+(941970,0.96501)
+(1064100,0.98118)
+(840110,0.87795)
+(903940,0.93706)
+(1017400,0.97236)
+            };
+            \addplot[
+        color=green,only marks, mark options={
+        fill=white,
+        scale=0.75},
+        mark=o
+        ]
+        coordinates{
+        (343250,0.63491)
+(346570,0.63739)
+(350070,0.63922)
+(630350,0.91086)
+(713440,0.94987)
+(767430,0.94747)
+(874290,0.95281)
+(979310,0.97505)
+(1126000,0.98824)
+        };
+            \legend{Near-shortest path, First-in-first-out, Direct replenishment}
+        \end{axis}
+    \end{tikzpicture}
+%\caption{Effect of routing method: Status quo cost structure}
+\end{figure}
+
+\end{document}
