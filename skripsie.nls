@@ -3,7 +3,7 @@
  \nomgroup{D}
 
   \item [{$ANN$}]\begingroup Artificial neural network\nomeqref {4.0}
-		\nompageref{23}
+		\nompageref{27}
   \item [{$DCNN$}]\begingroup Deep convolutional neural network\nomeqref {4.0}
 		\nompageref{23}
 

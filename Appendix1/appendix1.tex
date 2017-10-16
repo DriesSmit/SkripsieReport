@@ -24,9 +24,7 @@ To calculate those 5 probabilities, some more detailed derivations are necessary
 
 \subsection{Student answer}
 
-
-
-To determine a answer for one of the students questions, $P(Answer2/Image)$, so further derivations and assumptions are necessary. There are 8 possible columns to use for an answer. The first column defecates the sign of an answer. Thus two signs are possible. For each of the remaining 7 columns a number from 0 - 9 can be represented. Thus there are ten possible values for each column. This gives a possible number of values to search through to be $2*10^7 = 20 000 000$. Each of these states needs to be calculated and thus is computationally intractable. Thus a assumption is needed to reduce the number of possible states. A fair assumption to made, all $20 000 000$ possible numbers are equally likely to be written down. Thus each column digit becomes independent of the another columns. Thus if a value in one column is known, it does not influence the probabilities of the other columns being a certain value. Thus the number of states no becomes $2+10*7=72$, which is significantly less. and An illustration of this graph can be seen in Figure \ref{fig:ans}. In Equation \ref{eqn:ansIndep} this independence property can now be seen. To find the most probable answer only $P(sign/Image)$ and $P(digit(1-7)/Image)$ still needs to be calculated. Using the image processing techniques described in Section \ref{ch:ImageProcessing} the $P(sign/Image)$ can simply be determined heuristically by determining the probability of the bubble being coloured in, underneath the sign. Thus the only values yet to calculate is $P(digit/Image)$. This is described in Section \ref{sec:digit}.
+In Section \ref{sec:pgmStudentNum} it was determined that the student answer can be calcuated by combiining the intended sign and digits of each column to form an answer. The reason for this could be attributed to the fact that these digits where independent of one another. This means that Evidence of other columns have no influence on the intended digit in a certain column. In Equation \ref{eqn:ansIndep} this independence property can now be seen. To find the most probable answer only $P(sign/Image)$ and $P(digit(1-7)/Image)$ still needs to be calculated. Using the image processing techniques described in Section \ref{ch:ImageProcessing} the $P(sign/Image)$ can simply be determined heuristically by determining the probability of the bubble being coloured in, underneath the sign. Thus the only values yet to calculate is $P(digit/Image)$. This is described in Section \ref{sec:digit}.
 
 \begin{align}
 % \nonumber to remove numbering (before each equation)
@@ -43,7 +41,7 @@ To determine a answer for one of the students questions, $P(Answer2/Image)$, so 
 
 \subsection{Student number}
 
-The previous assumption does not hold in the case of student numbers. Knowing the digit value of one column changes the probability of each other column taking a certain value. The reason for this is, because there is only a limit number of student numbers to consider. Thus if the first digit is a 2, only student numbers starting with 2 must still be considered. To account for this fact an additional node is added above the individual digit probabilities. This node represents the probability of each student number being present in the image. This node will have $+- 900$ states, depending on the number of student numbers. The student number graph can be seen in Figure \ref{fig:stdNum}. Next a derivation for $P(studentNumber/Image)$ is needed. 
+As state in Section \ref{sec:pgmStudentNum} the assumtion of independence does not hold in the case of a student number. The reason for this is, because every 8 digit number is not equally likely to be a student number. Only student numbers that are valid will be considered as a possible state that the student number node can take on. This node will have $+- 900$ states, depending on the number of student numbers. The student number graph can be seen in Figure \ref{fig:stdNum}. Next a derivation for $P(studentNumber/Image)$ is needed. (Taken for the main body) 
 
 In the below equations, 'Digits' represents the 8 digit random variables. The first step is to apply Bayes rule as seen in Equation \ref{eqn:bayesStd}.
 
@@ -105,5 +103,5 @@ $P(StudentNumber)$ can be initialized as a equal distribution, because every stu
   \centering
   \includegraphics[width=16cm]{pgmDigit}\\
   \caption{Graphical setup of determining intended digit.}
-  \label{fig:pgmDigit}
+  \label{fig:pgmDigit2}
 \end{figure}
