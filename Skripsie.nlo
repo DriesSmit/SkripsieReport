@@ -1,5 +1,5 @@
 \nomenclatureentry{pgmAcronym$PGM$@[{$PGM$}]\begingroup Probabilistic graphical model\nomeqref {1.0}|nompageref}{5}
 \nomenclatureentry{omrAcronym$OMR$@[{$OMR$}]\begingroup Optical mark recognition\nomeqref {2.0}|nompageref}{7}
-\nomenclatureentry{omrAcronym$OCR$@[{$OCR$}]\begingroup Optical character recognition\nomeqref {2.0}|nompageref}{9}
-\nomenclatureentry{dcnnAcronym$DCNN$@[{$DCNN$}]\begingroup Deep convolutional neural network\nomeqref {4.0}|nompageref}{19}
-\nomenclatureentry{dcnnAcronym$ANN$@[{$ANN$}]\begingroup Artificial neural network\nomeqref {4.0}|nompageref}{19}
+\nomenclatureentry{omrAcronym$OCR$@[{$OCR$}]\begingroup Optical character recognition\nomeqref {2.0}|nompageref}{10}
+\nomenclatureentry{dcnnAcronym$DCNN$@[{$DCNN$}]\begingroup Deep convolutional neural network\nomeqref {4.0}|nompageref}{23}
+\nomenclatureentry{dcnnAcronym$ANN$@[{$ANN$}]\begingroup Artificial neural network\nomeqref {4.0}|nompageref}{23}

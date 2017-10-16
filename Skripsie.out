@@ -49,10 +49,15 @@
 \BOOKMARK [1][]{section.6.2}{6.2 How this final year project benefits society}{chapter.6}% 49
 \BOOKMARK [1][]{section.6.3}{6.3 What the student learned}{chapter.6}% 50
 \BOOKMARK [1][]{section.6.4}{6.4 Conclusion: Summary and conclusions}{chapter.6}% 51
-\BOOKMARK [0][]{chapter*.23}{References}{}% 52
-\BOOKMARK [0][]{appendix.A}{A Graphical overview of system as a whole}{}% 53
-\BOOKMARK [0][]{appendix.B}{B Mathematical derivation of system as a whole}{}% 54
-\BOOKMARK [0][]{appendix.C}{C Implementation/Algorithms}{}% 55
-\BOOKMARK [1][]{section.C.1}{C.1 Deep Convolutional Neural Network}{appendix.C}% 56
-\BOOKMARK [0][]{appendix.D}{D Validation and results}{}% 57
-\BOOKMARK [0][]{appendix.E}{E Project plan}{}% 58
+\BOOKMARK [0][]{chapter*.24}{References}{}% 52
+\BOOKMARK [0][]{appendix.A}{A Overview of system}{}% 53
+\BOOKMARK [1][]{section.A.1}{A.1 System as a whole}{appendix.A}% 54
+\BOOKMARK [1][]{section.A.2}{A.2 Deriving the intended student entry}{appendix.A}% 55
+\BOOKMARK [2][]{subsection.A.2.1}{A.2.1 Student answer}{section.A.2}% 56
+\BOOKMARK [2][]{subsection.A.2.2}{A.2.2 Student number}{section.A.2}% 57
+\BOOKMARK [1][]{section.A.3}{A.3 Deriving the estimated digit}{appendix.A}% 58
+\BOOKMARK [0][]{appendix.B}{B Implementation/Algorithms}{}% 59
+\BOOKMARK [1][]{section.B.1}{B.1 Deep Convolutional Neural Network}{appendix.B}% 60
+\BOOKMARK [0][]{appendix.C}{C Validation and results}{}% 61
+\BOOKMARK [0][]{appendix.D}{D Outcome compliance}{}% 62
+\BOOKMARK [0][]{appendix.E}{E Project plan}{}% 63

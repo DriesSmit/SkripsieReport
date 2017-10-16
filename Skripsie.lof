@@ -1,31 +1,37 @@
 \select@language {english}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Automatic grading template 1.\relax }}{3}{figure.caption.5}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces System overview.\relax }}{6}{figure.caption.6}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Graphical overview of the system as a whole.\relax }}{6}{figure.caption.6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Standard OMR template, \citet {stdTemplate}\relax }}{8}{figure.caption.7}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Example answer from student\relax }}{10}{figure.caption.8}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Standard OMR template, from \citet {stdTemplate}\relax }}{9}{figure.caption.7}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Corrected answer by crossing out bubbles.\relax }}{11}{figure.caption.8}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Reduced contours in image.\relax }}{13}{figure.caption.9}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Radon transform applied on a 2 dimensional area, \citet {radon}\relax }}{15}{figure.caption.10}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Detection of template in image and estimation of bubble locations.\relax }}{16}{figure.caption.11}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Result in rotation after applying radon transform.\relax }}{17}{figure.caption.12}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Four markers found from applying Radon transforms.\relax }}{15}{figure.caption.9}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Reduced contours in image.\relax }}{16}{figure.caption.10}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Radon transform applied on a 2 dimensional area, from \citet {radon}\relax }}{18}{figure.caption.11}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Detection of template in image and estimation of bubble locations.\relax }}{20}{figure.caption.12}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Result in rotation after applying radon transform.\relax }}{21}{figure.caption.13}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Basic structure of an neural network, \citet {karpathy2017}\relax }}{20}{figure.caption.13}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Example image used as input to the neural network, \citet {tensor2017}\relax }}{21}{figure.caption.14}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Image scanned for character areas.\relax }}{23}{figure.caption.15}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces The found box is then normalized to rectangular shape.\relax }}{24}{figure.caption.16}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces a Randon transform then gets applied.\relax }}{24}{figure.caption.17}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces An clustering algorithm is used to find the main cluster in the remaining image.\relax }}{25}{figure.caption.18}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Area of found cluster.\relax }}{25}{figure.caption.19}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Final translation and normalization of image.\relax }}{26}{figure.caption.20}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Graphical setup of digit generation.\relax }}{27}{figure.caption.21}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Column representing one digit.\relax }}{28}{figure.caption.22}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Basic structure of a neural network, from \citet {karpathy2017}\relax }}{24}{figure.caption.14}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Example image used as input to the neural network, \citet {tensor2017}\relax }}{25}{figure.caption.15}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Image scanned for character areas.\relax }}{27}{figure.caption.16}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces The found box is then normalized to rectangular shape.\relax }}{28}{figure.caption.17}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces a Randon transform then gets applied.\relax }}{28}{figure.caption.18}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces An clustering algorithm is used to find the main cluster in the remaining image.\relax }}{29}{figure.caption.19}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Area of found cluster.\relax }}{29}{figure.caption.20}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Final translation and normalization of image.\relax }}{29}{figure.caption.21}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Graphical setup of determining intended digit.\relax }}{31}{figure.caption.22}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Column representing one digit.\relax }}{32}{figure.caption.23}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces System overview.\relax }}{37}{figure.caption.25}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Graphical setup of determining student answer.\relax }}{39}{figure.caption.26}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Graphical setup of determining student number.\relax }}{41}{figure.caption.27}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Graphical setup of determining intended digit.\relax }}{42}{figure.caption.28}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {E.1}{\ignorespaces Project plan for the final year project.\relax }}{38}{figure.caption.24}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {D.1}{\ignorespaces Project plan for the final year project.\relax }}{46}{figure.caption.29}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {E.1}{\ignorespaces Project plan for the final year project.\relax }}{48}{figure.caption.30}

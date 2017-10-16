@@ -3,14 +3,14 @@
  \nomgroup{D}
 
   \item [{$ANN$}]\begingroup Artificial neural network\nomeqref {4.0}
-		\nompageref{19}
+		\nompageref{23}
   \item [{$DCNN$}]\begingroup Deep convolutional neural network\nomeqref {4.0}
-		\nompageref{19}
+		\nompageref{23}
 
  \nomgroup{O}
 
   \item [{$OCR$}]\begingroup Optical character recognition\nomeqref {2.0}
-		\nompageref{9}
+		\nompageref{10}
   \item [{$OMR$}]\begingroup Optical mark recognition\nomeqref {2.0}
 		\nompageref{7}
 
