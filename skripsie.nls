@@ -1,14 +1,11 @@
 \begin{thenomenclature} 
 
- \nomgroup{D}
+ \nomgroup{A}
 
   \item [{$ANN$}]\begingroup Artificial neural network\nomeqref {4.0}
 		\nompageref{27}
   \item [{$DCNN$}]\begingroup Deep convolutional neural network\nomeqref {4.0}
 		\nompageref{23}
-
- \nomgroup{O}
-
   \item [{$OCR$}]\begingroup Optical character recognition\nomeqref {2.0}
 		\nompageref{10}
   \item [{$OMR$}]\begingroup Optical mark recognition\nomeqref {2.0}
@@ -18,5 +15,12 @@
 
   \item [{$PGM$}]\begingroup Probabilistic graphical model\nomeqref {1.0}
 		\nompageref{5}
+
+ \nomgroup{S}
+
+  \item [{$w_{i}$}]\begingroup Weight value at index i.\nomeqref {4.1}
+		\nompageref{28}
+  \item [{$x_{i}$}]\begingroup Input value at index i.\nomeqref {4.1}
+		\nompageref{28}
 
 \end{thenomenclature}

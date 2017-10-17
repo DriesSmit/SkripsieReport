@@ -3,7 +3,7 @@
 \graphicspath{{Chapter4/Chapter4Figures/}}
 The previous chapter briefly described the basic workings of the optical mark recognition (OCR) system inside the automatic test grader. There is still one critical piece of evidence that has not been used with the basic system. This information is the characters that the student writes in the designated boxes.
 
-\nomenclature[dcnnAcronym]{$DCNN$}{Deep convolutional neural network}
+\nomenclature[A]{$DCNN$}{Deep convolutional neural network}
 This next chapter will provide two machine learning approaches to significantly improve the accuracy in identifying digits over the previous standalone basic system, discussed in Chapter \ref{ch:ImageProcessing}. An approach to locate and classify hand written characters, provided by the students, using a deep convolutional neural network (DCNN), is firstly described. Next a more accurate method in determining the true digit, student answers and student number, using probabilistic  graphical models (PGM), is discussed. This PGM method is found to be accurate enough to determine the student number by only using the character recognition information provided.
 
 \section{Character recognition using a neural network}
@@ -89,7 +89,7 @@ Each digit on the test sheet is now separated and can be used as input to an neu
 \subsection{Neural Network Classification}
 
 \subsubsection{Introduction}
-\nomenclature[dcnnAcronym]{$ANN$}{Artificial neural network}
+\nomenclature[A]{$ANN$}{Artificial neural network}
 
 A neural network is a powerful machine learning tool for approximating complex functions. The basic architecture of a neural network can be seen in Figure \ref{fig:nn}. A artificial neural network (ANN) consist of an input, hidden and output layer, as described in \citet{MichealN2015}. A neural network is a simplified approximation of how neurons in the brain works. Each neuron in the network acts as a small processing unit. With a initial input, an output is determined by measuring the last output node, as seen in the Figure. The output can only be determined once each layer have been calculated one after the other.
 
@@ -113,12 +113,15 @@ For this project a 28 by 28 greyscalled image is used as input. Thus if each pix
 
 
 \subsubsection{The artificial neuron}
-The neuron unit is the small processing unit used to build a neural network. The first step in calculating the output of a neural network is to find the weighted sum of the inputs. ALl the variables in this network are floating point values. A bias variable is added to allow a neuron to have an offset in  its output. The weighted sum of these inputs are added with a bias variable to give,
+The neuron unit is the small processing unit used to build a neural network. The first step in calculating the output of a neural network is to find the weighted sum of the inputs. All the variables in this network are floating point values. A bias variable is added to allow a neuron to have an offset in  its output. The weighted sum of these inputs are added with a bias variable to give,
 \begin{align}
 % \nonumber to remove numbering (before each equation)
   z =  &\displaystyle{\sum_{i=0}^{c} x_{i}*w_{i} + b}.
 \label{eqn:nnOut}
 \end{align}
+
+\nomenclature[S]{$x_{i}$}{Input value at index i.}
+\nomenclature[S]{$w_{i}$}{Weight value at index i.}
 
 Where $c$ is the number of inputs. $x_{i}$ and $w_{i}$ respectively are the input and weight values at index i. $b$ is the biased that enables and offset in the output($z$) of the neuron.
 
