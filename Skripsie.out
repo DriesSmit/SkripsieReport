@@ -1,6 +1,6 @@
 \BOOKMARK [0][]{Doc-Start}{ECSA Outcomes Reference}{}% 1
 \BOOKMARK [0][]{Doc-Start}{Abstract}{}% 2
-\BOOKMARK [0][]{Doc-Start}{Opsomming}{}% 3
+\BOOKMARK [0][]{Doc-Start}{Uittreksel}{}% 3
 \BOOKMARK [0][]{chapter*.2}{List of Figures}{}% 4
 \BOOKMARK [0][]{chapter*.3}{List of Tables}{}% 5
 \BOOKMARK [0][]{chapter*.4}{Nomenclature}{}% 6
@@ -30,8 +30,8 @@
 \BOOKMARK [1][]{section.3.4}{3.4 Conclusion}{chapter.3}% 30
 \BOOKMARK [0][]{chapter.4}{4 Machine learning approach}{}% 31
 \BOOKMARK [1][]{section.4.1}{4.1 Character recognition using a neural network}{chapter.4}% 32
-\BOOKMARK [2][]{subsection.4.1.1}{4.1.1 Summery}{section.4.1}% 33
-\BOOKMARK [2][]{subsection.4.1.2}{4.1.2 Preprocessing on image}{section.4.1}% 34
+\BOOKMARK [2][]{subsection.4.1.1}{4.1.1 Summary}{section.4.1}% 33
+\BOOKMARK [2][]{subsection.4.1.2}{4.1.2 Preprocessing to find individual digit image}{section.4.1}% 34
 \BOOKMARK [2][]{subsection.4.1.3}{4.1.3 Neural Network Classification}{section.4.1}% 35
 \BOOKMARK [3][]{subsubsection.4.1.3.1}{4.1.3.1 Introduction}{subsection.4.1.3}% 36
 \BOOKMARK [3][]{subsubsection.4.1.3.2}{4.1.3.2 The artificial neuron}{subsection.4.1.3}% 37

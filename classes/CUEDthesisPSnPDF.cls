@@ -300,10 +300,10 @@ Electrical and Electronic Engineering at the University of Stellenbosch}}
    \begin{quote}}
 {\end{quote}\end{alwayssingle}}
 
-\newenvironment{opsomming} {\begin{alwayssingle} \pagestyle{plain}
+\newenvironment{uittreksel} {\begin{alwayssingle} \pagestyle{plain}
 %  \begin{center}
   \vspace*{1.5cm}
-  {\Large \bfseries  Opsomming}
+  {\Large \bfseries  Uittreksel}
 %  \end{center}
   \vspace{0.5cm}
    \begin{quote}}

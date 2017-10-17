@@ -20,7 +20,7 @@
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Area block drawn around segment most probable to belong to the digit.\relax }}{27}{figure.caption.19}
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Image after final translation and normalization is applied.\relax }}{27}{figure.caption.20}
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Basic structure of a neural network, from \citet {karpathy2017}\relax }}{28}{figure.caption.21}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Example image used as input to the neural network, from \citet {tensor2017}\relax }}{28}{figure.caption.22}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Example image used as input to the neural network, from \citet {tensor2017}\relax }}{29}{figure.caption.22}
 \contentsline {figure}{\numberline {4.10}{\ignorespaces Graphical setup for determining the intended digit written by a student.\relax }}{32}{figure.caption.23}
 \contentsline {figure}{\numberline {4.11}{\ignorespaces Column with the evidence that gets considered for the calculation of an intended digit.\relax }}{32}{figure.caption.24}
 \contentsline {figure}{\numberline {4.12}{\ignorespaces Graphical setup of determining student answer.\relax }}{34}{figure.caption.25}
