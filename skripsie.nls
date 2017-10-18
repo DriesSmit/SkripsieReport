@@ -3,9 +3,9 @@
  \nomgroup{A}
 
   \item [{$ANN$}]\begingroup Artificial neural network\nomeqref {4.0}
-		\nompageref{25}
+		\nompageref{22}
   \item [{$DCNN$}]\begingroup Deep convolutional neural network\nomeqref {4.0}
-		\nompageref{21}
+		\nompageref{18}
   \item [{$OCR$}]\begingroup Optical character recognition\nomeqref {2.0}
 		\nompageref{8}
   \item [{$OMR$}]\begingroup Optical mark recognition\nomeqref {2.0}
@@ -19,8 +19,8 @@
  \nomgroup{S}
 
   \item [{$w_{i}$}]\begingroup Weight value at index i.\nomeqref {4.1}
-		\nompageref{26}
+		\nompageref{23}
   \item [{$x_{i}$}]\begingroup Input value at index i.\nomeqref {4.1}
-		\nompageref{26}
+		\nompageref{23}
 
 \end{thenomenclature}

@@ -43,8 +43,6 @@ Using this basic system an average time for each test is calculated to be 0.305 
 
 A total of 6 out of the 25 test where reported as clashes. The two random images were both reported in the clash list. Further the one test which only has the student number written in with no bubbles filled in is also reported to the list. The other 3 clashes were reported due to the crossed out bubbles interpreted as still filled in, causing the system to think that two answer were filled in. An example of this can be seen in Figure \ref{fig:crossClash}.
 
-
-
 \subsubsection{Incorrect automatic graded results}
 
 There where 4 tests in total that where graded automatically, but wrongly. All of these test were tests that had only character information in atleast one of the answers. An example of this can be seen in Figure \ref{fig:OnlyCharacters}
@@ -79,7 +77,7 @@ There were no automatically graded answers that was done incorrectly.
 
 \subsection{Analysis or results}
 
-As is seen in the section below, the complete systems does not reduce the number of clashes for these 25 images. The complete system sometimes think a crossed out character is the intended character in that block. But because it is crossed out the system assigns a low certainty to that value, as the neural network is not to sure which digit it is. The complete system had no wrongly automatically graded answers in contras to the 4 graded wrongly using the basic system. A reason to this is attributed to more evidence that gets considered in the complete system. Thus only if that evidence match up will the system be certain enough to accept its answer as the correct one. In the next section the complete system use used to grade a tutorial written by students. 
+As is seen in the section below, the complete systems does not reduce the number of clashes for these 25 images. The complete system sometimes classifies a crossed out character is the intended character in that block. But because it is crossed out the system assigns a low certainty to that value, as the neural network is not to sure which digit it is. A drawback of the completed system is that it takes on average 2.011 seconds to grade a tests. This is due to the student number PGM taking on average 1.5 seconds to infer the correct student number. The complete system had no incorrectly automatically graded answers in contras to the 4 graded wrongly using the basic system. A reason to this is attributed to more evidence that gets considered in the complete system. Thus only if that evidence match up will the system be certain enough to accept its answer as the correct one. In the next section the complete system use used to grade a tutorial written by students. 
 
 \section{Grading of tutorial tests}
 
@@ -87,7 +85,7 @@ In this section the complete system is tested on the final tutorial test written
 
 \subsection{Marking statistics}
 
-For these tutorial test  an average marking time per test of 2.3 seconds was recorded. 
+For these tutorial test  an average marking time per test of 2.3 seconds was recorded.
 
 \subsection{Clashlist}
 
@@ -142,6 +140,7 @@ For a more detailed description of the results from grading all 4 tutorial tests
 
 \subsection{Analysis or results}
 
-In conclusion it is noted that the complete system, with its machine learning capabilities, slightly reduces the number of tests that the user must mark manually from the previous basic system. About 7.5\% of the tests in the tutorial had to be marked manually, due to the system being unsure of its answers. The system does however have a high probability of grading tests correctly if they are done automatically. A reason for this can be attributed to the fact that the system correlates two pieces of evidence to predict the correct answer. Thus both the character and bubble information has to be interpreted incorrectly for the system to automatically mark a system wrong.
+In conclusion it is noted that the complete system, with its machine learning capabilities, slightly reduces the number of tests that the user must mark manually from the previous basic system. About 7.5\% of the tests in the tutorial had to be marked manually, due to the system being unsure of its answers. The system does however have a high probability of grading tests correctly if they are done automatically. A reason for this can be attributed to the fact that the system correlates two pieces of evidence to predict the correct answer. Thus both the character and bubble information has to be interpreted incorrectly for the system to automatically grade a answer incorrectly. 
 
+Thus overall the system could graded 92.5\% of all the test correctly and automatically. From the remaining 7.5\% only 1 test or 0.1\% of the tests was found to be graded wrongly. For the remaining 7.4\% of the tests the system was not certain enough to grade these test automatically. The system did classify most of the clashlist test correctly. This means the system could possible have graded 97.1\% of the tests correctly. This can be done by changing a threshold value, but allows the other 2.9\% of the tests to be classified incorrectly.
 

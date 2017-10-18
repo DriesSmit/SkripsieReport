@@ -3,22 +3,21 @@
 \label{ch:Conclusions}
 
 \graphicspath{{Conclusions/Figures_Conclusions/}}
-
-This section still needs to be written up.
-
 \section{Project summary}
 
+In this project an automatic test grading system is developed with the aim of grading student test using a special template. Firstly research was done into excising methods of grading test automatically. It was found that these software packages normally uses only image processing methods to graded bubbles on a paper. For this project additional machine learning capabilities was also built into the system. This allows for a better estimation of what the student  wanted to write down on the paper.
+
 \section{How this final year project benefits society}
-Must say something here. Also say something about ethics, how you realised that your work may have an impact on the environment (or not), \textit{etc}.
+In the African society there is a great number of individuals who does not have access to quality educational opportunities. The educational systems these individuals do have are normally of pour grade with limited teaching assistance. Educators who are available are not accessible to learners to provide quality education. Automatic Mark Recognition software like the one developed in this project allows for a great number of tests to be assessed automatically in a short time span. This gives educators the power to handle bigger classes and thus provide more learners the opportunity for a better education.
 
 \section{What the student learned}
-During the execution of this project, the student learned that time management is important, because \ldots Also, using \LaTeX \ is of cardinal importance to professionally typeset a report.
+During the execution of this project, the student learned that time management is important to complete an project in due time. Time management also allows an individual to continuously asses how he/she is doing with respect to a schedule. This not only increases performance, but also self confidence in the final product. Finally the student learned how to develop a software package under a deadline. This project also allowed the student to gain a basic knowledge a a broad range of fields including image processing, neural networks and probabilistic graphical models. 
 
 
-\section{Future improvements onder conclusion?}
+\section{Future improvements}
 
-Increase speed of test. Use the Radon transform to locate circles. Then do image processing only on that areas. No need for contour finding on the whole image.
+To increase the speed of grading tests it should be considered to use a faster PGM library to inference the intended student number. This can be done by using Stellenbosch's emdw library. Further increases in test grading speed can be achieved by only doing image processing on the expected locations of the bubbles. This will bring some extra technical hurdles, but if solved can significantly increase the software's speed. Further the accuracy of the character recognition neural network can be increased by making use of Generative Adversarial Networks(GAN) to train the network on actually classified test results.
 
 \section{Conclusion: Summary and conclusions}
 
-This chapter provided a summary of the objectives, methodology and results of the final year project....
+In conclusion it was found that an test grading system could be build that can correct grade tests automatically with a 92.5\% accuracy. Those test
