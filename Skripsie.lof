@@ -3,38 +3,42 @@
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Automatic grading template 1.\relax }}{3}{figure.caption.5}
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Graphical overview of the system as a whole.\relax }}{6}{figure.caption.6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Standard OMR template, from \citet {stdTemplate}\relax }}{9}{figure.caption.7}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Corrected answer by crossing out bubbles.\relax }}{11}{figure.caption.8}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Standard OMR template, from \citet {stdTemplate}\relax }}{8}{figure.caption.7}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Corrected answer by crossing out bubbles.\relax }}{9}{figure.caption.8}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Four markers found from applying Radon transforms.\relax }}{15}{figure.caption.9}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Reduced contours in image.\relax }}{16}{figure.caption.10}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Radon transform applied on a 2 dimensional area, from \citet {radon}\relax }}{17}{figure.caption.11}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Result in rotation after applying radon transform.\relax }}{18}{figure.caption.12}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Detection of template in image and estimation of bubble locations.\relax }}{20}{figure.caption.13}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Four markers found from applying Radon transforms.\relax }}{12}{figure.caption.9}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Reduced contours in image.\relax }}{14}{figure.caption.10}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Radon transform applied on a 2 dimensional area, from \citet {radon}\relax }}{15}{figure.caption.11}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Result in rotation after applying radon transform.\relax }}{16}{figure.caption.12}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Detection of template in image and estimation of bubble locations.\relax }}{18}{figure.caption.13}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Image showing found contours for boxes used for character recognition.\relax }}{24}{figure.caption.14}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Example image found by doing image processing in main test sheet.\relax }}{25}{figure.caption.15}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces The box contour found is normalized to form a rectangular shape.\relax }}{25}{figure.caption.16}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Box after black lines gets filtered out, found using a Radon transform.\relax }}{26}{figure.caption.17}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Custom segmentation algorithm used to find the main cluster in the remaining image.\relax }}{26}{figure.caption.18}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Area block drawn around segment most probable to belong to the digit.\relax }}{27}{figure.caption.19}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Image after final translation and normalization is applied.\relax }}{27}{figure.caption.20}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Basic structure of a neural network, from \citet {karpathy2017}\relax }}{28}{figure.caption.21}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Example image used as input to the neural network, from \citet {tensor2017}\relax }}{29}{figure.caption.22}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Graphical setup for determining the intended digit written by a student.\relax }}{32}{figure.caption.23}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Column with the evidence that gets considered for the calculation of an intended digit.\relax }}{32}{figure.caption.24}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Graphical setup of determining student answer.\relax }}{34}{figure.caption.25}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Graphical setup of determining a student answer.\relax }}{35}{figure.caption.26}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Image showing found contours for boxes used for character recognition.\relax }}{22}{figure.caption.14}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Example image found by doing image processing in main test sheet.\relax }}{23}{figure.caption.15}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces The box contour found is normalized to form a rectangular shape.\relax }}{23}{figure.caption.16}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Box after black lines gets filtered out, found using a Radon transform.\relax }}{24}{figure.caption.17}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Custom segmentation algorithm used to find the main cluster in the remaining image.\relax }}{24}{figure.caption.18}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Area block drawn around segment most probable to belong to the digit.\relax }}{25}{figure.caption.19}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Image after final translation and normalization is applied.\relax }}{25}{figure.caption.20}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Basic structure of a neural network, from \citet {karpathy2017}\relax }}{26}{figure.caption.21}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Example image used as input to the neural network, from \citet {tensor2017}\relax }}{27}{figure.caption.22}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Graphical setup for determining the intended digit written by a student.\relax }}{30}{figure.caption.23}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Column with the evidence that gets considered for the calculation of an intended digit.\relax }}{30}{figure.caption.24}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Graphical setup of determining student answer.\relax }}{32}{figure.caption.25}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Graphical setup of determining a student answer.\relax }}{33}{figure.caption.26}
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces System overview.\relax }}{40}{figure.caption.28}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Graphical setup of determining student answer.\relax }}{42}{figure.caption.29}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Graphical setup of determining student number.\relax }}{44}{figure.caption.30}
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Graphical setup of determining intended digit.\relax }}{45}{figure.caption.31}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Image showing answer with crossed out answers that the system misinterpreted.\relax }}{37}{figure.caption.27}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Student filled in answer with only character information.\relax }}{38}{figure.caption.28}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Crossed out character that confused the grading system.\relax }}{39}{figure.caption.29}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Incorrectly identified answer as 95.\relax }}{41}{figure.caption.31}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces System overview.\relax }}{44}{figure.caption.33}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Graphical setup of determining student answer.\relax }}{46}{figure.caption.34}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Graphical setup of determining student number.\relax }}{48}{figure.caption.35}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Graphical setup of determining intended digit.\relax }}{49}{figure.caption.36}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {D.1}{\ignorespaces Project plan for the final year project.\relax }}{49}{figure.caption.32}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {E.1}{\ignorespaces Project plan for the final year project.\relax }}{51}{figure.caption.33}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {D.1}{\ignorespaces Project plan for the final year project.\relax }}{53}{figure.caption.37}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {E.1}{\ignorespaces Project plan for the final year project.\relax }}{55}{figure.caption.38}

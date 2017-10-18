@@ -2,9 +2,9 @@
 \contentsline {chapter}{ECSA Outcomes Reference}{iii}{Doc-Start}
 \contentsline {chapter}{Abstract}{iv}{Doc-Start}
 \contentsline {chapter}{Uittreksel}{v}{Doc-Start}
-\contentsline {chapter}{List of Figures}{x}{chapter*.2}
-\contentsline {chapter}{List of Tables}{xi}{chapter*.3}
-\contentsline {chapter}{Nomenclature}{xii}{chapter*.4}
+\contentsline {chapter}{List of Figures}{xi}{chapter*.2}
+\contentsline {chapter}{List of Tables}{xii}{chapter*.3}
+\contentsline {chapter}{Nomenclature}{xiii}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Problem background}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Problem statement}{2}{section.1.2}
@@ -17,56 +17,71 @@
 \contentsline {chapter}{\numberline {2}Literature Study}{7}{chapter.2}
 \contentsline {section}{\numberline {2.1}Existing systems}{7}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Standard OMR techniques}{7}{subsection.2.1.1}
-\contentsline {section}{\numberline {2.2}Additional techniques}{10}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Contour detection}{10}{subsection.2.2.1}
+\contentsline {section}{\numberline {2.2}Additional techniques}{8}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Contour detection}{9}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Character recognition}{10}{subsection.2.2.2}
-\contentsline {section}{\numberline {2.3}Conclusion: System requirements}{12}{section.2.3}
-\contentsline {chapter}{\numberline {3}Image Processing}{13}{chapter.3}
-\contentsline {section}{\numberline {3.1}Orientation Detection}{13}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Initial filtering and orientation detection}{14}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Radon Transform}{17}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Finding the template}{18}{subsection.3.1.3}
-\contentsline {section}{\numberline {3.2}Bubble detection and processing}{21}{section.3.2}
-\contentsline {section}{\numberline {3.3}Data processing and grading}{21}{section.3.3}
-\contentsline {section}{\numberline {3.4}Conclusion}{22}{section.3.4}
-\contentsline {chapter}{\numberline {4}Machine learning approach}{23}{chapter.4}
-\contentsline {section}{\numberline {4.1}Character recognition using a neural network}{23}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Summary}{23}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Preprocessing to find individual digit image}{24}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Neural Network Classification}{27}{subsection.4.1.3}
-\contentsline {subsubsection}{\numberline {4.1.3.1}Introduction}{27}{subsubsection.4.1.3.1}
-\contentsline {subsubsection}{\numberline {4.1.3.2}The artificial neuron}{28}{subsubsection.4.1.3.2}
-\contentsline {subsubsection}{\numberline {4.1.3.3}Generating output from an neural network}{29}{subsubsection.4.1.3.3}
-\contentsline {subsubsection}{\numberline {4.1.3.4}Training of neural network}{30}{subsubsection.4.1.3.4}
-\contentsline {section}{\numberline {4.2}Probabilistic Graphical Models}{31}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Overview}{31}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Intended digit model}{31}{subsection.4.2.2}
-\contentsline {subsubsection}{\numberline {4.2.2.1}Structure of the graph}{31}{subsubsection.4.2.2.1}
-\contentsline {subsubsection}{\numberline {4.2.2.2}Estimating the intended digit}{33}{subsubsection.4.2.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Intended answer model}{33}{subsection.4.2.3}
-\contentsline {subsubsection}{\numberline {4.2.3.1}Structure of the graph}{33}{subsubsection.4.2.3.1}
-\contentsline {subsubsection}{\numberline {4.2.3.2}Estimating the intended answer}{34}{subsubsection.4.2.3.2}
-\contentsline {subsection}{\numberline {4.2.4}Student number model}{35}{subsection.4.2.4}
-\contentsline {subsubsection}{\numberline {4.2.4.1}Structure of the graph}{35}{subsubsection.4.2.4.1}
-\contentsline {subsubsection}{\numberline {4.2.4.2}Estimating the student number}{35}{subsubsection.4.2.4.2}
-\contentsline {subsection}{\numberline {4.2.5}Training the model}{36}{subsection.4.2.5}
-\contentsline {section}{\numberline {4.3}Conclusion}{36}{section.4.3}
-\contentsline {chapter}{\numberline {5}Analysis of results}{37}{chapter.5}
-\contentsline {section}{\numberline {5.1}Future improvements}{37}{section.5.1}
-\contentsline {chapter}{\numberline {6}Summary and conclusions}{38}{chapter.6}
-\contentsline {section}{\numberline {6.1}Project summary}{38}{section.6.1}
-\contentsline {section}{\numberline {6.2}How this final year project benefits society}{38}{section.6.2}
-\contentsline {section}{\numberline {6.3}What the student learned}{38}{section.6.3}
-\contentsline {section}{\numberline {6.4}Conclusion: Summary and conclusions}{38}{section.6.4}
-\contentsline {chapter}{References}{39}{chapter*.27}
-\contentsline {chapter}{\numberline {A}Overview of system}{40}{appendix.A}
-\contentsline {section}{\numberline {A.1}System as a whole}{40}{section.A.1}
-\contentsline {section}{\numberline {A.2}Deriving the intended student entry}{41}{section.A.2}
-\contentsline {subsection}{\numberline {A.2.1}Student answer}{41}{subsection.A.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Student number}{42}{subsection.A.2.2}
-\contentsline {section}{\numberline {A.3}Deriving the estimated digit}{44}{section.A.3}
-\contentsline {chapter}{\numberline {B}Implementation/Algorithms}{46}{appendix.B}
-\contentsline {section}{\numberline {B.1}Deep Convolutional Neural Network}{46}{section.B.1}
-\contentsline {chapter}{\numberline {C}Validation and results}{47}{appendix.C}
-\contentsline {chapter}{\numberline {D}Outcome compliance}{48}{appendix.D}
-\contentsline {chapter}{\numberline {E}Project plan}{50}{appendix.E}
+\contentsline {section}{\numberline {2.3}Conclusion: System requirements}{10}{section.2.3}
+\contentsline {chapter}{\numberline {3}Image Processing}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}Orientation Detection}{11}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Initial filtering and orientation detection}{12}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Radon Transform}{13}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Finding the template}{16}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}Bubble detection and processing}{19}{section.3.2}
+\contentsline {section}{\numberline {3.3}Data processing and grading}{19}{section.3.3}
+\contentsline {section}{\numberline {3.4}Conclusion}{20}{section.3.4}
+\contentsline {chapter}{\numberline {4}Machine learning approach}{21}{chapter.4}
+\contentsline {section}{\numberline {4.1}Character recognition using a neural network}{21}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Summary}{21}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Preprocessing to find individual digit image}{22}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Neural Network Classification}{25}{subsection.4.1.3}
+\contentsline {subsubsection}{\numberline {4.1.3.1}Introduction}{25}{subsubsection.4.1.3.1}
+\contentsline {subsubsection}{\numberline {4.1.3.2}The artificial neuron}{26}{subsubsection.4.1.3.2}
+\contentsline {subsubsection}{\numberline {4.1.3.3}Generating output from an neural network}{27}{subsubsection.4.1.3.3}
+\contentsline {subsubsection}{\numberline {4.1.3.4}Training of neural network}{28}{subsubsection.4.1.3.4}
+\contentsline {section}{\numberline {4.2}Probabilistic Graphical Models}{29}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Overview}{29}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Intended digit model}{29}{subsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.2.1}Structure of the graph}{29}{subsubsection.4.2.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2.2}Estimating the intended digit}{31}{subsubsection.4.2.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Intended answer model}{31}{subsection.4.2.3}
+\contentsline {subsubsection}{\numberline {4.2.3.1}Structure of the graph}{31}{subsubsection.4.2.3.1}
+\contentsline {subsubsection}{\numberline {4.2.3.2}Estimating the intended answer}{32}{subsubsection.4.2.3.2}
+\contentsline {subsection}{\numberline {4.2.4}Student number model}{33}{subsection.4.2.4}
+\contentsline {subsubsection}{\numberline {4.2.4.1}Structure of the graph}{33}{subsubsection.4.2.4.1}
+\contentsline {subsubsection}{\numberline {4.2.4.2}Estimating the student number}{33}{subsubsection.4.2.4.2}
+\contentsline {subsection}{\numberline {4.2.5}Training the model}{34}{subsection.4.2.5}
+\contentsline {section}{\numberline {4.3}Conclusion}{34}{section.4.3}
+\contentsline {chapter}{\numberline {5}Analysis of results}{35}{chapter.5}
+\contentsline {section}{\numberline {5.1}Results of 25 test cases}{35}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Basic system}{36}{subsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.1.1}Marking statistics}{36}{subsubsection.5.1.1.1}
+\contentsline {subsubsection}{\numberline {5.1.1.2}Clashlist}{36}{subsubsection.5.1.1.2}
+\contentsline {subsubsection}{\numberline {5.1.1.3}Incorrect automatic graded results}{37}{subsubsection.5.1.1.3}
+\contentsline {subsection}{\numberline {5.1.2}Complete system}{37}{subsection.5.1.2}
+\contentsline {subsubsection}{\numberline {5.1.2.1}Marking statistics}{37}{subsubsection.5.1.2.1}
+\contentsline {subsubsection}{\numberline {5.1.2.2}Clashlist}{37}{subsubsection.5.1.2.2}
+\contentsline {subsubsection}{\numberline {5.1.2.3}Incorrect automatic graded results}{38}{subsubsection.5.1.2.3}
+\contentsline {subsection}{\numberline {5.1.3}Analysis or results}{38}{subsection.5.1.3}
+\contentsline {section}{\numberline {5.2}Grading of tutorial tests}{39}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Marking statistics}{39}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Clashlist}{39}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Incorrect automatic graded results}{39}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Analysis or results}{41}{subsection.5.2.4}
+\contentsline {chapter}{\numberline {6}Summary and conclusions}{42}{chapter.6}
+\contentsline {section}{\numberline {6.1}Project summary}{42}{section.6.1}
+\contentsline {section}{\numberline {6.2}How this final year project benefits society}{42}{section.6.2}
+\contentsline {section}{\numberline {6.3}What the student learned}{42}{section.6.3}
+\contentsline {section}{\numberline {6.4}Future improvements onder conclusion?}{42}{section.6.4}
+\contentsline {section}{\numberline {6.5}Conclusion: Summary and conclusions}{42}{section.6.5}
+\contentsline {chapter}{References}{43}{chapter*.32}
+\contentsline {chapter}{\numberline {A}Overview of system}{44}{appendix.A}
+\contentsline {section}{\numberline {A.1}System as a whole}{44}{section.A.1}
+\contentsline {section}{\numberline {A.2}Deriving the intended student entry}{45}{section.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Student answer}{45}{subsection.A.2.1}
+\contentsline {subsection}{\numberline {A.2.2}Student number}{46}{subsection.A.2.2}
+\contentsline {section}{\numberline {A.3}Deriving the estimated digit}{48}{section.A.3}
+\contentsline {chapter}{\numberline {B}Implementation/Algorithms}{50}{appendix.B}
+\contentsline {section}{\numberline {B.1}Deep Convolutional Neural Network}{50}{section.B.1}
+\contentsline {chapter}{\numberline {C}Validation and results}{51}{appendix.C}
+\contentsline {chapter}{\numberline {D}Outcome compliance}{52}{appendix.D}
+\contentsline {chapter}{\numberline {E}Project plan}{54}{appendix.E}
