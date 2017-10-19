@@ -1,7 +1,7 @@
-\backcite {stdTemplate}{{ix}{(document)}{Doc-Start}}
-\backcite {radon}{{ix}{(document)}{Doc-Start}}
-\backcite {karpathy2017}{{ix}{(document)}{Doc-Start}}
-\backcite {tensor2017}{{ix}{(document)}{Doc-Start}}
+\backcite {stdTemplate}{{viii}{(document)}{Doc-Start}}
+\backcite {radon}{{viii}{(document)}{Doc-Start}}
+\backcite {tensor2017}{{viii}{(document)}{Doc-Start}}
+\backcite {karpathy2017}{{viii}{(document)}{Doc-Start}}
 \backcite {stdTemplate}{{7}{2.1}{figure.caption.7}}
 \backcite {DraganI2003}{{7}{2.1.1}{figure.caption.7}}
 \backcite {MVGI2015}{{8}{2.1.2}{subsection.2.1.2}}
@@ -12,6 +12,6 @@
 \backcite {pgmPy}{{9}{2.2.1}{subsection.2.2.1}}
 \backcite {pgmPy}{{10}{2.2.1}{subsection.2.2.1}}
 \backcite {radon}{{14}{3.3}{figure.caption.11}}
-\backcite {karpathy2017}{{23}{4.7}{figure.caption.20}}
-\backcite {MichealN2015}{{23}{4.1.3.1}{subsubsection.4.1.3.1}}
-\backcite {tensor2017}{{24}{4.8}{figure.caption.21}}
+\backcite {tensor2017}{{23}{4.7}{figure.caption.20}}
+\backcite {karpathy2017}{{24}{4.8}{figure.caption.21}}
+\backcite {MichealN2015}{{24}{4.1.2.1}{subsubsection.4.1.2.1}}

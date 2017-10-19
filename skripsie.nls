@@ -21,7 +21,7 @@
  \nomgroup{S}
 
   \item [{$\sigma(z)$}]\begingroup Normalization function in a neural network.\nomeqref {4.1}
-		\nompageref{24}
+		\nompageref{25}
   \item [{$b$}]\begingroup Bias variable added to allow a neuron to have an offset in its output.\nomeqref {4.0}
 		\nompageref{24}
   \item [{$c$}]\begingroup Number of inputs to a neuron.\nomeqref {4.0}

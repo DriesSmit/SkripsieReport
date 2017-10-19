@@ -6,69 +6,60 @@
 \@writefile{lot}{\addvspace {10\p@ }}
 \newlabel{ch:MachineLearning}{{4}{19}{Machine learning approach}{chapter.4}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.1}Character recognition using a neural network}{19}{section.4.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Summary}{19}{subsection.4.1.1}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Image showing found contours for boxes used for character recognition.\relax }}{20}{figure.caption.14}}
 \newlabel{fig:sa}{{4.1}{20}{Image showing found contours for boxes used for character recognition.\relax }{figure.caption.14}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Preprocessing to find individual digit image}{20}{subsection.4.1.2}}
-\newlabel{sec:preprocess}{{4.1.2}{20}{Preprocessing to find individual digit image}{subsection.4.1.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Preprocessing and creating digit images}{20}{subsection.4.1.1}}
+\newlabel{sec:preprocess}{{4.1.1}{20}{Preprocessing and creating digit images}{subsection.4.1.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces The box contour found is normalized to form a rectangular shape.\relax }}{21}{figure.caption.15}}
 \newlabel{fig:bp}{{4.2}{21}{The box contour found is normalized to form a rectangular shape.\relax }{figure.caption.15}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Box after black lines gets filtered out, found using a Radon transform.\relax }}{21}{figure.caption.16}}
 \newlabel{fig:ar}{{4.3}{21}{Box after black lines gets filtered out, found using a Radon transform.\relax }{figure.caption.16}{}}
-\citation{MichealN2015}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Custom segmentation algorithm used to find the main cluster in the remaining image.\relax }}{22}{figure.caption.17}}
 \newlabel{fig:c}{{4.4}{22}{Custom segmentation algorithm used to find the main cluster in the remaining image.\relax }{figure.caption.17}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Area block drawn around segment most probable to belong to the digit.\relax }}{22}{figure.caption.18}}
 \newlabel{fig:areaLoc}{{4.5}{22}{Area block drawn around segment most probable to belong to the digit.\relax }{figure.caption.18}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Image after final translation and normalization is applied.\relax }}{22}{figure.caption.19}}
 \newlabel{fig:final}{{4.6}{22}{Image after final translation and normalization is applied.\relax }{figure.caption.19}{}}
-\citation{karpathy2017}
-\citation{karpathy2017}
 \citation{tensor2017}
 \citation{tensor2017}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces Basic structure of a neural network, from \citet  {karpathy2017}\relax }}{23}{figure.caption.20}}
-\@writefile{brf}{\backcite{karpathy2017}{{23}{4.7}{figure.caption.20}}}
-\newlabel{fig:nn}{{4.7}{23}{Basic structure of a neural network, from \citet {karpathy2017}\relax }{figure.caption.20}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}Neural Network Classification}{23}{subsection.4.1.3}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.3.1}Introduction}{23}{subsubsection.4.1.3.1}}
-\@writefile{brf}{\backcite{MichealN2015}{{23}{4.1.3.1}{subsubsection.4.1.3.1}}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Example image used as input to the neural network, from \citet  {tensor2017}\relax }}{24}{figure.caption.21}}
-\@writefile{brf}{\backcite{tensor2017}{{24}{4.8}{figure.caption.21}}}
-\newlabel{fig:mnist}{{4.8}{24}{Example image used as input to the neural network, from \citet {tensor2017}\relax }{figure.caption.21}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.3.2}The artificial neuron}{24}{subsubsection.4.1.3.2}}
-\newlabel{eqn:nnOut}{{4.1}{24}{The artificial neuron}{equation.4.1.1}{}}
-\newlabel{eqn:sigmoid}{{4.2}{24}{The artificial neuron}{equation.4.1.2}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.3.3}Generating output from an neural network}{25}{subsubsection.4.1.3.3}}
-\newlabel{eqn:normal}{{4.3}{25}{Generating output from an neural network}{equation.4.1.3}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.3.4}Training of neural network}{25}{subsubsection.4.1.3.4}}
-\newlabel{sec:trainNN}{{4.1.3.4}{25}{Training of neural network}{subsubsection.4.1.3.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Probabilistic Graphical Models}{26}{section.4.2}}
-\newlabel{sec:PGM}{{4.2}{26}{Probabilistic Graphical Models}{section.4.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Overview}{26}{subsection.4.2.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Intended digit model}{26}{subsection.4.2.2}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2.1}Structure of the graph}{26}{subsubsection.4.2.2.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces Graphical setup for determining the intended digit written by a student.\relax }}{27}{figure.caption.22}}
-\newlabel{fig:pgmDigit}{{4.9}{27}{Graphical setup for determining the intended digit written by a student.\relax }{figure.caption.22}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces Column with the evidence that gets considered for the calculation of an intended digit.\relax }}{27}{figure.caption.23}}
-\newlabel{fig:column}{{4.10}{27}{Column with the evidence that gets considered for the calculation of an intended digit.\relax }{figure.caption.23}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2.2}Estimating the intended digit}{28}{subsubsection.4.2.2.2}}
-\newlabel{sec:intendedDigit}{{4.2.2.2}{28}{Estimating the intended digit}{subsubsection.4.2.2.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}Intended answer model}{28}{subsection.4.2.3}}
-\newlabel{sec:pgmStudentNum}{{4.2.3}{28}{Intended answer model}{subsection.4.2.3}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.3.1}Structure of the graph}{28}{subsubsection.4.2.3.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces Graphical setup of determining student answer.\relax }}{29}{figure.caption.24}}
-\newlabel{fig:stdAns}{{4.11}{29}{Graphical setup of determining student answer.\relax }{figure.caption.24}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.3.2}Estimating the intended answer}{29}{subsubsection.4.2.3.2}}
-\newlabel{sec:intendedDigit}{{4.2.3.2}{29}{Estimating the intended answer}{subsubsection.4.2.3.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.4}Student number model}{30}{subsection.4.2.4}}
-\newlabel{sec:pgmStudentNum}{{4.2.4}{30}{Student number model}{subsection.4.2.4}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.4.1}Structure of the graph}{30}{subsubsection.4.2.4.1}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.4.2}Estimating the student number}{30}{subsubsection.4.2.4.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.5}Training the model}{30}{subsection.4.2.5}}
+\citation{karpathy2017}
+\citation{karpathy2017}
+\citation{MichealN2015}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces Example image used as input to the neural network, from \citet  {tensor2017}\relax }}{23}{figure.caption.20}}
+\@writefile{brf}{\backcite{tensor2017}{{23}{4.7}{figure.caption.20}}}
+\newlabel{fig:mnist}{{4.7}{23}{Example image used as input to the neural network, from \citet {tensor2017}\relax }{figure.caption.20}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Classification of digits}{23}{subsection.4.1.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Basic structure of a neural network, from \citet  {karpathy2017}\relax }}{24}{figure.caption.21}}
+\@writefile{brf}{\backcite{karpathy2017}{{24}{4.8}{figure.caption.21}}}
+\newlabel{fig:nn}{{4.8}{24}{Basic structure of a neural network, from \citet {karpathy2017}\relax }{figure.caption.21}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2.1}The Neural Network Basics}{24}{subsubsection.4.1.2.1}}
+\@writefile{brf}{\backcite{MichealN2015}{{24}{4.1.2.1}{subsubsection.4.1.2.1}}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2.2}The Artificial Neuron}{24}{subsubsection.4.1.2.2}}
+\newlabel{eqn:nnOut}{{4.1}{24}{The Artificial Neuron}{equation.4.1.1}{}}
+\newlabel{eqn:sigmoid}{{4.2}{25}{The Artificial Neuron}{equation.4.1.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2.3}Generating an output from the network}{25}{subsubsection.4.1.2.3}}
+\newlabel{eqn:normal}{{4.3}{25}{Generating an output from the network}{equation.4.1.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2.4}Deep Convolutional Neural Network(DCNN)}{25}{subsubsection.4.1.2.4}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2.5}Training of the neural network}{26}{subsubsection.4.1.2.5}}
+\newlabel{sec:trainNN}{{4.1.2.5}{26}{Training of the neural network}{subsubsection.4.1.2.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Probabilistic Graphical Models}{27}{section.4.2}}
+\newlabel{sec:PGM}{{4.2}{27}{Probabilistic Graphical Models}{section.4.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Overview of the system}{27}{subsection.4.2.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Estimating the intended answer}{27}{subsection.4.2.2}}
+\newlabel{sec:pgmStudentNum}{{4.2.2}{27}{Estimating the intended answer}{subsection.4.2.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces Graphical setup for determining the intended digit written by a student.\relax }}{28}{figure.caption.22}}
+\newlabel{fig:pgmDigit}{{4.9}{28}{Graphical setup for determining the intended digit written by a student.\relax }{figure.caption.22}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces Column with the evidence that gets considered for the calculation of an intended digit.\relax }}{28}{figure.caption.23}}
+\newlabel{fig:column}{{4.10}{28}{Column with the evidence that gets considered for the calculation of an intended digit.\relax }{figure.caption.23}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces Graphical setup of determining student answer.\relax }}{30}{figure.caption.24}}
+\newlabel{fig:stdAns}{{4.11}{30}{Graphical setup of determining student answer.\relax }{figure.caption.24}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}Estimating the student number}{30}{subsection.4.2.3}}
+\newlabel{sec:intendedDigit}{{4.2.3}{30}{Estimating the student number}{subsection.4.2.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.4}Training of a Probabilistic Graphical Model}{31}{subsection.4.2.4}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.3}Conclusion}{31}{section.4.3}}
 \FN@pp@footnotehinttrue 
 \@setckpt{Chapter4/chapter4}{
-\setcounter{page}{32}
+\setcounter{page}{33}
 \setcounter{equation}{3}
 \setcounter{enumi}{4}
 \setcounter{enumii}{0}
@@ -90,7 +81,7 @@
 \setcounter{NAT@ctr}{0}
 \setcounter{Item}{37}
 \setcounter{Hfootnote}{0}
-\setcounter{bookmark@seq@number}{50}
+\setcounter{bookmark@seq@number}{43}
 \setcounter{LT@tables}{0}
 \setcounter{LT@chunks}{0}
 \setcounter{parentequation}{0}

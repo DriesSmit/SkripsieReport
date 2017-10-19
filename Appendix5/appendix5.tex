@@ -3,3 +3,51 @@
 \graphicspath{{Appendix5/Appendix5figures/}}
 
 Validation and results of this system.
+
+\section{Deep Convolutional Neural Network test results}
+\label{sec:DCNNresult}
+
+Accuracy for character recognition:
+
+Using default deep neural network. Up to V22
+
+Test accuracy for network trained on MNIST dataset:
+On test data for MNIST: 		0.9935
+On test data for generated digits: 	0.666667
+
+Main reason for error.
+The MNIST dataset has images that are more consentrated to being binary.
+Either black or white.
+
+Test accuracy for network trained on generated digits:
+On test data for MNIST:			 0.9462
+On test data for generated digits:	 0.921569
+
+
+Reasons The algorithm above does not work that well on the characters:
+
+
+Borders are not cut out properly.
+
+Neural network focusses on color as well which decreases its accuracty for shape.
+
+Attempt 2:
+
+Accuracy for character recognition:
+
+Using default deep neural network. V23
+
+Test accuracy for network trained on MNIST dataset:
+On test data for MNIST: 		0.9935
+On test data for generated digits: 	0.666667
+
+Main reason for error.
+The MNIST dataset has images that are more consentrated to being binary.
+Either black or white.
+
+Test accuracy for network trained on generated digits:
+On test data for MNIST:			 0.9462
+On test data for generated digits:	 0.921569
+
+
+Reasons The algorithm above does not work that well on the characters:
