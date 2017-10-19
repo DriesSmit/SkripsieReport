@@ -140,13 +140,13 @@
 \setlength{\hoffset}{0.00cm}
 \setlength{\voffset}{0.00cm}
 
-\setlength{\evensidemargin}{1.96cm}
-%\setlength{\oddsidemargin}{-0.54cm}
+\setlength{\evensidemargin}{2.4cm}
+\setlength{\oddsidemargin}{0.5cm}
 \setlength{\topmargin}{1mm}
 \setlength{\headheight}{1.36cm}
 \setlength{\headsep}{1.00cm}
 \setlength{\textheight}{20.84cm}
-\setlength{\textwidth}{14.5cm}
+\setlength{\textwidth}{15.9cm}
 \setlength{\marginparsep}{1mm}
 \setlength{\marginparwidth}{3cm}
 \setlength{\footskip}{2.36cm}
@@ -208,17 +208,18 @@ Electrical and Electronic Engineering at the University of Stellenbosch}}
     { \Large {\bfseries {\@title}} \par}
 {\large \vspace*{20mm} {{\@crest} \par} \vspace*{20mm}}
     {{\Large \@author} \par}
-{\large \vspace*{1ex}
-    {{\@collegeordept} \par}
+{\large 
+%\vspace*{1ex}
+  %  {{\@collegeordept} \par}
 
-\vspace*{1ex}
-    {{\@university} \par}
+%\vspace*{1ex}
+ %   {{\@university} \par}
 \vspace*{20mm}
     {{\submittedtext} \par}
 \vspace*{10mm}
     {{\@promotor} \par}
-\vspace*{1ex}
-    {\it {\@degree} \par}
+%\vspace*{1ex}
+  %  {\it {\@degree} \par}
 \vspace*{2ex}
     {\@degreedate}}
   \end{center}
