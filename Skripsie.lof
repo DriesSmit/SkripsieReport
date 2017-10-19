@@ -4,13 +4,13 @@
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Graphical overview of the system as a whole.\relax }}{6}{figure.caption.6}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Standard OMR template with refernce blocks on the left, from \citet {stdTemplate}\relax }}{8}{figure.caption.7}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Corrected answer by crossing out bubbles.\relax }}{10}{figure.caption.8}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Contours found around corrected answer.\relax }}{10}{figure.caption.8}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Four markers found from applying Radon transforms.\relax }}{13}{figure.caption.9}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Reduced contours in image.\relax }}{15}{figure.caption.10}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Radon transform applied on a 2 dimensional area, from \citet {radon}\relax }}{15}{figure.caption.11}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Radon transform applied on a 2 dimensional space, from \citet {radon}\relax }}{15}{figure.caption.11}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Result in rotation after applying radon transform.\relax }}{16}{figure.caption.12}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Detection of template in image and estimation of bubble locations.\relax }}{17}{figure.caption.13}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Detection of contours in image and estimation of bubble locations.\relax }}{17}{figure.caption.13}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Image showing found contours for boxes used for character recognition.\relax }}{21}{figure.caption.14}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Example image found by doing image processing in main test sheet.\relax }}{22}{figure.caption.15}
