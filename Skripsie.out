@@ -10,76 +10,74 @@
 \BOOKMARK [1][]{section.1.4}{1.4 Project objectives}{chapter.1}% 10
 \BOOKMARK [1][]{section.1.5}{1.5 Research methodology}{chapter.1}% 11
 \BOOKMARK [1][]{section.1.6}{1.6 Graphical overview of system}{chapter.1}% 12
-\BOOKMARK [2][]{subsection.1.6.1}{1.6.1 System overview}{section.1.6}% 13
-\BOOKMARK [2][]{subsection.1.6.2}{1.6.2 Graphical representation}{section.1.6}% 14
-\BOOKMARK [0][]{chapter.2}{2 Literature Study}{}% 15
-\BOOKMARK [1][]{section.2.1}{2.1 Existing systems}{chapter.2}% 16
-\BOOKMARK [2][]{subsection.2.1.1}{2.1.1 Standard OMR techniques}{section.2.1}% 17
-\BOOKMARK [1][]{section.2.2}{2.2 Additional techniques}{chapter.2}% 18
-\BOOKMARK [2][]{subsection.2.2.1}{2.2.1 Contour detection}{section.2.2}% 19
-\BOOKMARK [2][]{subsection.2.2.2}{2.2.2 Character recognition}{section.2.2}% 20
-\BOOKMARK [1][]{section.2.3}{2.3 Conclusion: System requirements}{chapter.2}% 21
-\BOOKMARK [0][]{chapter.3}{3 Image Processing}{}% 22
-\BOOKMARK [1][]{section.3.1}{3.1 Orientation Detection}{chapter.3}% 23
-\BOOKMARK [2][]{subsection.3.1.1}{3.1.1 Initial filtering and orientation detection}{section.3.1}% 24
-\BOOKMARK [2][]{subsection.3.1.2}{3.1.2 Radon Transform}{section.3.1}% 25
-\BOOKMARK [2][]{subsection.3.1.3}{3.1.3 Finding the template}{section.3.1}% 26
-\BOOKMARK [1][]{section.3.2}{3.2 Bubble detection and processing}{chapter.3}% 27
-\BOOKMARK [1][]{section.3.3}{3.3 Data processing and grading}{chapter.3}% 28
-\BOOKMARK [1][]{section.3.4}{3.4 Conclusion}{chapter.3}% 29
-\BOOKMARK [0][]{chapter.4}{4 Machine learning approach}{}% 30
-\BOOKMARK [1][]{section.4.1}{4.1 Character recognition using a neural network}{chapter.4}% 31
-\BOOKMARK [2][]{subsection.4.1.1}{4.1.1 Summary}{section.4.1}% 32
-\BOOKMARK [2][]{subsection.4.1.2}{4.1.2 Preprocessing to find individual digit image}{section.4.1}% 33
-\BOOKMARK [2][]{subsection.4.1.3}{4.1.3 Neural Network Classification}{section.4.1}% 34
-\BOOKMARK [3][]{subsubsection.4.1.3.1}{4.1.3.1 Introduction}{subsection.4.1.3}% 35
-\BOOKMARK [3][]{subsubsection.4.1.3.2}{4.1.3.2 The artificial neuron}{subsection.4.1.3}% 36
-\BOOKMARK [3][]{subsubsection.4.1.3.3}{4.1.3.3 Generating output from an neural network}{subsection.4.1.3}% 37
-\BOOKMARK [3][]{subsubsection.4.1.3.4}{4.1.3.4 Training of neural network}{subsection.4.1.3}% 38
-\BOOKMARK [1][]{section.4.2}{4.2 Probabilistic Graphical Models}{chapter.4}% 39
-\BOOKMARK [2][]{subsection.4.2.1}{4.2.1 Overview}{section.4.2}% 40
-\BOOKMARK [2][]{subsection.4.2.2}{4.2.2 Intended digit model}{section.4.2}% 41
-\BOOKMARK [3][]{subsubsection.4.2.2.1}{4.2.2.1 Structure of the graph}{subsection.4.2.2}% 42
-\BOOKMARK [3][]{subsubsection.4.2.2.2}{4.2.2.2 Estimating the intended digit}{subsection.4.2.2}% 43
-\BOOKMARK [2][]{subsection.4.2.3}{4.2.3 Intended answer model}{section.4.2}% 44
-\BOOKMARK [3][]{subsubsection.4.2.3.1}{4.2.3.1 Structure of the graph}{subsection.4.2.3}% 45
-\BOOKMARK [3][]{subsubsection.4.2.3.2}{4.2.3.2 Estimating the intended answer}{subsection.4.2.3}% 46
-\BOOKMARK [2][]{subsection.4.2.4}{4.2.4 Student number model}{section.4.2}% 47
-\BOOKMARK [3][]{subsubsection.4.2.4.1}{4.2.4.1 Structure of the graph}{subsection.4.2.4}% 48
-\BOOKMARK [3][]{subsubsection.4.2.4.2}{4.2.4.2 Estimating the student number}{subsection.4.2.4}% 49
-\BOOKMARK [2][]{subsection.4.2.5}{4.2.5 Training the model}{section.4.2}% 50
-\BOOKMARK [1][]{section.4.3}{4.3 Conclusion}{chapter.4}% 51
-\BOOKMARK [0][]{chapter.5}{5 Analysis of results}{}% 52
-\BOOKMARK [1][]{section.5.1}{5.1 Results of 25 test cases}{chapter.5}% 53
-\BOOKMARK [2][]{subsection.5.1.1}{5.1.1 Basic system}{section.5.1}% 54
-\BOOKMARK [3][]{subsubsection.5.1.1.1}{5.1.1.1 Marking statistics}{subsection.5.1.1}% 55
-\BOOKMARK [3][]{subsubsection.5.1.1.2}{5.1.1.2 Clashlist}{subsection.5.1.1}% 56
-\BOOKMARK [3][]{subsubsection.5.1.1.3}{5.1.1.3 Incorrect automatic graded results}{subsection.5.1.1}% 57
-\BOOKMARK [2][]{subsection.5.1.2}{5.1.2 Complete system}{section.5.1}% 58
-\BOOKMARK [3][]{subsubsection.5.1.2.1}{5.1.2.1 Marking statistics}{subsection.5.1.2}% 59
-\BOOKMARK [3][]{subsubsection.5.1.2.2}{5.1.2.2 Clashlist}{subsection.5.1.2}% 60
-\BOOKMARK [3][]{subsubsection.5.1.2.3}{5.1.2.3 Incorrect automatic graded results}{subsection.5.1.2}% 61
-\BOOKMARK [2][]{subsection.5.1.3}{5.1.3 Analysis or results}{section.5.1}% 62
-\BOOKMARK [1][]{section.5.2}{5.2 Grading of tutorial tests}{chapter.5}% 63
-\BOOKMARK [2][]{subsection.5.2.1}{5.2.1 Marking statistics}{section.5.2}% 64
-\BOOKMARK [2][]{subsection.5.2.2}{5.2.2 Clashlist}{section.5.2}% 65
-\BOOKMARK [2][]{subsection.5.2.3}{5.2.3 Incorrect automatic graded results}{section.5.2}% 66
-\BOOKMARK [2][]{subsection.5.2.4}{5.2.4 Analysis or results}{section.5.2}% 67
-\BOOKMARK [0][]{chapter.6}{6 Summary and conclusions}{}% 68
-\BOOKMARK [1][]{section.6.1}{6.1 Project summary}{chapter.6}% 69
-\BOOKMARK [1][]{section.6.2}{6.2 How this final year project benefits society}{chapter.6}% 70
-\BOOKMARK [1][]{section.6.3}{6.3 What the student learned}{chapter.6}% 71
-\BOOKMARK [1][]{section.6.4}{6.4 Future improvements}{chapter.6}% 72
-\BOOKMARK [1][]{section.6.5}{6.5 Conclusion: Summary and conclusions}{chapter.6}% 73
-\BOOKMARK [0][]{chapter*.32}{References}{}% 74
-\BOOKMARK [0][]{appendix.A}{A Project plan}{}% 75
-\BOOKMARK [0][]{appendix.B}{B Outcome compliance}{}% 76
-\BOOKMARK [0][]{appendix.C}{C Overview of system}{}% 77
-\BOOKMARK [1][]{section.C.1}{C.1 System as a whole}{appendix.C}% 78
-\BOOKMARK [1][]{section.C.2}{C.2 Deriving the intended student entry}{appendix.C}% 79
-\BOOKMARK [2][]{subsection.C.2.1}{C.2.1 Student answer}{section.C.2}% 80
-\BOOKMARK [2][]{subsection.C.2.2}{C.2.2 Student number}{section.C.2}% 81
-\BOOKMARK [1][]{section.C.3}{C.3 Deriving the estimated digit}{appendix.C}% 82
-\BOOKMARK [0][]{appendix.D}{D Implementation/Algorithms}{}% 83
-\BOOKMARK [1][]{section.D.1}{D.1 Deep Convolutional Neural Network}{appendix.D}% 84
-\BOOKMARK [0][]{appendix.E}{E Validation and results}{}% 85
+\BOOKMARK [0][]{chapter.2}{2 Literature Study}{}% 13
+\BOOKMARK [1][]{section.2.1}{2.1 Existing systems}{chapter.2}% 14
+\BOOKMARK [2][]{subsection.2.1.1}{2.1.1 Standard OMR techniques}{section.2.1}% 15
+\BOOKMARK [1][]{section.2.2}{2.2 Additional techniques}{chapter.2}% 16
+\BOOKMARK [2][]{subsection.2.2.1}{2.2.1 Contour detection}{section.2.2}% 17
+\BOOKMARK [2][]{subsection.2.2.2}{2.2.2 Character recognition}{section.2.2}% 18
+\BOOKMARK [1][]{section.2.3}{2.3 Conclusion: System requirements}{chapter.2}% 19
+\BOOKMARK [0][]{chapter.3}{3 Image Processing}{}% 20
+\BOOKMARK [1][]{section.3.1}{3.1 Orientation Detection}{chapter.3}% 21
+\BOOKMARK [2][]{subsection.3.1.1}{3.1.1 Initial filtering and orientation detection}{section.3.1}% 22
+\BOOKMARK [2][]{subsection.3.1.2}{3.1.2 Radon Transform}{section.3.1}% 23
+\BOOKMARK [2][]{subsection.3.1.3}{3.1.3 Finding the template}{section.3.1}% 24
+\BOOKMARK [1][]{section.3.2}{3.2 Bubble detection and processing}{chapter.3}% 25
+\BOOKMARK [1][]{section.3.3}{3.3 Data processing and grading}{chapter.3}% 26
+\BOOKMARK [1][]{section.3.4}{3.4 Conclusion}{chapter.3}% 27
+\BOOKMARK [0][]{chapter.4}{4 Machine learning approach}{}% 28
+\BOOKMARK [1][]{section.4.1}{4.1 Character recognition using a neural network}{chapter.4}% 29
+\BOOKMARK [2][]{subsection.4.1.1}{4.1.1 Summary}{section.4.1}% 30
+\BOOKMARK [2][]{subsection.4.1.2}{4.1.2 Preprocessing to find individual digit image}{section.4.1}% 31
+\BOOKMARK [2][]{subsection.4.1.3}{4.1.3 Neural Network Classification}{section.4.1}% 32
+\BOOKMARK [3][]{subsubsection.4.1.3.1}{4.1.3.1 Introduction}{subsection.4.1.3}% 33
+\BOOKMARK [3][]{subsubsection.4.1.3.2}{4.1.3.2 The artificial neuron}{subsection.4.1.3}% 34
+\BOOKMARK [3][]{subsubsection.4.1.3.3}{4.1.3.3 Generating output from an neural network}{subsection.4.1.3}% 35
+\BOOKMARK [3][]{subsubsection.4.1.3.4}{4.1.3.4 Training of neural network}{subsection.4.1.3}% 36
+\BOOKMARK [1][]{section.4.2}{4.2 Probabilistic Graphical Models}{chapter.4}% 37
+\BOOKMARK [2][]{subsection.4.2.1}{4.2.1 Overview}{section.4.2}% 38
+\BOOKMARK [2][]{subsection.4.2.2}{4.2.2 Intended digit model}{section.4.2}% 39
+\BOOKMARK [3][]{subsubsection.4.2.2.1}{4.2.2.1 Structure of the graph}{subsection.4.2.2}% 40
+\BOOKMARK [3][]{subsubsection.4.2.2.2}{4.2.2.2 Estimating the intended digit}{subsection.4.2.2}% 41
+\BOOKMARK [2][]{subsection.4.2.3}{4.2.3 Intended answer model}{section.4.2}% 42
+\BOOKMARK [3][]{subsubsection.4.2.3.1}{4.2.3.1 Structure of the graph}{subsection.4.2.3}% 43
+\BOOKMARK [3][]{subsubsection.4.2.3.2}{4.2.3.2 Estimating the intended answer}{subsection.4.2.3}% 44
+\BOOKMARK [2][]{subsection.4.2.4}{4.2.4 Student number model}{section.4.2}% 45
+\BOOKMARK [3][]{subsubsection.4.2.4.1}{4.2.4.1 Structure of the graph}{subsection.4.2.4}% 46
+\BOOKMARK [3][]{subsubsection.4.2.4.2}{4.2.4.2 Estimating the student number}{subsection.4.2.4}% 47
+\BOOKMARK [2][]{subsection.4.2.5}{4.2.5 Training the model}{section.4.2}% 48
+\BOOKMARK [1][]{section.4.3}{4.3 Conclusion}{chapter.4}% 49
+\BOOKMARK [0][]{chapter.5}{5 Analysis of results}{}% 50
+\BOOKMARK [1][]{section.5.1}{5.1 Results of 25 test cases}{chapter.5}% 51
+\BOOKMARK [2][]{subsection.5.1.1}{5.1.1 Basic system}{section.5.1}% 52
+\BOOKMARK [3][]{subsubsection.5.1.1.1}{5.1.1.1 Marking statistics}{subsection.5.1.1}% 53
+\BOOKMARK [3][]{subsubsection.5.1.1.2}{5.1.1.2 Clashlist}{subsection.5.1.1}% 54
+\BOOKMARK [3][]{subsubsection.5.1.1.3}{5.1.1.3 Incorrect automatic graded results}{subsection.5.1.1}% 55
+\BOOKMARK [2][]{subsection.5.1.2}{5.1.2 Complete system}{section.5.1}% 56
+\BOOKMARK [3][]{subsubsection.5.1.2.1}{5.1.2.1 Marking statistics}{subsection.5.1.2}% 57
+\BOOKMARK [3][]{subsubsection.5.1.2.2}{5.1.2.2 Clashlist}{subsection.5.1.2}% 58
+\BOOKMARK [3][]{subsubsection.5.1.2.3}{5.1.2.3 Incorrect automatic graded results}{subsection.5.1.2}% 59
+\BOOKMARK [2][]{subsection.5.1.3}{5.1.3 Analysis or results}{section.5.1}% 60
+\BOOKMARK [1][]{section.5.2}{5.2 Grading of tutorial tests}{chapter.5}% 61
+\BOOKMARK [2][]{subsection.5.2.1}{5.2.1 Marking statistics}{section.5.2}% 62
+\BOOKMARK [2][]{subsection.5.2.2}{5.2.2 Clashlist}{section.5.2}% 63
+\BOOKMARK [2][]{subsection.5.2.3}{5.2.3 Incorrect automatic graded results}{section.5.2}% 64
+\BOOKMARK [2][]{subsection.5.2.4}{5.2.4 Analysis or results}{section.5.2}% 65
+\BOOKMARK [0][]{chapter.6}{6 Summary and conclusions}{}% 66
+\BOOKMARK [1][]{section.6.1}{6.1 Project summary}{chapter.6}% 67
+\BOOKMARK [1][]{section.6.2}{6.2 How this final year project benefits society}{chapter.6}% 68
+\BOOKMARK [1][]{section.6.3}{6.3 What the student learned}{chapter.6}% 69
+\BOOKMARK [1][]{section.6.4}{6.4 Future improvements}{chapter.6}% 70
+\BOOKMARK [1][]{section.6.5}{6.5 Conclusion: Summary and conclusions}{chapter.6}% 71
+\BOOKMARK [0][]{chapter*.32}{References}{}% 72
+\BOOKMARK [0][]{appendix.A}{A Project plan}{}% 73
+\BOOKMARK [0][]{appendix.B}{B Outcome compliance}{}% 74
+\BOOKMARK [0][]{appendix.C}{C Overview of system}{}% 75
+\BOOKMARK [1][]{section.C.1}{C.1 System as a whole}{appendix.C}% 76
+\BOOKMARK [1][]{section.C.2}{C.2 Deriving the intended student entry}{appendix.C}% 77
+\BOOKMARK [2][]{subsection.C.2.1}{C.2.1 Student answer}{section.C.2}% 78
+\BOOKMARK [2][]{subsection.C.2.2}{C.2.2 Student number}{section.C.2}% 79
+\BOOKMARK [1][]{section.C.3}{C.3 Deriving the estimated digit}{appendix.C}% 80
+\BOOKMARK [0][]{appendix.D}{D Implementation/Algorithms}{}% 81
+\BOOKMARK [1][]{section.D.1}{D.1 Deep Convolutional Neural Network}{appendix.D}% 82
+\BOOKMARK [0][]{appendix.E}{E Validation and results}{}% 83

@@ -165,6 +165,8 @@ The final step in determining the students answers is to probabilistically deter
 
 \subsection{Overview}
 
+For this project a graphical approach is followed in representing the software developed. A graphical model in essence allows software to be represented as information (nodes or circles) and relationships (directed arrows). The directions of the arrows represents what information causes other information to be created, thus given a parent to offspring interpretation). An example of such a graph can again be seen in Figure \ref{fig:pgmDigit}. These graphs allows for intuitive reasoning about how the system should operate. For this project an observation is made in the form of an image which is used as evidence. The system is then tasked with predicting what the written entries are given this information. Due to the probabilistic nature of the system a probabilistic component is also needed in this graphical models. Thus a probabilistic graphical model (PGM) is used.
+
 A probabilistic graphical model (PGM) is a probabilistic graph containing random variables, where the graph expresses the conditional independence structure between these variables. The type of PGM used for this project is a Bayesian network. A Bayesian network models a set of random variables and their conditional dependencies via a directed acyclic graph (DAG). As seen in Figure \ref{fig:pgmDigit}, arrows are used to indicate which variables are conditionally dependent on others. 
 
 \subsection{Intended digit model}

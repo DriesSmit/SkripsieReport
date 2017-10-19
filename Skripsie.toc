@@ -11,8 +11,6 @@
 \contentsline {section}{\numberline {1.4}Project objectives}{4}{section.1.4}
 \contentsline {section}{\numberline {1.5}Research methodology}{4}{section.1.5}
 \contentsline {section}{\numberline {1.6}Graphical overview of system}{5}{section.1.6}
-\contentsline {subsection}{\numberline {1.6.1}System overview}{5}{subsection.1.6.1}
-\contentsline {subsection}{\numberline {1.6.2}Graphical representation}{5}{subsection.1.6.2}
 \contentsline {chapter}{\numberline {2}Literature Study}{7}{chapter.2}
 \contentsline {section}{\numberline {2.1}Existing systems}{7}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Standard OMR techniques}{7}{subsection.2.1.1}
