@@ -6,42 +6,58 @@
     %\graphicspath{{Chapter2/Chapter2Figures/}}
 %\fi
 
-In the previous chapter the problem statement and objectives of this project was laid out. Further a brief system overview was also provided.
-This chapter will provide information about already existing systems and the techniques they use in doing image processing and character recognition on images. Additionally, research on existing libraries, to aid in this project, will also be done.
+In the previous chapter the problem statement and objectives of this project was laid out. Further a brief system overview is also provided.
+This chapter will provide information about already existing Optical Mark Recognition(OMR) systems and the techniques they use in doing image processing on images. Research on additional machine learning approaches used in character recognition and probabilistic modelling is also described.
 
-\section{Existing systems}
-A Optical Mark Recognition(OMR) system is a piece of software that is used to extracted hand written information from a filled in form. Each system normally has a specific template that it can extract information from. An template for one of these forms can be seen in Figure \ref{fig:omrTemplate}. These systems are generally used when fast and accurate grading of tests are needed. The biggest drawback of these systems are that information can only be portrayed in a very limited manner. On OMR templates there are a bubbles that allows a user to chose between different options to answer. OCR systems are thus excellent for the grading multiple choice type questions.At the moment most of these systems only grade colour-in bubbles and do not interpret characters on the page.
+\section{Existing OMR techniques}
+A OMR system is a piece of software that is used to extracted hand written information from a filled in form. Each system normally has a specific template that it can extract information from. An example template is shown in Figure \ref{fig:omrTemplate}. These systems are generally used when fast and accurate grading of tests are needed. The biggest drawback of these systems are that information can only be portrayed in a very limited manner, due to the bubbles. On OMR templates there are a grid of bubbles that allows a user to cohose between different options to answer. OMR systems are thus excellent for the grading multiple choice type questions. 
 
-\subsection{Standard OMR techniques}
+\subsection{Standard OMR systems}
 \label{sec:StandardTech}
-As can be seen in Figure \ref{fig:omrTemplate}, there is normally specific reference blocks on a OMR template. These blocks are included to allow the computer vision and image processing algorithms find the orientation of the image more easily.
+
+As can be seen in Figure \ref{fig:omrTemplate}, there is normally specific reference blocks on a OMR template. These blocks are included to allow the computer vision and image processing algorithms find the orientation of the image more easily. Other templates include lines that can be used to locate the template.
 
 \begin{figure}
   \centering
   \includegraphics[width=10cm]{omrTemplate}\\
-  \caption{Standard OMR template, from \citet{stdTemplate}}%, 
+  \caption{Standard OMR template with refernce blocks on the left, from \citet{stdTemplate}}
   \label{fig:omrTemplate}
 \end{figure}
 
-In an OMR system there are normally two phases to marking an test, as stated in \citet{DraganI2003}. The first step is to determine the region within where the answers are located in the image. In this process the system finds the orientation of the template in the image and thus can approximate the location of the bubbles. Normally some preprocessing on a blank template is done beforehand too aid in locating the bubbles. Once the bubbles are found their locations gets stored and processed. The final step is then to calculate the average pixel concentration in the bubbles and estimate whether they have been filled in.
+In an OMR system there are normally two phases in the grading of an test, as stated in \citet{DraganI2003}. The first step is to determine the grid within where the answers are located in the image. In this process the system finds the orientation of the template in the image and thus can approximate the location of the use of colour in bubbles. Normally some preprocessing on a blank template is done beforehand too aid in locating the bubbles. Once the bubbles are found their estimated locations gets stored. The second step is then to estimate the value each bubble and use these values as the estimated answers. These steps is described in more detail next.
 
-\section{Additional techniques}
-\nomenclature[A]{$OCR$}{Optical character recognition}
-The above method allows for grading of tests using a simple OMR system. For the test grader used for the Applied Mathematics tests, there is a need to go beyond such a basic system.  In standard OCR, when a student makes a mistake, he/she needs to erase the existing answer and write a new answer in. This can be time consuming for a template with 8 bubble row choices per answer. This also increases the probability that the student will make a mistake in the process. Addressing this problem it is determined that two additional options need to be made available. Firstly the student is allowed to cross out answers instead of totally erasing them. An example of this can be seen in Figure \ref{fig:Cross}. Then secondly the system needs to be accurate enough to determine the student's student number only by filling in the character blocks above the bubbles. This requirement is addressed by using a PGM in Section \ref{sec:pgmStudentNum}. Using optical character recognition (OCR), the bubble information and character information can thus be cross-referenced in an intelligence way, as seen in Section \ref{sec:PGM}.
+\subsection{Finding the template}
+
+The first process performed by OMR software is to locate a template grid inside the test image. This step is necessary for the software to know which bubble corresponds with each answer. One method of locating the template is looking for lines in the template. This border normally contains long lines that can be extracted using a Hough transform, as stated in \citet{MVGI2015}. A Hough transform is used to locate instances of an imperfect object within a certain shape range. A specific form of a Hough transform can be implemented to detect lines. This form is called a Radon transform, as described in \citet{MathWorks}. A Radon transform provides a way of representing a image as a summation of different line integrations, as is discussed in Section \ref{sec:RadonTransform}. 
+
+Once a atleast two line references on a page has been found the template orientation can be determined. Those two lines are then used to find two reference points on a page. These points allows the system to estimate the locations of every bubble on the template sheet. In the next section a method to process these bubble is described.
+
+\subsection{Processing a bubble}
+
+Now that an estimated location for each bubble is known, the next step for an OMR system is to process these bubbles. As stated in \citet{MVGI2015}, a basic image processing method to classify bubbles is to simple count up the number of coloured in pixels. If this value is above a threshold value the bubble is classified as filled in, otherwise not. To detect if a bubble is crossed out an additional algorithm is needed.
+
+To determine if an answer in a bubble is truly coloured in and not just crossed out, contour detection is used. This means that the contour around the bubble needs to be detected and used in analysis. In python(or C) this can be implemented using the freely available OpenCV library, as described in \citet{AdrianR2016}. OpenCV is an image processing library that has highly optimized techniques to find contours in a given image. An example of this can be seen in Figure \ref{fig:Cross}. Once the contour information is known the bubbles can be assessed by the pixels inside it, as well as its shape. Thus by looking at the shape of a contour it can be determined if a bubble is crossed out or not.(Verander die image na een wat 'n contour om het)
+
 
 \begin{figure}
   \centering
   \includegraphics[width=5cm]{Cross}\\
-  \caption{Corrected answer by crossing out bubbles.}
+  \caption{Contours found around corrected answer.}
   \label{fig:Cross}
 \end{figure}
 
-\subsection{Contour detection}
-To determine if an answer in a bubble is truly coloured in and not just crossed out, contour detection is needed. This means that the contour around the bubble needs to be detected and used in analysis. In python this can be implemented using the freely available OpenCV library, as referenced in \citet{AdrianR2016}. OpenCV is an image processing library has has highly optimized techniques to find contours in a given image. Given this new contour information the bubbles is can now be assessed by the pixels inside it, as well as its shape. (Verander die image dalk na een wat 'n contour om het)
 
-\subsection{Character recognition}
-To further increase the accuracy of the system, Optical Character Recognition (OCR) software will also be need and applied on the characters blocks, present on the templates. Research shows that one preferred way of doing OCR is using TensorFlow. This method is described in \citet{Tensor}. TensorFlow is also a python library, but allows the build of instructions to be implemented in ef{f}icient c++ code. For this test grader, TensorFlow is used to construct a convolutional neural network. This network will read an image, containing the digit, and predict the probability of each digit.
+\section{Optical character recognition}
+
+\nomenclature[A]{$OCR$}{Optical character recognition}
+\nomenclature[A]{$DCNN$}{Deep convolutional neural network}
+To further increase the accuracy of the system, Optical Character Recognition (OCR) software will also be need and applied on the characters blocks, present on the templates. It is found that one preferred way of doing OCR is using TensorFlow. This method is described in \citet{Tensor}. TensorFlow is a python library, but allows the build of instructions to be implemented in ef{f}icient c++ code. For this test grader, TensorFlow is used to construct a deep convolutional neural network(DCNN). DCNNs are powerful machine learning techniques generally used to process images. One effective application of DCNN are that they are excellent at processing an image with a digit in and estimating that digit.
+
+\subsection{Probabilistic approach}
+
+A last piece of information that needs to be investigate is how the bubble and character evidence can be brought together in a effective way to produced the best estimate of the intended student entries. Once an bubble and character is analysed an probabilistic value is assigned to it. Each bubble has a probability of being filled in, while each character has a probability of representing each of 10 digits. To predict a final answer a probabilistic model is needed. In \citet{pgmPy}, a machine learning approach is used to infer a probability of random variables being in a certain state given evidence. This method is known as a Probabilistic Graphical Model(PGM). A PGM is a probabilistic framework that consist of a graph that specifies the probabilistic relationship between a number of random variables. These type of models works well in some aspects of the medical field. If a patient has certain symptoms a PGM can be used to predict what the underlining illness behind the decease is. In this project a PGM can be used to estimate the underling student entries given the evidence presented. The library used in \citet{pgmPy} is called pgmPy. This library allows for a PGM to be constructed in python. 
 
 \section{Conclusion: System requirements}
 
-In conclusion it can be seen that the system will need to incorporate a combination of image processing(OMR) on the bubbles and character recognition on the digits, handwritten by the students. When these dif{f}erent evidience is the considered in combination, a more accurate student answer can be estimated. This will also allow for more convenience for students writing these test, hoekom?. Kyk na oom Johan se raad. Die litriture study moet oor huidige metodes gaan en hul resultate.
+In conclusion it is seen that a combination of image processing and machine learning techniques is needed to successfully grade a student test paper. A good method in locating a template is using a Radon transform to find reference lines in an image. Once this is done the bubbles can be estimate in the image. Too classified digits it is found that a DCNN can be implemented in the TensorFlow library space. Once all these evidence are acquired a Probabilistic Graphical Model was found to be a perfected method in predicting the estimated entry answer of the student.
+In Chapter \ref{ch:ImageProcessing} a more detailed overview on the image processing techniques used in this project is given.

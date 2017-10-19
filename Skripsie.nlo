@@ -1,7 +1,8 @@
 \nomenclatureentry{A$OMR$@[{$OMR$}]\begingroup Optical mark recognition\nomeqref {0}|nompageref}{iii}
 \nomenclatureentry{pgmAcronym$PGM$@[{$PGM$}]\begingroup Probabilistic graphical model\nomeqref {0}|nompageref}{iii}
 \nomenclatureentry{A$ANN$@[{$ANN$}]\begingroup Artificial neural network\nomeqref {0}|nompageref}{iii}
-\nomenclatureentry{A$OCR$@[{$OCR$}]\begingroup Optical character recognition\nomeqref {2.0}|nompageref}{8}
-\nomenclatureentry{A$DCNN$@[{$DCNN$}]\begingroup Deep convolutional neural network\nomeqref {4.0}|nompageref}{19}
-\nomenclatureentry{S$x_{i}$@[{$x_{i}$}]\begingroup Input value at index i.\nomeqref {4.1}|nompageref}{25}
-\nomenclatureentry{S$w_{i}$@[{$w_{i}$}]\begingroup Weight value at index i.\nomeqref {4.1}|nompageref}{25}
+\nomenclatureentry{A$OCR$@[{$OCR$}]\begingroup Optical character recognition\nomeqref {2.0}|nompageref}{10}
+\nomenclatureentry{A$DCNN$@[{$DCNN$}]\begingroup Deep convolutional neural network\nomeqref {2.0}|nompageref}{10}
+\nomenclatureentry{A$DCNN$@[{$DCNN$}]\begingroup Deep convolutional neural network\nomeqref {4.0}|nompageref}{20}
+\nomenclatureentry{S$x_{i}$@[{$x_{i}$}]\begingroup Input value at index i.\nomeqref {4.1}|nompageref}{26}
+\nomenclatureentry{S$w_{i}$@[{$w_{i}$}]\begingroup Weight value at index i.\nomeqref {4.1}|nompageref}{26}
