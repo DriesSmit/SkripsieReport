@@ -38,41 +38,42 @@
 \contentsline {subsubsection}{\numberline {4.1.2.5}Training of the neural network}{26}{subsubsection.4.1.2.5}
 \contentsline {section}{\numberline {4.2}Probabilistic Graphical Models}{27}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Overview of the system}{27}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Estimating the intended answer}{27}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Estimating the student number}{30}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Training of a Probabilistic Graphical Model}{31}{subsection.4.2.4}
-\contentsline {section}{\numberline {4.3}Conclusion}{31}{section.4.3}
-\contentsline {chapter}{\numberline {5}Analysis of results}{33}{chapter.5}
-\contentsline {section}{\numberline {5.1}Results of 25 test cases}{34}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Basic system}{34}{subsection.5.1.1}
-\contentsline {subsubsection}{\numberline {5.1.1.1}Marking statistics}{34}{subsubsection.5.1.1.1}
-\contentsline {subsubsection}{\numberline {5.1.1.2}Clashlist}{35}{subsubsection.5.1.1.2}
-\contentsline {subsubsection}{\numberline {5.1.1.3}Incorrect automatic graded results}{35}{subsubsection.5.1.1.3}
-\contentsline {subsection}{\numberline {5.1.2}Complete system}{36}{subsection.5.1.2}
-\contentsline {subsubsection}{\numberline {5.1.2.1}Marking statistics}{36}{subsubsection.5.1.2.1}
-\contentsline {subsubsection}{\numberline {5.1.2.2}Clashlist}{36}{subsubsection.5.1.2.2}
-\contentsline {subsubsection}{\numberline {5.1.2.3}Incorrect automatic graded results}{36}{subsubsection.5.1.2.3}
-\contentsline {subsection}{\numberline {5.1.3}Analysis or results}{37}{subsection.5.1.3}
-\contentsline {section}{\numberline {5.2}Grading of tutorial tests}{38}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Marking statistics}{38}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Clashlist}{38}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Incorrect automatic graded results}{38}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Analysis or results}{38}{subsection.5.2.4}
-\contentsline {chapter}{\numberline {6}Summary and conclusions}{41}{chapter.6}
-\contentsline {section}{\numberline {6.1}Project summary}{41}{section.6.1}
-\contentsline {section}{\numberline {6.2}How this final year project benefits society}{41}{section.6.2}
-\contentsline {section}{\numberline {6.3}What the student learned}{41}{section.6.3}
-\contentsline {section}{\numberline {6.4}Future improvements}{42}{section.6.4}
-\contentsline {section}{\numberline {6.5}Conclusion: Summary and conclusions}{42}{section.6.5}
-\contentsline {chapter}{References}{43}{chapter*.30}
-\contentsline {chapter}{\numberline {A}Project plan}{44}{appendix.A}
-\contentsline {chapter}{\numberline {B}Outcome compliance}{46}{appendix.B}
-\contentsline {chapter}{\numberline {C}Overview of system}{47}{appendix.C}
-\contentsline {section}{\numberline {C.1}System as a whole}{47}{section.C.1}
-\contentsline {section}{\numberline {C.2}Deriving the intended student entry}{48}{section.C.2}
-\contentsline {subsection}{\numberline {C.2.1}Student answer}{48}{subsection.C.2.1}
-\contentsline {subsection}{\numberline {C.2.2}Student number}{49}{subsection.C.2.2}
-\contentsline {section}{\numberline {C.3}Deriving the estimated digit}{51}{section.C.3}
-\contentsline {chapter}{\numberline {D}Implementation/Algorithms}{53}{appendix.D}
-\contentsline {chapter}{\numberline {E}Validation and results}{54}{appendix.E}
-\contentsline {section}{\numberline {E.1}Deep Convolutional Neural Network test results}{54}{section.E.1}
+\contentsline {subsection}{\numberline {4.2.2}Estimating the intended digit}{27}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Estimating the student answer}{28}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Estimating the student number}{29}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Training of a Probabilistic Graphical Model}{30}{subsection.4.2.5}
+\contentsline {section}{\numberline {4.3}Conclusion}{30}{section.4.3}
+\contentsline {chapter}{\numberline {5}Analysis of results}{31}{chapter.5}
+\contentsline {section}{\numberline {5.1}Results of 25 test cases}{32}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Basic system}{32}{subsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.1.1}Marking statistics}{32}{subsubsection.5.1.1.1}
+\contentsline {subsubsection}{\numberline {5.1.1.2}Clashlist}{33}{subsubsection.5.1.1.2}
+\contentsline {subsubsection}{\numberline {5.1.1.3}Incorrect automatic graded results}{33}{subsubsection.5.1.1.3}
+\contentsline {subsection}{\numberline {5.1.2}Complete system}{34}{subsection.5.1.2}
+\contentsline {subsubsection}{\numberline {5.1.2.1}Marking statistics}{34}{subsubsection.5.1.2.1}
+\contentsline {subsubsection}{\numberline {5.1.2.2}Clashlist}{34}{subsubsection.5.1.2.2}
+\contentsline {subsubsection}{\numberline {5.1.2.3}Incorrect automatic graded results}{34}{subsubsection.5.1.2.3}
+\contentsline {subsection}{\numberline {5.1.3}Analysis or results}{35}{subsection.5.1.3}
+\contentsline {section}{\numberline {5.2}Grading of tutorial tests}{36}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Marking statistics}{36}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Clashlist}{36}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Incorrect automatic graded results}{36}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Analysis or results}{36}{subsection.5.2.4}
+\contentsline {chapter}{\numberline {6}Summary and conclusions}{39}{chapter.6}
+\contentsline {section}{\numberline {6.1}Project summary}{39}{section.6.1}
+\contentsline {section}{\numberline {6.2}How this final year project benefits society}{39}{section.6.2}
+\contentsline {section}{\numberline {6.3}What the student learned}{39}{section.6.3}
+\contentsline {section}{\numberline {6.4}Future improvements}{40}{section.6.4}
+\contentsline {section}{\numberline {6.5}Conclusion: Summary and conclusions}{40}{section.6.5}
+\contentsline {chapter}{References}{41}{chapter*.29}
+\contentsline {chapter}{\numberline {A}Project plan}{42}{appendix.A}
+\contentsline {chapter}{\numberline {B}Outcome compliance}{44}{appendix.B}
+\contentsline {chapter}{\numberline {C}Overview of system}{45}{appendix.C}
+\contentsline {section}{\numberline {C.1}System as a whole}{45}{section.C.1}
+\contentsline {section}{\numberline {C.2}Deriving the intended student entry}{46}{section.C.2}
+\contentsline {subsection}{\numberline {C.2.1}Student answer}{46}{subsection.C.2.1}
+\contentsline {subsection}{\numberline {C.2.2}Student number}{47}{subsection.C.2.2}
+\contentsline {section}{\numberline {C.3}Deriving the estimated digit}{49}{section.C.3}
+\contentsline {chapter}{\numberline {D}Implementation/Algorithms}{51}{appendix.D}
+\contentsline {chapter}{\numberline {E}Validation and results}{52}{appendix.E}
+\contentsline {section}{\numberline {E.1}Deep Convolutional Neural Network test results}{52}{section.E.1}

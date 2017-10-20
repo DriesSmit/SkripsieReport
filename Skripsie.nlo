@@ -13,3 +13,6 @@
 \nomenclatureentry{S$z$@[{$z$}]\begingroup Weighted some of a neuron's inputs and internal variables.\nomeqref {4.0}|nompageref}{24}
 \nomenclatureentry{S$c$@[{$c$}]\begingroup Number of inputs to a neuron.\nomeqref {4.0}|nompageref}{24}
 \nomenclatureentry{S$\sigma(z)$@[{$\sigma(z)$}]\begingroup Normalization function in a neural network.\nomeqref {4.1}|nompageref}{25}
+\nomenclatureentry{S$p(i)$@[{$p(i)$}]\begingroup Probability of digit at index $i$.\nomeqref {4.2}|nompageref}{25}
+\nomenclatureentry{S$S$@[{$S$}]\begingroup Random variable describing intended student number.\nomeqref {4.3}|nompageref}{30}
+\nomenclatureentry{S$DI$@[{$DI$}]\begingroup Random variables describing all the intended digits.\nomeqref {4.3}|nompageref}{30}
