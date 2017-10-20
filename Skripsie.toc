@@ -68,12 +68,12 @@
 \contentsline {chapter}{References}{41}{chapter*.29}
 \contentsline {chapter}{\numberline {A}Project plan}{42}{appendix.A}
 \contentsline {chapter}{\numberline {B}Outcome compliance}{44}{appendix.B}
-\contentsline {chapter}{\numberline {C}Overview of system}{45}{appendix.C}
-\contentsline {section}{\numberline {C.1}System as a whole}{45}{section.C.1}
-\contentsline {section}{\numberline {C.2}Deriving the intended student entry}{46}{section.C.2}
-\contentsline {subsection}{\numberline {C.2.1}Student answer}{46}{subsection.C.2.1}
-\contentsline {subsection}{\numberline {C.2.2}Student number}{47}{subsection.C.2.2}
-\contentsline {section}{\numberline {C.3}Deriving the estimated digit}{49}{section.C.3}
-\contentsline {chapter}{\numberline {D}Implementation/Algorithms}{51}{appendix.D}
-\contentsline {chapter}{\numberline {E}Validation and results}{52}{appendix.E}
-\contentsline {section}{\numberline {E.1}Deep Convolutional Neural Network test results}{52}{section.E.1}
+\contentsline {chapter}{\numberline {C}Overview of system}{47}{appendix.C}
+\contentsline {section}{\numberline {C.1}System as a whole}{47}{section.C.1}
+\contentsline {section}{\numberline {C.2}Deriving the intended student entry}{48}{section.C.2}
+\contentsline {subsection}{\numberline {C.2.1}Student answer}{48}{subsection.C.2.1}
+\contentsline {subsection}{\numberline {C.2.2}Student number}{49}{subsection.C.2.2}
+\contentsline {section}{\numberline {C.3}Deriving the estimated digit}{51}{section.C.3}
+\contentsline {chapter}{\numberline {D}Implementation/Algorithms}{53}{appendix.D}
+\contentsline {chapter}{\numberline {E}Validation and results}{54}{appendix.E}
+\contentsline {section}{\numberline {E.1}Deep Convolutional Neural Network test results}{54}{section.E.1}
