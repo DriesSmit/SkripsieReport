@@ -26,8 +26,6 @@
 		\nompageref{24}
   \item [{$c$}]\begingroup Number of inputs to a neuron.\nomeqref {4.0}
 		\nompageref{24}
-  \item [{$DI$}]\begingroup Random variables describing all the intended digits.\nomeqref {4.3}
-		\nompageref{30}
   \item [{$f(x, y)$}]\begingroup Two dimensional function that a Radon transform is applied over.\nomeqref {3.0}
 		\nompageref{13}
   \item [{$G(r,\theta$}]\begingroup Radon transform defined over r and $\theta$\nomeqref {3.0}
@@ -36,8 +34,6 @@
 		\nompageref{16}
   \item [{$p(i)$}]\begingroup Probability of digit at index $i$.\nomeqref {4.2}
 		\nompageref{25}
-  \item [{$S$}]\begingroup Random variable describing intended student number.\nomeqref {4.3}
-		\nompageref{30}
   \item [{$w_{i}$}]\begingroup Weight value at index i.\nomeqref {4.0}
 		\nompageref{24}
   \item [{$x_{i}$}]\begingroup Input value at index i.\nomeqref {4.0}
