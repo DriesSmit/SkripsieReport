@@ -80,13 +80,13 @@
 \contentsline {chapter}{\numberline {E}Validation and results}{65}{appendix.E}
 \contentsline {section}{\numberline {E.1}All tutorial results}{65}{section.E.1}
 \contentsline {subsection}{\numberline {E.1.1}Overview}{65}{subsection.E.1.1}
-\contentsline {section}{\numberline {E.2}Deep Convolutional Neural Network test results}{67}{section.E.2}
-\contentsline {section}{\numberline {E.3}Trained on generated database}{68}{section.E.3}
-\contentsline {subsection}{\numberline {E.3.1}Accuracy of network}{68}{subsection.E.3.1}
-\contentsline {subsection}{\numberline {E.3.2}Conclusion on accuracy}{68}{subsection.E.3.2}
-\contentsline {section}{\numberline {E.4}Trained on MNIST database}{68}{section.E.4}
-\contentsline {subsection}{\numberline {E.4.1}Accuracy of network}{68}{subsection.E.4.1}
-\contentsline {subsection}{\numberline {E.4.2}Conclusion on accuracy}{68}{subsection.E.4.2}
-\contentsline {section}{\numberline {E.5}Trained on mixed database}{68}{section.E.5}
-\contentsline {subsection}{\numberline {E.5.1}Accuracy of network}{68}{subsection.E.5.1}
-\contentsline {subsection}{\numberline {E.5.2}Conclusion on accuracy}{68}{subsection.E.5.2}
+\contentsline {section}{\numberline {E.2}Deep Convolutional Neural Network results}{67}{section.E.2}
+\contentsline {subsection}{\numberline {E.2.1}Trained on generated database}{68}{subsection.E.2.1}
+\contentsline {subsubsection}{\numberline {E.2.1.1}Accuracy of network}{68}{subsubsection.E.2.1.1}
+\contentsline {subsubsection}{\numberline {E.2.1.2}Conclusion on accuracy}{68}{subsubsection.E.2.1.2}
+\contentsline {subsection}{\numberline {E.2.2}Trained on MNIST database}{68}{subsection.E.2.2}
+\contentsline {subsubsection}{\numberline {E.2.2.1}Accuracy of network}{68}{subsubsection.E.2.2.1}
+\contentsline {subsubsection}{\numberline {E.2.2.2}Conclusion on accuracy}{68}{subsubsection.E.2.2.2}
+\contentsline {subsection}{\numberline {E.2.3}Trained on mixed database}{69}{subsection.E.2.3}
+\contentsline {subsubsection}{\numberline {E.2.3.1}Accuracy of network}{69}{subsubsection.E.2.3.1}
+\contentsline {subsubsection}{\numberline {E.2.3.2}Conclusion on accuracy}{69}{subsubsection.E.2.3.2}

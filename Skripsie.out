@@ -79,13 +79,13 @@
 \BOOKMARK [0][]{appendix.E}{E Validation and results}{}% 79
 \BOOKMARK [1][]{section.E.1}{E.1 All tutorial results}{appendix.E}% 80
 \BOOKMARK [2][]{subsection.E.1.1}{E.1.1 Overview}{section.E.1}% 81
-\BOOKMARK [1][]{section.E.2}{E.2 Deep Convolutional Neural Network test results}{appendix.E}% 82
-\BOOKMARK [1][]{section.E.3}{E.3 Trained on generated database}{appendix.E}% 83
-\BOOKMARK [2][]{subsection.E.3.1}{E.3.1 Accuracy of network}{section.E.3}% 84
-\BOOKMARK [2][]{subsection.E.3.2}{E.3.2 Conclusion on accuracy}{section.E.3}% 85
-\BOOKMARK [1][]{section.E.4}{E.4 Trained on MNIST database}{appendix.E}% 86
-\BOOKMARK [2][]{subsection.E.4.1}{E.4.1 Accuracy of network}{section.E.4}% 87
-\BOOKMARK [2][]{subsection.E.4.2}{E.4.2 Conclusion on accuracy}{section.E.4}% 88
-\BOOKMARK [1][]{section.E.5}{E.5 Trained on mixed database}{appendix.E}% 89
-\BOOKMARK [2][]{subsection.E.5.1}{E.5.1 Accuracy of network}{section.E.5}% 90
-\BOOKMARK [2][]{subsection.E.5.2}{E.5.2 Conclusion on accuracy}{section.E.5}% 91
+\BOOKMARK [1][]{section.E.2}{E.2 Deep Convolutional Neural Network results}{appendix.E}% 82
+\BOOKMARK [2][]{subsection.E.2.1}{E.2.1 Trained on generated database}{section.E.2}% 83
+\BOOKMARK [3][]{subsubsection.E.2.1.1}{E.2.1.1 Accuracy of network}{subsection.E.2.1}% 84
+\BOOKMARK [3][]{subsubsection.E.2.1.2}{E.2.1.2 Conclusion on accuracy}{subsection.E.2.1}% 85
+\BOOKMARK [2][]{subsection.E.2.2}{E.2.2 Trained on MNIST database}{section.E.2}% 86
+\BOOKMARK [3][]{subsubsection.E.2.2.1}{E.2.2.1 Accuracy of network}{subsection.E.2.2}% 87
+\BOOKMARK [3][]{subsubsection.E.2.2.2}{E.2.2.2 Conclusion on accuracy}{subsection.E.2.2}% 88
+\BOOKMARK [2][]{subsection.E.2.3}{E.2.3 Trained on mixed database}{section.E.2}% 89
+\BOOKMARK [3][]{subsubsection.E.2.3.1}{E.2.3.1 Accuracy of network}{subsection.E.2.3}% 90
+\BOOKMARK [3][]{subsubsection.E.2.3.2}{E.2.3.2 Conclusion on accuracy}{subsection.E.2.3}% 91
