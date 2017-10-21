@@ -2,35 +2,35 @@
 \label{ap:results}
 \graphicspath{{Appendix5/Appendix5figures/}}
 
-This appendix described additional test results obtained from experiments done on the systems.
+This appendix described additional test results obtained from experiments done on the automatic test grading systems.
 
 \section{All tutorial results}
 \label{sec:tutorialResults}
 
 \subsection{Overview}
 
-This automatic test grader was sucesfully used to grade 11 tutorial test in 2017. In that 11 tutorial an approximately of 99.6\% of test was graded correctly, as no corrections were made by students. The ta
+This automatic test grader was successfully used to grade 11 tutorial test in 2017. The amount of tests per tutorial varies due to students having valid excuses. On average 889 tests were written per tutorial. The results of these tutorials can be seen in Table \ref{tbl:tutResults} and Table \ref{tbl:tutResults2}.
 
 \begin{table}
 \caption{Description of tutorial results.} \label{tbl:tutResults}
   \centering
-\begin{tabular}{|p{3cm}|p{3cm}|p{5cm}|}
+\begin{tabular}{|p{2cm}|p{4cm}|p{5cm}|}
 \hline
-\textbf{Tutorial number}&\textbf{Number of tests graded incorrectly}&\textbf{Reason for results}\\
+\textbf{Tutorial number}&\textbf{Percentage tests graded correctly}&\textbf{Reason for results}\\
 \hline
 \multicolumn{3}{|l|}{Basic system is now implemented.}\\
 \hline
-Tutorial 1&3&Hello assdafsadfsa dfsdfsdafdsf asdfsadfasdf sadfasdfa sdfsadfs adfasdfs dfasdfsdafsa dfsdf sadfasdf asdf asdfa dfasd fsad fsad fsa dfsdf.\\
+Tutorial 1&98.4\% (14 mistakes)&The system had problems with identifying crossed out answers.\\
 \hline
-Tutorial 2&3&Hello assdafsadfsa dfsdfsdafdsf asdfsadfasdf sadfasdfa sdfsadfs adfasdfs dfasdfsdafsa dfsdf sadfasdf asdf asdfa dfasd fsad fsad fsa dfsdf.\\
+Tutorial 2&98.8\% (11 mistakes)&The system still had a problem with crossed out answers.  This problem was subsequently resolved.\\
 \hline
-Tutorial 3&3&Hello assdafsadfsa dfsdfsdafdsf asdfsadfasdf sadfasdfa sdfsadfs adfasdfs dfasdfsdafsa dfsdf sadfasdf asdf asdfa dfasd fsad fsad fsa dfsdf.\\
+Tutorial 3&99.4\% (5 mistakes)&The system made a few mistakes with answers with only character information.\\
 \hline
-Tutorial 4&3&Hello assdafsadfsa dfsdfsdafdsf asdfsadfasdf sadfasdfa sdfsadfs adfasdfs dfasdfsdafsa dfsdf sadfasdf asdf asdfa dfasd fsad fsad fsa dfsdf.\\
+Tutorial 4&98.5\% (13 mistakes)&A rounding mistake in the software led to some answers being marked incorrectly.\\
 \hline
-Tutorial 5&3&Hello assdafsadfsa dfsdfsdafdsf asdfsadfasdf sadfasdfa sdfsadfs adfasdfs dfasdfsdafsa dfsdf sadfasdf asdf asdfa dfasd fsad fsad fsa dfsdf.\\
+Tutorial 5&99.3\% (5 mistakes)&The system made a few mistakes with answers with only character information.\\
 \hline
-Tutorial 6&3&Hello assdafsadfsa dfsdfsdafdsf asdfsadfasdf sadfasdfa sdfsadfs adfasdfs dfasdfsdafsa dfsdf sadfasdf asdf asdfa dfasd fsad fsad fsa dfsdf.\\
+Tutorial 6&99.7\% (3 mistakes)&The system made a few mistakes with answers with only character information.\\
 \hline
 \end{tabular} 
 \end{table}
@@ -38,26 +38,34 @@ Tutorial 6&3&Hello assdafsadfsa dfsdfsdafdsf asdfsadfasdf sadfasdfa sdfsadfs adf
 \begin{table}
 \caption{Description of tutorial results.} \label{tbl:tutResults2}
   \centering
-\begin{tabular}{|p{3cm}|p{3cm}|p{5cm}|}
+\begin{tabular}{|p{2cm}|p{4cm}|p{5cm}|}
+\hline
+\textbf{Tutorial number}&\textbf{Number of tests graded incorrectly}&\textbf{Reason for results}\\
 \hline
 \multicolumn{3}{|l|}{Compete system is now implemented.}\\
 \hline
-Tutorial 7&3&Hello assdafsadfsa dfsdfsdafdsf asdfsadfasdf sadfasdfa sdfsadfs adfasdfs dfasdfsdafsa dfsdf sadfasdf asdf asdfa dfasd fsad fsad fsa dfsdf.\\
+Tutorial 7&99.9\% (1 mistake)&The system classified a crossed out answer as being coloured in.\\
 \hline
-Tutorial 8&3&Hello assdafsadfsa dfsdfsdafdsf asdfsadfasdf sadfasdfa sdfsadfs adfasdfs dfasdfsdafsa dfsdf sadfasdf asdf asdfa dfasd fsad fsad fsa dfsdf.\\
+Tutorial 8&99.8\% (2 mistakes)&The system classified a crossed out answer as being coloured in. This problem was subsequently resolved.\\
 \hline
-Tutorial 9&3&Hello assdafsadfsa dfsdfsdafdsf asdfsadfasdf sadfasdfa sdfsadfs adfasdfs dfasdfsdafsa dfsdf sadfasdf asdf asdfa dfasd fsad fsad fsa dfsdf.\\
+Tutorial 9&100.0\% (0 mistakes)&No mistakes where found.\\
 \hline
-Tutorial 10&3&Hello assdafsadfsa dfsdfsdafdsf asdfsadfasdf sadfasdfa sdfsadfs adfasdfs dfasdfsdafsa dfsdf sadfasdf asdf asdfa dfasd fsad fsad fsa dfsdf.\\
+Tutorial 10&99.9\% (1 mistakes)&This tutorial was discussed in the results chapter. The student wrote over the negative sign bubble, confusing the system. This mistake is attributed to the student.\\
 \hline
-Tutorial 11&3&Hello assdafsadfsa dfsdfsdafdsf asdfsadfasdf sadfasdfa sdfsadfs adfasdfs dfasdfsdafsa dfsdf sadfasdf asdf asdfa dfasd fsad fsad fsa dfsdf.\\
+Tutorial 11&100.0\% (0 mistakes)&No mistakes where found.\\
 \hline
 \end{tabular}
 \end{table}
+
+It is possible that there are tests with mistakes that was not reported. To calculate the probability of this happening the 6th tutorial test was manually checked for mistakes. Non were found. Thus it is assumed that tests that have mistakes in, but is not reported are unlikely and is not interoperated into the calculations.
+
+In the 11 tutorials an average of 99.3\% of test is estimated to be graded correctly, as no corrections were made by students.  This result is seen to be brought down by the basic system having a lower accuracy rate. When only taking the complete grading system's result and average correctly grading tests is calculated to be 99.9\%.
+
+
 \section{Deep Convolutional Neural Network test results}
 \label{sec:DCNNresult}
 
-This section describes the results obtained on testing a trained neural network on a test dataset. Tests is conducted on 3 neural networks trained on different datasets and compared with each other. This testing proses is conducted to find the neural network weights that will classified had written digits the most accurately. The neural networks is tested on a test dataset generated by grading 900 student tests, while extracting the character images. The answers from these tests is used to create labels for each digit image. Thus each 28 by 28 pixel digit image has a accompanied label specifies what that digit is. The database contains 16 000 labelled images. An additional dataset, called the MNIST dataset was also used in this proses. This dataset contains 60 000 images 
+This section describes the results obtained on testing a trained neural network on a test dataset. Tests is conducted on 3 neural networks trained on different datasets and compared with each other. This testing proses is conducted to find the neural network weights that will classified had written digits the most accurately. The neural networks is tested on a test dataset generated by grading 900 student tests, while extracting the character images. The answers from these tests is used to create labels for each digit image. Thus each 28 by 28 pixel digit image has a accompanied label specifies what that digit is. The database contains 16 000 labelled images and was thus split into a training set of 11 000 digits and a test set of 5 000 digits. An additional dataset, called the MNIST dataset, \citep{mnist}, was also used in this proses. This dataset contains 60 000 images 
 \section{Trained on generated database}
 For a first attempt at training the neural network 10 000 of the generated database is used. The remaining 6000 digits is then used to test the accuracy of the network.
 
@@ -79,16 +87,6 @@ For a first attempt at training the neural network 10 000 of the generated datab
 \subsection{Accuracy of network}
 
 \subsection{Conclusion on accuracy}
-
-
-
-
-
-
-
-
-
-
 
 Attempt 2:
 

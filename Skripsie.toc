@@ -73,17 +73,20 @@
 \contentsline {section}{\numberline {C.2}Student answer}{49}{section.C.2}
 \contentsline {section}{\numberline {C.3}The intended digit}{51}{section.C.3}
 \contentsline {section}{\numberline {C.4}Student number}{53}{section.C.4}
-\contentsline {chapter}{\numberline {D}Implementation/Algorithms}{56}{appendix.D}
-\contentsline {chapter}{\numberline {E}Validation and results}{57}{appendix.E}
-\contentsline {section}{\numberline {E.1}All tutorial results}{57}{section.E.1}
-\contentsline {subsection}{\numberline {E.1.1}Overview}{57}{subsection.E.1.1}
-\contentsline {section}{\numberline {E.2}Deep Convolutional Neural Network test results}{60}{section.E.2}
-\contentsline {section}{\numberline {E.3}Trained on generated database}{60}{section.E.3}
-\contentsline {subsection}{\numberline {E.3.1}Accuracy of network}{60}{subsection.E.3.1}
-\contentsline {subsection}{\numberline {E.3.2}Conclusion on accuracy}{60}{subsection.E.3.2}
-\contentsline {section}{\numberline {E.4}Trained on MNIST database}{60}{section.E.4}
-\contentsline {subsection}{\numberline {E.4.1}Accuracy of network}{60}{subsection.E.4.1}
-\contentsline {subsection}{\numberline {E.4.2}Conclusion on accuracy}{60}{subsection.E.4.2}
-\contentsline {section}{\numberline {E.5}Trained on mixed database}{60}{section.E.5}
-\contentsline {subsection}{\numberline {E.5.1}Accuracy of network}{61}{subsection.E.5.1}
-\contentsline {subsection}{\numberline {E.5.2}Conclusion on accuracy}{61}{subsection.E.5.2}
+\contentsline {chapter}{\numberline {D}Systems diagrams}{56}{appendix.D}
+\contentsline {section}{\numberline {D.1}Interface}{56}{section.D.1}
+\contentsline {section}{\numberline {D.2}Templates}{59}{section.D.2}
+\contentsline {section}{\numberline {D.3}DCNN TensorFlow setup}{63}{section.D.3}
+\contentsline {chapter}{\numberline {E}Validation and results}{65}{appendix.E}
+\contentsline {section}{\numberline {E.1}All tutorial results}{65}{section.E.1}
+\contentsline {subsection}{\numberline {E.1.1}Overview}{65}{subsection.E.1.1}
+\contentsline {section}{\numberline {E.2}Deep Convolutional Neural Network test results}{67}{section.E.2}
+\contentsline {section}{\numberline {E.3}Trained on generated database}{68}{section.E.3}
+\contentsline {subsection}{\numberline {E.3.1}Accuracy of network}{68}{subsection.E.3.1}
+\contentsline {subsection}{\numberline {E.3.2}Conclusion on accuracy}{68}{subsection.E.3.2}
+\contentsline {section}{\numberline {E.4}Trained on MNIST database}{68}{section.E.4}
+\contentsline {subsection}{\numberline {E.4.1}Accuracy of network}{68}{subsection.E.4.1}
+\contentsline {subsection}{\numberline {E.4.2}Conclusion on accuracy}{68}{subsection.E.4.2}
+\contentsline {section}{\numberline {E.5}Trained on mixed database}{68}{section.E.5}
+\contentsline {subsection}{\numberline {E.5.1}Accuracy of network}{68}{subsection.E.5.1}
+\contentsline {subsection}{\numberline {E.5.2}Conclusion on accuracy}{68}{subsection.E.5.2}

@@ -38,4 +38,10 @@
 \contentsline {figure}{\numberline {C.4}{\ignorespaces Graphical setup of determining intended digit.\relax }}{52}{figure.caption.36}
 \contentsline {figure}{\numberline {C.5}{\ignorespaces Graphical setup of determining student number.\relax }}{54}{figure.caption.37}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {D.1}{\ignorespaces Main interface of test grader.\relax }}{57}{figure.caption.38}
+\contentsline {figure}{\numberline {D.2}{\ignorespaces Clashlist interface of test grader.\relax }}{58}{figure.caption.39}
+\contentsline {figure}{\numberline {D.3}{\ignorespaces Original template focussed on numbered answered questions.\relax }}{60}{figure.caption.40}
+\contentsline {figure}{\numberline {D.4}{\ignorespaces Template allowing for numbered and multiple choice answers.\relax }}{61}{figure.caption.41}
+\contentsline {figure}{\numberline {D.5}{\ignorespaces Template focussed just on multiple choice type questions.\relax }}{62}{figure.caption.42}
+\contentsline {figure}{\numberline {D.6}{\ignorespaces DCNN structural setup diagram, from \citet {Tensor}\relax }}{64}{figure.caption.43}
 \addvspace {10\p@ }
