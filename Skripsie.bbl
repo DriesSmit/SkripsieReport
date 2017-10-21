@@ -1,4 +1,4 @@
-\begin{thebibliography}{11}
+\begin{thebibliography}{12}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Ankan \& Panda(2015)}]{pgmPy}
@@ -39,5 +39,9 @@
 
 \bibitem[{VijayaForm(2017)}]{stdTemplate}
 {\sc VijayaForm} (2017). Omr sheet.
+
+\bibitem[{Yann~LeCun \& Burges(1998)}]{mnist}
+{\sc Yann~LeCun, C.C. \& Burges, C.J.} (1998). The mnist database of
+  handwritten digits.
 
 \end{thebibliography}

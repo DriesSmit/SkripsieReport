@@ -1,9 +1,9 @@
 \select@language {english}
 \contentsline {chapter}{Abstract}{iii}{Doc-Start}
 \contentsline {chapter}{Uittreksel}{iv}{Doc-Start}
-\contentsline {chapter}{List of Figures}{ix}{chapter*.2}
-\contentsline {chapter}{List of Tables}{x}{chapter*.3}
-\contentsline {chapter}{Nomenclature}{xii}{chapter*.4}
+\contentsline {chapter}{List of Figures}{x}{chapter*.2}
+\contentsline {chapter}{List of Tables}{xi}{chapter*.3}
+\contentsline {chapter}{Nomenclature}{xiii}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Problem background}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Problem statement}{2}{section.1.2}
@@ -75,4 +75,15 @@
 \contentsline {section}{\numberline {C.4}Student number}{53}{section.C.4}
 \contentsline {chapter}{\numberline {D}Implementation/Algorithms}{56}{appendix.D}
 \contentsline {chapter}{\numberline {E}Validation and results}{57}{appendix.E}
-\contentsline {section}{\numberline {E.1}Deep Convolutional Neural Network test results}{57}{section.E.1}
+\contentsline {section}{\numberline {E.1}All tutorial results}{57}{section.E.1}
+\contentsline {subsection}{\numberline {E.1.1}Overview}{57}{subsection.E.1.1}
+\contentsline {section}{\numberline {E.2}Deep Convolutional Neural Network test results}{60}{section.E.2}
+\contentsline {section}{\numberline {E.3}Trained on generated database}{60}{section.E.3}
+\contentsline {subsection}{\numberline {E.3.1}Accuracy of network}{60}{subsection.E.3.1}
+\contentsline {subsection}{\numberline {E.3.2}Conclusion on accuracy}{60}{subsection.E.3.2}
+\contentsline {section}{\numberline {E.4}Trained on MNIST database}{60}{section.E.4}
+\contentsline {subsection}{\numberline {E.4.1}Accuracy of network}{60}{subsection.E.4.1}
+\contentsline {subsection}{\numberline {E.4.2}Conclusion on accuracy}{60}{subsection.E.4.2}
+\contentsline {section}{\numberline {E.5}Trained on mixed database}{60}{section.E.5}
+\contentsline {subsection}{\numberline {E.5.1}Accuracy of network}{61}{subsection.E.5.1}
+\contentsline {subsection}{\numberline {E.5.2}Conclusion on accuracy}{61}{subsection.E.5.2}
