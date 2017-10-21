@@ -42,7 +42,7 @@ It is important to note that there are still unwanted contours in the list, but 
 
 \subsection{Radon Transform}
 \label{sec:RadonTransform}
-\nomenclature[S]{$G(r,\theta$}{Radon transform defined over r and $\theta$}
+\nomenclature[S]{$G(r,\theta)$}{Radon transform defined over r and $\theta$}
 \nomenclature[S]{$f(x, y)$}{Two dimensional function that a Radon transform is applied over.}
 The Radon transform is an integral transform that can be represented by a series of line integrals over a function $f(x,y)$. These transforms are commonly used in CT scans. Mathematically this transform is defined as $$G(r,\theta) = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} f(x, y) \delta(x\cos(\theta) + y\sin(\theta) - r) dx dy.$$Where $r$ represents the perpendicular offset of the line and $\theta$ the angle of the line. $x$ and $y$ represents variables within a 2 mentionable space within which the function $f(x,y)$ is defined.  A visual interpretation of this transform can be seen in Figure \ref{fig:RadonT}.  
 

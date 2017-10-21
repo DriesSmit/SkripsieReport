@@ -1,12 +1,8 @@
 \chapter{Overview of system}
 \label{ap:systemOverview}
-\graphicspath{{Chapter1/Chapter1Figures/},{Chapter4/Chapter4Figures/}}
+\graphicspath{{Appendix3/Appendix3Figures/},{Chapter1/Chapter1Figures/},{Chapter4/Chapter4Figures/}}
 
-In this chapter a graphical and mathematical derivation of the entire system is given.
-
-%x  x
-%\forall
- A.b onder aan <-- vir sum over all deriviation sit die all teken onder aan die sumation
+In this appendix a graphical and mathematical derivation for the system is given. It is shown through mathematical derivation how the pgmPy software  predict the student entries given the distributions stated. It should be noted that the software exploits additional methods in calculating these values in a efficient manner.
 
 \section{System as a whole}
 
@@ -14,98 +10,171 @@ In this chapter a graphical and mathematical derivation of the entire system is 
   \centering
   \includegraphics[width=11cm]{systemOverview}\\
   \caption{System overview.}
-  \label{fig:systemOverview}
+  \label{fig:appOverview}
 \end{figure}
 
-As described in Chapter \ref{ch:Introduction}, the system can fundamentally be represented with 6 information nodes. These nodes are shown in Figure \ref{fig:systemOverview}. The student has certain information he/she wants to portray on the paper. This includes the 4 answers and student number the student wants to write down. Thus those 5 nodes gives rise to the image, representing the last node. Thus fundamentally the system is tasked with working out these 5 conditional probabilities: $P(StudentNumber/Image)$, $P(Answer1/Image)$, $P(Answer2/Image)$, $P(Answer3/Image)$ and $P(Answer4/Image)$. The random variables StudentNumber and Answer(1 to 3) thus represent all the possible values that the student number and answers possibly can be. The image is a random variable representing the total number of possible states the image can represent. This value is in the order of 1240*1754*256 possible states. To practically represent this further assumptions are made in the following sections. 
+As described in Chapter \ref{ch:Introduction}, the system can fundamentally be represented with 6 information nodes. These nodes are shown in Figure \ref{fig:appOverview}. The student has 5 pieces of information that he/she wants to portray, signifying the first 5 nodes. Those 5 nodes gives rise to the image, representing the last node. At its core the system is tasked with inferring the conditional probabilities $P(StudentNumber/Image)$, $P(Answer1/Image)$, $P(Answer2/Image)$, $P(Answer3/Image)$ and $P(Answer4/Image)$. The random variables StudentNumber and Answer(1 to 4) thus represent all the possible values that the student number and answers possibly can be. The image is also a random variable representing the total number of possible states the image can take. Each image has a width and length of 1240 by 1754 pixels. For every pixel there are 256 possible values, ranging from 0.0-1.0, it can take. Thus the number of possible images are in the range of $1240*1754*256$. To practically represent this more detailed derivations and assumptions is needed. These derivations are described in the next sections. 
  
-The aim of the software is to maximize the likelihood of those probability distributions indicating the correct answers.
-The reason the problem is represented in a probabilistic way is due to the fact that different images are going to be generated every time a test is written. This is true even when the same information is going to be portrayed. Everytime a student writes a test he/she is going to write in different ways. A probabilistic graphical model (PGM) is thus used to describe this system and its inner operations. For a more detailed explanation on PGM's, refer to Section \ref{sec:PGM}.  The blocks in Figure \ref{fig:systemOverview} represent additional processing that is described in the following sections.
+%The aim of the software is to maximize the likelihood of those probability distributions indicating the correct answers.
+%The reason the problem is represented in a probabilistic way is due to the fact that different images are going to be generated every time a test is written. This is true even when the same information is going to be portrayed. Everytime a student writes a test he/she is going to write in different ways. A probabilistic graphical model (PGM) is thus used to describe this system and its inner operations. For a more detailed explanation on PGM's, refer to Section \ref{sec:PGM}.  The blocks in Figure \ref{fig:systemOverview} represent additional processing that is described in the following sections.
 
-To calculate those 5 probabilities, some more detailed derivations are necessary. These derivations are described in the next section.
+\section{Student answer}
 
-\section{Deriving the intended student entry}
+In Section \ref{sec:studentAnswer} it was determined that the student answer can be calculated by combining the intended sign and digits of each column separately. This is attributed to the fact that these digits are independent of one another, as seen in Figure \ref{fig:appAns}. 
 
-\subsection{Student answer}
+\begin{figure}
+  \centering
+  \includegraphics[width=10cm]{appAns}\\
+  \caption{Graphical setup of determining student answer.}
+  \label{fig:appAns}
+\end{figure}
 
-In Section \ref{sec:pgmStudentNum} it was determined that the student answer can be calculated by combining the intended sign and digits of each column to form an answer. The reason for this could be attributed to the fact that these digits where independent of one another. This means that the intended digit in a certain column is not influenced by what the values in other columns are. In Equation \ref{eqn:ansIndep} this independence property can now be seen. To find the most probable answer only $P(sign/Image)$ and $P(digit(1-7)/Image)$ still needs to be calculated. Using the image processing techniques described in Section \ref{ch:ImageProcessing} the $P(sign/Image)$ can simply be determined heuristically by determining the probability of the bubble being coloured in, underneath the sign. Thus the only values yet to calculate is $P(digit/Image)$. This is described in Section \ref{sec:digit}.
+The intended digit in a certain column is not influenced by what the values in the other columns are. This independence property is thus described by
 
 \begin{align}
 % \nonumber to remove numbering (before each equation)
-  P(Answer/Image) =  P(sign/Image)*P(digit1/Image)*...*P(digit7/Image)
+  P(A/I) =  P(Si/I)*P(D_1/I)*...*P(D_7/I).
+\label{eqn:ansIndep}
+\end{align}
+\nomenclature[S]{$A$}{Random variable representing an answer for a specific question.}
+\nomenclature[S]{$I$}{Random variable representing the test image.}
+\nomenclature[S]{$Sn$}{Random variable representing the sign of a specific answer.}
+\nomenclature[S]{$D_i$}{Random variable representing a digit in column i for a answer or student number block.}
+Where $A$ represents an answer for a specific question. $I$ and $Si$ are random variables representing the image and sign of the answer.
+
+To find the most probable answer only $P(Sn/I)$ and $P(D_{1-7}/I)$ needs to be calculated. Using image processing techniques described in Section \ref{ch:ImageProcessing}, $P(Sn/Image)$ can simply be determined heuristically by determining the probability of the bubble being coloured in, underneath the sign. Thus the only values yet to calculate is $P(D_{1-7}/I)$. The probability is derived in the next section.
+
+\section{The intended digit}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=1cm]{column}\\
+  \caption{Column with the evidence that gets considered for the calculation of an intended digit.}
+  \label{fig:column}
+\end{figure}
+
+In determining an intended digit there is 11 information nodes to use as evidence. These nodes represents the 10 bubbles and character block, as shown in Figure \ref{fig:column}. Extra nodes are also added to symbolise the intended bubbles as described in Section \ref{sec:studentDigit}. The first bubble might sometimes incorrectly be associated with digit 0. Thus even if the student intended the digit 0 as an answer, the intended bubble of that student was actually the bubble for digit 1.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=16cm]{appDigit}\\
+  \caption{Graphical setup of determining intended digit.}
+  \label{fig:appDigit}
+\end{figure}
+\nomenclature[S]{$BE_i$}{Random variable representing a bubble evidence obtained form image processing at and arbitrary index $i$.}
+\nomenclature[S]{$CE_i$}{Random variable representing a character evidence obtained form image processing at and arbitrary index $i$.}
+
+The probability that has to be calculated for each column is describe by $P(D_i/I)$. This value represents the probability that each of the 10 digits is written down in column $i$ . We know that the digit evidence is calculated heuristically using image processing. Thus the estimate of the intended digit is now represented as $P(D_i/I,BE_i,CE_i)$. $BE_i$ and $CE_i$ signifies the random variables for all the bubble and digit evidence. As seen in Figure \ref{fig:appDigit}, $D_i$ and $I$ becomes independent from one another given the values of $BE_i$ and $CE_i$. Thus the probability of the intended digit is now given by $P(D_i/BE_i,CE_i)$.
+\nomenclature[S]{$BI_i$}{Random variable representing the bubbles the student to colour in for digit $i$.}
+$BE_i$ and $BI_i$ is further described by 
+\begin{align}
+% \nonumber to remove numbering (before each equation)
+  P(BE_i) =  P(BE_{i:0},BE_{i:1},...,BE_{i:9}),
+\label{eqn:ansIndep}
+\end{align}
+where  $P(BE_{i:j})$ represents the digit i at bubble j and
+\begin{align}
+% \nonumber to remove numbering (before each equation)
+  P(BI_i) =  P(BI_{i:0},BI_{i:1},...,BI_{i:9}),
 \label{eqn:ansIndep}
 \end{align}
 
-\begin{figure}
-  \centering
-  \includegraphics[width=10cm]{ans}\\
-  \caption{Graphical setup of determining student answer.}
-  \label{fig:ans}
-\end{figure}
+where  $P(BI_{i:j})$ represents the digit i at bubble j.
 
-\subsection{Student number}
-
-As state in Section \ref{sec:pgmStudentNum} the assumption of independence does not hold in the case of a student number. The reason for this is, because every 8 digit number is not equally likely to be a student number. Only student numbers that are valid will be considered as a possible state that the student number node can take on. This node will have $+- 900$ states, depending on the number of student numbers. The student number graph can be seen in Figure \ref{fig:stdNum}. Next a derivation for $P(studentNumber/Image)$ is needed. 
-
-In the below equations, 'Digits' represents the 8 digit random variables. The first step is to apply Bayes rule as seen in Equation \ref{eqn:bayesStd}.
-
+$P(D_i/BE_i,CE_i)$ can now be represented by
 \begin{align}
-  P(StudentNumber,Digits/Image) =  \frac{P(Image/StudentNumber,Digits)*P(StudentNumber,Digits)}{P(Image)}
-\label{eqn:bayesStd}
+% \nonumber to remove numbering (before each equation)
+  P(D_i/BE_i,CE_i)	=  \sum_{\forall BI_i}^{}  P(D_i,BI_i/BE_i,CE_i)\\
+  					=  \sum_{\forall BI_i}^{}  \frac{P(BE_i,CE_i/D_i,BI_i)P(D_i,BI_i)}{P(BE_i,CE_i)}.
+\label{eqn:ansEqn2}
 \end{align}
 
-When all the digits are known, the image becomes independent of the student number. This can be seen in Equation \ref{eqn:bayesStd}. Also the chain rule states that Equation \ref{eqn:chain} must be true.
-
+In Equation \ref{eqn:ansEqn2}, the indented bubble term is brought in by making use of the sum rule. Bayes' rule is then applied in line 2. In Figure \ref{fig:appDigit}, $BE_i$ and $CE_i$ is seen to be independent when $D_i$ and $BI_i$ is known. Further it is observed that $BE_i$ is only reliant on $BI_i$ and $CE_i$ on $D_i$. Thus by applying a additional product rule results in,
 \begin{align}
-  P(Image/StudentNumber,Digits) = P(Image/Digits)
-\label{eqn:digitInd}
+% \nonumber to remove numbering (before each equation)
+  P(D_i/BE_i,CE_i) =  \sum_{\forall BI_i}^{}\frac{P(BE_i/BI_i)P(BI_i/D_i)P(D_i)P(CE_i/D_i)}{P(BE_i,CE_i)}.
+\label{eqn:ansEqn2}
 \end{align}
 
+Bayes' rule also provides us with,
 \begin{align}
-  P(StudentNumber,Digit) = P(Digit/StudentNumber)*P(StudentNumber)
-\label{eqn:chain}
+% \nonumber to remove numbering (before each equation)
+  P(CE_i/D_i)	=  \frac{P(D_i/CE_i)PCE_i)}{P(D_i)}.
+\label{eqn:ansEqn2}
 \end{align}
 
-Next the Digit random variable is summed out to produce $P(studentNumber/Image)$, as seen in Equation \ref{eqn:sumRule}.
-
+Now by factoring out all the constant terms out of the summation one is left with,
 \begin{align}
-  P(StudentNumber/Image) = \sum_{D}^{All} \frac{P(Image/Digits)*P(Digit/StudentNumber)
-  *P(StudentNumber)}{P(Image)}
-\label{eqn:sumRule}
+% \nonumber to remove numbering (before each equation)
+  P(D_i/BE_i,CE_i) =  \frac{P(CE_i)}{P(BE_i,CE,i)}\sum_{\forall BI_i}^{}P(BE_i/BI_i)P(BI_i/D_i)P(D_i/CE_i).
+\label{eqn:ansEqn2}
 \end{align}
+The constant terms gets ignored in the pgmPy package due to them only being normalizing terms. Once the summation has been calculated the software simply normalizes the resulting values without needing those terms. Thus only $P(BE_i/BI_i)$, $P(BI_i/D_i)$ and $P(D_i/CE_i)$ are needed.
 
-Applying Bayes rule again the following equality can be presented, as seen in Equation \ref{eqn:bayesStd2}.
+$P(BE_i/BI_i)$ and  $P(BI_i/D_i)$ are both terms that are gathered after the pgm system has been trained. The final term that is needed is $P(D_i/CE_i)$. This term is efficiently represented through the use a the neural network. Thus the pgm system can successfully infer the digit prior probabilities with these 3 distributions specified.
 
-\begin{align}
-  P(StudentNumber/Image) = P(Image/Digits) = \frac{P(Digits/Image)*P(Image)}{P(Digits)}
-\label{eqn:bayesStd2}
-\end{align}
-
-Thus the result can be seen in Equation \ref{eqn:final}. $P(StudentNumber)$ can be taken out of the sum, due to it being independant of $Digits$.
-
-\begin{align}
-  P(StudentNumber/Image) = P(StudentNumber)*\sum_{D}^{All} \frac{P(Digits/Image)
-  *P(Digits/StudentNumber)}{P(Digits)}
-\label{eqn:final}
-\end{align}
-
-$P(StudentNumber)$ can be initialized as a equal distribution, because every student number is equal as likely to be in a given test. $P(Digits/StudentNumber)$ is a value that is trained from data. This value symbolizes the probability that the user intended to write down a given digit given that student's student number. This number is thus strongly correlated with the student number. If the first digit of the student number is 1, Digit1 will have a high probability of being 1. The only values that still needs to be calculated are thus $P(Digits/Image) = P(Digit1/Image)*...*$. This derivation is covered in the next section.
+\section{Student number}
+\nomenclature[S]{$DE$}{Random variables representing a digit evidence obtained form image processing.}
+\nomenclature[S]{$DI$}{Random variables all the digit intended by the student.}
+\nomenclature[S]{$S$}{Random variable representing the possible student number.}
+As state in Section \ref{sec:studentNumber}, the assumption of independence between digits does not hold in the case of a student number. The reason for this is, because every 8 digit number is not equally likely to be a student number. Only student numbers that are valid needs to be considered as a possible state that the student number node can take. This node will have $+- 900$ states, depending on the number of student numbers. The student number graph can be seen in Figure \ref{fig:stdNum}. Now a derivation for $P(S/I)$ is needed. $S$ represents the a random variable over all the possible student numbers. $I$ again represents the image. We know that the digit evidence is calculated heuristically using image processing. Thus the estimate of the student number is now represented as $P(S/I,DE)$. $DE$ now represents all the bubble and character evidence. As seen in Figure \ref{fig:stdNum}, $S$ and $I$ becomes independent from one another given the values of $DE$. Thus the probability of the intended digit is now given by $P(S/DE)$.
 
 \begin{figure}
   \centering
-  \includegraphics[width=10cm]{stdNum}\\
+  \includegraphics[width=3cm]{appStdNum}\\
   \caption{Graphical setup of determining student number.}
   \label{fig:stdNum}
 \end{figure}
 
-\section{Deriving the estimated digit}
-\label{sec:digit}
+$DE$ and $DI$ is further described by 
+\begin{align}
+% \nonumber to remove numbering (before each equation)
+  P(DE) =  P(BE_1,CE_1,BE_2,CE_2,...,BE_8,CE_8),
+\label{eqn:ansIndep}
+\end{align}
+
+\begin{align}
+% \nonumber to remove numbering (before each equation)
+  P(DI) =  P(D_1,D_2,...,D_8),
+\label{eqn:ansIndep2}
+\end{align}
+
+$P(S/DE)$ can now be represented by
+\begin{align}
+% \nonumber to remove numbering (before each equation)
+  P(S/DE)	=  \sum_{\forall DI}^{}  P(S,DI/DE)\\
+  					=  \sum_{\forall DI}^{}  \frac{P(BE/S,DI)P(S,DI)}{P(DE)}.
+\label{eqn:stdEqn2}
+\end{align}
+
+In Equation \ref{eqn:stdEqn2}, the digit intended term, $DI$, is brought in by making use of the sum rule. Bayes' rule is then applied in line 2.
+
+In Figure \ref{fig:stdNum}, $DE$ is seen to be independent from $S$ if $DI$ is known thus,
+
+\begin{align}
+% \nonumber to remove numbering (before each equation)
+  P(S/DE)	=  \sum_{\forall DI}^{}  \frac{P(BE/DI)P(DI/S)P(S)}{P(DE)}.
+\label{eqn:stdEqn3}
+\end{align}
+
+Finally from the digit and student number graph structure the following independence properties is also known,
 
 
 
-\begin{figure}
-  \centering
-  \includegraphics[width=16cm]{pgmDigit}\\
-  \caption{Graphical setup of determining intended digit.}
-  \label{fig:pgmDigit2}
-\end{figure}
+\begin{align}
+P(DE/ID) = P(BE_1/BI_1)P(CE/D_1)...P(BE_8/BI_8)P(CE/D_8)\\
+\label{eqn:stdEqn4}
+\end{align}
+
+
+$P(S)$ can be initialized as a equal distribution, because every student number is equal as likely to be in a given test. $P(DI/S)$ are values that are trained from data using the independency property, 
+\begin{align}
+P(DI/S) = P(D_1/S)...P(D_8/S).
+\label{eqn:stdEqn4}
+\end{align}
+This value symbolizes the probability that the user intended to write down a given digit given that student's student number. This number is thus strongly correlated with the student number. If the first digit of the student number is 1, digit 1 will have a high probability of being 1. The only values that still needs to be calculated are thus $P(DE/ID)$. Using the indepenency property of \begin{align}
+P(DE/ID) = P(BE_1/BI_1)P(CE/D_1)...P(BE_8/BI_8)P(CE/D_8),
+\label{eqn:stdEqn4}
+\end{align}
+
+the digit models' conditional distributions can be used. The two PGM models can now be fully defined and used infer the intended student entries.

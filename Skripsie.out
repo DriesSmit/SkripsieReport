@@ -69,10 +69,9 @@
 \BOOKMARK [0][]{appendix.B}{B Outcome compliance}{}% 69
 \BOOKMARK [0][]{appendix.C}{C Overview of system}{}% 70
 \BOOKMARK [1][]{section.C.1}{C.1 System as a whole}{appendix.C}% 71
-\BOOKMARK [1][]{section.C.2}{C.2 Deriving the intended student entry}{appendix.C}% 72
-\BOOKMARK [2][]{subsection.C.2.1}{C.2.1 Student answer}{section.C.2}% 73
-\BOOKMARK [2][]{subsection.C.2.2}{C.2.2 Student number}{section.C.2}% 74
-\BOOKMARK [1][]{section.C.3}{C.3 Deriving the estimated digit}{appendix.C}% 75
-\BOOKMARK [0][]{appendix.D}{D Implementation/Algorithms}{}% 76
-\BOOKMARK [0][]{appendix.E}{E Validation and results}{}% 77
-\BOOKMARK [1][]{section.E.1}{E.1 Deep Convolutional Neural Network test results}{appendix.E}% 78
+\BOOKMARK [1][]{section.C.2}{C.2 Student answer}{appendix.C}% 72
+\BOOKMARK [1][]{section.C.3}{C.3 The intended digit}{appendix.C}% 73
+\BOOKMARK [1][]{section.C.4}{C.4 Student number}{appendix.C}% 74
+\BOOKMARK [0][]{appendix.D}{D Implementation/Algorithms}{}% 75
+\BOOKMARK [0][]{appendix.E}{E Validation and results}{}% 76
+\BOOKMARK [1][]{section.E.1}{E.1 Deep Convolutional Neural Network test results}{appendix.E}% 77
