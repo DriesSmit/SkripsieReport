@@ -71,8 +71,8 @@
 \contentsline {chapter}{\numberline {C}Overview of system}{48}{appendix.C}
 \contentsline {section}{\numberline {C.1}System as a whole}{48}{section.C.1}
 \contentsline {section}{\numberline {C.2}Student answer}{49}{section.C.2}
-\contentsline {section}{\numberline {C.3}The intended digit}{50}{section.C.3}
-\contentsline {section}{\numberline {C.4}Student number}{52}{section.C.4}
-\contentsline {chapter}{\numberline {D}Implementation/Algorithms}{55}{appendix.D}
-\contentsline {chapter}{\numberline {E}Validation and results}{56}{appendix.E}
-\contentsline {section}{\numberline {E.1}Deep Convolutional Neural Network test results}{56}{section.E.1}
+\contentsline {section}{\numberline {C.3}The intended digit}{51}{section.C.3}
+\contentsline {section}{\numberline {C.4}Student number}{53}{section.C.4}
+\contentsline {chapter}{\numberline {D}Implementation/Algorithms}{56}{appendix.D}
+\contentsline {chapter}{\numberline {E}Validation and results}{57}{appendix.E}
+\contentsline {section}{\numberline {E.1}Deep Convolutional Neural Network test results}{57}{section.E.1}

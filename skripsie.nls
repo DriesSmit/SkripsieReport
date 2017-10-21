@@ -27,19 +27,19 @@
   \item [{$b$}]\begingroup Bias variable added to allow a neuron to have an offset in its output.\nomeqref {4.0}
 		\nompageref{24}
   \item [{$BE_i$}]\begingroup Random variable representing a bubble evidence obtained form image processing at and arbitrary index $i$.\nomeqref {C.1}
-		\nompageref{50}
+		\nompageref{51}
   \item [{$BI_i$}]\begingroup Random variable representing the bubbles the student to colour in for digit $i$.\nomeqref {C.1}
-		\nompageref{50}
+		\nompageref{51}
   \item [{$c$}]\begingroup Number of inputs to a neuron.\nomeqref {4.0}
 		\nompageref{24}
   \item [{$CE_i$}]\begingroup Random variable representing a character evidence obtained form image processing at and arbitrary index $i$.\nomeqref {C.1}
-		\nompageref{50}
+		\nompageref{51}
   \item [{$D_i$}]\begingroup Random variable representing a digit in column i for a answer or student number block.\nomeqref {C.1}
 		\nompageref{49}
   \item [{$DE$}]\begingroup Random variables representing a digit evidence obtained form image processing.\nomeqref {C.8}
-		\nompageref{52}
+		\nompageref{53}
   \item [{$DI$}]\begingroup Random variables all the digit intended by the student.\nomeqref {C.8}
-		\nompageref{52}
+		\nompageref{53}
   \item [{$f(x, y)$}]\begingroup Two dimensional function that a Radon transform is applied over.\nomeqref {3.0}
 		\nompageref{13}
   \item [{$G(r,\theta)$}]\begingroup Radon transform defined over r and $\theta$\nomeqref {3.0}
@@ -51,7 +51,7 @@
   \item [{$p(i)$}]\begingroup Probability of digit at index $i$.\nomeqref {4.2}
 		\nompageref{25}
   \item [{$S$}]\begingroup Random variable representing the possible student number.\nomeqref {C.8}
-		\nompageref{52}
+		\nompageref{53}
   \item [{$Sn$}]\begingroup Random variable representing the sign of a specific answer.\nomeqref {C.1}
 		\nompageref{49}
   \item [{$w_{i}$}]\begingroup Weight value at index i.\nomeqref {4.0}
