@@ -57,36 +57,36 @@
 \contentsline {section}{\numberline {5.2}Grading of tutorial tests}{35}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Marking statistics}{36}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}Clash list}{36}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Incorrect automatic graded results}{37}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Analysis or results}{37}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.3}Incorrect automatic graded results}{36}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Analysis or results}{38}{subsection.5.2.4}
 \contentsline {chapter}{\numberline {6}Summary and conclusions}{39}{chapter.6}
 \contentsline {section}{\numberline {6.1}Project summary}{39}{section.6.1}
 \contentsline {section}{\numberline {6.2}How this final year project benefits society}{39}{section.6.2}
-\contentsline {section}{\numberline {6.3}What the student learned}{39}{section.6.3}
+\contentsline {section}{\numberline {6.3}What the student learned}{40}{section.6.3}
 \contentsline {section}{\numberline {6.4}Future improvements}{40}{section.6.4}
-\contentsline {section}{\numberline {6.5}Conclusion: Summary and conclusions}{40}{section.6.5}
-\contentsline {chapter}{References}{42}{chapter*.30}
-\contentsline {chapter}{\numberline {A}Project plan}{43}{appendix.A}
-\contentsline {chapter}{\numberline {B}Outcome compliance}{45}{appendix.B}
-\contentsline {chapter}{\numberline {C}Overview of system}{48}{appendix.C}
-\contentsline {section}{\numberline {C.1}System as a whole}{48}{section.C.1}
-\contentsline {section}{\numberline {C.2}Student answer}{49}{section.C.2}
-\contentsline {section}{\numberline {C.3}The intended digit}{51}{section.C.3}
-\contentsline {section}{\numberline {C.4}Student number}{53}{section.C.4}
-\contentsline {chapter}{\numberline {D}Systems diagrams}{56}{appendix.D}
-\contentsline {section}{\numberline {D.1}Interface}{56}{section.D.1}
-\contentsline {section}{\numberline {D.2}Templates}{59}{section.D.2}
-\contentsline {section}{\numberline {D.3}DCNN TensorFlow setup}{63}{section.D.3}
-\contentsline {chapter}{\numberline {E}Validation and results}{65}{appendix.E}
-\contentsline {section}{\numberline {E.1}All tutorial results}{65}{section.E.1}
-\contentsline {subsection}{\numberline {E.1.1}Overview}{65}{subsection.E.1.1}
-\contentsline {section}{\numberline {E.2}Deep Convolutional Neural Network results}{67}{section.E.2}
-\contentsline {subsection}{\numberline {E.2.1}Trained on generated database}{68}{subsection.E.2.1}
-\contentsline {subsubsection}{\numberline {E.2.1.1}Accuracy of network}{68}{subsubsection.E.2.1.1}
-\contentsline {subsubsection}{\numberline {E.2.1.2}Conclusion on accuracy}{68}{subsubsection.E.2.1.2}
-\contentsline {subsection}{\numberline {E.2.2}Trained on MNIST database}{68}{subsection.E.2.2}
-\contentsline {subsubsection}{\numberline {E.2.2.1}Accuracy of network}{68}{subsubsection.E.2.2.1}
-\contentsline {subsubsection}{\numberline {E.2.2.2}Conclusion on accuracy}{68}{subsubsection.E.2.2.2}
-\contentsline {subsection}{\numberline {E.2.3}Trained on mixed database}{69}{subsection.E.2.3}
-\contentsline {subsubsection}{\numberline {E.2.3.1}Accuracy of network}{69}{subsubsection.E.2.3.1}
-\contentsline {subsubsection}{\numberline {E.2.3.2}Conclusion on accuracy}{69}{subsubsection.E.2.3.2}
+\contentsline {section}{\numberline {6.5}Summary and conclusions}{40}{section.6.5}
+\contentsline {chapter}{References}{41}{chapter*.30}
+\contentsline {chapter}{\numberline {A}Project plan}{42}{appendix.A}
+\contentsline {chapter}{\numberline {B}Outcome compliance}{44}{appendix.B}
+\contentsline {chapter}{\numberline {C}Overview of system}{47}{appendix.C}
+\contentsline {section}{\numberline {C.1}System as a whole}{47}{section.C.1}
+\contentsline {section}{\numberline {C.2}Student answer}{48}{section.C.2}
+\contentsline {section}{\numberline {C.3}The intended digit}{50}{section.C.3}
+\contentsline {section}{\numberline {C.4}Student number}{52}{section.C.4}
+\contentsline {chapter}{\numberline {D}Systems diagrams}{55}{appendix.D}
+\contentsline {section}{\numberline {D.1}Interface}{55}{section.D.1}
+\contentsline {section}{\numberline {D.2}Templates}{58}{section.D.2}
+\contentsline {section}{\numberline {D.3}DCNN TensorFlow setup}{62}{section.D.3}
+\contentsline {chapter}{\numberline {E}Validation and results}{64}{appendix.E}
+\contentsline {section}{\numberline {E.1}All tutorial results}{64}{section.E.1}
+\contentsline {subsection}{\numberline {E.1.1}Overview}{64}{subsection.E.1.1}
+\contentsline {section}{\numberline {E.2}Deep Convolutional Neural Network results}{66}{section.E.2}
+\contentsline {subsection}{\numberline {E.2.1}Trained on generated database}{67}{subsection.E.2.1}
+\contentsline {subsubsection}{\numberline {E.2.1.1}Accuracy of network}{67}{subsubsection.E.2.1.1}
+\contentsline {subsubsection}{\numberline {E.2.1.2}Conclusion on accuracy}{67}{subsubsection.E.2.1.2}
+\contentsline {subsection}{\numberline {E.2.2}Trained on MNIST database}{67}{subsection.E.2.2}
+\contentsline {subsubsection}{\numberline {E.2.2.1}Accuracy of network}{67}{subsubsection.E.2.2.1}
+\contentsline {subsubsection}{\numberline {E.2.2.2}Conclusion on accuracy}{67}{subsubsection.E.2.2.2}
+\contentsline {subsection}{\numberline {E.2.3}Trained on mixed database}{68}{subsection.E.2.3}
+\contentsline {subsubsection}{\numberline {E.2.3.1}Accuracy of network}{68}{subsubsection.E.2.3.1}
+\contentsline {subsubsection}{\numberline {E.2.3.2}Conclusion on accuracy}{68}{subsubsection.E.2.3.2}
