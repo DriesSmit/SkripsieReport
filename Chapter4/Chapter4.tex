@@ -106,11 +106,10 @@ Each neuron in the network takes in a list of input values. This input values ar
 \nomenclature[S]{$z$}{Weighted sum of a neuron's inputs and internal variables}
 \nomenclature[S]{$c$}{Number of inputs to a neuron}
 \begin{align}
-% \nonumber to remove numbering (before each equation)
   z =  &\displaystyle{\sum_{i=0}^{c} x_{i}*w_{i} + b}.
 \label{eqn:nnOut}
 \end{align}
-Where $c$ is the number of inputs. $x_{i}$ and $w_{i}$ respectively are the input and weight values at index i. $b$ is a is term that enables and offset in the output($z$) of the neuron.
+Where $c$ is the number of inputs. $x_{i}$ and $w_{i}$ respectively are the input and weight values at index i. $b$ is a is term that enables and offset in the output ($z$) of the neuron.
 The summed value then gets normalize using an sigmoid function, seen seen
 \nomenclature[S]{$\sigma(z)$}{Normalization function in a neural network}
 \begin{align}
@@ -130,9 +129,9 @@ After the 748 input values have been assigned to the network inputs, each of the
 \end{align}
 Where $p(i)$ is the probability of digit $i$ being the character in the image. The value $\sigma(z_{i})$ is the output of the output neuron at index $i$.
 
-\subsubsection{Deep Convolutional Neural Network(DCNN)}
+\subsubsection{Deep Convolutional Neural Network}
 
-The previous section gave an overview of the basic a neural network implementation. In recent years much more powerful neural networks such as Deep Convolutional Neural Network(DCNN) has also been introduced. A DCNN uses the basic principles described above, but has extra optimized features that allows an neural network with many layers to be constructed. The exact mathematics behind these Deep Neural Networks are beyond the scope of this project report. This neural network, implemented in TensorFlow, allows an neural network to achieve an high accuracy on  classifying digits take from these test. For this project a neural network optimized for digit classification, as described in \citet{Tensor}. The neural network was only adjusted to increase its accuracy for this specific grading system. These results are described in \ref{ch:Results}.
+The previous section gave an overview of the basic a neural network implementation. In recent years much more powerful neural networks such as Deep Convolutional Neural Network (DCNN) has also been introduced. A DCNN uses the basic principles described above, but has extra optimized features that allows an neural network with many layers to be constructed. The exact mathematics behind these Deep Neural Networks are beyond the scope of this project report. This neural network, implemented in TensorFlow, allows an neural network to achieve an high accuracy on  classifying digits take from these test. For this project a neural network optimized for digit classification, as described in \citet{Tensor}. The neural network was only adjusted to increase its accuracy for this specific grading system. These results are described in \ref{ch:Results}.
 
 \subsubsection{Training of the neural network}
 \label{sec:trainNN}
@@ -203,7 +202,7 @@ For a student numbers knowing one digit value of a column influences the probabi
 Now that the graph has been setup the model can be used to infer the most probable student number. By setting all the bubble evidence and character priers the student number probabilities can be inferred. This model allows for a accurate result, because most student numbers are fairly different to one another. It is found that if the student provides only character information with no bubbles coloured in, a highly probable estimate can still be made.
 
 \subsection{Training of a Probabilistic Graphical Model}
-In a PGM the conditional probabilities distributions between each random variable that has an relationship(arrow) is needed. 
+In a PGM the conditional probabilities distributions between each random variable that has an relationship (arrow) is needed. 
 To calculate these conditional probability distributions training data must be gathered. To obtain this  data the previous basic model with the character recognition software is used to estimate the answers for 100 test sheets. Once these sheets where graded the results is manually check. Thus each training label now contained bubble evidence and character proirs from the neural network. With this information each training set is used to infer the conditional probability needed to train both the digit and student number model. For a mathematically approach to these two PGM models, refer to Appendix \ref{ap:systemOverview}.
 
 \section{Conclusion}
