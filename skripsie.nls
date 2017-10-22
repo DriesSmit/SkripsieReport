@@ -2,12 +2,11 @@
 
  \nomgroup{A}
 
-  \item [{$ANN$}]\begingroup Artificial neural network\nomeqref {0}
-		\nompageref{iii}
   \item [{$DCNN$}]\begingroup Deep convolutional neural network\nomeqref {2.0}
 		\nompageref{9}
   \item [{$DCNN$}]\begingroup Deep convolutional neural network\nomeqref {4.0}
 		\nompageref{19}
+  \item [{$NN$}]\begingroup Neural network\nomeqref {0}\nompageref{iii}
   \item [{$OCR$}]\begingroup Optical character recognition\nomeqref {2.0}
 		\nompageref{9}
   \item [{$OMR$}]\begingroup Optical mark recognition\nomeqref {0}
@@ -20,45 +19,45 @@
 
  \nomgroup{S}
 
-  \item [{$\sigma(z)$}]\begingroup Normalization function in a neural network.\nomeqref {4.1}
+  \item [{$\sigma(z)$}]\begingroup Normalization function in a neural network\nomeqref {4.1}
 		\nompageref{25}
-  \item [{$A$}]\begingroup Random variable representing an answer for a specific question.\nomeqref {C.1}
+  \item [{$A$}]\begingroup Random variable representing an answer for a specific question\nomeqref {C.1}
 		\nompageref{49}
-  \item [{$b$}]\begingroup Bias variable added to allow a neuron to have an offset in its output.\nomeqref {4.0}
+  \item [{$b$}]\begingroup Bias variable added to allow a neuron to have an offset in its output\nomeqref {4.0}
 		\nompageref{24}
-  \item [{$BE_i$}]\begingroup Random variable representing a bubble evidence obtained form image processing at and arbitrary index $i$.\nomeqref {C.1}
+  \item [{$BE_i$}]\begingroup Random variable representing a bubble evidence obtained form image processing at and arbitrary index $i$\nomeqref {C.1}
 		\nompageref{51}
-  \item [{$BI_i$}]\begingroup Random variable representing the bubbles the student to colour in for digit $i$.\nomeqref {C.1}
+  \item [{$BI_i$}]\begingroup Random variable representing the bubbles the student to colour in for digit $i$\nomeqref {C.1}
 		\nompageref{51}
-  \item [{$c$}]\begingroup Number of inputs to a neuron.\nomeqref {4.0}
+  \item [{$c$}]\begingroup Number of inputs to a neuron\nomeqref {4.0}
 		\nompageref{24}
-  \item [{$CE_i$}]\begingroup Random variable representing a character evidence obtained form image processing at and arbitrary index $i$.\nomeqref {C.1}
+  \item [{$CE_i$}]\begingroup Random variable representing a character evidence obtained form image processing at and arbitrary index $i$\nomeqref {C.1}
 		\nompageref{51}
-  \item [{$D_i$}]\begingroup Random variable representing a digit in column i for a answer or student number block.\nomeqref {C.1}
+  \item [{$D_i$}]\begingroup Random variable representing a digit in column $i$ for a answer or student number block\nomeqref {C.1}
 		\nompageref{49}
-  \item [{$DE$}]\begingroup Random variables representing a digit evidence obtained form image processing.\nomeqref {C.8}
+  \item [{$DE$}]\begingroup Random variables representing a digit evidence obtained form image processing\nomeqref {C.8}
 		\nompageref{53}
-  \item [{$DI$}]\begingroup Random variables all the digit intended by the student.\nomeqref {C.8}
+  \item [{$DI$}]\begingroup Random variables all the digit intended by the student\nomeqref {C.8}
 		\nompageref{53}
-  \item [{$f(x, y)$}]\begingroup Two dimensional function that a Radon transform is applied over.\nomeqref {3.0}
+  \item [{$f(x, y)$}]\begingroup Two dimensional function that a Radon transform is applied over\nomeqref {3.0}
 		\nompageref{13}
-  \item [{$G(r,\theta)$}]\begingroup Radon transform defined over r and $\theta$\nomeqref {3.0}
+  \item [{$G(r,\theta)$}]\begingroup Radon transform defined over $r$ and $\theta$\nomeqref {3.0}
 		\nompageref{13}
-  \item [{$I$}]\begingroup Random variable representing the test image.\nomeqref {C.1}
+  \item [{$I$}]\begingroup Random variable representing the test image\nomeqref {C.1}
 		\nompageref{49}
-  \item [{$n$}]\begingroup Number of bubbles of template sheet.\nomeqref {3.0}
+  \item [{$n$}]\begingroup Number of bubbles of template sheet\nomeqref {3.0}
 		\nompageref{16}
-  \item [{$p(i)$}]\begingroup Probability of digit at index $i$.\nomeqref {4.2}
+  \item [{$p(i)$}]\begingroup Probability of digit at index $i$\nomeqref {4.2}
 		\nompageref{25}
-  \item [{$S$}]\begingroup Random variable representing the possible student number.\nomeqref {C.8}
+  \item [{$S$}]\begingroup Random variable representing the possible student number\nomeqref {C.8}
 		\nompageref{53}
-  \item [{$Sn$}]\begingroup Random variable representing the sign of a specific answer.\nomeqref {C.1}
+  \item [{$Sn$}]\begingroup Random variable representing the sign of a specific answer\nomeqref {C.1}
 		\nompageref{49}
-  \item [{$w_{i}$}]\begingroup Weight value at index i.\nomeqref {4.0}
+  \item [{$w_{i}$}]\begingroup Weight value at index $i$\nomeqref {4.0}
 		\nompageref{24}
-  \item [{$x_{i}$}]\begingroup Input value at index i.\nomeqref {4.0}
+  \item [{$x_{i}$}]\begingroup Input value at index $i$\nomeqref {4.0}
 		\nompageref{24}
-  \item [{$z$}]\begingroup Weighted some of a neuron's inputs and internal variables.\nomeqref {4.0}
+  \item [{$z$}]\begingroup Weighted sum of a neuron's inputs and internal variables\nomeqref {4.0}
 		\nompageref{24}
 
 \end{thenomenclature}

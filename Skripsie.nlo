@@ -1,26 +1,26 @@
 \nomenclatureentry{A$OMR$@[{$OMR$}]\begingroup Optical mark recognition\nomeqref {0}|nompageref}{iii}
 \nomenclatureentry{pgmAcronym$PGM$@[{$PGM$}]\begingroup Probabilistic graphical model\nomeqref {0}|nompageref}{iii}
-\nomenclatureentry{A$ANN$@[{$ANN$}]\begingroup Artificial neural network\nomeqref {0}|nompageref}{iii}
+\nomenclatureentry{A$NN$@[{$NN$}]\begingroup Neural network\nomeqref {0}|nompageref}{iii}
 \nomenclatureentry{A$OCR$@[{$OCR$}]\begingroup Optical character recognition\nomeqref {2.0}|nompageref}{9}
 \nomenclatureentry{A$DCNN$@[{$DCNN$}]\begingroup Deep convolutional neural network\nomeqref {2.0}|nompageref}{9}
-\nomenclatureentry{S$G(r,\theta)$@[{$G(r,\theta)$}]\begingroup Radon transform defined over r and $\theta$\nomeqref {3.0}|nompageref}{13}
-\nomenclatureentry{S$f(x, y)$@[{$f(x, y)$}]\begingroup Two dimensional function that a Radon transform is applied over.\nomeqref {3.0}|nompageref}{13}
-\nomenclatureentry{S$n$@[{$n$}]\begingroup Number of bubbles of template sheet.\nomeqref {3.0}|nompageref}{16}
+\nomenclatureentry{S$G(r,\theta)$@[{$G(r,\theta)$}]\begingroup Radon transform defined over $r$ and $\theta$\nomeqref {3.0}|nompageref}{13}
+\nomenclatureentry{S$f(x, y)$@[{$f(x, y)$}]\begingroup Two dimensional function that a Radon transform is applied over\nomeqref {3.0}|nompageref}{13}
+\nomenclatureentry{S$n$@[{$n$}]\begingroup Number of bubbles of template sheet\nomeqref {3.0}|nompageref}{16}
 \nomenclatureentry{A$DCNN$@[{$DCNN$}]\begingroup Deep convolutional neural network\nomeqref {4.0}|nompageref}{19}
-\nomenclatureentry{S$x_{i}$@[{$x_{i}$}]\begingroup Input value at index i.\nomeqref {4.0}|nompageref}{24}
-\nomenclatureentry{S$w_{i}$@[{$w_{i}$}]\begingroup Weight value at index i.\nomeqref {4.0}|nompageref}{24}
-\nomenclatureentry{S$b$@[{$b$}]\begingroup Bias variable added to allow a neuron to have an offset in its output.\nomeqref {4.0}|nompageref}{24}
-\nomenclatureentry{S$z$@[{$z$}]\begingroup Weighted some of a neuron's inputs and internal variables.\nomeqref {4.0}|nompageref}{24}
-\nomenclatureentry{S$c$@[{$c$}]\begingroup Number of inputs to a neuron.\nomeqref {4.0}|nompageref}{24}
-\nomenclatureentry{S$\sigma(z)$@[{$\sigma(z)$}]\begingroup Normalization function in a neural network.\nomeqref {4.1}|nompageref}{25}
-\nomenclatureentry{S$p(i)$@[{$p(i)$}]\begingroup Probability of digit at index $i$.\nomeqref {4.2}|nompageref}{25}
-\nomenclatureentry{S$A$@[{$A$}]\begingroup Random variable representing an answer for a specific question.\nomeqref {C.1}|nompageref}{49}
-\nomenclatureentry{S$I$@[{$I$}]\begingroup Random variable representing the test image.\nomeqref {C.1}|nompageref}{49}
-\nomenclatureentry{S$Sn$@[{$Sn$}]\begingroup Random variable representing the sign of a specific answer.\nomeqref {C.1}|nompageref}{49}
-\nomenclatureentry{S$D_i$@[{$D_i$}]\begingroup Random variable representing a digit in column i for a answer or student number block.\nomeqref {C.1}|nompageref}{49}
-\nomenclatureentry{S$BE_i$@[{$BE_i$}]\begingroup Random variable representing a bubble evidence obtained form image processing at and arbitrary index $i$.\nomeqref {C.1}|nompageref}{51}
-\nomenclatureentry{S$CE_i$@[{$CE_i$}]\begingroup Random variable representing a character evidence obtained form image processing at and arbitrary index $i$.\nomeqref {C.1}|nompageref}{51}
-\nomenclatureentry{S$BI_i$@[{$BI_i$}]\begingroup Random variable representing the bubbles the student to colour in for digit $i$.\nomeqref {C.1}|nompageref}{51}
-\nomenclatureentry{S$DE$@[{$DE$}]\begingroup Random variables representing a digit evidence obtained form image processing.\nomeqref {C.8}|nompageref}{53}
-\nomenclatureentry{S$DI$@[{$DI$}]\begingroup Random variables all the digit intended by the student.\nomeqref {C.8}|nompageref}{53}
-\nomenclatureentry{S$S$@[{$S$}]\begingroup Random variable representing the possible student number.\nomeqref {C.8}|nompageref}{53}
+\nomenclatureentry{S$x_{i}$@[{$x_{i}$}]\begingroup Input value at index $i$\nomeqref {4.0}|nompageref}{24}
+\nomenclatureentry{S$w_{i}$@[{$w_{i}$}]\begingroup Weight value at index $i$\nomeqref {4.0}|nompageref}{24}
+\nomenclatureentry{S$b$@[{$b$}]\begingroup Bias variable added to allow a neuron to have an offset in its output\nomeqref {4.0}|nompageref}{24}
+\nomenclatureentry{S$z$@[{$z$}]\begingroup Weighted sum of a neuron's inputs and internal variables\nomeqref {4.0}|nompageref}{24}
+\nomenclatureentry{S$c$@[{$c$}]\begingroup Number of inputs to a neuron\nomeqref {4.0}|nompageref}{24}
+\nomenclatureentry{S$\sigma(z)$@[{$\sigma(z)$}]\begingroup Normalization function in a neural network\nomeqref {4.1}|nompageref}{25}
+\nomenclatureentry{S$p(i)$@[{$p(i)$}]\begingroup Probability of digit at index $i$\nomeqref {4.2}|nompageref}{25}
+\nomenclatureentry{S$A$@[{$A$}]\begingroup Random variable representing an answer for a specific question\nomeqref {C.1}|nompageref}{49}
+\nomenclatureentry{S$I$@[{$I$}]\begingroup Random variable representing the test image\nomeqref {C.1}|nompageref}{49}
+\nomenclatureentry{S$Sn$@[{$Sn$}]\begingroup Random variable representing the sign of a specific answer\nomeqref {C.1}|nompageref}{49}
+\nomenclatureentry{S$D_i$@[{$D_i$}]\begingroup Random variable representing a digit in column $i$ for a answer or student number block\nomeqref {C.1}|nompageref}{49}
+\nomenclatureentry{S$BE_i$@[{$BE_i$}]\begingroup Random variable representing a bubble evidence obtained form image processing at and arbitrary index $i$\nomeqref {C.1}|nompageref}{51}
+\nomenclatureentry{S$CE_i$@[{$CE_i$}]\begingroup Random variable representing a character evidence obtained form image processing at and arbitrary index $i$\nomeqref {C.1}|nompageref}{51}
+\nomenclatureentry{S$BI_i$@[{$BI_i$}]\begingroup Random variable representing the bubbles the student to colour in for digit $i$\nomeqref {C.1}|nompageref}{51}
+\nomenclatureentry{S$DE$@[{$DE$}]\begingroup Random variables representing a digit evidence obtained form image processing\nomeqref {C.8}|nompageref}{53}
+\nomenclatureentry{S$DI$@[{$DI$}]\begingroup Random variables all the digit intended by the student\nomeqref {C.8}|nompageref}{53}
+\nomenclatureentry{S$S$@[{$S$}]\begingroup Random variable representing the possible student number\nomeqref {C.8}|nompageref}{53}

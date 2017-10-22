@@ -100,11 +100,11 @@ The neuron unit is the small processing unit and by including many of these neur
 
 \subsubsection{The Artificial Neuron}
 Each neuron in the network takes in a list of input values. This input values are the output values of the neurons in the layer before this neuron, seen in Figure \ref{fig:nn}. This values are that multiplied by internal weights of the neuron and a final weight, named the bias, is then added. These internal weights are thus fixed to a specific value, depending on what function that neuron tries to approximate. A bias variable is also added to expand the range of functions a neuron can approximate. The weighted sum of these inputs are then added with the bias variable to give,
-\nomenclature[S]{$x_{i}$}{Input value at index i.}
-\nomenclature[S]{$w_{i}$}{Weight value at index i.}
-\nomenclature[S]{$b$}{Bias variable added to allow a neuron to have an offset in its output.}
-\nomenclature[S]{$z$}{Weighted some of a neuron's inputs and internal variables.}
-\nomenclature[S]{$c$}{Number of inputs to a neuron.}
+\nomenclature[S]{$x_{i}$}{Input value at index $i$}
+\nomenclature[S]{$w_{i}$}{Weight value at index $i$}
+\nomenclature[S]{$b$}{Bias variable added to allow a neuron to have an offset in its output}
+\nomenclature[S]{$z$}{Weighted sum of a neuron's inputs and internal variables}
+\nomenclature[S]{$c$}{Number of inputs to a neuron}
 \begin{align}
 % \nonumber to remove numbering (before each equation)
   z =  &\displaystyle{\sum_{i=0}^{c} x_{i}*w_{i} + b}.
@@ -112,7 +112,7 @@ Each neuron in the network takes in a list of input values. This input values ar
 \end{align}
 Where $c$ is the number of inputs. $x_{i}$ and $w_{i}$ respectively are the input and weight values at index i. $b$ is a is term that enables and offset in the output($z$) of the neuron.
 The summed value then gets normalize using an sigmoid function, seen seen
-\nomenclature[S]{$\sigma(z)$}{Normalization function in a neural network.}
+\nomenclature[S]{$\sigma(z)$}{Normalization function in a neural network}
 \begin{align}
   \sigma(z) =  &\displaystyle{\frac{1}{1 + e^{-z}}}.
 \label{eqn:sigmoid}
@@ -122,7 +122,7 @@ This artificial neuron thus takes in a weighted input with a bias and produces a
 \subsubsection{Generating an output from the network}
 After the 748 input values have been assigned to the network inputs, each of the network's layers can be calculated consecutively one after another. This is done using the previously mentioned Equations \ref{eqn:nnOut} and \ref{eqn:sigmoid} on each layer consecutively of the network starting at the first hidden layer. Once the first layer's outputs are calculated the next layer can be calculated. This process is repeated until all the layers is calculated. After this step the final values can be read of of the output neuron that represents the result. In this project then output neurons is used to represent the likelihood of each of 10 digits, given the input data. To turn the observed on the output neurons into probabilities, the values gets normalized using
 
-\nomenclature[S]{$p(i)$}{Probability of digit at index $i$.}
+\nomenclature[S]{$p(i)$}{Probability of digit at index $i$}
 
 \begin{align}
   p(i) =  &\displaystyle{\frac{\sigma(z_{i})}{\sum_{k=0}^{10} \sigma(z_{k})}}.

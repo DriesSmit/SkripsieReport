@@ -36,10 +36,10 @@ The intended digit in a certain column is not influenced by what the values in t
   P(A/I) =  P(Si/I)P(D_1/I)...P(D_7/I).
 \label{eqn:ansIndep}
 \end{align}
-\nomenclature[S]{$A$}{Random variable representing an answer for a specific question.}
-\nomenclature[S]{$I$}{Random variable representing the test image.}
-\nomenclature[S]{$Sn$}{Random variable representing the sign of a specific answer.}
-\nomenclature[S]{$D_i$}{Random variable representing a digit in column i for a answer or student number block.}
+\nomenclature[S]{$A$}{Random variable representing an answer for a specific question}
+\nomenclature[S]{$I$}{Random variable representing the test image}
+\nomenclature[S]{$Sn$}{Random variable representing the sign of a specific answer}
+\nomenclature[S]{$D_i$}{Random variable representing a digit in column $i$ for a answer or student number block}
 Where $A$ represents an answer for a specific question. $I$ and $Si$ are random variables representing the image and sign of the answer.
 
 To find the most probable answer only $P(Sn/I)$ and $P(D_{1-7}/I)$ needs to be calculated. Using image processing techniques described in Section \ref{ch:ImageProcessing}, $P(Si/I)$ can simply be determined heuristically by determining the probability of the bubble being coloured in, underneath the sign. Thus the only values yet to calculate is $P(D_{1-7}/I)$, as derived in the next section.
@@ -61,11 +61,11 @@ In determining an intended digit there is 11 information nodes to use as evidenc
   \caption{Graphical setup of determining intended digit.}
   \label{fig:appDigit}
 \end{figure}
-\nomenclature[S]{$BE_i$}{Random variable representing a bubble evidence obtained form image processing at and arbitrary index $i$.}
-\nomenclature[S]{$CE_i$}{Random variable representing a character evidence obtained form image processing at and arbitrary index $i$.}
+\nomenclature[S]{$BE_i$}{Random variable representing a bubble evidence obtained form image processing at and arbitrary index $i$}
+\nomenclature[S]{$CE_i$}{Random variable representing a character evidence obtained form image processing at and arbitrary index $i$}
 
 The probability that has to be calculated for each column is describe by $P(D_i/I)$. This value represents the probability that each of the 10 digits is written down in column $i$ . We know that the digit evidence is calculated heuristically using image processing. Thus the estimate of the intended digit is now represented by $P(D_i/I,BE_i,CE_i)$. $BE_i$ and $CE_i$ represents all the bubble and character evidence for that digit. As seen in Figure \ref{fig:appDigit}, $D_i$ and $I$ becomes independent from one another given the values of $BE_i$ and $CE_i$. Thus the probability of the intended digit is now given by $P(D_i/BE_i,CE_i)$.
-\nomenclature[S]{$BI_i$}{Random variable representing the bubbles the student to colour in for digit $i$.}
+\nomenclature[S]{$BI_i$}{Random variable representing the bubbles the student to colour in for digit $i$}
 $BE_i$ and $BI_i$ is further described by 
 \begin{align}
 % \nonumber to remove numbering (before each equation)
@@ -111,9 +111,9 @@ The constant terms gets ignored in the pgmPy package due to them only being norm
 $P(BE_i/BI_i)$ and  $P(BI_i/D_i)$ are both terms that is deduced form training. The final term that is needed is $P(D_i/CE_i)$. This term is efficiently represented through the use a the neural network. Thus the pgm system can successfully infer the digit and thus answer probabilities with these 3 distributions specified. Next a derivation on the student number probability is discussed.
 
 \section{Student number}
-\nomenclature[S]{$DE$}{Random variables representing a digit evidence obtained form image processing.}
-\nomenclature[S]{$DI$}{Random variables all the digit intended by the student.}
-\nomenclature[S]{$S$}{Random variable representing the possible student number.}
+\nomenclature[S]{$DE$}{Random variables representing a digit evidence obtained form image processing}
+\nomenclature[S]{$DI$}{Random variables all the digit intended by the student}
+\nomenclature[S]{$S$}{Random variable representing the possible student number}
 As state in Section \ref{sec:studentNumber}, the assumption of independence between digits does not hold in the case of a student number. The reason for this is, because every 8 digit number is not equally likely to be a student number. Only student numbers that are valid needs to be considered as a possible state that the student number node can take. This node will have $\pm 900$ states, depending on the number of student numbers. The student number graph can be seen in Figure \ref{fig:stdNum}. Next a derivation for $P(S/I)$ is needed. $S$ represents a random variable over all the possible student numbers. $I$ again represents the image. We know that the digit evidence is calculated heuristically using image processing. Thus the estimate of the student number is now represented as $P(S/I,DE)$. $DE$ now represents all the bubble and character evidence. As seen in Figure \ref{fig:stdNum}, $S$ and $I$ becomes independent from one another given the values of $DE$. Thus the probability of the intended digit is now given by $P(S/DE)$.
 
 \begin{figure}

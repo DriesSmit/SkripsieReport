@@ -42,8 +42,8 @@ It is important to note that there are still unwanted contours in the list, but 
 
 \subsection{Radon Transform}
 \label{sec:RadonTransform}
-\nomenclature[S]{$G(r,\theta)$}{Radon transform defined over r and $\theta$}
-\nomenclature[S]{$f(x, y)$}{Two dimensional function that a Radon transform is applied over.}
+\nomenclature[S]{$G(r,\theta)$}{Radon transform defined over $r$ and $\theta$}
+\nomenclature[S]{$f(x, y)$}{Two dimensional function that a Radon transform is applied over}
 The Radon transform is an integral transform that can be represented by a series of line integrals over a function $f(x,y)$. These transforms are commonly used in CT scans. Mathematically this transform is defined as $$G(r,\theta) = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} f(x, y) \delta(x\cos(\theta) + y\sin(\theta) - r) dx dy.$$Where $r$ represents the perpendicular offset of the line and $\theta$ the angle of the line. $x$ and $y$ represents variables within a 2 mentionable space within which the function $f(x,y)$ is defined.  A visual interpretation of this transform can be seen in Figure \ref{fig:RadonT}.  
 
 \begin{figure}
@@ -79,8 +79,8 @@ Once the template is found the bubble values and digit blocks can be determined,
 Now that a list of possible bubble contours are found with the estimate bubble centres, one contour needs to be assigned to each bubble. This is discussed in the next section.
 
 \section{Bubble detection and processing}
-\nomenclature[S]{$n$}{Number of bubbles of template sheet.}
-To find the location of each bubble in the image, the system simply takes the contour closest to the estimated bubble location. This can be done in an efficient manner by sorting the contours by their locations. Searching through the contours now becomes linear and of complexity O(n), where n is the number of bubbles. This means that the processing time to find these bubbles is linearly related to the number of bubbles in the template image. 
+\nomenclature[S]{$n$}{Number of bubbles of template sheet}
+To find the location of each bubble in the image, the system simply takes the contour closest to the estimated bubble location. This can be done in an efficient manner by sorting the contours by their locations. Searching through the contours now becomes linear and of complexity $O(n)$, where n is the number of bubbles. This means that the processing time to find these bubbles is linearly related to the number of bubbles in the template image. 
 
 Next the data in each contour needs to be processed and stored. The first type of evidence is calculating the average pixel intensity inside the contours. If this value is high the bubble is most likely coloured in or crossed out. The advantage of using the closest contour as the bubble's estimated location, over conventional methods now becomes apparent. In conventional methods an estimated area is calculated where the bubble is most likely to be located. This becomes problematic if the system needs to know if the bubble has been crossed out, as only data about pixel intensities are present. 
 
@@ -95,11 +95,11 @@ The previous section now allows each bubble to be classified into 3 categories n
 \item Count the number of completely filled in answers in this column. Store the position of that entry for later use.
 \item If there are no completely filled in answers, count the amount of partially filled in answers and override the previous values.
 \item If the previous result is 0, set the output value for that column to 0.
-\item If step 2 or 3 presents a value greater that 1, save the answer sheet to a clashlist to be evaluated manually once the automatic grading of the test are completed.
+\item If step 2 or 3 presents a value greater that 1, save the answer sheet to a clash list to be evaluated manually once the automatic grading of the test are completed.
 \item Repeat steps 2 to 5 for each column in the bubble grid.
 \end{enumerate}
 
-This algorithm thus checks if there are more that one entry in any of the columns. If this is true the results is sent to a clashlist to be marked manually. If one one bubble was found to be coloured in the value gets set to the index of that bubble. Finally if no bubbles where coloured in the result for that column gets set to 0.
+This algorithm thus checks if there are more that one entry in any of the columns. If this is true the results is sent to a clash list to be marked manually. If one one bubble was found to be coloured in the value gets set to the index of that bubble. Finally if no bubbles where coloured in the result for that column gets set to 0.
 
 \section{Conclusion}
 

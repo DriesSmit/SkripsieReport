@@ -40,6 +40,12 @@
 \usepackage{ifthen}
 \usepackage{ifpdf}
 
+% COMMENT DIE onderstaande paragraaf UIT!!!  ##############################################################
+\renewenvironment{quote}
+  {\small\list{}{\rightmargin=0cm \leftmargin=0cm}%
+   \item\relax}
+  {\endlist}
+
 
 %Bibliography
 %uncomment next line to change bibliography name to references for Book document class
@@ -238,6 +244,8 @@ Electrical and Electronic Engineering at the University of Stellenbosch}}
 \begin{alwayssingle}
 %\begin{center}
 \vspace*{1.5cm}
+% COMMENT DIE onderstaande hspace UIT!!! ##############################################################
+  \hspace*{-0.8cm}
 {\Large \bfseries Acknowledgements}
 %\end{center}
 \vspace{0.5cm}
@@ -253,6 +261,8 @@ Electrical and Electronic Engineering at the University of Stellenbosch}}
 \begin{alwayssingle}\pagestyle{plain}
 \begin{center}
 \vspace*{1.5cm}
+% COMMENT DIE onderstaande hspace UIT!!! ##############################################################
+  \hspace*{-0.8cm}
 {\Large \bfseries Acknowledgements}
 \end{center}
 \vspace{0.5cm}\begin{quote}}
@@ -268,6 +278,8 @@ Electrical and Electronic Engineering at the University of Stellenbosch}}
 \begin{alwayssingle}
 %\begin{center}
 \vspace*{1.5cm}
+% COMMENT DIE onderstaande hspace UIT!!! ##############################################################
+  \hspace*{-0.8cm}
 {\Large \bfseries Declaration}
 %\end{center}
 \vspace{0.5cm}
@@ -295,6 +307,8 @@ Electrical and Electronic Engineering at the University of Stellenbosch}}
 \newenvironment{abstracts} {\begin{alwayssingle} \pagestyle{plain}
 %  \begin{center}
   \vspace*{1.5cm}
+% COMMENT DIE onderstaande hspace UIT!!! ##############################################################
+  \hspace*{-0.8cm}
   {\Large \bfseries  Abstract}
 %  \end{center}
   \vspace{0.5cm}
@@ -304,6 +318,8 @@ Electrical and Electronic Engineering at the University of Stellenbosch}}
 \newenvironment{uittreksel} {\begin{alwayssingle} \pagestyle{plain}
 %  \begin{center}
   \vspace*{1.5cm}
+  % COMMENT DIE onderstaande hspace UIT!!! ##############################################################
+  \hspace*{-0.8cm}
   {\Large \bfseries  Uittreksel}
 %  \end{center}
   \vspace{0.5cm}
@@ -317,6 +333,8 @@ Electrical and Electronic Engineering at the University of Stellenbosch}}
 \newenvironment{abstractslong} {\begin{alwayssingle} \pagestyle{plain}
   \begin{center}
   \vspace*{1.5cm}
+  % COMMENT DIE onderstaande hspace UIT!!! ##############################################################
+  \hspace*{-0.8cm}
   {\Large \bfseries  Abstract}
   \end{center}
   \vspace{0.5cm} \begin{quote}}

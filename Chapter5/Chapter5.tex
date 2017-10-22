@@ -6,7 +6,7 @@
 
 In the following chapter a study is described on the accuracy of the test grading system. In the first two sections of this chapter the basic and complete system are compared using the same datasets. The first test grading system includes only image processing techniques described in Chapter \ref{ch:ImageProcessing}. The second system contains the complete project software with all the machine learning techniques described in Chapter \ref{ch:MachineLearning}.
 
-Each systems is assessed using 3 categories. In category one marking statistics is given on the grading of these test. The second category describes all the tests the system transferred to the user for manually marking. This was due to the system having a certainty level below a threshold. In this category the tests gets sent to a clashlist. After all the test is graded the systems displays a interface with values it thinks the student wrote down. An additional image is also displayed. The user is then tasked with scanning through each of the clashed tests, using the interface, to see if any tests is graded incorrectly by the system. This process is normally fast, because the system has a high accuracy in guessing the answers correctly. In the last category, all the answers that the system did not assign for manual marking, but identified incorrectly will be described.
+Each systems is assessed using 3 categories. In category one marking statistics is given on the grading of these test. The second category describes all the tests the system transferred to the user for manually marking. This was due to the system having a certainty level below a threshold. In this category the tests gets sent to a clash list. After all the test is graded the systems displays a interface with values it thinks the student wrote down. An additional image is also displayed. The user is then tasked with scanning through each of the clashed tests, using the interface, to see if any tests is graded incorrectly by the system. This process is normally fast, because the system has a high accuracy in guessing the answers correctly. In the last category, all the answers that the system did not assign for manual marking, but identified incorrectly will be described.
 
 \section{Results of 25 test cases}
 
@@ -37,7 +37,7 @@ Using this basic system an average time for each test is calculated to be 0.305 
   \label{fig:crossClash}
 \end{figure}
 
-\subsubsection{Clashlist}
+\subsubsection{Clash list}
 
 A total of 6 out of the 25 test where reported as clashes. The two images without a template were both reported in the clash list. Further the 1 test which only has the student number written in characters with no bubble information is also reported to the list. The other 3 clashes were reported due to the crossed out bubbles interpreted as still filled in, causing the system to think that two answer were filled in. An example of this can be seen in Figure \ref{fig:crossClash}.
 
@@ -58,7 +58,7 @@ There where 4 tests in total that where graded automatically, but incorrectly. A
 
 Using this complete system an average time for each test is calculated to be 2.011 seconds. 
 
-\subsubsection{Clashlist}
+\subsubsection{Clash list}
 
 A total of 6 out of the 25 test where reported as clashes. The two images with no template in were both again reported in the clash list. Two cases was reported to the clash list due to the character recognition determining a crossed out character as the intended character. An example of this is shown in Figure \ref{fig:crossedOutCharacter}. One test was reported due to it only having characters written in with no bubbles. Thus even though the system identified every character correctly, it had to low of a percentage faith in its answer and reported it to the clash list. 
 
@@ -84,7 +84,7 @@ In this section the complete system is tested on the final tutorial test written
 
 For these tutorial test  an average marking time per test of 2.3 seconds is recorded.
 
-\subsection{Clashlist}
+\subsection{Clash list}
 
 In total there were 67 clashes in the 888 tests. These 67 clashes are categorised in Table  \ref{tbl:TutClash}.
 \begin{table}
@@ -140,5 +140,5 @@ For a more detailed description of the results from grading all 4 tutorial tests
 
 In conclusion it is noted that the complete system, with its machine learning capabilities, slightly reduces the number of tests that the user must mark manually from the previous basic system. About 7.5\% of the tests in the tutorial had to be marked manually, due to the system being unsure of its answers. The system does however have a high probability of grading tests correctly if they are done automatically. A reason for this can be attributed to the fact that the system correlates two pieces of evidence to predict the correct answer. Thus both the character and bubble information has to be interpreted incorrectly for the system to automatically grade a answer incorrectly. 
 
-Thus overall the system could graded 92.5\% of all the test correctly and automatically. From the remaining 7.5\% only 1 test or 0.1\% of the tests was found to be graded wrongly. For the remaining 7.4\% of the tests the system was not certain enough to grade these test automatically. The system did classify most of the clashlist test correctly. This means the system could possible have graded 97.1\% of the tests correctly. This can be done by changing a threshold value, but allows the other 2.9\% of the tests to be classified incorrectly.
+Thus overall the system could graded 92.5\% of all the test correctly and automatically. From the remaining 7.5\% only 1 test or 0.1\% of the tests was found to be graded wrongly. For the remaining 7.4\% of the tests the system was not certain enough to grade these test automatically. The system did classify most of the clash list test correctly. This means the system could possible have graded 97.1\% of the tests correctly. This can be done by changing a threshold value, but allows the other 2.9\% of the tests to be classified incorrectly.
 
