@@ -3,7 +3,7 @@
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Automatic test grading template layout.\relax }}{3}{figure.caption.5}
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Graphical overview of the system as a whole.\relax }}{5}{figure.caption.6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Standard OMR template with reference blocks on the left, from \citet {stdTemplate}\relax }}{7}{figure.caption.7}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Standard OMR template with reference blocks on the left, from \citet {stdTemplate}\relax }}{8}{figure.caption.7}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Contours found around corrected answer.\relax }}{9}{figure.caption.8}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Four markers found from applying Radon transforms.\relax }}{12}{figure.caption.9}
@@ -42,6 +42,6 @@
 \contentsline {figure}{\numberline {D.2}{\ignorespaces Clash list interface of test grader.\relax }}{56}{figure.caption.40}
 \contentsline {figure}{\numberline {D.3}{\ignorespaces Original template focussed on numbered answered questions.\relax }}{58}{figure.caption.41}
 \contentsline {figure}{\numberline {D.4}{\ignorespaces Template allowing for numbered and multiple choice answers.\relax }}{59}{figure.caption.42}
-\contentsline {figure}{\numberline {D.5}{\ignorespaces Template focussed just on multiple choice type questions.\relax }}{60}{figure.caption.43}
-\contentsline {figure}{\numberline {D.6}{\ignorespaces DCNN structural setup diagram, from \citet {Tensor}\relax }}{62}{figure.caption.44}
+\contentsline {figure}{\numberline {D.5}{\ignorespaces Template focussed solely on multiple choice type questions.\relax }}{60}{figure.caption.43}
+\contentsline {figure}{\numberline {D.6}{\ignorespaces DCNN structural set up diagram, from \citet {Tensor}\relax }}{62}{figure.caption.44}
 \addvspace {10\p@ }
