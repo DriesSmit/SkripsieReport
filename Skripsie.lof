@@ -34,14 +34,14 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {C.1}{\ignorespaces System overview.\relax }}{47}{figure.caption.34}
 \contentsline {figure}{\numberline {C.2}{\ignorespaces Graphical setup of determining student answer.\relax }}{48}{figure.caption.35}
-\contentsline {figure}{\numberline {C.3}{\ignorespaces Column with the evidence that gets considered for the calculation of an intended digit.\relax }}{50}{figure.caption.36}
-\contentsline {figure}{\numberline {C.4}{\ignorespaces Graphical setup of determining intended digit.\relax }}{51}{figure.caption.37}
-\contentsline {figure}{\numberline {C.5}{\ignorespaces Graphical setup of determining student number.\relax }}{53}{figure.caption.38}
+\contentsline {figure}{\numberline {C.3}{\ignorespaces Column with evidence that gets considered for the calculation of an intended digit.\relax }}{49}{figure.caption.36}
+\contentsline {figure}{\numberline {C.4}{\ignorespaces Graphical setup of determining intended digit.\relax }}{50}{figure.caption.37}
+\contentsline {figure}{\numberline {C.5}{\ignorespaces Graphical setup of determining student number.\relax }}{52}{figure.caption.38}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {D.1}{\ignorespaces Main interface of test grader.\relax }}{56}{figure.caption.39}
-\contentsline {figure}{\numberline {D.2}{\ignorespaces Clash list interface of test grader.\relax }}{56}{figure.caption.40}
-\contentsline {figure}{\numberline {D.3}{\ignorespaces Original template focussed on numbered answered questions.\relax }}{58}{figure.caption.41}
-\contentsline {figure}{\numberline {D.4}{\ignorespaces Template allowing for numbered and multiple choice answers.\relax }}{59}{figure.caption.42}
-\contentsline {figure}{\numberline {D.5}{\ignorespaces Template focussed solely on multiple choice type questions.\relax }}{60}{figure.caption.43}
-\contentsline {figure}{\numberline {D.6}{\ignorespaces DCNN structural set up diagram, from \citet {Tensor}\relax }}{62}{figure.caption.44}
+\contentsline {figure}{\numberline {D.1}{\ignorespaces Main interface of test grader.\relax }}{55}{figure.caption.39}
+\contentsline {figure}{\numberline {D.2}{\ignorespaces Clash list interface of test grader.\relax }}{55}{figure.caption.40}
+\contentsline {figure}{\numberline {D.3}{\ignorespaces Original template focussed on numbered answered questions.\relax }}{57}{figure.caption.41}
+\contentsline {figure}{\numberline {D.4}{\ignorespaces Template allowing for numbered and multiple choice answers.\relax }}{58}{figure.caption.42}
+\contentsline {figure}{\numberline {D.5}{\ignorespaces Template focussed solely on multiple choice type questions.\relax }}{59}{figure.caption.43}
+\contentsline {figure}{\numberline {D.6}{\ignorespaces DCNN structural set up diagram, from \citet {Tensor}\relax }}{61}{figure.caption.44}
 \addvspace {10\p@ }
