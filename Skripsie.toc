@@ -41,7 +41,7 @@
 \contentsline {subsection}{\numberline {4.2.2}Estimating the intended digit}{28}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}Estimating the student answer}{29}{subsection.4.2.3}
 \contentsline {subsection}{\numberline {4.2.4}Estimating the student number}{30}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}Training of a Probabilistic Graphical Model}{30}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.5}Training of a Probabilistic Graphical Model}{31}{subsection.4.2.5}
 \contentsline {section}{\numberline {4.3}Conclusion}{31}{section.4.3}
 \contentsline {chapter}{\numberline {5}Analysis of results}{32}{chapter.5}
 \contentsline {section}{\numberline {5.1}Results of 25 test cases}{32}{section.5.1}
