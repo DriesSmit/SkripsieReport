@@ -97,11 +97,11 @@ In this section the complete system is tested on the final tutorial written by a
 
 \subsection{Marking statistics}
 
-For these tutorial test  an average marking time per test of 2.3 seconds was recorded.
+For these tutorial test  an average marking time per test of 2.01 seconds was recorded.
 
 \subsection{Clash list}
 
-There were in total 67 clashes in the 888 tests. These 67 clashes are categorised in Table  \ref{tbl:TutClash}.
+There were in total 57 clashes in the 888 tests. These 67 clashes are categorised in Table  \ref{tbl:TutClash}.
 \begin{table}
   \centering
   \caption{Description and quantity of clashes in the different catagories.} \label{tbl:TutClash}
@@ -110,7 +110,7 @@ There were in total 67 clashes in the 888 tests. These 67 clashes are categorise
 \textbf{Number of tests} & \textbf{Category description}\\
 \textbf{in category} &\\
 \hline
-41&In these tests the system guessed the right values, but was unsure about its answer. Some of the cases was when the student number was only filled in the character box. The software always identified the correct student number, but was still unsure about that answer.\\
+31&In these tests the system guessed the right values, but was unsure about its answer. Some of the cases was when the student number was only filled in the character box. The software always identified the correct student number, but was still unsure about that answer.\\
 \hline
 15&In these tests the system could not distinguish between a crossed out answer and correct answer. This is due to the crossed out answer being interpreted as a filled in answer.\\
 \hline
@@ -140,7 +140,7 @@ For a more detailed description of the results from grading all 4 tutorial tests
 
 \subsection{Analysis or results}
 
-In conclusion, it is noted that the complete system, with its machine learning capabilities, slightly reduces the number of tests that the user must mark manually from the previous basic system. About 7.5\% of the tests in the tutorial had to be marked manually, due to the system being unsure of its answers. The system does, however, have a high probability of grading tests correctly if they are done automatically. A reason for this can be attributed to the fact that the system correlates two pieces of evidence to predict the correct answer. Thus, both the character and bubble information has to be interpreted incorrectly for the system to automatically grade an answer incorrectly. 
+In conclusion, it is noted that the complete system, with its machine learning capabilities, slightly reduces the number of tests that the user must mark manually from the previous basic system. About 7.5\% of the tests in the tutorial had to be marked manually, due to the system being unsure of its answers. The system does, however, have a 99.9\% of grading tests correctly if they are done automatically. The reason for this can be attributed to the fact that the system correlates two pieces of evidence to predict the correct answer. Thus, both the character and bubble information has to be interpreted incorrectly for the system to automatically grade an answer incorrectly. 
 
-The system could grade 92.5\% of all the test correctly and automatically. From the remaining 7.5\% only 1 test or 0.1\% of the tests was found to be graded incorrectly. For the remaining 7.4\% of the tests, the system was not certain enough to grade these test automatically. The system did classify most of the clash list test correctly. This means the system could possible have graded 97.1\% of the tests correctly. This can be done by changing the threshold value, but allows the other 2.9\% of the tests to be classified incorrectly.
+The system could grade 92.5\% of all the test correctly and automatically. From the remaining 7.5\% only 1 test or 0.1\% of the tests was found to be graded incorrectly and the other 7.4\% of the tests were sent to a clash list. The system classified most of the clash list test correctly. If the clash list threshold level of the system is set to 0 the system could possible have graded 97.1\% of the tests correctly.
 
