@@ -75,17 +75,16 @@
 \BOOKMARK [0][]{appendix.D}{D Systems diagrams}{}% 75
 \BOOKMARK [1][]{section.D.1}{D.1 Interface}{appendix.D}% 76
 \BOOKMARK [1][]{section.D.2}{D.2 Templates}{appendix.D}% 77
-\BOOKMARK [1][]{section.D.3}{D.3 DCNN TensorFlow setup}{appendix.D}% 78
-\BOOKMARK [0][]{appendix.E}{E Validation and results}{}% 79
-\BOOKMARK [1][]{section.E.1}{E.1 All tutorial results}{appendix.E}% 80
-\BOOKMARK [2][]{subsection.E.1.1}{E.1.1 Overview}{section.E.1}% 81
-\BOOKMARK [1][]{section.E.2}{E.2 Deep Convolutional Neural Network results}{appendix.E}% 82
-\BOOKMARK [2][]{subsection.E.2.1}{E.2.1 Trained on generated database}{section.E.2}% 83
-\BOOKMARK [3][]{subsubsection.E.2.1.1}{E.2.1.1 Accuracy of network}{subsection.E.2.1}% 84
-\BOOKMARK [3][]{subsubsection.E.2.1.2}{E.2.1.2 Conclusion on accuracy}{subsection.E.2.1}% 85
-\BOOKMARK [2][]{subsection.E.2.2}{E.2.2 Trained on MNIST database}{section.E.2}% 86
-\BOOKMARK [3][]{subsubsection.E.2.2.1}{E.2.2.1 Accuracy of network}{subsection.E.2.2}% 87
-\BOOKMARK [3][]{subsubsection.E.2.2.2}{E.2.2.2 Conclusion on accuracy}{subsection.E.2.2}% 88
-\BOOKMARK [2][]{subsection.E.2.3}{E.2.3 Trained on mixed database}{section.E.2}% 89
-\BOOKMARK [3][]{subsubsection.E.2.3.1}{E.2.3.1 Accuracy of network}{subsection.E.2.3}% 90
-\BOOKMARK [3][]{subsubsection.E.2.3.2}{E.2.3.2 Conclusion on accuracy}{subsection.E.2.3}% 91
+\BOOKMARK [0][]{appendix.E}{E Validation and results}{}% 78
+\BOOKMARK [1][]{section.E.1}{E.1 All tutorial results}{appendix.E}% 79
+\BOOKMARK [2][]{subsection.E.1.1}{E.1.1 Overview}{section.E.1}% 80
+\BOOKMARK [1][]{section.E.2}{E.2 Deep Convolutional Neural Network results}{appendix.E}% 81
+\BOOKMARK [2][]{subsection.E.2.1}{E.2.1 Trained on generated database}{section.E.2}% 82
+\BOOKMARK [3][]{subsubsection.E.2.1.1}{E.2.1.1 Accuracy of network}{subsection.E.2.1}% 83
+\BOOKMARK [3][]{subsubsection.E.2.1.2}{E.2.1.2 Conclusion on accuracy}{subsection.E.2.1}% 84
+\BOOKMARK [2][]{subsection.E.2.2}{E.2.2 Trained on MNIST database}{section.E.2}% 85
+\BOOKMARK [3][]{subsubsection.E.2.2.1}{E.2.2.1 Accuracy of network}{subsection.E.2.2}% 86
+\BOOKMARK [3][]{subsubsection.E.2.2.2}{E.2.2.2 Conclusion on accuracy}{subsection.E.2.2}% 87
+\BOOKMARK [2][]{subsection.E.2.3}{E.2.3 Trained on mixed database}{section.E.2}% 88
+\BOOKMARK [3][]{subsubsection.E.2.3.1}{E.2.3.1 Accuracy of network}{subsection.E.2.3}% 89
+\BOOKMARK [3][]{subsubsection.E.2.3.2}{E.2.3.2 Conclusion on accuracy}{subsection.E.2.3}% 90

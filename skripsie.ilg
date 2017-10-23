@@ -7,8 +7,8 @@ Scanning style file C:/Users/User/AppData/Roaming/MiKTeX/2.9/makeindex/nomencl/n
 ** Input style error (file = C:/Users/User/AppData/Roaming/MiKTeX/2.9/makeindex/nomencl/nomencl.ist, line = 72):
    -- Unknown specifier lethead_flag.
 ...done (10 attributes redefined, 3 ignored).
-Scanning input file skripsie.nlo....done (33 entries accepted, 0 rejected).
-Sorting entries....done (171 comparisons).
-Generating output file skripsie.nls....done (75 lines written, 0 warnings).
+Scanning input file skripsie.nlo....done (36 entries accepted, 0 rejected).
+Sorting entries....done (180 comparisons).
+Generating output file skripsie.nls....done (81 lines written, 0 warnings).
 Output written in skripsie.nls.
 Transcript written in skripsie.ilg.

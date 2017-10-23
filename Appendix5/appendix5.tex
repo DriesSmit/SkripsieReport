@@ -9,7 +9,7 @@ This appendix described additional test results obtained from experiments done o
 
 \subsection{Overview}
 
-This automatic test grader was successfully used to grade 11 tutorial test in 2017. The amount of tests per tutorial varies due to students having valid excuses. On average 889 tests were written per tutorial. The results of these tutorials can be seen in Table \ref{tbl:tutResults} and Table \ref{tbl:tutResults2}.
+The automatic test grader developed in this study was successfully used to grade 11 tutorial test in 2017. The number of students per tutorial varies due to students having valid excuses. On average 889 tests were written per tutorial. The results of these tutorials can be seen in Table \ref{tbl:tutResults} and Table \ref{tbl:tutResults2}.
 
 \begin{table}
 \caption{Description of tutorial results.} \label{tbl:tutResults}
@@ -26,7 +26,7 @@ Tutorial 2&98.8\% (11 mistakes)&The system still had a problem with crossed out 
 \hline
 Tutorial 3&99.4\% (5 mistakes)&The system made a few mistakes with answers with only character information.\\
 \hline
-Tutorial 4&98.5\% (13 mistakes)&A rounding mistake in the software led to some answers being marked incorrectly.\\
+Tutorial 4&98.5\% (13 mistakes)&A rounding error in the software led to some answers being marked incorrectly.\\
 \hline
 Tutorial 5&99.3\% (5 mistakes)&The system made a few mistakes with answers with only character information.\\
 \hline
@@ -57,9 +57,9 @@ Tutorial 11&100.0\% (0 mistakes)&No mistakes where found.\\
 \end{tabular}
 \end{table}
 
-It is possible that there are tests with mistakes that was not reported. To calculate the probability of this happening the 6th tutorial test was manually checked for mistakes. Non were found. Thus it is assumed that tests that have mistakes in, but is not reported are unlikely and is not incorporated into the calculations.
+It is possible that there are tests with mistakes that was not reported. To calculate the probability of this happening the 6th tutorial test was manually checked for mistakes. None were found. Thus it is assumed that tests that have mistakes in, but is not reported are unlikely and is not incorporated into the calculations.
 
-In the 11 tutorials an average of 99.3\% of test is estimated to be graded correctly, as no corrections were made by students.  This result is seen to be brought down by the basic system having a lower accuracy rate. When only taking the complete grading system's result and average correctly grading tests is calculated to be 99.9\%.
+In the 11 tutorials an average of 99.3\% of tests are estimated to be graded correctly, as no corrections were made by students.  This percentage is lower that expected, because the basic system's averages is also included. When only taking the complete grading system's result, an average of correctly grading tests is calculated to be 99.9\%.
 
 
 \section{Deep Convolutional Neural Network results}
@@ -71,7 +71,7 @@ In a first attempt at training a neural network the generated 11 000 digit train
 
 \subsubsection{Accuracy of network}
 
-The test accuracy of the neural network on both test sets are shown in Table \ref{tbl:nnResult1}.
+The test accuracy of the neural network on both test sets are given in Table \ref{tbl:nnResult1}.
 
 \begin{table}
 \caption{Test results for neural network trained on generated data.} \label{tbl:nnResult1}
@@ -89,13 +89,13 @@ Generated dataset&92.16\%\\
 
 \subsubsection{Conclusion on accuracy}
 
-The results are promising, but the average on the MNIST dataset is still to low. A standard digit classifier has an MNIST testing accuracy of above 99\%. A reason for this accuracy is attributed to the small training set size of the generated dataset. The deep neural network thus does not have enough data to accurately model each digit and starts to overfit on the data.
+The results are promising, but the average on the MNIST dataset is still too low. A standard digit classifier has an MNIST testing accuracy of above 99\%. A reason for this accuracy is attributed to the small training set size of the generated dataset. The deep neural network thus does not have enough data to accurately model each digit and starts to overfit on the data.
 
 \subsection{Trained on MNIST database}
 For the second neural network the MNIST dataset of 60 000 digit was used to train the network.
 
 \subsubsection{Accuracy of network}
-The test accuracy of the neural network on both test sets are shown in Table \ref{tbl:nnResult2}.
+The test accuracy of the neural network on both test sets are given in Table \ref{tbl:nnResult2}.
 
 \begin{table}
 \caption{Test results for neural network trained on MNIST dataset.} \label{tbl:nnResult2}
@@ -113,13 +113,13 @@ Generated dataset&82.23\%\\
 
 \subsubsection{Conclusion on accuracy}
 
-The resulting 83.23\% in classifying the generated data is low. The reason for this low accuracy was attributed to the MNIST dataset having many preprocessed digits. In the test grader example digits are sometimes written to the side. The system mostly corrects for this, but there are cases where the digit cannot be centered. This causes a few off-centred digits that the neural network is not trained to classify.
+The resulting 83.23\% in classifying the generated data is low. The reason for this low accuracy was attributed to the MNIST dataset having many preprocessed digits. In the test grader example digits are sometimes written to the side. The system mostly corrects for this, but there are cases where the digits cannot be centred. This causes a few off-centred digits that the neural network is not trained to classify.
 
 \subsection{Trained on mixed database}
 For the final neural network a combined dataset was used. Thus the 11 000 training digits of the generated dataset and the 60 000 training digits of the MNIST was combined to train the model.
 
 \subsubsection{Accuracy of network}
-The test accuracy of the neural network on both test sets are shown in Table \ref{tbl:nnResult3}.
+The test accuracy of the neural network on both test sets are given in Table \ref{tbl:nnResult3}.
 
 \begin{table}
 \caption{Test results for neural network trained on generated data.} \label{tbl:nnResult3}
