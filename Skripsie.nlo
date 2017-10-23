@@ -5,6 +5,12 @@
 \nomenclatureentry{A$DCNN$@[{$DCNN$}]\begingroup Deep convolutional neural network\nomeqref {2.0}|nompageref}{9}
 \nomenclatureentry{S$G(r,\theta)$@[{$G(r,\theta)$}]\begingroup Radon transform defined over $r$ and $\theta$\nomeqref {3.0}|nompageref}{13}
 \nomenclatureentry{S$f(x, y)$@[{$f(x, y)$}]\begingroup Two dimensional function that a Radon transform is applied over\nomeqref {3.0}|nompageref}{13}
+\nomenclatureentry{S$x$@[{$x$}]\begingroup Horizontal coordinate value in two dimensional plane\nomeqref {3.0}|nompageref}{13}
+\nomenclatureentry{S$y$@[{$y$}]\begingroup Vertical coordinate value in two dimensional plane\nomeqref {3.0}|nompageref}{13}
+\nomenclatureentry{S$r$@[{$r$}]\begingroup Length of perpendicular offset of the line in a Radon transform\nomeqref {3.0}|nompageref}{13}
+\nomenclatureentry{S$\delta$@[{$\delta$}]\begingroup Dirac delta function maps any function to its value at zero\nomeqref {3.0}|nompageref}{13}
+\nomenclatureentry{S$\theta$@[{$\theta$}]\begingroup Angle of summation line in the Radon transform\nomeqref {3.0}|nompageref}{13}
+\nomenclatureentry{S$f(x, y)$@[{$f(x, y)$}]\begingroup Two dimensional function that a Radon transform is applied over\nomeqref {3.0}|nompageref}{13}
 \nomenclatureentry{A$CT$@[{$CT$}]\begingroup Computed Tomography\nomeqref {3.0}|nompageref}{13}
 \nomenclatureentry{S$n$@[{$n$}]\begingroup Number of bubbles of template sheet\nomeqref {3.1}|nompageref}{16}
 \nomenclatureentry{A$DCNN$@[{$DCNN$}]\begingroup Deep convolutional neural network\nomeqref {4.0}|nompageref}{19}
@@ -12,6 +18,8 @@
 \nomenclatureentry{S$w_{i}$@[{$w_{i}$}]\begingroup Weight value at index $i$\nomeqref {4.0}|nompageref}{24}
 \nomenclatureentry{S$b$@[{$b$}]\begingroup Bias variable added to allow a neuron to have an offset in its output\nomeqref {4.0}|nompageref}{24}
 \nomenclatureentry{S$z$@[{$z$}]\begingroup Weighted sum of a neuron's inputs and internal variables\nomeqref {4.0}|nompageref}{24}
+\nomenclatureentry{S$z_k$@[{$z_k$}]\begingroup Weighted sum of a neuron's inputs and internal variables at index $k$ in the specific layer\nomeqref {4.0}|nompageref}{24}
+\nomenclatureentry{S$k$@[{$k$}]\begingroup Index value for a specific input neuron\nomeqref {4.0}|nompageref}{24}
 \nomenclatureentry{S$c$@[{$c$}]\begingroup Number of inputs to a neuron\nomeqref {4.0}|nompageref}{24}
 \nomenclatureentry{S$\sigma(z)$@[{$\sigma(z)$}]\begingroup Normalization function in a neural network\nomeqref {4.1}|nompageref}{25}
 \nomenclatureentry{S$p(i)$@[{$p(i)$}]\begingroup Probability of digit at index $i$\nomeqref {4.2}|nompageref}{25}

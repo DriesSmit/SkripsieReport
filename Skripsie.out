@@ -30,7 +30,7 @@
 \BOOKMARK [1][]{section.4.1}{4.1 Character recognition using a neural network}{chapter.4}% 30
 \BOOKMARK [2][]{subsection.4.1.1}{4.1.1 Preprocessing and creating digit images}{section.4.1}% 31
 \BOOKMARK [2][]{subsection.4.1.2}{4.1.2 Classification of digits}{section.4.1}% 32
-\BOOKMARK [3][]{subsubsection.4.1.2.1}{4.1.2.1 The Neural Network Basics}{subsection.4.1.2}% 33
+\BOOKMARK [3][]{subsubsection.4.1.2.1}{4.1.2.1 The Neural Network basics}{subsection.4.1.2}% 33
 \BOOKMARK [3][]{subsubsection.4.1.2.2}{4.1.2.2 The Artificial Neuron}{subsection.4.1.2}% 34
 \BOOKMARK [3][]{subsubsection.4.1.2.3}{4.1.2.3 Generating an output from the network}{subsection.4.1.2}% 35
 \BOOKMARK [3][]{subsubsection.4.1.2.4}{4.1.2.4 Deep Convolutional Neural Network}{subsection.4.1.2}% 36

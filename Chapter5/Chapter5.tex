@@ -10,7 +10,7 @@ Each systems is assessed using 3 categories. In category 1, marking statistics a
 
 \section{Results of 25 test cases}
 
-In this section the results of grading 25 hand picked tests are compared between the two systems. Among the 25 tests, there are different categories that evaluates different aspects and limitations of the systems. The categories and the number of test for the particular category, are shown in Table \ref{tbl:25Tests}.
+In this section the results of grading 25 hand picked tests are compared between the two systems. Among the 25 tests, there are different categories that evaluate different aspects and limitations of the systems. The categories and the number of test for the particular category, are shown in Table \ref{tbl:25Tests}.
 
 \begin{table}
 \caption{Description of 25 evaluation tests.} \label{tbl:25Tests}
@@ -38,12 +38,12 @@ Page with tilted template inside image&2\\
 \end{tabular} 
 \end{table}
 
-These tests are specifically chosen, because combined they approximates all the types of tests the system has to asses. Most of the tests are extreme cases of what students have filled in on test forms. These test provides a good test-bench to see how well each system performs in challenging situations.
+These tests are specifically chosen, because combined, they approximates all the types of tests the system has to asses. Most of the tests are extreme cases of what students have filled in on test forms. These test provides a good test-bench to see how well each system performs in challenging situations.
 
 \subsection{Basic system}
 \subsubsection{Marking statistics}
 
-Using this basic system, an average time for each test is calculated to be 0.305 seconds. 
+Using the basic system, an average time for each test is calculated to be 0.305 seconds. 
 
 \begin{figure}
   \centering
@@ -58,7 +58,7 @@ A total of 6 out of the 25 test where reported as clashes. The two images withou
 
 \subsubsection{Incorrect automatic graded results}
 
-There where 4 tests in total that where graded automatically, but incorrectly. All of these test were tests that had only character information in at least one of the answers. An example of this can be seen in Figure \ref{fig:OnlyCharacters}.
+There where 4 tests in total that where graded automatically, but incorrectly. All of these tests had only character information in at least one of the answers. An example of this can be seen in Figure \ref{fig:OnlyCharacters}.
 
 \begin{figure}
   \centering
@@ -71,11 +71,11 @@ There where 4 tests in total that where graded automatically, but incorrectly. A
 
 \subsubsection{Marking statistics}
 
-Using this complete system, an average time for each test is calculated to be 2.011 seconds. 
+Using the complete system, an average time for each test is calculated to be 2.011 seconds. 
 
 \subsubsection{Clash list}
 
-A total of 6 out of the 25 test where reported as clashes. The two images with no template in were both again reported in the clash list. Two cases was reported to the clash list due to the character recognition determining a crossed out character as the intended character. An example of this is shown in Figure \ref{fig:crossedOutCharacter}. One test was reported, because it only has characters in with no bubbles coloured in. Thus, even though the system identified every character correctly, it had a to low of a percentage confidence in its answer and reported it to the clash list. 
+A total of 6 out of the 25 test where reported as clashes. The two images with no template in were both again reported in the clash list. Two cases was reported to the clash list due to the character recognition determining a crossed out character as the intended character. An example of this is shown in Figure \ref{fig:crossedOutCharacter}. One test was reported, because it only has characters in with no bubbles coloured in. Thus, even though the system identified every character correctly, it had a too low of a percentage confidence in its answer and reported it to the clash list. 
 
 \begin{figure}
   \centering
@@ -86,18 +86,18 @@ A total of 6 out of the 25 test where reported as clashes. The two images with n
 
 \subsubsection{Incorrect automatic graded results}
 
-There were no automatically graded answers that were done so incorrectly.
+There were no automatically graded answers that were done incorrectly.
 
 \subsection{Analysis or results}
 
-The complete systems does not reduce the number of clashes significantly for these 25 images. The completed system is that it takes on average 2.011 seconds to grade a test. The student number PGM takes most of that time, 1.5 seconds, to infer the correct student number. The complete system had no incorrectly automatically graded answers in contrast to the 4 graded incorrectly using the basic system. A reason to this is attributed to more evidence that gets considered in the complete system. Therefore only if the evidence match up will the system be certain enough to accept its answer as the correct one. In the next section the complete system is used to grade a tutorial written by students. 
+The complete systems does not reduce the number of clashes significantly for these 25 images. The complete system took on average 2.011 seconds to grade a test. The student number PGM takes most of that time, 1.5 seconds, to infer the correct student number. The complete system had no incorrectly automatically graded answers in contrast to the 4 graded incorrectly using the basic system. A reason to this is attributed to more evidence that gets considered in the complete system. Therefore only if the evidence match up will the system be certain enough to accept its answer as the correct one. In the next section the complete system is used to grade a tutorial test written by students. 
 
 \section{Grading of tutorial tests}
-In this section the complete system is tested on the final tutorial written by all the students in the class. The final version of the complete system was used in grading the students' tests. Student feedback was recorded to find tests that were graded incorrectly and used as the grader's results. 
+In this section the complete system is tested on a tutorial written by all the students in the class. The final version of the complete system was used in grading the students' tests. Student feedback was recorded to find tests that were graded incorrectly and used as the grader's results. 
 
 \subsection{Marking statistics}
 
-For these tutorial test  an average marking time per test of 2.01 seconds was recorded.
+For these tutorial test an average marking time per test of 2.01 seconds was recorded.
 
 \subsection{Clash list}
 
@@ -110,7 +110,7 @@ There were in total 57 clashes in the 888 tests. These 67 clashes are categorise
 \textbf{Number of tests} & \textbf{Category description}\\
 \textbf{in category} &\\
 \hline
-31&In these tests the system guessed the right values, but was unsure about its answer. Some of the cases was when the student number was only filled in the character box. The software always identified the correct student number, but was still unsure about that answer.\\
+31&In these tests the system guessed the right values, but was unsure about its answer. Some of the cases were when the student number was only filled in the character box. The software always identified the correct student number, but was still unsure about the answer.\\
 \hline
 15&In these tests the system could not distinguish between a crossed out answer and correct answer. This is due to the crossed out answer being interpreted as a filled in answer.\\
 \hline
@@ -127,7 +127,7 @@ There were in total 57 clashes in the 888 tests. These 67 clashes are categorise
 
 The students were asked to report any results that were marked incorrectly by the system for this particular test. These results are all the results that the system decided to accept the automatically graded answer and in doing so, graded the test incorrectly.
 
-Only 1 result was reported where the software automatically marked the wrong answer to a test. The correct answer was -95.0 and the system marked the answer as 95.0, as shown in Figure \ref{fig:wrongAns}. There may still be tests that were marked incorrectly, but these test(s) were not reported. In comparison there were 15 known mistakes made in the first tutorial using the basic system.
+Only 1 result was reported where the software automatically marked the answer in an incorrect manner. The correct answer was -95.0 and the system marked the answer as 95.0, as shown in Figure \ref{fig:wrongAns}. There may still be tests that were marked incorrectly, but these test(s) were not reported. In comparison there were 15 known mistakes made in the first tutorial using the basic system.
 
 \begin{figure}
   \centering
@@ -140,7 +140,7 @@ For a more detailed description of the results from grading all 4 tutorial tests
 
 \subsection{Analysis or results}
 
-In conclusion, it is noted that the complete system, with its machine learning capabilities, slightly reduces the number of tests that the user must mark manually from the previous basic system. About 7.5\% of the tests in the tutorial had to be marked manually, due to the system being unsure of its answers. The system does, however, have a 99.9\% of grading tests correctly if they are done automatically. The reason for this can be attributed to the fact that the system correlates two pieces of evidence to predict the correct answer. Thus, both the character and bubble information has to be interpreted incorrectly for the system to automatically grade an answer incorrectly. 
+In conclusion, it is noted that the complete system, with its machine learning capabilities, reduces the number of tests that the user must mark manually from the previous basic system. About 7.5\% of the tests in the tutorial had to be marked manually, due to the system being unsure of its answers. The system does, however, have a 99.9\% of grading tests correctly if they are done automatically. The reason for this can be attributed to the fact that the system correlates two pieces of evidence to predict the correct answer. Thus, both the character and bubble information has to be interpreted incorrectly for the system to automatically grade an answer incorrectly. 
 
 The system could grade 92.5\% of all the test correctly and automatically. From the remaining 7.5\% only 1 test or 0.1\% of the tests was found to be graded incorrectly and the other 7.4\% of the tests were sent to a clash list. The system classified most of the clash list test correctly. If the clash list threshold level of the system is set to 0 the system could possible have graded 97.1\% of the tests correctly.
 

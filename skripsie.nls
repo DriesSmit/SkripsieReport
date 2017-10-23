@@ -21,8 +21,12 @@
 
  \nomgroup{S}
 
+  \item [{$\delta$}]\begingroup Dirac delta function maps any function to its value at zero\nomeqref {3.0}
+		\nompageref{13}
   \item [{$\sigma(z)$}]\begingroup Normalization function in a neural network\nomeqref {4.1}
 		\nompageref{25}
+  \item [{$\theta$}]\begingroup Angle of summation line in the Radon transform\nomeqref {3.0}
+		\nompageref{13}
   \item [{$A$}]\begingroup Random variable representing an answer for a specific question\nomeqref {C.0}
 		\nompageref{47}
   \item [{$b$}]\begingroup Bias variable added to allow a neuron to have an offset in its output\nomeqref {4.0}
@@ -51,14 +55,20 @@
 		\nompageref{16}
   \item [{$p(i)$}]\begingroup Probability of digit at index $i$\nomeqref {4.2}
 		\nompageref{25}
+  \item [{$r$}]\begingroup Length of perpendicular offset of the line in a Radon transform\nomeqref {3.0}
+		\nompageref{13}
   \item [{$S$}]\begingroup Random variable representing the possible student number\nomeqref {C.0}
 		\nompageref{47}
   \item [{$Sn$}]\begingroup Random variable representing the sign of a specific answer\nomeqref {C.1}
 		\nompageref{48}
   \item [{$w_{i}$}]\begingroup Weight value at index $i$\nomeqref {4.0}
 		\nompageref{24}
+  \item [{$x$}]\begingroup Horizontal coordinate value in two dimensional plane\nomeqref {3.0}
+		\nompageref{13}
   \item [{$x_{i}$}]\begingroup Input value at index $i$\nomeqref {4.0}
 		\nompageref{24}
+  \item [{$y$}]\begingroup Vertical coordinate value in two dimensional plane\nomeqref {3.0}
+		\nompageref{13}
   \item [{$z$}]\begingroup Weighted sum of a neuron's inputs and internal variables\nomeqref {4.0}
 		\nompageref{24}
 

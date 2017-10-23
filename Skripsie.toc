@@ -3,7 +3,7 @@
 \contentsline {chapter}{Uittreksel}{iv}{Doc-Start}
 \contentsline {chapter}{List of Figures}{x}{chapter*.2}
 \contentsline {chapter}{List of Tables}{xi}{chapter*.3}
-\contentsline {chapter}{Nomenclature}{xiii}{chapter*.4}
+\contentsline {chapter}{Nomenclature}{xiv}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Problem background}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Problem statement}{2}{section.1.2}
@@ -31,7 +31,7 @@
 \contentsline {section}{\numberline {4.1}Character recognition using a neural network}{19}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Preprocessing and creating digit images}{20}{subsection.4.1.1}
 \contentsline {subsection}{\numberline {4.1.2}Classification of digits}{23}{subsection.4.1.2}
-\contentsline {subsubsection}{\numberline {4.1.2.1}The Neural Network Basics}{24}{subsubsection.4.1.2.1}
+\contentsline {subsubsection}{\numberline {4.1.2.1}The Neural Network basics}{24}{subsubsection.4.1.2.1}
 \contentsline {subsubsection}{\numberline {4.1.2.2}The Artificial Neuron}{24}{subsubsection.4.1.2.2}
 \contentsline {subsubsection}{\numberline {4.1.2.3}Generating an output from the network}{25}{subsubsection.4.1.2.3}
 \contentsline {subsubsection}{\numberline {4.1.2.4}Deep Convolutional Neural Network}{25}{subsubsection.4.1.2.4}
