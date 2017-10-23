@@ -7,10 +7,10 @@ As modern technology and machine learning techniques advances, it is important f
 
 In the recent years the Applied Mathematics Department of Stellenbosch Engineering, started observing a decrease in accuracy in the grading of tutorial tests done by a teaching assistants and demies.  Students complain on a regular basis about correct answers being marked incorrectly or even that their answers were totally ignored. Furthermore, the assistants took a long time to grade these tests with time and financial implications. To address this problem, the Applied Mathematics department proposes to automate the process of grading the tutorial tests.
 
-The head of the department wanted a system that can analyse and grade tests written on a specific template. These answer sheets are handed out to the students to fill in their respective answers. The answer sheets are then scanned in to create a digital copy. The system is tasked with automatically grading all these digital copies and transferring the graded results to a database.
+The head of the department wanted a system that can analyse and grade tests written on a specific template. These answer sheets are handed out to the students to fill in their respective answers. The answer sheets are then scanned to create a digital copy. The system is tasked with automatically grading all these digital copies and transferring the graded results to a database.
 
 The department has tried to use a basic version of this type of system in the past. Such a system only really becomes useful to the department if it can grade decimal values instead of only being able to grade multiple choice answers. Thus a template needs to be designed that allows students to answer with decimal valued answers. Another factor to consider is filling in those values must still be relatively easy. Therefore students need to have the freedom of quickly crossing out an answer instead of erasing it each time.
-In this research project the department sends weekly scanned-in answer sheets, which need to be graded and the results returned to them. The feedback from these weekly tutorial tests then acts as validation tests for the system. These tests are done in parallel with the development and expansion of the test grading software. For these reasons an agile development methodology is used to develop the software.
+In this research project the department sends weekly scanned answer sheets, which need to be graded and the results returned to them. The feedback from these weekly tutorial tests then acts as validation tests for the system. These tests are done in parallel with the development and expansion of the test grading software. For these reasons an agile development methodology is used to develop the software.
 
 \section{Problem statement}
 \label{sec:problemStatement}
@@ -24,7 +24,7 @@ Given the problem background and stakeholders discussed in the previous section 
 }
 
 \section{Project scope and assumptions}\label{sec:Scope}
-Initial discussions with the department revealed that a specific template can be used. This template allows the image processing software to more accurately determine what the student's intended answer is. The template consists of bubbles that can be filled in as well as blocks for handwritten digits, as shown in Figure \ref{fig:NumbersTemplate}. The focus of this project lies on processing the scanned-in answer sheet written on the specific template. To use the template the student must fill in his/her student number and question answers in the designated character blocks. They are also required to fill in the bubble underneath each digit, corresponding to that specific digit. Additionally a bubble next to each question is provided if a negative sign is required.
+Initial discussions with the department revealed that a specific template can be used. This template allows the image processing software to more accurately determine what the student's intended answer is. The template consists of bubbles that can be filled in as well as blocks for handwritten digits, as shown in Figure \ref{fig:NumbersTemplate}. The focus of this project lies on processing the scanned answer sheet written on the specific template. To use the template the student must fill in his/her student number and question answers in the designated character blocks. They are also required to fill in the bubble underneath each digit, corresponding to that specific digit. Additionally a bubble next to each question is provided if a negative sign is required.
 
 \begin{figure}
   \centering
@@ -43,7 +43,7 @@ Any additional assumptions are stated in the appropriate section throughout this
 The problem as stated in Section \ref{sec:problemStatement}, is addressed by pursuing the following objectives:
 \begin{enumerate}
   \item Do a \textsl{literature study} on the topics of \textsl{Image Processing}, \textsl{Computer Vision} and \textsl{Character Recognition}. Further a \textsl{literature study} on \textsl{Neural Networks} and \textsl{Probabilistic Graphical models} is also done.
-  \item Develop a \textsl{software application} to allow a \textsl{user} to grade a large number (approximately 1000) scanned in student tests automatically.
+  \item Develop a \textsl{software application} to allow a \textsl{user} to grade a large number (approximately 1000) scanned student tests automatically.
 \item The software should provide precise and useful feedback. In order to achieve this, every graded result will also include feedback on what questions the student answered incorrectly.
 \item Upgrade the software to allow students to cross out answers instead of having to erase them.
   \item Do a weekly \textsl{validation experiment} with the software, by grading tutorial test for the department. The results are then used as the students' grades for that test.
