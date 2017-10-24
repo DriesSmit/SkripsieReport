@@ -8,17 +8,17 @@ This chapter will provide information on already existing Optical Mark Recogniti
 \section{Existing OMR techniques}
 An OMR system is software that is used to extracted handwritten information from a filled-in form. Each system normally has a specific template that it can extract information from. An example template is shown in Figure \ref{fig:omrTemplate}. These systems are generally used when fast and accurate grading of tests are required. The main drawback of these systems is that information can only be portrayed in a limited manner, due to the bubbles. On an OMR template there is a grid of bubbles that allows a user to choose between different options to answer. Optical Mark Recognition systems are thus excellent for the grading of multiple choice type questions. 
 
+\begin{figure}
+  \centering
+  \includegraphics[width=14cm]{omrTemplate}\\
+  \caption{Standard OMR template with reference blocks on the left, from \citet{stdTemplate}}
+  \label{fig:omrTemplate}
+\end{figure}
+
 \subsection{Standard OMR systems}
 \label{sec:StandardTech}
 
 As can be seen in Figure \ref{fig:omrTemplate}, there is normally specific reference blocks on an OMR template. These blocks are included to allow the computer vision and image processing algorithms to find the orientation of the image more easily. Other templates include lines that can be used to locate the template.
-
-\begin{figure}
-  \centering
-  \includegraphics[width=10cm]{omrTemplate}\\
-  \caption{Standard OMR template with reference blocks on the left, from \citet{stdTemplate}}
-  \label{fig:omrTemplate}
-\end{figure}
 
 In an OMR system there are normally two phases in the grading of a test, as stated in \citet{DraganI2003}. The first step is to determine the grid within where the answers are located in the image. In this process the system finds the orientation of the template in the image and therefore can approximate the location of the use of coloured in bubbles. Normally, some preprocessing on a blank template is done beforehand to aid in locating the bubbles. Once the bubbles were found, their estimated locations gets stored. The second step is then to estimate the value of each bubble and use these values as the estimated answers. These steps are described in more detail next.
 

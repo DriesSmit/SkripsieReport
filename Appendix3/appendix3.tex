@@ -57,7 +57,7 @@ In determining an intended digit there are 11 information nodes to use as eviden
   \caption{Graphical setup of determining intended digit.}
   \label{fig:appDigit}
 \end{figure}
-\nomenclature[S]{$BE_i$}{Random variable representing a bubble evidence obtained form image processing at and arbitrary index $i$}
+\nomenclature[S]{$BE_i$}{Random variable representing bubble evidence obtained form image processing of the digit at index $i$}
 \nomenclature[S]{$CE_i$}{Random variable representing a character evidence obtained form image processing at and arbitrary index $i$}
 
 The probability of each column's digit is describe by $P(D_i/I)$. This value represents the probability of each of the 10 digits being written down in column $i$ . We know that the digit evidence is calculated heuristically using image processing. Each bubble thus has an evidence value with 4 possible states, namely not filled in, crossed out, partially filled-in and completely filled in. Thus the estimate of the intended digit is now represented by $P(D_i/I,BE_i,CE_i)$. $BE_i$ and $CE_i$ represents all the bubble and character evidence for that digit. As seen in Figure \ref{fig:appDigit}, $D_i$ and $I$ becomes independent from one another given the values of $BE_i$ and $CE_i$. Thus the probability of the intended digit is now given by $P(D_i/BE_i,CE_i)$.

@@ -14,7 +14,6 @@
 \nomenclatureentry{A$CT$@[{$CT$}]\begingroup Computed Tomography\nomeqref {3.0}|nompageref}{13}
 \nomenclatureentry{S$G_\theta(r)$@[{$G_\theta(r)$}]\begingroup The Randon transform's values at a given $\theta$\nomeqref {3.0}|nompageref}{13}
 \nomenclatureentry{S$n$@[{$n$}]\begingroup Number of bubbles of template sheet\nomeqref {3.1}|nompageref}{16}
-\nomenclatureentry{A$DCNN$@[{$DCNN$}]\begingroup Deep convolutional neural network\nomeqref {4.0}|nompageref}{19}
 \nomenclatureentry{S$x_{i}$@[{$x_{i}$}]\begingroup Input value at index $i$\nomeqref {4.0}|nompageref}{24}
 \nomenclatureentry{S$w_{i}$@[{$w_{i}$}]\begingroup Weight value at index $i$\nomeqref {4.0}|nompageref}{24}
 \nomenclatureentry{S$b$@[{$b$}]\begingroup Bias variable added to allow a neuron to have an offset in its output\nomeqref {4.0}|nompageref}{24}
@@ -29,7 +28,7 @@
 \nomenclatureentry{S$S$@[{$S$}]\begingroup Random variable representing the possible student number\nomeqref {C.0}|nompageref}{47}
 \nomenclatureentry{S$Sn$@[{$Sn$}]\begingroup Random variable representing the sign of a specific answer\nomeqref {C.0}|nompageref}{48}
 \nomenclatureentry{S$D_i$@[{$D_i$}]\begingroup Random variable representing a digit in column $i$ for a answer or student number block\nomeqref {C.0}|nompageref}{48}
-\nomenclatureentry{S$BE_i$@[{$BE_i$}]\begingroup Random variable representing a bubble evidence obtained form image processing at and arbitrary index $i$\nomeqref {C.1}|nompageref}{50}
+\nomenclatureentry{S$BE_i$@[{$BE_i$}]\begingroup Random variable representing bubble evidence obtained form image processing of the digit at index $i$\nomeqref {C.1}|nompageref}{50}
 \nomenclatureentry{S$CE_i$@[{$CE_i$}]\begingroup Random variable representing a character evidence obtained form image processing at and arbitrary index $i$\nomeqref {C.1}|nompageref}{50}
 \nomenclatureentry{S$BI_i$@[{$BI_i$}]\begingroup Random variable representing the bubbles the student to colour in for digit $i$\nomeqref {C.1}|nompageref}{50}
 \nomenclatureentry{S$DE$@[{$DE$}]\begingroup Random variables representing a digit evidence obtained form image processing\nomeqref {C.8}|nompageref}{52}

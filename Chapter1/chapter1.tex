@@ -26,9 +26,9 @@ Given the problem background and stakeholders discussed in the previous section 
 \section{Project scope and assumptions}\label{sec:Scope}
 Initial discussions with the department revealed that a specific template can be used. This template allows the image processing software to more accurately determine what the student's intended answer is. The template consists of bubbles that can be filled in as well as blocks for handwritten digits, as shown in Figure \ref{fig:NumbersTemplate}. The focus of this project lies on processing the scanned answer sheet written on the specific template. To use the template the student must fill in his/her student number and question answers in the designated character blocks. They are also required to fill in the bubble underneath each digit, corresponding to that specific digit. Additionally a bubble next to each question is provided if a negative sign is required.
 
-\begin{figure}
+\begin{figure}[h]
   \centering
-  \includegraphics[width=6cm]{NumbersTemplate}\\
+  \includegraphics[width=8cm]{NumbersTemplate}\\
   \caption{Automatic test grading template layout.}
   \label{fig:NumbersTemplate}
 \end{figure}
@@ -73,10 +73,13 @@ The structure and graphical overview of the software is presented next.
 
 \section{Graphical overview of system}
 The process of writing an answer down on a paper can be represented using 6 information nodes. These nodes are illustrated in Figure \ref{fig:systemOverviewIntro}. The unnamed blocks indicate that information processing occurs in these steps. The student has certain information he/she wants to portray on the paper, namely the 4 answers and student number he/she wants to write down. Thus those 5 nodes give rise to the image, representing the last node. These nodes have to be represented in a probabilistic manner as the process of writing answers down and scanning the test sheet in, may produce a different image every time a test is written, even though the same answers are intended. Thus the system is fundamentally tasked with inferring the probability of each answer and the student's number given the particular image as evidence. This is done by processing the image evidence to produce and estimate the intended answers. These processes are described in later sections. In the next section a literature study on current systems is given. For a more detailed mathematical overview of the system, refer to Appendix \ref{ap:systemOverview}.
-
-\begin{figure}[b]
+\\
+\\
+\\
+\\
+\begin{figure}[H]
   \centering
-  \includegraphics[width=11cm]{systemOverview}\\
+  \includegraphics[width=13cm]{systemOverview}\\
   \caption{Graphical overview of the system as a whole.}
   \label{fig:systemOverviewIntro}
 \end{figure}

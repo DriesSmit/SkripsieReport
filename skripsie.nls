@@ -6,8 +6,6 @@
 		\nompageref{13}
   \item [{$DCNN$}]\begingroup Deep convolutional neural network\nomeqref {2.0}
 		\nompageref{9}
-  \item [{$DCNN$}]\begingroup Deep convolutional neural network\nomeqref {4.0}
-		\nompageref{19}
   \item [{$NN$}]\begingroup Neural network\nomeqref {0}\nompageref{iii}
   \item [{$OCR$}]\begingroup Optical character recognition\nomeqref {2.0}
 		\nompageref{9}
@@ -31,7 +29,7 @@
 		\nompageref{47}
   \item [{$b$}]\begingroup Bias variable added to allow a neuron to have an offset in its output\nomeqref {4.0}
 		\nompageref{24}
-  \item [{$BE_i$}]\begingroup Random variable representing a bubble evidence obtained form image processing at and arbitrary index $i$\nomeqref {C.1}
+  \item [{$BE_i$}]\begingroup Random variable representing bubble evidence obtained form image processing of the digit at index $i$\nomeqref {C.1}
 		\nompageref{50}
   \item [{$BI_i$}]\begingroup Random variable representing the bubbles the student to colour in for digit $i$\nomeqref {C.1}
 		\nompageref{50}
