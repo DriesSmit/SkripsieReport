@@ -17,30 +17,31 @@
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Box after black lines gets filtered out, found using a Radon transform.\relax }}{21}{figure.caption.16}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Custom segmentation algorithm used to find the main cluster in the remaining image.\relax }}{22}{figure.caption.17}
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Area block drawn around the segment most probable to belong to the digit.\relax }}{22}{figure.caption.18}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Image after final translation and normalization is applied.\relax }}{22}{figure.caption.19}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Final image after translation and normalization is applied.\relax }}{22}{figure.caption.19}
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Example image used as input to the neural network, from \citet {tensor2017}\relax }}{23}{figure.caption.20}
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Basic structure of a neural network, from \citet {karpathy2017}\relax }}{24}{figure.caption.21}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Graphical setup for determining the intended digit written by a student.\relax }}{28}{figure.caption.22}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Graphical setup of student answer.\relax }}{29}{figure.caption.23}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Graphical setup for determining the intended digit written by a student.\relax }}{27}{figure.caption.22}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Graphical setup of student answer.\relax }}{28}{figure.caption.23}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Graphical setup of student number.\relax }}{29}{figure.caption.24}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Image showing answer with crossed out answers that the system misinterpreted.\relax }}{33}{figure.caption.25}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Filled-in answer with only character information.\relax }}{34}{figure.caption.26}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Crossed out character that confused the grading system.\relax }}{35}{figure.caption.27}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Incorrectly identified answer as 95.\relax }}{36}{figure.caption.29}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Project plan for the final year project.\relax }}{43}{figure.caption.31}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Image showing answer with crossed out answers that the system misinterpreted.\relax }}{33}{figure.caption.26}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Filled-in answer with only character information.\relax }}{34}{figure.caption.27}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Crossed out character that confused the grading system.\relax }}{35}{figure.caption.28}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Incorrectly identified answer as 95.\relax }}{36}{figure.caption.30}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {C.1}{\ignorespaces System overview.\relax }}{47}{figure.caption.34}
-\contentsline {figure}{\numberline {C.2}{\ignorespaces Graphical setup of determining student answer.\relax }}{48}{figure.caption.35}
-\contentsline {figure}{\numberline {C.3}{\ignorespaces Column with evidence that gets considered for the calculation of an intended digit.\relax }}{50}{figure.caption.36}
-\contentsline {figure}{\numberline {C.4}{\ignorespaces Graphical setup of determining intended digit.\relax }}{51}{figure.caption.37}
-\contentsline {figure}{\numberline {C.5}{\ignorespaces Graphical setup of determining student number.\relax }}{53}{figure.caption.38}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Project plan for the final year project.\relax }}{43}{figure.caption.32}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {D.1}{\ignorespaces Main interface of test grader.\relax }}{56}{figure.caption.39}
-\contentsline {figure}{\numberline {D.2}{\ignorespaces Clash list interface of test grader.\relax }}{56}{figure.caption.40}
-\contentsline {figure}{\numberline {D.3}{\ignorespaces Original template focussed on numbered answered questions.\relax }}{58}{figure.caption.41}
-\contentsline {figure}{\numberline {D.4}{\ignorespaces Template allowing for numbered and multiple choice answers.\relax }}{59}{figure.caption.42}
-\contentsline {figure}{\numberline {D.5}{\ignorespaces Template focussed solely on multiple choice type questions.\relax }}{60}{figure.caption.43}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {C.1}{\ignorespaces System overview.\relax }}{47}{figure.caption.35}
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Graphical setup of determining student answer.\relax }}{48}{figure.caption.36}
+\contentsline {figure}{\numberline {C.3}{\ignorespaces Column with evidence that gets considered for the calculation of an intended digit.\relax }}{50}{figure.caption.37}
+\contentsline {figure}{\numberline {C.4}{\ignorespaces Graphical setup of determining intended digit.\relax }}{51}{figure.caption.38}
+\contentsline {figure}{\numberline {C.5}{\ignorespaces Graphical setup of determining student number.\relax }}{53}{figure.caption.39}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {D.1}{\ignorespaces Main interface of test grader.\relax }}{56}{figure.caption.40}
+\contentsline {figure}{\numberline {D.2}{\ignorespaces Clash list interface of test grader.\relax }}{56}{figure.caption.41}
+\contentsline {figure}{\numberline {D.3}{\ignorespaces Original template focussed on numbered answered questions.\relax }}{58}{figure.caption.42}
+\contentsline {figure}{\numberline {D.4}{\ignorespaces Template allowing for numbered and multiple choice answers.\relax }}{59}{figure.caption.43}
+\contentsline {figure}{\numberline {D.5}{\ignorespaces Template focussed solely on multiple choice type questions.\relax }}{60}{figure.caption.44}
 \addvspace {10\p@ }

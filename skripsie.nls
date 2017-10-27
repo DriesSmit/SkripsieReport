@@ -22,7 +22,7 @@
   \item [{$\delta$}]\begingroup Dirac delta function maps any function to its value at zero\nomeqref {3.0}
 		\nompageref{14}
   \item [{$\sigma(z)$}]\begingroup Normalization function in a neural network\nomeqref {4.1}
-		\nompageref{25}
+		\nompageref{24}
   \item [{$\theta$}]\begingroup Angle of summation line in the Radon transform\nomeqref {3.0}
 		\nompageref{14}
   \item [{$A$}]\begingroup Random variable representing an answer for a specific question\nomeqref {C.0}

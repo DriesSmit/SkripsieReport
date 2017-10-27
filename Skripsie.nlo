@@ -21,7 +21,7 @@
 \nomenclatureentry{S$z_k$@[{$z_k$}]\begingroup Weighted sum of a neuron's inputs and internal variables at index $k$ in the specific layer\nomeqref {4.0}|nompageref}{24}
 \nomenclatureentry{S$k$@[{$k$}]\begingroup Index value for a specific input neuron\nomeqref {4.0}|nompageref}{24}
 \nomenclatureentry{S$c$@[{$c$}]\begingroup Number of inputs to a neuron\nomeqref {4.0}|nompageref}{24}
-\nomenclatureentry{S$\sigma(z)$@[{$\sigma(z)$}]\begingroup Normalization function in a neural network\nomeqref {4.1}|nompageref}{25}
+\nomenclatureentry{S$\sigma(z)$@[{$\sigma(z)$}]\begingroup Normalization function in a neural network\nomeqref {4.1}|nompageref}{24}
 \nomenclatureentry{S$p(i)$@[{$p(i)$}]\begingroup Probability of digit at index $i$\nomeqref {4.2}|nompageref}{25}
 \nomenclatureentry{S$A$@[{$A$}]\begingroup Random variable representing an answer for a specific question\nomeqref {C.0}|nompageref}{47}
 \nomenclatureentry{S$I$@[{$I$}]\begingroup Random variable representing the test image\nomeqref {C.0}|nompageref}{47}
