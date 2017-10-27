@@ -3,7 +3,7 @@
  \nomgroup{A}
 
   \item [{$CT$}]\begingroup Computed Tomography\nomeqref {3.0}
-		\nompageref{13}
+		\nompageref{14}
   \item [{$DCNN$}]\begingroup Deep convolutional neural network\nomeqref {2.0}
 		\nompageref{9}
   \item [{$NN$}]\begingroup Neural network\nomeqref {0}\nompageref{iii}
@@ -20,11 +20,11 @@
  \nomgroup{S}
 
   \item [{$\delta$}]\begingroup Dirac delta function maps any function to its value at zero\nomeqref {3.0}
-		\nompageref{13}
+		\nompageref{14}
   \item [{$\sigma(z)$}]\begingroup Normalization function in a neural network\nomeqref {4.1}
 		\nompageref{25}
   \item [{$\theta$}]\begingroup Angle of summation line in the Radon transform\nomeqref {3.0}
-		\nompageref{13}
+		\nompageref{14}
   \item [{$A$}]\begingroup Random variable representing an answer for a specific question\nomeqref {C.0}
 		\nompageref{47}
   \item [{$b$}]\begingroup Bias variable added to allow a neuron to have an offset in its output\nomeqref {4.0}
@@ -44,11 +44,11 @@
   \item [{$DI$}]\begingroup Random variables all the digit intended by the student\nomeqref {C.8}
 		\nompageref{52}
   \item [{$f(x, y)$}]\begingroup Two dimensional function that a Radon transform is applied over\nomeqref {3.0}
-		\nompageref{13}
+		\nompageref{14}
   \item [{$G(r,\theta)$}]\begingroup Radon transform defined over $r$ and $\theta$\nomeqref {3.0}
-		\nompageref{13}
+		\nompageref{14}
   \item [{$G_\theta(r)$}]\begingroup The Randon transform's values at a given $\theta$\nomeqref {3.0}
-		\nompageref{13}
+		\nompageref{14}
   \item [{$I$}]\begingroup Random variable representing the test image\nomeqref {C.0}
 		\nompageref{47}
   \item [{$k$}]\begingroup Index value for a specific input neuron\nomeqref {4.0}
@@ -58,7 +58,7 @@
   \item [{$p(i)$}]\begingroup Probability of digit at index $i$\nomeqref {4.2}
 		\nompageref{25}
   \item [{$r$}]\begingroup Length of perpendicular offset of the line in a Radon transform\nomeqref {3.0}
-		\nompageref{13}
+		\nompageref{14}
   \item [{$S$}]\begingroup Random variable representing the possible student number\nomeqref {C.0}
 		\nompageref{47}
   \item [{$Sn$}]\begingroup Random variable representing the sign of a specific answer\nomeqref {C.0}
@@ -66,11 +66,11 @@
   \item [{$w_{i}$}]\begingroup Weight value at index $i$\nomeqref {4.0}
 		\nompageref{24}
   \item [{$x$}]\begingroup Horizontal coordinate value in two dimensional plane\nomeqref {3.0}
-		\nompageref{13}
+		\nompageref{14}
   \item [{$x_{i}$}]\begingroup Input value at index $i$\nomeqref {4.0}
 		\nompageref{24}
   \item [{$y$}]\begingroup Vertical coordinate value in two dimensional plane\nomeqref {3.0}
-		\nompageref{13}
+		\nompageref{14}
   \item [{$z$}]\begingroup Weighted sum of a neuron's inputs and internal variables\nomeqref {4.0}
 		\nompageref{24}
   \item [{$z_k$}]\begingroup Weighted sum of a neuron's inputs and internal variables at index $k$ in the specific layer\nomeqref {4.0}

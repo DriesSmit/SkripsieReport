@@ -7,7 +7,7 @@ The previous chapter focused on existing methods of grading tests automatically.
 \label{sec:orientDetect}
 As mentioned in Section \ref{sec:StandardTech}, there are two main steps in OMR grading. The first challenge with grading a scanned answer sheet, is finding the orientation of the template in the image. This can be done by finding two or more reference points on the page. These reference points then allow for the calculation of the template's rotation, offset and size inside the image. In Chapter \ref{ch:LiteratureStudy} it was found that the traditional way to find these reference points was to include them on the page, in the form of black blocks or lines. Including black blocks is an effective method of finding the template, but might look a bit less attractive, due to the black blocks on the page.
 
-For this project, the markers or reference points that the software uses are already present on the template paper. These are the two longest horizontal lines as well as the two vertical lines on the comment box, as can be seen in Figure \ref{fig:radonResults}. Together, these lines have enough information to determine 4 reference points, shown in red in the figure. The reason these lines are chosen as references, is because a Radon transform can easily be applied to locate them, as discussed in Section \ref{sec:RadonTransform}. Therefore the software can successfully find the template even though one of the four lines is identified incorrectly. Using the reference points the rotation, offset and size of the template is determined. However, before the orientation of the image can be determined, a check is made if the image might be upside down. This is done to make it easier to find the orientation afterwards. This requires some initial image filtering and is discussed in the next section.
+For this project, the markers or reference points that the software uses are already present on the template paper. These are the two longest horizontal lines as well as the two vertical lines on the comment box, as can be seen in Figure \ref{fig:radonResults}. Together, these lines have enough information to determine 4 reference points, shown in red in the figure. The reason these lines are chosen as references, is because a Radon transform can easily be applied to locate them, as discussed in Section \ref{sec:RadonTransform}. Therefore the software can successfully find the template even though one of the four lines is identified incorrectly. Using the reference points the rotation, offset and size of the template is determined. However, before the orientation of the image can be determined, a check must be made to determine if the image might be upside down. This is done to make it easier to find the orientation afterwards. To determine if an image is upside down, initial image filtering is required as discussed in the next section.
 
 \begin{figure}
   \centering
@@ -33,15 +33,14 @@ In order to check if an image is upside down, the software first needs to find r
 \end{enumerate}
 \end{algorithm}
 
-
-It is important to note that there are still unwanted contours in the list, but for now this reduced list is sufficient. Once the list is found, the software counts the number of contour centrepoints below and above the image center. Figure \ref{fig:reduced} shows the resulting contours found in the image. As can be seen in the figure, more bubbles should be below the horizontal center line, for the image to be the right side up. The next step will be to determine the coordinates of the answers the student wrote down. The first step to achieve this is to locate the template in the image as discussed in the following section.
-
-\begin{figure}
+\begin{figure}[h]
   \centering
   \includegraphics[width=6.5cm]{Reduced}\\
   \caption{Reduced contours in image.}
   \label{fig:reduced}
 \end{figure}
+
+It is important to note that there are still unwanted contours in the list, but for now this reduced list is sufficient. Once the list is found, the software counts the number of contour centrepoints below and above the image center. Figure \ref{fig:reduced} shows the resulting contours found in the image. As can be seen in the figure, more bubbles should be below the horizontal center line, for the image to be the right side up. The next step will be to determine the coordinates of the answers the student wrote down, by first locating the template in the image. In the next section we first define a mathematical transform which is used to find the template.
 
 \subsection{Radon Transform}
 \label{sec:RadonTransform}
@@ -60,20 +59,18 @@ The Radon transform is an integral transform that can be represented by a series
 G(r,\theta) = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} f(x, y) \delta(x\cos(\theta) + y\sin(\theta) - r) dx dy,
 \label{eqn:radon}
 \end{align}where $r$ represents the perpendicular offset of the line and $\theta$ the angle of the line. The variables $x$ and $y$ specify coordinates in a two-dimensional space within which the function $f(x,y)$ is defined.  A visual interpretation of this transform is shown in Figure \ref{fig:RadonT}. In the figure $G_\theta(r)$ is the Randon transform's values at a given $\theta$.
-
-\begin{figure}
+\begin{figure}[h]
   \centering
-  \includegraphics[width=7cm]{RadonT}\\
-  \caption{Radon transform applied on a two dimensional space, adapted from \citet{radon}}
+  \includegraphics[width=5.6cm]{RadonT}\\
+  \caption{Radon transform applied on function $f$, adapted from \citet{radon}}
   \label{fig:RadonT}
 \end{figure}
-
 \subsection{Finding the template}
 \label{sec:findTemplate}
 
-In this project, the image's Radon transform is calculated for specific intervals of the gradient. Each gradient interval will thus generate a one dimensional array of values corresponding with the pixel intensities along the lines that are being summed, as shown in Figure \ref{fig:RadonT}. This method is used to determine where the 2 horizontal and 2 vertical lines are located, as mentioned in Section \ref{sec:orientDetect}. 
+In this project, the image's Radon transform is calculated for specific intervals of the gradient. Each gradient interval will thus generate a one dimensional array of values corresponding with the pixel intensities along the lines that are being summed, as shown in Figure \ref{fig:RadonT}. This method is used to determine where the 2 horizontal and 2 vertical lines are located, as previously mentioned.
 
-The Radon transform's values are calculated between the angles 85$^{\circ}$ and 95$^{\circ}$ to find the first two horizontal lines. It is assumed that the image will not be rotated by more that 5$^{\circ}$ in either direction. Black lines will cause a spike to appear on the Radon transform for the angle where it is summing parallel with that particular black line. By finding the transform angle that has this maximum value, the rotation of the template can be found. The two maximum values that are recorded at this angle are then taken as the relative locations of the two horizontal lines. After the correct angle is found, the two vertical lines can be found by applying a Radon transform at an angle 90$^{\circ}$ clockwise from the previously calculated angle. The two peak values at that angle then provides the relative locations of the two vertical lines. The four reference points can now be calculated, as seen in Figure \ref{fig:radonResults}. Once the reference points are found, the image is rescaled and orientated to the original template size for further processing. In Figure \ref{fig:rotate} the corrected image is shown.
+The Radon transform's values are calculated between the angles 85$^{\circ}$ and 95$^{\circ}$ to find the first two horizontal lines. It is assumed that the image will not be rotated by more that 5$^{\circ}$ in either direction. Black lines will cause a spike in value to appear on the Radon transform for the angle where it is summing parallel with that particular black line. By finding the transform angle that has this spike in value, the rotation of the template can be found. The two maximum values that are recorded at this angle are then taken as the relative locations of the two horizontal lines. After the correct angle is found, the two vertical lines can be found by applying a Radon transform at an angle 90$^{\circ}$ clockwise from the previously calculated angle. The two peak values at that angle then provides the relative locations of the two vertical lines. The four reference points can now be calculated, as seen in Figure \ref{fig:radonResults}. Once the reference points are found, the image is rescaled and orientated to the original template size for further processing. In Figure \ref{fig:rotate} the corrected image is shown.
 
 \begin{figure}
   \centering
@@ -91,27 +88,27 @@ Once the template is located the bubble values and digit blocks can be determine
   \label{fig:FinalEstimate}
 \end{figure}
 
-Now that a list of possible bubble contours are found with the estimate bubble centres, one contour needs to be assigned to each bubble. This is discussed in the next section.
+Now that a list of possible bubble contours are found with the estimate bubble centres, one contour needs to be assigned to each bubble. This process is discussed in the next section.
 
 \section{Bubble detection and processing}
 \nomenclature[S]{$n$}{Number of bubbles of template sheet}
-The location of each bubble in the image is found by simply taking the contour closest to that bubble's estimated location. This can be done in an efficient manner by sorting the contours by their locations. Searching through the contours now becomes linear and of complexity $O(n)$, where $n$ is the number of bubbles. This means that the processing time to find these bubbles is linearly related to the number of bubbles in the template image. 
+The location of each bubble in the image is found by simply taking the contour closest to that bubble's estimated location. This is done in an efficient manner by sorting the contours by their locations. Searching through the contours now becomes linear and of complexity $O(n)$, where $n$ is the number of bubbles. This means that the processing time to find these bubbles is linearly related to the number of bubbles in the template image. 
 
-Next, the data in each contour needs to be processed and stored. The first type of evidence is calculating the average pixel intensity inside the contours. If this value is high, the bubble is most likely coloured in or crossed out. The advantage of using the closest contour as the bubble's estimated location, over conventional methods, now becomes apparent. In conventional methods, an estimated area is calculated where the bubble is most likely to be located. This becomes problematic if the system needs to know if the bubble has been crossed out, as the only data available is about pixel intensities. 
+Next, the data in each contour needs to be processed and stored. The first type of evidence is obtained from calculating the average pixel intensity inside the contours. If this value is high, the bubble is most likely coloured in or crossed out. The advantage of using the closest contour as the bubble's estimated location, over conventional methods, now becomes apparent. In conventional methods, only pixels at the bubble's estimated location are used to determine if the bubble is coloured-in. This becomes problematic if the system needs to know if the bubble has been crossed out, as the only data available is about pixel intensities. 
 
-Using the contour information also provides information on the shape of the bubble entry. Thus by drawing the smallest possible block around the contour, that still covers every value inside the contour, an area can be calculated. This area becomes large when a answer is crossed out, due to the lines stretching outside the initial bubble. By inspecting the area value, the system can successfully determine if the bubble is filled in or crossed out.
+Using the contours information about the shape of the bubble entry is also known. Thus by drawing the smallest possible block around the contour, that still covers every value inside the contour, an area can be calculated. This area becomes large when a answer is crossed out, due to the lines stretching outside the initial bubble. By inspecting the area value, the system can successfully determine if the bubble is filled in or crossed out.
 
 \section{Data processing and grading}
 
-The previous section now allows each bubble to be classified into three categories namely, empty, completely filled in or crossed out. An additional category of partially filled in will also be introduced, as it aids grading of tests where students write lightly. An algorithm to determine what bubble was chosen is now described in Algorithm \ref{alg:bubbleAns}.
+The previous section now allows each bubble to be classified into three categories namely, empty, completely filled in or crossed out. An additional category of partially filled in is also introduced, as it aids grading of tests where students write lightly. An algorithm to determine what bubble was chosen is described in Algorithm \ref{alg:bubbleAns}.
 
 \begin{algorithm}[H]
 \caption{Calculate the student answer from bubble grid.}
 \label{alg:bubbleAns}
 \begin{enumerate}
 \item Start with column 0.
-\item Count the number of completely filled in answers in this column. Store the position of that entry for later use.
-\item If there are no completely filled in answers, count the amount of partially filled in answers and override the previous values.
+\item Count the number of completely filled-in answers in this column. Store the position of that entry for later use.
+\item If there are no completely filled-in answers, count the amount of partially filled-in answers and override the previous values.
 \item If the previous result is 0, set the output value for that column to 0.
 \item If step 2 or 3 presents a value greater that 1, save the answer sheet to a clash list to be evaluated manually once the automatic grading of the test is completed.
 \item Repeat steps 2 to 5 for each column in the bubble grid.

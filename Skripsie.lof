@@ -7,8 +7,8 @@
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Contours found around corrected answer.\relax }}{9}{figure.caption.8}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Four markers found from applying Radon transforms.\relax }}{12}{figure.caption.9}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Reduced contours in image.\relax }}{14}{figure.caption.10}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Radon transform applied on a two dimensional space, adapted from \citet {radon}\relax }}{14}{figure.caption.11}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Reduced contours in image.\relax }}{13}{figure.caption.10}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Radon transform applied on function $f$, adapted from \citet {radon}\relax }}{14}{figure.caption.11}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Result in rotation after applying radon transform.\relax }}{15}{figure.caption.12}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Detection of contours in image and estimation of bubble locations.\relax }}{16}{figure.caption.13}
 \addvspace {10\p@ }
