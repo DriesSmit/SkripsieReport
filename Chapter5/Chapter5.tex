@@ -6,7 +6,7 @@
 
 In the following chapter a study is described on the accuracy of the test grading system. In the first two sections of this chapter, the basic and complete system are compared using the same datasets. The first test grading system includes only image processing techniques described in Chapter \ref{ch:ImageProcessing}. The second system contains the complete project software with all the machine learning techniques described in Chapter \ref{ch:MachineLearning}.
 
-Each systems is assessed using 3 categories. In category 1, marking statistics are given on the grading of these test. The second category describes all the tests the system transferred to the user for manually marking. The reason for this is, because the system had a certainty level below a specific threshold for that test. In this category the tests are send to a clash list. After all the tests are graded, the system displays an interface with values it estimated the student wrote down. An additional image is also displayed. The user is then tasked with scanning through each of the clashed tests, using the interface, to see if any tests is graded incorrectly by the system. This process is normally fast, as the system has a high accuracy in guessing the answers correctly. In the last category, all the answers that the system decided to grade automatically, but identified incorrectly, will be described.
+Each systems is assessed using 3 categories. In category 1, marking statistics are given on the grading of these test. The second category describes all the tests the system transferred to the user for manually marking. The reason for this is, because the system had a certainty level below a specific threshold for that test. In this category the tests are send to a clash list. After all the tests are graded, the system displays an interface with values it estimated the student wrote down. An additional image of the test is also displayed. The user is then tasked with looking through each of the clashed tests, using the interface, to see if any tests is graded incorrectly by the system. This process is normally fast, as the system has a high accuracy in predicting the answers correctly. In the last category, all the answers that the system decided to grade automatically, but identified incorrectly, is described.
 
 \section{Results of 25 test cases}
 
@@ -19,9 +19,9 @@ In this section the results of grading 25 hand picked tests are compared between
 \hline
 \textbf{Description of test type}&\textbf{Number of tests}\\
 \hline
-Test with crossed out answers&7\\
+Test with crossed-out answers&7\\
 \hline
-Test with lightly coloured entries or partially coloured in entries&4\\
+Test with lightly coloured entries or partially coloured-in entries&4\\
 \hline
 Test with negative signed answers&1 (also included under other categories)\\
 \hline
@@ -33,28 +33,28 @@ Test with data filled in correctly&2\\
 \hline
 Random page with no template on them&2\\
 \hline
-Page with tilted template inside image&2\\
+Page with rotated template inside image&2\\
 \hline
 \end{tabular} 
 \end{table}
 
-These tests are specifically chosen, because combined, they approximates all the types of tests the system has to asses. Most of the tests are extreme cases of what students have filled in on test forms. These test provides a good test-bench to see how well each system performs in challenging situations.
+These tests are specifically chosen, because combined, they approximates all the types of tests the system has to assess. Most of the tests are extreme cases of what students have filled in on test forms. These test provides a good test-bench to see how well each system performs in challenging situations.
 
 \subsection{Basic system}
 \subsubsection{Marking statistics}
 
-Using the basic system, an average time for each test is calculated to be 0.305 seconds. 
+Using the basic system, an average time evaluating each test is calculated to be 0.305 seconds. 
 
 \begin{figure}
   \centering
   \includegraphics[width=8cm]{crossClash}\\
-  \caption{Image showing answer with crossed out answers that the system misinterpreted.}
+  \caption{Image showing answer with crossed-out answers that the system misinterpreted.}
   \label{fig:crossClash}
 \end{figure}
 
 \subsubsection{Clash list}
 
-A total of 6 out of the 25 test where reported as clashes. The two images without a template were both reported in the clash list. Furthermore the 1 test which only has the student number written in characters with no bubble information is also reported to the list. The other 3 clashes were reported due to the crossed out bubbles interpreted as still filled in, causing the system to think that two answer were filled in. An example of this is shown in Figure \ref{fig:crossClash}.
+A total of 6 out of the 25 test where reported as clashes. The two images without a template were both reported in the clash list. Furthermore the 1 test which only has the student number written in characters with no bubble information was also reported to the list. The other 3 clashes were reported due to the crossed-out bubbles being interpreted as still filled in, causing the system to think that two answer were filled in. An example of this is shown in Figure \ref{fig:crossClash}.
 
 \subsubsection{Incorrect automatic graded results}
 
@@ -71,16 +71,16 @@ There where 4 tests in total that where graded automatically, but incorrectly. A
 
 \subsubsection{Marking statistics}
 
-Using the complete system, an average time for each test is calculated to be 2.011 seconds. 
+Using the complete system, an average time evaluating each test is calculated to be 2.011 seconds. 
 
 \subsubsection{Clash list}
 
-A total of 6 out of the 25 test where reported as clashes. The two images with no template in were both again reported in the clash list. Two cases was reported to the clash list due to the character recognition determining a crossed out character as the intended character. An example of this is shown in Figure \ref{fig:crossedOutCharacter}. One test was reported, because it only has characters in with no bubbles coloured in. Thus, even though the system identified every character correctly, it had a too low of a percentage confidence in its answer and reported it to the clash list. 
+A total of 6 out of the 25 test where reported as clashes. The two images with no template in were again both reported in the clash list. Two cases was reported to the clash list due to the character recognition determining a crossed-out character as the intended character, but with low certainty. An example of this is shown in Figure \ref{fig:crossedOutCharacter}. One test was reported, because it only has characters in with no bubbles coloured in. Thus, even though the system identified every character correctly, it had a too low of a percentage confidence in its answer and reported it to the clash list. 
 
 \begin{figure}
   \centering
   \includegraphics[width=8cm]{crossedOutCharacter}\\
-  \caption{Crossed out character that confused the grading system.}
+  \caption{Crossed-out character that confused the grading system.}
   \label{fig:crossedOutCharacter}
 \end{figure}
 
@@ -90,7 +90,7 @@ There were no automatically graded answers that were done incorrectly.
 
 \subsection{Analysis or results}
 
-The complete systems does not reduce the number of clashes significantly for these 25 images. The complete system took on average 2.011 seconds to grade a test. The student number PGM takes most of that time, 1.5 seconds, to infer the correct student number. The complete system had no incorrectly automatically graded answers in contrast to the 4 graded incorrectly using the basic system. A reason to this is attributed to more evidence that gets considered in the complete system. Therefore only if the evidence match up will the system be certain enough to accept its answer as the correct one. In the next section the complete system is used to grade a tutorial test written by students. 
+The systems both had the same number of clashes significantly for these 25 images. The complete system took on average 2.011 seconds to grade a test. The student number PGM takes most of that time, 1.5 seconds, to infer the correct student number. The complete system had no incorrectly automatically graded answers in contrast to the 4 graded incorrectly using the basic system. A reason to this is attributed to more evidence that gets considered in the complete system. Therefore only if the evidence match up will the system be certain enough to accept its answer as the correct one. In the next section the complete system is used to grade a tutorial test written by students. 
 
 \section{Grading of tutorial tests}
 In this section the complete system is tested on a tutorial written by all the students in the class. The final version of the complete system was used in grading the students' tests. Student feedback was recorded to find tests that were graded incorrectly and used as the grader's results. 
@@ -101,7 +101,7 @@ For these tutorial test an average marking time per test of 2.01 seconds was rec
 
 \subsection{Clash list}
 
-There were in total 57 clashes in the 888 tests. These 67 clashes are categorised in Table  \ref{tbl:TutClash}.
+There were in total 57 clashes in the 888 tests. These 57 clashes are categorised in Table  \ref{tbl:TutClash}.
 \begin{table}
   \centering
   \caption{Description and quantity of clashes in the different categories.} \label{tbl:TutClash}
@@ -112,7 +112,7 @@ There were in total 57 clashes in the 888 tests. These 67 clashes are categorise
 \hline
 31&In these tests the system guessed the right values, but was unsure about its answer. Some of the cases were when the student number was only filled in the character box. The software always identified the correct student number, but was still unsure about the answer.\\
 \hline
-15&In these tests the system could not distinguish between a crossed out answer and correct answer. This is due to the crossed out answer being interpreted as a filled in answer.\\
+15&In these tests the system could not distinguish between a crossed-out answer and correct answer. This is due to the crossed-out answer being interpreted as a filled in answer.\\
 \hline
 8&These tests have an answer with only character information in them. The system tried to identify each answer, but made a mistake in at least one of the digits.\\
 \hline

@@ -1,10 +1,10 @@
-\chapter{Overview of system}
+\chapter{Mathematical and graphical description of system}
 \label{ap:systemOverview}
 \graphicspath{{Appendix3/Appendix3Figures/},{Chapter1/Chapter1Figures/},{Chapter4/Chapter4Figures/}}
 
 In this appendix a graphical and mathematical derivation for the system is given. It is shown through mathematical derivation how the pgmpy software can predict the student number and answer given the probability distributions and evidence. It should be noted that the software exploits additional methods in calculating these values in an efficient manner.
 
-\section{System as a whole}
+\section{High-level overview}
 
 \begin{figure}
   \centering
@@ -20,7 +20,7 @@ As described in Chapter \ref{ch:Introduction}, the system can fundamentally be r
 %The aim of the software is to maximize the likelihood of those probability distributions indicating the correct answers.
 %The reason the problem is represented in a probabilistic way is due to the fact that different images are going to be generated every time a test is written. This is true even when the same information is going to be portrayed. Everytime a student writes a test he/she is going to write in different ways. A probabilistic graphical model (PGM) is thus used to describe this system and its inner operations. For a more detailed explanation on PGM's, refer to Section \ref{sec:PGM}.  The blocks in Figure \ref{fig:systemOverview} represent additional processing that is described in the following sections.
 
-\section{Student answer}
+\section{The student answer}
 In Section \ref{sec:studentAnswer}, it was determined that the student's answer can be calculated by combining the intended sign and digits of each column separately. This is attributed to the fact that these digits are independent of one another, as seen in Figure \ref{fig:appAns}. 
 
 \begin{figure}
@@ -105,7 +105,7 @@ The constant terms gets ignored in the pgmpy package due to them only being norm
 
 $P(BE_i/BI_i)$ and  $P(BI_i/D_i)$ are both terms that is deduced from training. The final term that is needed is $P(D_i/CE_i)$. This term is efficiently represented through the use of a neural network. Thus the PGM system can successfully infer the digit probabilities and thus the student answer with these 3 distributions specified. A derivation on the student number probability is discussed next.
 
-\section{Student number}
+\section{The student number}
 \nomenclature[S]{$DE$}{Random variables representing a digit evidence obtained form image processing}
 \nomenclature[S]{$DI$}{Random variables all the digit intended by the student}
 As state in Section \ref{sec:studentNumber}, the assumption of independence between digits does not hold in the case of a student number. The reason for this is, because every 8 digit number is not equally likely to be a student number. Only student numbers that are valid needs to be considered as a possible state that the student number node can take. This node has approximately $900$ states, depending on the number of student numbers. The student number graph can be seen in Figure \ref{fig:stdNum}. 

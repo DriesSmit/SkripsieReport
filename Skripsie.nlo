@@ -28,8 +28,8 @@
 \nomenclatureentry{S$S$@[{$S$}]\begingroup Random variable representing the possible student number\nomeqref {C.0}|nompageref}{47}
 \nomenclatureentry{S$Sn$@[{$Sn$}]\begingroup Random variable representing the sign of a specific answer\nomeqref {C.0}|nompageref}{48}
 \nomenclatureentry{S$D_i$@[{$D_i$}]\begingroup Random variable representing a digit in column $i$ for a answer or student number block\nomeqref {C.0}|nompageref}{48}
-\nomenclatureentry{S$BE_i$@[{$BE_i$}]\begingroup Random variable representing bubble evidence obtained form image processing of the digit at index $i$\nomeqref {C.1}|nompageref}{50}
-\nomenclatureentry{S$CE_i$@[{$CE_i$}]\begingroup Random variable representing a character evidence obtained form image processing at and arbitrary index $i$\nomeqref {C.1}|nompageref}{50}
-\nomenclatureentry{S$BI_i$@[{$BI_i$}]\begingroup Random variable representing the bubbles the student to colour in for digit $i$\nomeqref {C.1}|nompageref}{50}
-\nomenclatureentry{S$DE$@[{$DE$}]\begingroup Random variables representing a digit evidence obtained form image processing\nomeqref {C.8}|nompageref}{52}
-\nomenclatureentry{S$DI$@[{$DI$}]\begingroup Random variables all the digit intended by the student\nomeqref {C.8}|nompageref}{52}
+\nomenclatureentry{S$BE_i$@[{$BE_i$}]\begingroup Random variable representing bubble evidence obtained form image processing of the digit at index $i$\nomeqref {C.1}|nompageref}{49}
+\nomenclatureentry{S$CE_i$@[{$CE_i$}]\begingroup Random variable representing a character evidence obtained form image processing at and arbitrary index $i$\nomeqref {C.1}|nompageref}{49}
+\nomenclatureentry{S$BI_i$@[{$BI_i$}]\begingroup Random variable representing the bubbles the student to colour in for digit $i$\nomeqref {C.1}|nompageref}{49}
+\nomenclatureentry{S$DE$@[{$DE$}]\begingroup Random variables representing a digit evidence obtained form image processing\nomeqref {C.8}|nompageref}{51}
+\nomenclatureentry{S$DI$@[{$DI$}]\begingroup Random variables all the digit intended by the student\nomeqref {C.8}|nompageref}{51}
