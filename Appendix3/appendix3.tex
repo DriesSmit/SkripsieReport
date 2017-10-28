@@ -2,7 +2,7 @@
 \label{ap:systemOverview}
 \graphicspath{{Appendix3/Appendix3Figures/},{Chapter1/Chapter1Figures/},{Chapter4/Chapter4Figures/}}
 
-In this appendix a graphical and mathematical derivation for the system is given. It is shown through mathematical derivation how the pgmpy software can predict the student number and answer given the probability distributions and evidence. It should be noted that the software exploits additional methods in calculating these values in an efficient manner.
+In this appendix a graphical and mathematical derivation for the system is given. It is shown through mathematical derivation how the pgmpy software can predict the student number and answer, given the probability distributions and evidence. It should be noted that the software exploits additional methods in calculating these values in an efficient manner.
 
 \section{High-level overview}
 
@@ -21,7 +21,7 @@ As described in Chapter \ref{ch:Introduction}, the system can fundamentally be r
 %The reason the problem is represented in a probabilistic way is due to the fact that different images are going to be generated every time a test is written. This is true even when the same information is going to be portrayed. Everytime a student writes a test he/she is going to write in different ways. A probabilistic graphical model (PGM) is thus used to describe this system and its inner operations. For a more detailed explanation on PGM's, refer to Section \ref{sec:PGM}.  The blocks in Figure \ref{fig:systemOverview} represent additional processing that is described in the following sections.
 
 \section{The student answer}
-In Section \ref{sec:studentAnswer}, it was determined that the student's answer can be calculated by combining the intended sign and digits of each column separately. This is attributed to the fact that these digits are independent of one another, as seen in Figure \ref{fig:appAns}. 
+In Section \ref{sec:studentAnswer}, it was determined that the student's answer can be calculated by combining the intended sign and digits of each column, which is calculated separately. This is attributed to the fact that these digits are independent of one another, as illustrated in Figure \ref{fig:appAns}. 
 
 \begin{figure}
   \centering
@@ -36,9 +36,9 @@ The intended digit in a certain column is not influenced by what the values in t
   P(A/I) =  P(Si/I)P(D_1/I)...P(D_7/I),
 \label{eqn:ansIndep}
 \end{align}
-where $A$ and $I$ again represent an answer  for a specific question and the image, respectively. The random variable $Si$ represents the sign of the answer.
+where $A$ and $I$ again represent an answer  for a specific question and the image. The random variable $Si$ represents the sign of the answer. $P(D_i/I)$ represents the probability of each of the 10 digits being written down in column $i$.
 
-To find the most probable answer, only $P(Sn/I)$ and $P(D_{1-7}/I)$ need to be calculated. Using image processing techniques described in Section \ref{ch:ImageProcessing}, $P(Si/I)$ can simply be determined heuristically by determining the probability of the bubble being coloured in, underneath the sign. Thus the only values yet to calculate is $P(D_{1-7}/I)$ and derived in the next section.
+To find the most probable answer, only $P(Sn/I)$ and $P(D_{1-7}/I)$ need to be calculated. Using image processing techniques described in Section \ref{ch:ImageProcessing}, $P(Si/I)$ can be determined heuristically by determining the probability of the bubble being coloured in, underneath the sign. Thus the only values that still need calculate is $P(D_{1-7}/I)$, as derived in the next section.
 
 \section{The intended digit}
 
@@ -60,7 +60,7 @@ In determining an intended digit there are 11 information nodes to use as eviden
 \nomenclature[S]{$BE_i$}{Random variable representing bubble evidence obtained form image processing of the digit at index $i$}
 \nomenclature[S]{$CE_i$}{Random variable representing a character evidence obtained form image processing at and arbitrary index $i$}
 
-The probability of each column's digit is describe by $P(D_i/I)$. This value represents the probability of each of the 10 digits being written down in column $i$ . We know that the digit evidence is calculated heuristically using image processing. Each bubble thus has an evidence value with 4 possible states, namely not filled-in, crossed out, partially filled-in and completely filled-in. Thus the estimate of the intended digit is now represented by $P(D_i/I,BE_i,CE_i)$. $BE_i$ and $CE_i$ represents all the bubble and character evidence for that digit. As seen in Figure \ref{fig:appDigit}, $D_i$ and $I$ becomes independent from one another given the values of $BE_i$ and $CE_i$. Thus the probability of the intended digit is now given by $P(D_i/BE_i,CE_i)$.
+The probability of each column's digit is describe by $P(D_i/I)$. This value again represents the probability of each of the 10 digits being written down in column $i$ . We know that the digit evidence is calculated heuristically using image processing. Each bubble thus has an evidence value with 4 possible states, namely not filled-in, crossed out, partially filled-in and completely filled-in. Thus the estimate of the intended digit is now represented by $P(D_i/I,BE_i,CE_i)$. $BE_i$ and $CE_i$ represents all the bubble and character evidence for that digit. As seen in Figure \ref{fig:appDigit}, $D_i$ and $I$ becomes independent from one another given the values of $BE_i$ and $CE_i$. Thus the probability of the intended digit is now given by $P(D_i/BE_i,CE_i)$.
 \nomenclature[S]{$BI_i$}{Random variable representing the bubbles the student to colour in for digit $i$}
 $BE_i$ is further described by 
 \begin{align}
@@ -68,13 +68,13 @@ $BE_i$ is further described by
   P(BE_i) =  P(BE_{i:0},BE_{i:1},...,BE_{i:9}),
 \label{eqn:ansIndep}
 \end{align}
-where  $P(BE_{i:j})$ represents the digit i at bubble j. $BI_i$ is then represented by
+where  $P(BE_{i:j})$ represents the probability of the bubble evidence at bubble j in digit i. $BI_i$ is then represented by
 \begin{align}
 % \nonumber to remove numbering (before each equation)
   P(BI_i) =  P(BI_{i:0},BI_{i:1},...,BI_{i:9}),
 \label{eqn:ansIndep}
 \end{align}
-where  $P(BI_{i:j})$ represents the digit i at bubble j.
+where  $P(BI_{i:j})$ represents probability of the intended bubble at bubble j in digit i.
 
 $P(D_i/BE_i,CE_i)$ can now be represented by
 \begin{align}
@@ -84,19 +84,19 @@ $P(D_i/BE_i,CE_i)$ can now be represented by
 \label{eqn:ansEqn2}
 \end{align}
 
-In Equation \ref{eqn:ansEqn2}, the intended bubble term is brought in by making use of the sum rule. Bayes' rule is then applied. In Figure \ref{fig:appDigit}, $BE_i$ and $CE_i$ is seen to be independent when $D_i$ or $BI_i$ is known. Further it is observed that $BE_i$ is only reliant on $BI_i$ and $CE_i$ on $D_i$. Thus by applying an additional product rule it is determined that
+In Equation \ref{eqn:ansEqn2}, the intended bubble term is brought in by making use of the sum rule. Bayes' rule is then applied. In Figure \ref{fig:appDigit}, $BE_i$ and $CE_i$ is seen to be independent when $D_i$ or $BI_i$ is known. Further it is observed that $BE_i$ is only dependent on $BI_i$ and $CE_i$ only dependent on $D_i$. Thus by applying an additional product rule it is determined that
 \begin{align}
-  P(D_i/BE_i,CE_i) =  \sum_{\forall BI_i}^{}\frac{P(BE_i/BI_i)P(BI_i/D_i)P(CE_i/D_i)P(D_i)}{P(BE_i,CE_i)}.
+  P(D_i/BE_i,CE_i) =  \sum_{\forall BI_i}^{}\frac{P(BE_i/BI_i)P(CE_i/D_i)P(BI_i/D_i)P(D_i)}{P(BE_i,CE_i)}.
 \label{eqn:ansEqn3}
 \end{align}
 
 Bayes' rule also provides us with,
 \begin{align}
-  P(CE_i/D_i)	=  \frac{P(D_i/CE_i)PCE_i)}{P(D_i)}.
+  P(CE_i/D_i)	=  \frac{P(D_i/CE_i)P(CE_i)}{P(D_i)}.
 \label{eqn:ansEqn4}
 \end{align}
 
-Now by factoring out all the constant terms out of the summation the equation reduces to,
+By factoring out all the constant terms out of the summation the equation reduces to,
 \begin{align}
   P(D_i/BE_i,CE_i) =  \frac{P(CE_i)}{P(BE_i,CE,i)}\sum_{\forall BI_i}^{}P(BE_i/BI_i)P(BI_i/D_i)P(D_i/CE_i).
 \label{eqn:ansEqn5}
@@ -126,7 +126,7 @@ $DE$ is further described by
 \label{eqn:ansIndep}
 \end{align}
 
-$DI$ is described by,
+$DI$ is described by
 
 \begin{align}
 % \nonumber to remove numbering (before each equation)
@@ -138,28 +138,28 @@ $P(S/DE)$ can now be represented by
 \begin{align}
 % \nonumber to remove numbering (before each equation)
   P(S/DE)	=  \sum_{\forall DI}^{}  P(S,DI/DE)\\
-  					=  \sum_{\forall DI}^{}  \frac{P(BE/S,DI)P(S,DI)}{P(DE)}.
+  					=  \sum_{\forall DI}^{}  \frac{P(DE/S,DI)P(S,DI)}{P(DE)}.
 \label{eqn:stdEqn2}
 \end{align}
 
 In Equation \ref{eqn:stdEqn2}, the digit intended term, $DI$, is brought in by making use of the sum rule. Bayes' rule is then applied as shown.
 
-In Figure \ref{fig:stdNum}, $DE$ is seen to be independent from $S$ if $DI$ is known and thus,
+In Figure \ref{fig:stdNum}, $DE$ is shown to be independent of $S$ if $DI$ is known and thus,
 
 \begin{align}
 % \nonumber to remove numbering (before each equation)
-  P(S/DE)	=  \sum_{\forall DI}^{}  \frac{P(BE/DI)P(DI/S)P(S)}{P(DE)}.
+  P(S/DE)	=  \sum_{\forall DI}^{}  \frac{P(DE/DI)P(DI/S)P(S)}{P(DE)}.
 \label{eqn:stdEqn3}
 \end{align}
 
 Finally from the digit and student number graph structure the following independence properties are also known,
 
 \begin{align}
-P(DE/ID) = P(BE_1/BI_1)P(CE/D_1)...P(BE_8/BI_8)P(CE/D_8)\\
+P(DE/ID) = P(BE_1/BI_1)P(CE_1/D_1)...P(BE_8/BI_8)P(CE_8/D_8)
 \label{eqn:stdEqn4}
 \end{align}
 
-$P(S)$ can be initialized as an equal distribution, because every student number has the same likelihood in a given test. $P(DI/S)$ are values that are trained from data using the independence property, 
+$P(S)$ can be initialized as an equal distribution, because every student number has the same likelihood of being in a given test. $P(DI/S)$ are values that are trained from data using the independence property, 
 \begin{align}
 P(DI/S) = P(D_1/S)...P(D_8/S).
 \label{eqn:stdEqn4}

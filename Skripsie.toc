@@ -79,13 +79,13 @@
 \contentsline {chapter}{\numberline {E}Validation and results}{60}{appendix.E}
 \contentsline {section}{\numberline {E.1}All tutorial results}{60}{section.E.1}
 \contentsline {subsection}{\numberline {E.1.1}Overview}{60}{subsection.E.1.1}
-\contentsline {section}{\numberline {E.2}Deep Convolutional Neural Network results}{62}{section.E.2}
+\contentsline {section}{\numberline {E.2}Deep Convolutional Neural Network results}{63}{section.E.2}
 \contentsline {subsection}{\numberline {E.2.1}Trained on generated database}{63}{subsection.E.2.1}
 \contentsline {subsubsection}{\numberline {E.2.1.1}Accuracy of network}{63}{subsubsection.E.2.1.1}
 \contentsline {subsubsection}{\numberline {E.2.1.2}Conclusion on accuracy}{63}{subsubsection.E.2.1.2}
-\contentsline {subsection}{\numberline {E.2.2}Trained on MNIST database}{63}{subsection.E.2.2}
-\contentsline {subsubsection}{\numberline {E.2.2.1}Accuracy of network}{63}{subsubsection.E.2.2.1}
+\contentsline {subsection}{\numberline {E.2.2}Trained on MNIST database}{64}{subsection.E.2.2}
+\contentsline {subsubsection}{\numberline {E.2.2.1}Accuracy of network}{64}{subsubsection.E.2.2.1}
 \contentsline {subsubsection}{\numberline {E.2.2.2}Conclusion on accuracy}{64}{subsubsection.E.2.2.2}
 \contentsline {subsection}{\numberline {E.2.3}Trained on mixed database}{64}{subsection.E.2.3}
 \contentsline {subsubsection}{\numberline {E.2.3.1}Accuracy of network}{64}{subsubsection.E.2.3.1}
-\contentsline {subsubsection}{\numberline {E.2.3.2}Conclusion on accuracy}{64}{subsubsection.E.2.3.2}
+\contentsline {subsubsection}{\numberline {E.2.3.2}Conclusion on accuracy}{65}{subsubsection.E.2.3.2}
