@@ -2,13 +2,13 @@
 \label{ch:MachineLearning}
 \graphicspath{{Chapter4/Chapter4Figures/}}
 
-The previous chapter briefly described the basic workings of the optical mark recognition system inside the automatic test grader. There is still one critical piece of evidence that has not yet been observed in this basic system. This information is the characters that the student writes in the designated boxes.
+The previous chapter briefly described the basic workings of the optical mark recognition system inside the automatic test grader. There is still critical piece of evidence that has not yet been utilized in this basic system, namely the characters that the student writes in the designated boxes.
 
-This next chapter will provide two machine learning approaches to significantly improve the accuracy in identifying digits over the previous standalone basic system, discussed in Chapter \ref{ch:ImageProcessing}. An approach to locate and classify handwritten characters, provided by the students, using a deep convolutional neural network (DCNN), is described. Next, a more accurate method in estimating the  student answers and student number, using probabilistic  graphical models (PGM), is also discussed. 
+This next chapter will provide two machine learning approaches to significantly improve the accuracy in identifying digits over the previous standalone basic system discussed in Chapter \ref{ch:ImageProcessing}. An approach to locate and classify handwritten characters, provided by the students, using a deep convolutional neural network (DCNN), is described. A more accurate method in estimating the  student answers and student number, using probabilistic  graphical models (PGM), is also discussed. 
 
 \section{Character recognition using a neural network}
 
-This section focusses on processing the characters that the students write down in the designated boxes, as shown in Figure \ref{fig:sa}. A machine learning approach, called a neural network, is implemented to process these digits. This neural network can take an input of a 28 by 28 dimensional array of floating point numbers. These numbers represent a 28 by 28 greyscaled image that includes the digit being classified. The neural network is then tasked with calculating the probability of each digit being present in the particular image. Before each digit can be classified using a neural network, the individual 28 by 28 greyscaled image must first be found for each digit inside the test sheet. Image processing is required to achieve this, as described in the next section.
+This section focusses on processing the characters that the students write in the designated boxes, as shown in Figure \ref{fig:sa}. A machine learning approach, called a neural network, is implemented to process these digits. This neural network can take an input of a 28 by 28 dimensional array of floating point numbers. These numbers represent a 28 by 28 greyscaled image that includes the digit being classified. The neural network is then tasked with calculating the probability of each digit being present in the particular image. Before each digit can be classified using a neural network, the individual 28 by 28 greyscaled image must first be found for each digit inside the test sheet. Image processing is required to achieve this, as described in the next section.
 \begin{figure}
   \centering
   \includegraphics[width=6cm]{DigitScan}\\
@@ -19,7 +19,7 @@ This section focusses on processing the characters that the students write down 
 \subsection{Preprocessing and creating digit images}
 \label{sec:preprocess}
 
-In order to generate a 28 by 28 pixel image for each digit, the system must first find the location of each digit. Once this is done, the digits is processed and a corresponding 28 by 28 image, best representing that digit, can be created. This is done in the following 6 steps as seen below:
+In order to generate a 28 by 28 pixel image for each digit, the system must first find the location of each digit. Once this is done, the digits are processed and a corresponding 28 by 28 image, best representing the particular digit, can be created. This is done in the following 6 steps:
 
 \begin{enumerate}
 \item Find the contour closest to the expected location of the block, calculated in Section \ref{sec:findTemplate}. This is illustrated in Figure \ref{fig:sa}. It can be seen that the bubbles are already processed.
@@ -42,8 +42,8 @@ In order to generate a 28 by 28 pixel image for each digit, the system must firs
   \label{fig:ar}
 \end{figure}
 
-\item Use the indexes received from the Radon transform, of the positions of original black lines, to segment the image into the different boxes.
-\item A custom segmentation algorithm is used to find the pixels most likely to belong to the digit, as shown in Figure \ref{fig:c}. This algorithm is developed and implemented using a breadth first search technique to cluster the image into different segments. The algorithm first searches the image for pixels higher than a specific threshold value. This value specifies if a pixel is background or belongs to an object. Then all the pixels higher than the threshold value gets assigned to a segment. A segment is classified as a local region that does not connect to any other segment through pixels higher that the threshold value. The segment that most likely represents the digit is then extracted by looking at it's area and centrepoint.
+\item Use the locations received from the Radon transform, of the positions of the original black lines, to segment the image into the different boxes.
+\item A custom segmentation algorithm is used to find the pixels most likely to belong to the digit, as shown in Figure \ref{fig:c}. This algorithm is developed and implemented using a breadth first search technique to cluster the image into different segments. The algorithm first searches the image for pixels higher than a specific threshold value. This value specifies if a pixel is background or belongs to an object. Then all the pixels higher than the threshold value gets assigned to a segment. A segment is classified as a local region that does not connect to any other segment through pixels higher than the threshold value. The segment that most likely represents the digit is then extracted by looking at it's area and centrepoint.
 \begin{figure}
   \centering
   \includegraphics[width=5cm]{Cluster}\\
@@ -71,18 +71,18 @@ In order to generate a 28 by 28 pixel image for each digit, the system must firs
 
 \item The image is then reshaped into a 28 by 28 greyscaled image to be processed by the neural network.
 \end{enumerate}
-As mentioned, a 28 by 28 greyscaled image is used as input. Thus if each pixel represents one value, ranging from 0.0 to 1.0, there is total of 748 input values. Each digit image is thus represented by  one of these 28 by 28 greyscaled images. These 784 numbers is now used as input to a neural network to predict the digit. An overview of this neural network will be given next.
+As mentioned, a 28 by 28 greyscaled image is used as input. Thus if each pixel represents one value, ranging from 0.0 to 1.0, there are a total of 748 input values. Each digit image is therefore represented by  one of these 28 by 28 greyscaled images. These 784 numbers are now used as input to a neural network to predict the digit. An overview of this neural network will be given next.
 
 \subsection{Classification of digits}
 
-A neural network is a powerful machine learning tool for approximating complex functions. The basic architecture of a neural network is illustrated in Figure \ref{fig:nn}. These networks are simplified approximations of how neurons in the brain works. Each neuron in the network acts as a small processing unit that can take a input and produces an output. The power of a neural network lies in the ability of these neurons to be able to approximate different functions by adjustable their internal values depending on the characteristics the user wants the network to approximate. This property therefore allows complex functions to be trained onto such networks.
+A neural network is a powerful machine learning tool for approximating complex functions. The basic architecture of a neural network is illustrated in Figure \ref{fig:nn}. These networks are simplified approximations of how neurons in the brain work. Each neuron in the network acts as a small processing unit that can take an input and produces an output. The power of a neural network lies in the ability of these neurons to be able to approximate different functions by adjustable their internal values, depending on the characteristics the user wants the network to approximate. This property therefore allows complex functions to be trained onto such networks.
 
-For this project, a neural network is trained to estimate the probability of which of the 10 digits, from 0 to 9, are most likely present in the input image. The neural network will take a two dimensional array, representing a greyscaled image, as input to the network. Figure \ref{fig:mnist} illustrates an example input of a neural network using a 14 by 14 example image. For this project a 28 by 28 image is used. In the next section the basics of these neural networks are discussed.
+For this project, a neural network is trained to estimate the probability of which of the 10 digits, from 0 to 9, are most likely present in the input image. The neural network inputs a two dimensional array, representing a greyscaled image, to the network. Figure \ref{fig:mnist} illustrates an example input of a neural network using a 14 by 14 example image. For this project a 28 by 28 image is used. In the next section the basics of these neural networks are discussed.
 
 \begin{figure}
   \centering
   \includegraphics[width=10cm]{MNIST}\\
-  \caption{Example image used as input to the neural network, from \citet{tensor2017}}
+  \caption{Example image used as input to the neural network, from \citet{tensor2017}.}
   \label{fig:mnist}
 \end{figure}
 
@@ -95,10 +95,10 @@ For this project, a neural network is trained to estimate the probability of whi
 
 \subsubsection{The Neural Network basics}
 
-The neuron unit is a small processing unit. By including many of these neurons a neural network can be built. Neural networks consist of input, hidden and output layers (\citet{MichealN2015}). This network works by first assigning values to the input layer of the network. For this project those values are the 784 values received from the digit image. The network then sends signals through the network and generates an output. A breakdown of a neural network will be given next.
+The neuron unit is a small processing unit. By including many of these neurons a neural network can be built. Neural networks consist of input, hidden and output layers (\citet{MichealN2015}). This network works by first assigning values to the input layer of the network. For this project those values are the 784 values received from the digitized image. The network then sends signals through the network and generates an output. A breakdown of a neural network will be given next.
 
 \subsubsection{The Artificial Neuron}
-Each neuron in the network takes in a list of input values. These input values are given by the output values of the neurons in the previous layer, again illustrated in Figure \ref{fig:nn}. The weighted sum of these inputs are then added with the bias variable to give,
+Each neuron in the network takes in a list of input values. These input values are the output values of the neurons in the previous layer, again illustrated in Figure \ref{fig:nn}. The weighted sum of these inputs are then added with the bias variable to give,
 \nomenclature[S]{$x_{i}$}{Input value at index $i$}
 \nomenclature[S]{$w_{i}$}{Weight value at index $i$}
 \nomenclature[S]{$b$}{Bias variable added to allow a neuron to have an offset in its output}
@@ -110,13 +110,13 @@ Each neuron in the network takes in a list of input values. These input values a
   z =  &\displaystyle{\sum_{i=0}^{c} x_{i}\cdot w_{i} + b}.
 \label{eqn:nnOut}
 \end{align}
-In Equation \ref{eqn:nnOut}, $c$ is the number of inputs and $x_{i}$ and $w_{i}$ are the input and weight values at index $i$. The bias term, $b$, enables an offset in the output, $z$, of the neuron. These weighted values and bias term value gets determined in the networks training process. The value, $z$, then gets normalize using the sigmoid function,
+In Equation \ref{eqn:nnOut}, $c$ is the number of inputs and $x_{i}$ and $w_{i}$ are the input and weight values at index $i$. The bias term, $b$, enables an offset in the output, $z$, of the neuron. These weighted values and bias term value gets determined in the networks training process. The value, $z$, is then normalize using the sigmoid function,
 \nomenclature[S]{$\sigma(z)$}{Normalization function in a neural network}
 \begin{align}
   \sigma(z) =  &\displaystyle{\frac{1}{1 + e^{-z}}}.
 \label{eqn:sigmoid}
 \end{align}
-The artificial neuron therefore takes in a weighted input with a bias and produces a normalized output $\sigma(z)$. By adjusting the weights and bias variable, each neuron can learn to exhibit certain characteristics. This process allows different functions to be approximated by adjusting these variables. If a network of these neurons is used together, as illustrated in Figure \ref{fig:nn}, complex functions can be trained onto the network. In this project these weights and biases need to be set to specific values, to allow the network to accurately categorize digits from an image.
+The artificial neuron therefore takes in a weighted input with a bias and produces a normalized output $\sigma(z)$. By adjusting the weights and bias variable, each neuron can learn to exhibit certain characteristics. This process allows different functions to be approximated by adjusting these variables. If a network of these neurons is used together, as illustrated in Figure \ref{fig:nn}, complex functions can be trained onto the network. In this project, these weights and biases need to be set to specific values, to allow the network to accurately categorize digits from an image.
 
 \subsubsection{Generating an output from the network}
 After the 748 input values have been assigned to the network inputs, each of the network's layers can be calculated consecutively. This is done using Equations \ref{eqn:nnOut} and \ref{eqn:sigmoid} on each layer consecutively, starting at the first hidden layer. Once the first layer's outputs are calculated, the next layer can be calculated using those values as input. This process is repeated until all the layers are calculated. Once all these values are calculated, the final values can be read from the output neuron that represents the result. In this project ten output neurons are used to represent the likelihood of each of 10 digits, given the input data. The output neurons are then turned into probabilities by normalizing these outputs using
@@ -131,11 +131,11 @@ where $p(i)$ is the probability of digit $i$ being in the image. The value $\sig
 
 \subsubsection{Deep Convolutional Neural Network}
 
-The previous section gave an overview of a basic neural network implementation. In recent years much more powerful neural networks such as Deep Convolutional Neural Network (DCNN) have been introduced. A DCNN uses the basic principles described above, but has extra optimized features that allow a neural network with many layers to be constructed and trained. A DCNN is implemented in TensorFlow (\citet{Tensor}) and allows a neural network to achieve highly accurate results on classifying digits. For this project a neural network optimized for digit classification, as implemented in \citet{Tensor}, is used. The neural network is adjusted to increase its accuracy for this specific grading system. These results are described in Chapter \ref{ch:Results}.
+The previous section gave an overview of a basic neural network implementation. In recent years much more powerful neural networks, such as Deep Convolutional Neural Network (DCNN), have been introduced. A DCNN uses the basic principles described above, but has extra optimized features that allow a neural network with many layers to be constructed and trained. A DCNN is implemented in TensorFlow (\citet{Tensor}) and allows a neural network to achieve highly accurate results on classifying digits. For this project a neural network optimized for digit classification, as implemented in \citet{Tensor}, is used. The neural network is customized to increase its accuracy for this specific grading system. These results are described in Chapter \ref{ch:Results}.
 
 \subsubsection{Training of the neural network}
 \label{sec:trainNN}
-The MNIST dataset is used to train the DCNN neural network (\citet{mnist}). This is a database that has a labelled training set of 60 000 images, and a labelled test set of 10 000 images. For each image in the database, there is an accompanied label that specifies the digit value. The neural network is then trained to model this training set. This is done by adjusting the network's internal weights so that the network's output better represent the labelled training data, given the input images. The basic idea behind the training method used in a neural network is described in Algorithm \ref{alg:nnTrain}.
+The MNIST dataset is used to train the DCNN neural network (\citet{mnist}). This is a database that has a labelled training set of 60 000 images and a labelled test set of 10 000 images. For each image in the database, there is an accompanied label that specifies the digit value. The neural network is then trained to model this training set. This is done by adjusting the network's internal weights so that the network's output better represent the labelled training data, given the input images. The basic idea behind the training method used in a neural network is described in Algorithm \ref{alg:nnTrain}.
 
 \begin{algorithm}[H]
 \caption{Overview on training a neural network.}
@@ -148,11 +148,11 @@ The MNIST dataset is used to train the DCNN neural network (\citet{mnist}). This
 \end{enumerate}
 \end{algorithm}
 
-Once this process is completed, the network is ready to classify handwritten digits. This produces a probabilistic output of each intended digit in the test sheet. The next step is to incorporate this character evidence with the bubble evidence to produce a accurate estimate of the intended student entries. A method to achieve this is discussed in the next section.
+Once this process is completed, the network is ready to classify handwritten digits. This produces a probabilistic output of each intended digit in the test sheet. The next step is to incorporate this character evidence with the bubble evidence to produce an accurate estimate of the intended student entries. A method to achieve this is discussed in the next section.
 
 \section{Probabilistic Graphical Models}
 \label{sec:PGM}
-The final problem the system needs to solve, is to probabilistically determine the most likely student entries given the bubble and character evidence. This is achieved by implementing two probabilistic graphical models (PGM).
+The final problem the system needs to solve, is to probabilistically determine the most likely student entries, given the bubble and character evidence. This is achieved by implementing two probabilistic graphical models (PGM).
 
 \subsection{Overview of the system}
 A probabilistic graphical model is a probabilistic graph containing random variables, where the graph expresses the conditional independence structure between these variables. The type of PGM used for this project is a Bayesian network. A Bayesian network models a set of random variables and their conditional dependencies via a directed acyclic graph (DAG). %Directed graph that contains no circles.
@@ -191,7 +191,7 @@ An answer is represented by 8 columns, shown in Figure \ref{fig:stdAns}. \begin{
   \includegraphics[width=10cm]{ans}\\
   \caption{Graphical setup of student answer.}
   \label{fig:stdAns}
-\end{figure}The first column represents the sign of an answer. Thus two signs are possible. For each of the remaining 7 columns a number from 0 to 9 can be represented. Thus there are 10 possible values for each of these 7 columns. This gives a possible number of values that an answer can take to be $2\cdot 10^7$ equalling 20 000 000. Calculating each of these states are computationally intractable. Thus an assumption is needed to reduce the number of possible states. A fair assumption to make, is that all 20 000 000 possible values are equally likely to be written down. Thus each column digit becomes independent of the other columns' values. This means that if a value in one column is known, it does not influence the probabilities of the other columns having a certain value. Thus the number of states to calculate now becomes $2+10\cdot 7$ equalling $72$, because each column's states can now be calculated independently. Knowing this independent property, the student's answer can be calculated by using 7 digit models and a heuristic calculation of the intended sign.
+\end{figure}The first column represents the sign of an answer. Thus two signs are possible. For each of the remaining 7 columns a number from 0 to 9 can be represented. Thus there are 10 possible values for each of these 7 columns. This gives a possible number of values that an answer can take to be $2\cdot 10^7$, equalling 20 000 000. Calculating each of these states is computationally intractable. Thus an assumption is needed to reduce the number of possible states. A fair assumption to make, is that all 20 000 000 possible values are equally likely to be written down. Consequently each column digit becomes independent of the other columns' values. This means that if a value in one column is known, it does not influence the probabilities of the other columns having a certain value. Thus the number of states to calculate now becomes $2+10\cdot 7$, equalling $72$, because each column's states can now be calculated independently. Knowing this independent property, the student's answer can be calculated by using 7 digit models and a heuristic calculation of the intended sign.
 
 
 %In the previous section it was found that determining the intended sign and digit for each column the intended answer can be found. Thus the intended digit for each column is calculated separately using the digit model, as described in Section \ref{sec:intendedDigit}. The intended sign is determined heuristically by using the image processing methods described in Chapter \ref{ch:ImageProcessing} to find if the bubble underneath the sign is coloured in. Once this is done the intended answer is determined by combining the estimated sign and digits in the order seen in Figure \ref{fig:stdAns}.
@@ -199,17 +199,17 @@ An answer is represented by 8 columns, shown in Figure \ref{fig:stdAns}. \begin{
 \subsection{Estimating the student number}
 \label{sec:studentNumber}
 
-For the student numbers, knowing one digit value of a column influences the probabilities of the other columns having a certain number. The reason for this is, there are only a limited number of student numbers to consider. Thus if the first digit is a 2, only student numbers starting with 2 still have to be considered. To account for this, an additional node is added above the individual digit probabilities, as seen in Figure \ref{fig:stdNumCh4}. This node represents the probability of each student number being present in the image. The number of states of this node is in the order of $ 900$, depending on the number of student numbers.
+For the student numbers, knowing one digit value of a column influences the probabilities of the other columns having a certain number. The reason for this is that there are only a limited number of student numbers to consider. For example if the first digit is a 2, only student numbers starting with 2 still have to be considered. To account for this, an additional node is added above the individual digit probabilities, as seen in Figure \ref{fig:stdNumCh4}. This node represents the probability of each student number being present in the image. The number of states of this node is in the order of $ 900$, depending on the number of student numbers.
 \begin{figure}[b]
   \centering
   \includegraphics[width=8.9cm]{stdNum}\\
   \caption{Graphical setup of student number.}
   \label{fig:stdNumCh4}
 \end{figure}
-Once the graph has been set up, the model can be used to infer the most probable student number. By setting all the bubble evidence and character priors, the student number probabilities can be inferred. This model allows for an accurate result, because student numbers normally differ in more that one digit. The system can thus strongly differentiate between student numbers and determine which student number is most likely. It is found that if the student provides only character information with no bubbles coloured in, an accurate estimate can still be made.
+Once the graph has been set up, the model can be used to infer the most probable student number. By setting all the bubble evidence and character priors, the student number probabilities can be inferred. This model allows for an accurate result, because student numbers normally differ in more than one digit. The system can thus strongly differentiate between student numbers and determine which student number is most likely. It is found that if the student provides only character information with no bubbles coloured in, an accurate estimate can still be made.
 
 \subsection{Training of a Probabilistic Graphical Model}
-In a PGM the conditional probabilities distributions between each random variable that has a relationship (arrow) is needed. In order to calculate these conditional probability distributions training data must be gathered. The previous basic model with the character recognition software is used to estimate the answers for 100 test sheets. Once these sheets where graded the results were manually check. Thus each training label now contained bubble evidence and character proirs from the neural network. With this information, each training set is used to infer the conditional probability needed to train both the digit and student number models. For a mathematically approach to these two PGM models, refer to Appendix \ref{ap:systemOverview}.
+In a PGM the conditional probabilities distributions between each random variable that has a relationship (arrow) is needed. In order to calculate these conditional probability distributions, training data must be gathered. The previous basic model with the character recognition software is used to estimate the answers for 100 test sheets. Once these sheets where graded, the results were manually check. Thus each training label now contained bubble evidence and character proirs from the neural network. With this information, each training set is used to infer the conditional probability needed to train both the digit and student number models. For a mathematically approach to these two PGM models, refer to Appendix \ref{ap:systemOverview}.
 
 \section{Conclusion}
-This chapter discusses two machine learning techniques to improve the accuracy with which the system infers the answers written on each scanned test sheet. A method is shown, using a neural network, to estimate the probability of each digit given only the character box as input. Additionally, an approach is discussed, using a PGM, to allow the system to make a final prediction of what the student intended to write down given the image evidence. This PGM method is found to be accurate enough to determine the student number by only using the character recognition information provided.The following chapter will cover the validation and results of the system from weekly grading done for the Applied Mathematics department.
+This chapter discusses two machine learning techniques to improve the accuracy with which the system infers the answers written on each scanned test sheet. A method is shown, using a neural network, to estimate the probability of each digit given only the character box as input. Additionally, an approach is discussed, using a PGM, to allow the system to make a final prediction of what the student intended to write down given the image evidence. The PGM method is found to be accurate enough to determine the student number by only using the character recognition information provided.The following chapter will cover the validation and results of the system from weekly grading done for the Applied Mathematics department.
