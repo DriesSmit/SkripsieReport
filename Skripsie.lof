@@ -1,9 +1,9 @@
 \select@language {english}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Automatic test grading template layout.\relax }}{3}{figure.caption.5}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Graphical overview of the system as a whole.\relax }}{5}{figure.caption.6}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Graphical overview of the system.\relax }}{5}{figure.caption.6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Standard OMR template with reference blocks on the left, from \citet {stdTemplate}.\relax }}{7}{figure.caption.7}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Standard OMR template with reference blocks on the left \citep {stdTemplate}.\relax }}{7}{figure.caption.7}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Contours found around corrected answer.\relax }}{9}{figure.caption.8}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Four markers found from applying Radon transforms.\relax }}{12}{figure.caption.9}
@@ -14,10 +14,10 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Image showing found contours for boxes used for character recognition.\relax }}{20}{figure.caption.14}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces The box contour found is normalized to form a rectangular shape.\relax }}{21}{figure.caption.15}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Box after black lines gets filtered out, found using a Radon transform.\relax }}{21}{figure.caption.16}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Box after black lines are filtered out, found using a Radon transform.\relax }}{21}{figure.caption.16}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Custom segmentation algorithm used to find the main cluster in the remaining image.\relax }}{22}{figure.caption.17}
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Area block drawn around the segment most probable to belong to the digit.\relax }}{22}{figure.caption.18}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Final image after translation and normalization is applied.\relax }}{22}{figure.caption.19}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Final image after translation and normalization are applied.\relax }}{22}{figure.caption.19}
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Example image used as input to the neural network, from \citet {tensor2017}.\relax }}{23}{figure.caption.20}
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Basic structure of a neural network, from \citet {karpathy2017}.\relax }}{24}{figure.caption.21}
 \contentsline {figure}{\numberline {4.9}{\ignorespaces Graphical setup for determining the intended digit written by a student.\relax }}{27}{figure.caption.22}
@@ -27,7 +27,7 @@
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Image showing answer with crossed-out answers that the system misinterpreted.\relax }}{33}{figure.caption.26}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Filled-in answer with only character information.\relax }}{34}{figure.caption.27}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Crossed-out character that confused the grading system.\relax }}{35}{figure.caption.28}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Incorrectly identified answer as 95.\relax }}{36}{figure.caption.30}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Incorrectly identified answer as 95.\relax }}{38}{figure.caption.30}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {A.1}{\ignorespaces Project plan for the final year project.\relax }}{43}{figure.caption.32}

@@ -4,7 +4,6 @@
 As modern technology and machine learning techniques advances, it is important for the educational sector to continuously advance in their learning environment. This allows for an ever improving learning experience in and outside the classroom. 
 
 \section{Problem background}
-
 In the recent years the Applied Mathematics Department of Stellenbosch Engineering, started observing a decrease in accuracy in the grading of tutorial tests done by teaching assistants and demies.  Students complained on a regular basis about correct answers being marked incorrectly or even that their answers were totally ignored. Furthermore, the assistants took a long time to grade these tests with time and financial implications. To address this problem, the Applied Mathematics department proposed to automate the process of grading the tutorial tests.
 
 The head of the department wanted a system that can analyse and grade tests written on a specific template. These answer sheets are handed out to the students to fill in their respective answers. The answer sheets are then scanned to create a digital copy. The system is tasked with automatically grading all these digital copies and transferring the graded results to a database.
@@ -42,27 +41,24 @@ Any additional assumptions are stated in the appropriate section throughout this
 
 The problem as stated in Section \ref{sec:problemStatement}, is addressed by pursuing the following objectives:
 \begin{enumerate}
-  \item Perform a \textsl{literature study} on the topics of \textsl{Image Processing}, \textsl{Computer Vision} and \textsl{Character Recognition}. Further a \textsl{literature study} on \textsl{Neural Networks} and \textsl{Probabilistic Graphical models} is also done.
   \item Develop a \textsl{software application} to allow a \textsl{user} to grade a large number (approximately 1000) scanned student tests automatically.
 \item The software should provide precise and useful feedback. In order to achieve this, every graded result will also include feedback on what questions the student answered incorrectly.
 \item Upgrade the software to allow students to cross out answers instead of having to erase them.
-  \item Do a weekly \textsl{validation experiment} with the software, by grading tutorial test for the department. The results are then used as the students' grades for that test.
+  \item Perform a weekly \textsl{validation experiment} with the software, by grading tutorial test for the department. The results are then used as the students' grades for that test.
   \item Use an \textsl{agile development methodology} to improve the software in parallel with the grading of weekly tests.
   \item Add additional software, using machine learning, to improve the accuracy of the system in grading these tests.
   \item Add additional software that allows students to specify their student number only using characters, thereby simplifying the use of the template.
 \end{enumerate}
 The objectives are covered in separated chapters in this report. Note that each objective (1 to 8) build on the objectives previously listed.
 
- %To increase ease of use, software is developed that provides the option to students to only writing down their student numbers and not use the bubbles. Thus time does not get wasted filling in the student number bubbles. This result is achieved in Chapter \ref{sec:pgmStudentNum}.
-
 \section{Research methodology}
 
 An agile development methodology is used to complete the objectives listed in Section \ref{sec:Objectives}. The methodology consists of six different phases:
 \begin{enumerate}
 \item Identify a new feature or update that needs to be implemented into the software package.
-\item Do a study on existing methods to implement this new software.
+\item Perform a study on existing methods to implement this new software.
 \item Implement and integrate the new software with the current knowledge of the solution.
-\item Test the software and observe if it is working as planned.
+\item Test the software and observe if it's performance is satisfactory.
 \item If the software is not working as planned, revisit steps 2 to 4 until the new software is working.
 \item Use version control, in this case Git, to save the latest version of the software.
 \end{enumerate}
@@ -79,6 +75,6 @@ The process of writing an answer down on a paper can be represented using 6 info
 \begin{figure}[H]
   \centering
   \includegraphics[width=13cm]{systemOverview}\\
-  \caption{Graphical overview of the system as a whole.}
+  \caption{Graphical overview of the system.}
   \label{fig:systemOverviewIntro}
 \end{figure}

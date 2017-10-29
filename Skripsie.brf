@@ -4,10 +4,10 @@
 \backcite {karpathy2017}{{ix}{(document)}{Doc-Start}}
 \backcite {stdTemplate}{{7}{2.1}{figure.caption.7}}
 \backcite {DraganI2003}{{8}{2.1.1}{subsection.2.1.1}}
-\backcite {MVGI2015}{{8}{2.1.2}{subsection.2.1.2}}
-\backcite {MathWorks}{{8}{2.1.2}{subsection.2.1.2}}
-\backcite {MVGI2015}{{8}{2.1.3}{subsection.2.1.3}}
-\backcite {AdrianR2016}{{9}{2.1.3}{subsection.2.1.3}}
+\backcite {MVGI2015}{{8}{2.1.1.1}{subsubsection.2.1.1.1}}
+\backcite {MathWorks}{{8}{2.1.1.1}{subsubsection.2.1.1.1}}
+\backcite {MVGI2015}{{8}{2.1.1.2}{subsubsection.2.1.1.2}}
+\backcite {AdrianR2016}{{9}{2.1.1.2}{subsubsection.2.1.1.2}}
 \backcite {Tensor}{{9}{2.2}{section.2.2}}
 \backcite {pgmPy}{{10}{2.2.1}{subsection.2.2.1}}
 \backcite {pgmPy}{{10}{2.2.1}{subsection.2.2.1}}
@@ -16,6 +16,6 @@
 \backcite {karpathy2017}{{24}{4.8}{figure.caption.21}}
 \backcite {MichealN2015}{{24}{4.1.2.1}{subsubsection.4.1.2.1}}
 \backcite {Tensor}{{25}{4.1.2.4}{subsubsection.4.1.2.4}}
-\backcite {Tensor}{{25}{4.1.2.4}{subsubsection.4.1.2.4}}
+\backcite {Tensor}{{26}{4.1.2.4}{subsubsection.4.1.2.4}}
 \backcite {mnist}{{26}{4.1.2.5}{subsubsection.4.1.2.5}}
 \backcite {mnist}{{63}{E.2}{section.E.2}}

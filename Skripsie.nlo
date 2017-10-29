@@ -3,7 +3,7 @@
 \nomenclatureentry{A$NN$@[{$NN$}]\begingroup Neural network\nomeqref {0}|nompageref}{iii}
 \nomenclatureentry{A$OCR$@[{$OCR$}]\begingroup Optical character recognition\nomeqref {2.0}|nompageref}{9}
 \nomenclatureentry{A$DCNN$@[{$DCNN$}]\begingroup Deep convolutional neural network\nomeqref {2.0}|nompageref}{9}
-\nomenclatureentry{A$MNIST$@[{$MNIST$}]\begingroup Modified national institute of standards and technology database\nomeqref {2.0}|nompageref}{9}
+\nomenclatureentry{A$MNIST$@[{$MNIST$}]\begingroup Modified national institute of standards and technology\nomeqref {2.0}|nompageref}{9}
 \nomenclatureentry{S$G(r,\theta)$@[{$G(r,\theta)$}]\begingroup Radon transform defined over $r$ and $\theta$\nomeqref {3.0}|nompageref}{14}
 \nomenclatureentry{S$f(x, y)$@[{$f(x, y)$}]\begingroup Two dimensional function that a Radon transform is applied over\nomeqref {3.0}|nompageref}{14}
 \nomenclatureentry{S$x$@[{$x$}]\begingroup Horizontal coordinate value in two dimensional plane\nomeqref {3.0}|nompageref}{14}
@@ -24,6 +24,9 @@
 \nomenclatureentry{S$c$@[{$c$}]\begingroup Number of inputs to a neuron\nomeqref {4.0}|nompageref}{24}
 \nomenclatureentry{S$\sigma(z)$@[{$\sigma(z)$}]\begingroup Normalization function in a neural network\nomeqref {4.1}|nompageref}{24}
 \nomenclatureentry{S$p(i)$@[{$p(i)$}]\begingroup Probability of digit at index $i$\nomeqref {4.2}|nompageref}{25}
+\nomenclatureentry{A$MNIST$@[{$MNIST$}]\begingroup Modified national institute of standards and technology\nomeqref {4.3}|nompageref}{26}
+\nomenclatureentry{A$DAG$@[{$DAG$}]\begingroup Directed acyclic graph\nomeqref {4.3}|nompageref}{27}
+\nomenclatureentry{A$GAN$@[{$GAN$}]\begingroup Generative Adversarial Networks\nomeqref {6.0}|nompageref}{40}
 \nomenclatureentry{S$A$@[{$A$}]\begingroup Random variable representing an answer for a specific question\nomeqref {C.0}|nompageref}{47}
 \nomenclatureentry{S$I$@[{$I$}]\begingroup Random variable representing the test image\nomeqref {C.0}|nompageref}{47}
 \nomenclatureentry{S$S$@[{$S$}]\begingroup Random variable representing the possible student number\nomeqref {C.0}|nompageref}{47}

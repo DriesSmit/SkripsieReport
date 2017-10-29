@@ -1,13 +1,13 @@
 \chapter{Image processing}
 \label{ch:ImageProcessing}
 \graphicspath{{Chapter3/Chapter3Figures/}}
-The previous chapter focused on existing methods of grading tests automatically. It was found that most systems only use image processing, without a machine learning component, to grade these tests. In this chapter the core techniques behind processing these answer sheets, using image processing, are described. By using only these image processing techniques a reasonably accurate system can already be constructed. For further improvements in accuracy, two machine learning approaches are implemented. These approaches are discussed in Chapter \textbf{\ref{ch:MachineLearning}}.
+The previous chapter focused on existing methods of grading tests automatically. It was found that most systems only use image processing, without a machine learning component, to grade these tests. In this chapter the core techniques behind processing these answer sheets, using image processing, are described. By using only these image processing techniques a reasonably accurate system can already be constructed. For further improvements in accuracy, two machine learning approaches can be implemented.
 
 \section{Orientation detection}
 \label{sec:orientDetect}
 As mentioned in Section \ref{sec:StandardTech}, there are two main steps in OMR grading. The first challenge with grading a scanned answer sheet, is finding the orientation of the template in the image. This can be done by finding two or more reference points on the page. These reference points then allow for the calculation of the template's rotation, offset and size inside the image. In Chapter \ref{ch:LiteratureStudy} it was found that the traditional way to find these reference points was to include them on the page, in the form of black blocks or lines. Including black blocks is an effective method of finding the template, but might look a bit less attractive, due to the black blocks on the page.
 
-For this project, the markers or reference points that the software uses are already present on the template paper. These are the two longest horizontal lines as well as the two vertical lines on the comment box, as can be seen in Figure \ref{fig:radonResults}. Together, these lines have enough information to determine 4 reference points, shown in red in the figure. The reason these lines are chosen as references, is because a Radon transform can easily be applied to locate them, as discussed in Section \ref{sec:RadonTransform}. Therefore the software can successfully find the template even though one of the four lines is identified incorrectly. Using the reference points the rotation, offset and size of the template is determined. However, before the orientation of the image can be determined, a check must be made to determine if the image might be upside down. This is done to make it easier to find the orientation afterwards. To determine if an image is upside down, initial image filtering is required as discussed in the next section.
+For this project, the markers or reference points that the software uses are already present on the template paper. These are the two longest horizontal lines as well as the two vertical lines on the comment box, as can be seen in Figure \ref{fig:radonResults}. Together, these lines have enough information to determine 4 reference points, shown in red in the figure. These lines are chosen as references, since a Radon transform can easily be applied to locate them, as discussed in Section \ref{sec:RadonTransform}. The system only needs three of those four lines to find the template and thus can successfully find the template even though one of the four lines is identified incorrectly. Using the reference points the rotation, offset and size of the template is determined. However, before the orientation of the image can be determined, a check must be made to determine if the image might be upside down. This is done to make it easier to find the orientation afterwards. To determine if an image is upside down, initial image filtering is required as discussed in the next section.
 
 \begin{figure}
   \centering
@@ -22,7 +22,7 @@ For this project, the markers or reference points that the software uses are alr
 In order to check if an image is upside down, the software first needs to find relevant contours on the page. The contours are then filtered out if it does not loosely match the characteristics of a bubble or character block. This process can be described in Algorithm \ref{alg:checkRot}.
 
 \begin{algorithm}[H]
-\caption{Filter contours and check image rotation.}
+\caption{: Filter contours and check image rotation.}
 \label{alg:checkRot}
 \begin{enumerate}
 \item Threshold the image by making all the pixel values either white (lower than the mean) or black (higher than the mean).
@@ -40,7 +40,7 @@ In order to check if an image is upside down, the software first needs to find r
   \label{fig:reduced}
 \end{figure}
 
-It is important to note that there are still unwanted contours in the list, but for now this reduced list is sufficient. Once the list is found, the software counts the number of contour centrepoints below and above the image center. Figure \ref{fig:reduced} shows the resulting contours found in the image. As can be seen in the figure, more bubbles should be below the horizontal center line, for the image to be the right side up. The next step will be to determine the coordinates of the answers the student wrote down, by first locating the template in the image. In the next section we first define a mathematical transform which is used to find the template.
+It is important to note that there are still unwanted contours in the list, but for now this reduced list is sufficient. Once the list is found, the software counts the number of contour centrepoints below and above the image center. Figure \ref{fig:reduced} shows the resulting contours found in the image. As can be seen in the figure, more bubbles should be below the horizontal center line, for the image to be the right side up. The next step will be to determine the coordinates of the answers the student wrote down, by first locating the template in the image. In the next section a mathematical transform is define, which is used to find the template.
 
 \subsection{Radon transform}
 \label{sec:RadonTransform}
@@ -70,7 +70,7 @@ G(r,\theta) = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} f(x, y) \delta(x\c
 
 In this project, the image's Radon transform is calculated for specific intervals of the gradient. Each gradient interval will thus generate a one dimensional array of values corresponding with the pixel intensities along the lines that are being summed, as shown in Figure \ref{fig:RadonT}. This method is used to determine where the 2 horizontal and 2 vertical lines are located, as previously mentioned.
 
-The Radon transform's values are calculated between the angles 85$^{\circ}$ and 95$^{\circ}$ to find the first two horizontal lines. It is assumed that the image will not be rotated by more that 5$^{\circ}$ in either direction. Black lines will cause a spike in value to appear on the Radon transform for the angle where it is summing parallel with that particular black line. By finding the transform angle that has this spike in value, the rotation of the template can be found. The two maximum values that are recorded at this angle are then taken as the relative locations of the two horizontal lines. After the correct angle is found, the two vertical lines can be found by applying a Radon transform at an angle 90$^{\circ}$ clockwise from the previously calculated angle. The two peak values at that angle then provides the relative locations of the two vertical lines. The four reference points can now be calculated, as seen in Figure \ref{fig:radonResults}. Once the reference points are found, the image is rescaled and orientated to the original template size for further processing. In Figure \ref{fig:rotate} the corrected image is shown.
+The Radon transform's values are calculated between the angles 85$^{\circ}$ and 95$^{\circ}$ to find the first two horizontal lines. It is assumed that the image will not be rotated by more than 5$^{\circ}$ in either direction. Black lines will cause a spike in value to appear on the Radon transform for the angle where it is summing parallel with that particular black line. By finding the transform angle that has this spike in value, the rotation of the template can be found. The two maximum values that are recorded at this angle are then taken as the relative locations of the two horizontal lines. After the correct angle is found, the two vertical lines can be found by applying a Radon transform at an angle 90$^{\circ}$ clockwise from the previously calculated angle. The two peak values at that angle then provides the relative locations of the two vertical lines. The four reference points can now be calculated, as seen in Figure \ref{fig:radonResults}. Once the reference points are found, the image is rescaled and orientated to the original template size for further processing. In Figure \ref{fig:rotate} the corrected image is shown.
 
 \begin{figure}
   \centering
@@ -88,7 +88,7 @@ Once the template is located the bubble values and digit blocks can be determine
   \label{fig:FinalEstimate}
 \end{figure}
 
-Now that a list of possible bubble contours are found with the estimate bubble centres, one contour needs to be assigned to each bubble. This process is discussed in the next section.
+Now that a list of possible bubble contours are found with the estimate bubble centres, one contour needs to be assigned to each bubble.
 
 \section{Bubble detection and processing}
 \nomenclature[S]{$n$}{Number of bubbles of template sheet}
@@ -100,10 +100,10 @@ Using the contours information about the shape of the bubble entry is also known
 
 \section{Data processing and grading}
 
-The previous section now allows each bubble to be classified into three categories namely, empty, completely filled in or crossed out. An additional category of partially filled in is also introduced, as it aids grading of tests where students write lightly. An algorithm to determine what bubble was chosen is described in Algorithm \ref{alg:bubbleAns}.
+The previous section now allows each bubble to be classified into three categories namely, empty, completely filled-in or crossed out. An additional category of partially filled in is also introduced, as it aids grading of tests where students write lightly. An algorithm to determine what bubble was chosen is described in Algorithm \ref{alg:bubbleAns}.
 
 \begin{algorithm}[H]
-\caption{Calculate the student answer from bubble grid.}
+\caption{: Calculate the student answer from bubble grid.}
 \label{alg:bubbleAns}
 \begin{enumerate}
 \item Start with column 0.
@@ -117,7 +117,7 @@ The previous section now allows each bubble to be classified into three categori
 
 
 
-This algorithm therefore checks if there are more that one entry in any of the columns. If this is true, the results are sent to a clash list to be marked manually. If one bubble was found to be coloured in, the value gets set to the index of that bubble. Finally, if no bubbles where coloured in the result for that column gets set to 0.
+This algorithm therefore checks if there are more that one entry in any of the columns. If this is true, the results are sent to a clash list to be marked manually. If one bubble was found to be coloured in, the value gets set to the index of that bubble. Finally, if no bubbles where coloured in the result for that column are set to 0.
 
 \section{Conclusion}
 
