@@ -2,7 +2,7 @@
 \label{ap:systemOverview}
 \graphicspath{{Appendix3/Appendix3Figures/},{Chapter1/Chapter1Figures/},{Chapter4/Chapter4Figures/}}
 
-In this appendix a graphical and mathematical derivation for the system is given. It is shown through mathematical derivation how the pgmpy software can predict the student number and answer, given the probability distributions and evidence. It should be noted that the software exploits additional methods in calculating these values in an efficient manner.
+In this appendix a graphical and mathematical derivation for the system is given. It is shown through mathematical derivation how the pgmpy software can predict the student number and answer, given the probability distributions and evidence. It should be noted that the software exploits additional methods in calculating these values in an efficient manner. 
 
 \section{High-level overview}
 
@@ -66,13 +66,13 @@ $BE_i$ is further described by
 \begin{align}
 % \nonumber to remove numbering (before each equation)
   P(BE_i) =  P(BE_{i:0},BE_{i:1},...,BE_{i:9}),
-\label{eqn:ansIndep}
+\label{eqn:ansIndep2}
 \end{align}
 where  $P(BE_{i:j})$ represents the probability of the bubble evidence at bubble j in digit i. $BI_i$ is then represented by
 \begin{align}
 % \nonumber to remove numbering (before each equation)
   P(BI_i) =  P(BI_{i:0},BI_{i:1},...,BI_{i:9}),
-\label{eqn:ansIndep}
+\label{eqn:ansIndep3}
 \end{align}
 where  $P(BI_{i:j})$ represents probability of the intended bubble at bubble j in digit i.
 
@@ -123,7 +123,7 @@ $DE$ is further described by
 \begin{align}
 % \nonumber to remove numbering (before each equation)
   P(DE) =  P(BE_1,CE_1,BE_2,CE_2,...,BE_8,CE_8).
-\label{eqn:ansIndep}
+\label{eqn:ansIndep4}
 \end{align}
 
 $DI$ is described by
@@ -131,7 +131,7 @@ $DI$ is described by
 \begin{align}
 % \nonumber to remove numbering (before each equation)
   P(DI) =  P(D_1,D_2,...,D_8).
-\label{eqn:ansIndep2}
+\label{eqn:ansIndep5}
 \end{align}
 
 $P(S/DE)$ can now be represented by
@@ -162,10 +162,11 @@ P(DE/ID) = P(BE_1/BI_1)P(CE_1/D_1)...P(BE_8/BI_8)P(CE_8/D_8)
 $P(S)$ can be initialized as an equal distribution, because every student number has the same likelihood of being in a given test. $P(DI/S)$ are values that are trained from data using the independence property, 
 \begin{align}
 P(DI/S) = P(D_1/S)...P(D_8/S).
-\label{eqn:stdEqn4}
+\label{eqn:stdEqn5}
 \end{align}
 This value symbolizes the probability that the user intended to write down a digit given that student number. If the first digit of the student number is 1, the first intended digit will have a high probability of being 1. Thus these two random variables are strongly correlated. The only values that still need to be calculated are thus $P(DE/ID)$. Using the indepenency property of \begin{align}
 P(DE/ID) = P(BE_1/BI_1)P(CE/D_1)...P(BE_8/BI_8)P(CE/D_8),
-\label{eqn:stdEqn4}
+\label{eqn:stdEqn6}
 \end{align}
 the intended digit model's conditional distributions can be used. The two PGM models can now be fully defined and used to infer the intended student entries from an image.
+

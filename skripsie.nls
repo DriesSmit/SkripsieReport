@@ -6,14 +6,13 @@
 		\nompageref{14}
   \item [{$DCNN$}]\begingroup Deep convolutional neural network\nomeqref {2.0}
 		\nompageref{9}
+  \item [{$MNIST$}]\begingroup Modified National Institute of Standards and Technology database\nomeqref {2.0}
+		\nompageref{9}
   \item [{$NN$}]\begingroup Neural network\nomeqref {0}\nompageref{iii}
   \item [{$OCR$}]\begingroup Optical character recognition\nomeqref {2.0}
 		\nompageref{9}
   \item [{$OMR$}]\begingroup Optical mark recognition\nomeqref {0}
 		\nompageref{iii}
-
- \nomgroup{P}
-
   \item [{$PGM$}]\begingroup Probabilistic graphical model\nomeqref {0}
 		\nompageref{iii}
 

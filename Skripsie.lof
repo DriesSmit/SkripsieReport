@@ -3,12 +3,12 @@
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Automatic test grading template layout.\relax }}{3}{figure.caption.5}
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Graphical overview of the system as a whole.\relax }}{5}{figure.caption.6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Standard OMR template with reference blocks on the left, from \citet {stdTemplate}\relax }}{7}{figure.caption.7}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Standard OMR template with reference blocks on the left, from \citet {stdTemplate}.\relax }}{7}{figure.caption.7}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Contours found around corrected answer.\relax }}{9}{figure.caption.8}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Four markers found from applying Radon transforms.\relax }}{12}{figure.caption.9}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Reduced contours in image.\relax }}{13}{figure.caption.10}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Radon transform applied on function $f$, adapted from \citet {radon}\relax }}{14}{figure.caption.11}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Radon transform applied on function $f$, adapted from \citet {radon}.\relax }}{14}{figure.caption.11}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Result in rotation after applying radon transform.\relax }}{15}{figure.caption.12}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Detection of contours in image and estimation of bubble locations.\relax }}{16}{figure.caption.13}
 \addvspace {10\p@ }
@@ -19,7 +19,7 @@
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Area block drawn around the segment most probable to belong to the digit.\relax }}{22}{figure.caption.18}
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Final image after translation and normalization is applied.\relax }}{22}{figure.caption.19}
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Example image used as input to the neural network, from \citet {tensor2017}.\relax }}{23}{figure.caption.20}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Basic structure of a neural network, from \citet {karpathy2017}\relax }}{24}{figure.caption.21}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Basic structure of a neural network, from \citet {karpathy2017}.\relax }}{24}{figure.caption.21}
 \contentsline {figure}{\numberline {4.9}{\ignorespaces Graphical setup for determining the intended digit written by a student.\relax }}{27}{figure.caption.22}
 \contentsline {figure}{\numberline {4.10}{\ignorespaces Graphical setup of student answer.\relax }}{28}{figure.caption.23}
 \contentsline {figure}{\numberline {4.11}{\ignorespaces Graphical setup of student number.\relax }}{29}{figure.caption.24}

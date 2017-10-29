@@ -1,8 +1,9 @@
 \nomenclatureentry{A$OMR$@[{$OMR$}]\begingroup Optical mark recognition\nomeqref {0}|nompageref}{iii}
-\nomenclatureentry{pgmAcronym$PGM$@[{$PGM$}]\begingroup Probabilistic graphical model\nomeqref {0}|nompageref}{iii}
+\nomenclatureentry{A$PGM$@[{$PGM$}]\begingroup Probabilistic graphical model\nomeqref {0}|nompageref}{iii}
 \nomenclatureentry{A$NN$@[{$NN$}]\begingroup Neural network\nomeqref {0}|nompageref}{iii}
 \nomenclatureentry{A$OCR$@[{$OCR$}]\begingroup Optical character recognition\nomeqref {2.0}|nompageref}{9}
 \nomenclatureentry{A$DCNN$@[{$DCNN$}]\begingroup Deep convolutional neural network\nomeqref {2.0}|nompageref}{9}
+\nomenclatureentry{A$MNIST$@[{$MNIST$}]\begingroup Modified national institute of standards and technology database\nomeqref {2.0}|nompageref}{9}
 \nomenclatureentry{S$G(r,\theta)$@[{$G(r,\theta)$}]\begingroup Radon transform defined over $r$ and $\theta$\nomeqref {3.0}|nompageref}{14}
 \nomenclatureentry{S$f(x, y)$@[{$f(x, y)$}]\begingroup Two dimensional function that a Radon transform is applied over\nomeqref {3.0}|nompageref}{14}
 \nomenclatureentry{S$x$@[{$x$}]\begingroup Horizontal coordinate value in two dimensional plane\nomeqref {3.0}|nompageref}{14}
@@ -11,7 +12,7 @@
 \nomenclatureentry{S$\delta$@[{$\delta$}]\begingroup Dirac delta function maps any function to its value at zero\nomeqref {3.0}|nompageref}{14}
 \nomenclatureentry{S$\theta$@[{$\theta$}]\begingroup Angle of summation line in the Radon transform\nomeqref {3.0}|nompageref}{14}
 \nomenclatureentry{S$f(x, y)$@[{$f(x, y)$}]\begingroup Two dimensional function that a Radon transform is applied over\nomeqref {3.0}|nompageref}{14}
-\nomenclatureentry{A$CT$@[{$CT$}]\begingroup Computed Tomography\nomeqref {3.0}|nompageref}{14}
+\nomenclatureentry{A$CT$@[{$CT$}]\begingroup Computed tomography\nomeqref {3.0}|nompageref}{14}
 \nomenclatureentry{S$G_\theta(r)$@[{$G_\theta(r)$}]\begingroup The Randon transform's values at a given $\theta$\nomeqref {3.0}|nompageref}{14}
 \nomenclatureentry{S$n$@[{$n$}]\begingroup Number of bubbles of template sheet\nomeqref {3.1}|nompageref}{16}
 \nomenclatureentry{S$x_{i}$@[{$x_{i}$}]\begingroup Input value at index $i$\nomeqref {4.0}|nompageref}{24}

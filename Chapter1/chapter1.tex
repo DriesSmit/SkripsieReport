@@ -1,11 +1,11 @@
 \chapter{Introduction}
 \label{ch:Introduction}
 \graphicspath{{Chapter1/Chapter1Figures/}}
-As modern technology and machine learning techniques advances, it is important for the educational sector to continuously advance their learning environment. This allows for an ever improving learning experience in and outside the classroom. 
+As modern technology and machine learning techniques advances, it is important for the educational sector to continuously advance in their learning environment. This allows for an ever improving learning experience in and outside the classroom. 
 
 \section{Problem background}
 
-In the recent years the Applied Mathematics Department of Stellenbosch Engineering, started observing a decrease in accuracy in the grading of tutorial tests done by teaching assistants and demies.  Students complain on a regular basis about correct answers being marked incorrectly or even that their answers were totally ignored. Furthermore, the assistants took a long time to grade these tests with time and financial implications. To address this problem, the Applied Mathematics department proposes to automate the process of grading the tutorial tests.
+In the recent years the Applied Mathematics Department of Stellenbosch Engineering, started observing a decrease in accuracy in the grading of tutorial tests done by teaching assistants and demies.  Students complained on a regular basis about correct answers being marked incorrectly or even that their answers were totally ignored. Furthermore, the assistants took a long time to grade these tests with time and financial implications. To address this problem, the Applied Mathematics department proposed to automate the process of grading the tutorial tests.
 
 The head of the department wanted a system that can analyse and grade tests written on a specific template. These answer sheets are handed out to the students to fill in their respective answers. The answer sheets are then scanned to create a digital copy. The system is tasked with automatically grading all these digital copies and transferring the graded results to a database.
 
@@ -15,7 +15,7 @@ In this research project the department sends weekly scanned answer sheets, whic
 \section{Problem statement}
 \label{sec:problemStatement}
 
-Given the problem background and stakeholders discussed in the previous section the problem to be solved can be formulated as:
+Given the problem background and stakeholders discussed in the previous section the problem to be solved can be formulated as follows:
 \newline
 \newline
 \noindent\fbox{%
@@ -24,7 +24,7 @@ Given the problem background and stakeholders discussed in the previous section 
 }
 
 \section{Project scope and assumptions}\label{sec:Scope}
-Initial discussions with the department revealed that a specific template can be used. This template allows the image processing software to more accurately determine what the student's intended answer is. The template consists of bubbles that can be filled in as well as blocks for handwritten digits, as shown in Figure \ref{fig:NumbersTemplate}. The focus of this project lies on processing the scanned answer sheet written on the specific template. To use the template the student must fill in his/her student number and question answers in the designated character blocks. They are also required to fill in the bubble underneath each digit, corresponding to that specific digit. Additionally a bubble next to each question is provided if a negative sign is required.
+Initial discussions with the department revealed that a specific template can be used. This template allows the image processing software to more accurately determine what the student's intended answer is. The template consists of bubbles that can be filled in as well as blocks for handwritten digits, as shown in Figure \ref{fig:NumbersTemplate}. The focus of this project lies on processing the scanned answer sheet written on the specific template. To use the template the student must fill in his/her student number and question answers in the designated character blocks. They are also required to fill in the bubble underneath each digit, corresponding to that specific digit. Additionally, a bubble next to each question is provided if a negative sign is required.
 
 \begin{figure}[h]
   \centering
@@ -34,7 +34,7 @@ Initial discussions with the department revealed that a specific template can be
 \end{figure}
 
 
-Any additional assumptions are stated in the appropriate section throughout this project. In the next section the project objectives are laid out.
+Any additional assumptions are stated in the appropriate section throughout this project.
 
 
 \section{Project objectives}
@@ -42,7 +42,7 @@ Any additional assumptions are stated in the appropriate section throughout this
 
 The problem as stated in Section \ref{sec:problemStatement}, is addressed by pursuing the following objectives:
 \begin{enumerate}
-  \item Do a \textsl{literature study} on the topics of \textsl{Image Processing}, \textsl{Computer Vision} and \textsl{Character Recognition}. Further a \textsl{literature study} on \textsl{Neural Networks} and \textsl{Probabilistic Graphical models} is also done.
+  \item Perform a \textsl{literature study} on the topics of \textsl{Image Processing}, \textsl{Computer Vision} and \textsl{Character Recognition}. Further a \textsl{literature study} on \textsl{Neural Networks} and \textsl{Probabilistic Graphical models} is also done.
   \item Develop a \textsl{software application} to allow a \textsl{user} to grade a large number (approximately 1000) scanned student tests automatically.
 \item The software should provide precise and useful feedback. In order to achieve this, every graded result will also include feedback on what questions the student answered incorrectly.
 \item Upgrade the software to allow students to cross out answers instead of having to erase them.
@@ -71,7 +71,7 @@ An agile development methodology is used to complete the objectives listed in Se
 The structure and graphical overview of the software is presented next.
 
 \section{Graphical overview of system}
-The process of writing an answer down on a paper can be represented using 6 information nodes. These nodes are illustrated in Figure \ref{fig:systemOverviewIntro}. The unnamed blocks indicate that information processing occurs in these steps. The student has certain information he/she wants to portray on the paper, namely the 4 answers and student number he/she wants to write down. Thus those 5 nodes give rise to the image, representing the last node. These nodes have to be represented in a probabilistic manner as the process of writing answers down and scanning the test sheet in, may produce a different image every time a test is written, even though the same answers are intended. Thus the system is fundamentally tasked with inferring the probability of each answer and the student's number given the particular image as evidence. This is done by processing the image evidence to produce and estimate the intended answers. These processes are described in later sections. In the next section a literature study on current systems is given. For a more detailed mathematical overview of the system, refer to Appendix \ref{ap:systemOverview}.
+The process of writing an answer down on a paper can be represented using 6 information nodes. These nodes are illustrated in Figure \ref{fig:systemOverviewIntro}. The unnamed blocks indicate that information processing occurs in these steps. The student has certain information he/she wants to portray on the paper, namely the 4 answers and student number he/she wants to write down. Thus those 5 nodes give rise to the image, representing the last node. These nodes have to be represented in a probabilistic manner as the process of writing answers down and scanning the test sheet, may produce a different image every time a test is written, even though the same answers are intended. Thus the system is fundamentally tasked with inferring the probability of each answer and the student's number given the particular image as evidence. This is done by processing the image evidence to produce and estimate the intended answers. These processes are described in later sections. In the next section a literature study on current systems is given. For a more detailed mathematical overview of the system, refer to Appendix \ref{ap:systemOverview}.
 \\
 \\
 \\
@@ -82,11 +82,3 @@ The process of writing an answer down on a paper can be represented using 6 info
   \caption{Graphical overview of the system as a whole.}
   \label{fig:systemOverviewIntro}
 \end{figure}
-
-%\subsection{Graphical representation}
-
-%For this project a graphical approach is followed in representing the software developed. A graphical model in essence allows software to be represented as information (nodes or circles) and relationships (directed arrows). The directions of the arrows represents what information causes other information to be created, thus given a parent to offspring interpretation). An example of such a graph can again be seen in Figure \ref{fig:systemOverviewIntro}. This allows intuitive reasoning about how the system should operate. An observation is always made in the form of an image and then the system is tasked with predicting what the written answers are. Due to the probabilistic nature of the system a probabilistic component is also needed in this graphical models. Thus a probabilistic graphical model (PGM) is used.
-
-%A PGM is in essence the same as a general graphical model. The only difference is that now the information and relationships between information bubbles are probabilistic and not always certain as with general logic graphical models.
-
-%A literature study is presented next on methods currently used by existing automatic test grading systems. This will describe in the next chapter.

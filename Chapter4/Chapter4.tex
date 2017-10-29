@@ -89,7 +89,7 @@ For this project, a neural network is trained to estimate the probability of whi
 \begin{figure}
   \centering
   \includegraphics[width=10cm]{NN}\\
-  \caption{Basic structure of a neural network, from \citet{karpathy2017}}%, 
+  \caption{Basic structure of a neural network, from \citet{karpathy2017}.} 
   \label{fig:nn}
 \end{figure}
 
@@ -97,7 +97,7 @@ For this project, a neural network is trained to estimate the probability of whi
 
 The neuron unit is a small processing unit. By including many of these neurons a neural network can be built. Neural networks consist of input, hidden and output layers (\citet{MichealN2015}). This network works by first assigning values to the input layer of the network. For this project those values are the 784 values received from the digitized image. The network then sends signals through the network and generates an output. A breakdown of a neural network will be given next.
 
-\subsubsection{The Artificial Neuron}
+\subsubsection{The artificial neuron}
 Each neuron in the network takes in a list of input values. These input values are the output values of the neurons in the previous layer, again illustrated in Figure \ref{fig:nn}. The weighted sum of these inputs are then added with the bias variable to give,
 \nomenclature[S]{$x_{i}$}{Input value at index $i$}
 \nomenclature[S]{$w_{i}$}{Weight value at index $i$}
@@ -188,7 +188,7 @@ After the model is constructed, the intended digit needs to be estimated, with t
 
 An answer is represented by 8 columns, shown in Figure \ref{fig:stdAns}. \begin{figure}[b]
   \centering
-  \includegraphics[width=10cm]{ans}\\
+  \includegraphics[width=11cm]{ans}\\
   \caption{Graphical setup of student answer.}
   \label{fig:stdAns}
 \end{figure}The first column represents the sign of an answer. Thus two signs are possible. For each of the remaining 7 columns a number from 0 to 9 can be represented. Thus there are 10 possible values for each of these 7 columns. This gives a possible number of values that an answer can take to be $2\cdot 10^7$, equalling 20 000 000. Calculating each of these states is computationally intractable. Thus an assumption is needed to reduce the number of possible states. A fair assumption to make, is that all 20 000 000 possible values are equally likely to be written down. Consequently each column digit becomes independent of the other columns' values. This means that if a value in one column is known, it does not influence the probabilities of the other columns having a certain value. Thus the number of states to calculate now becomes $2+10\cdot 7$, equalling $72$, because each column's states can now be calculated independently. Knowing this independent property, the student's answer can be calculated by using 7 digit models and a heuristic calculation of the intended sign.

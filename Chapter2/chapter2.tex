@@ -1,20 +1,20 @@
-\chapter{Literature Study}
+\chapter{Literature study}
 \label{ch:LiteratureStudy}
 \graphicspath{{Chapter2/Chapter2Figures/}}
 In the previous chapter the problem statement and objectives of this project was laid out. Further, a brief system overview is provided.
 This chapter will provide information on already existing Optical Mark Recognition (OMR) systems and the techniques they use for conducting image processing. Research on additional machine learning approaches used in character recognition and probabilistic modelling is also given.
 
-\section{Existing OMR techniques}
+\section{Existing Optical Marker Recognition techniques}
 An OMR system is software that is used to extracted handwritten information from a filled-in form. Each system normally has a specific template that it can extract information from. An example template is shown in Figure \ref{fig:omrTemplate}. These systems are generally used when fast and accurate grading of tests are required. The main drawback of these systems is that information can only be portrayed in a limited manner, due to the bubbles. On an OMR template there is a grid of bubbles that allows a user to choose between different options to answer. Optical Mark Recognition systems are thus excellent for the grading of multiple choice type questions. 
 
 \begin{figure}
   \centering
   \includegraphics[width=14cm]{omrTemplate}\\
-  \caption{Standard OMR template with reference blocks on the left, from \citet{stdTemplate}}
+  \caption{Standard OMR template with reference blocks on the left, from \citet{stdTemplate}.}
   \label{fig:omrTemplate}
 \end{figure}
 
-\subsection{Standard OMR systems}
+\subsection{Standard Optical Marker Recognition systems}
 \label{sec:StandardTech}
 
 As can be seen in Figure \ref{fig:omrTemplate}, there is normally specific reference blocks on an OMR template. These blocks are included to allow the computer vision and image processing algorithms to find the orientation of the image more easily. Other templates include lines that can be used to locate the template.
@@ -29,9 +29,9 @@ Once at least two line references on a page have been found, the template orient
 
 \subsection{Processing a bubble}
 
-Once an estimated location for each bubble is known, the next step for an OMR system is to process these bubbles. As stated in \citet{MVGI2015}, a basic image processing method to classify bubbles is to simple add the number of coloured in pixels. If this value is above a specific threshold value, the bubble is classified as filled in, otherwise not. An additional algorithm is needed to detect if a bubble is crossed out .
+Once an estimated location for each bubble is known, the next step for an OMR system is to process these bubbles. As stated in \citet{MVGI2015}, a basic image processing method to classify bubbles is by adding the number of coloured in pixels. If this value is above a specific threshold value, the bubble is classified as filled in, otherwise not. An additional algorithm is needed to detect if a bubble is crossed out .
 
-In this project additional contour detection is used to determine if an answer in a bubble is truly coloured in and not just crossed out. This means that the contour around the bubble needs to be detected and used in the analysis. In Python (or C++) this can be implemented using the freely available OpenCV library,  \citet{AdrianR2016}. OpenCV is an image processing library that has highly optimized techniques to find contours in a given image. An example of this is shown in Figure \ref{fig:Cross}. Once the contour information is known, the bubbles can be assessed by the pixels inside it, as well as its shape. Thus by looking at the shape of a contour it can be determined if a bubble is crossed out or not.
+In this project additional contour detection is used to determine if an answer in a bubble is truly coloured in and not just crossed out. This means that the contour around the bubble needs to be detected and used in the analysis. In Python (or C++) this can be implemented using the freely available OpenCV library (\citet{AdrianR2016}). OpenCV is an image processing library that has highly optimized techniques to find contours in a given image. An example of this is shown in Figure \ref{fig:Cross}. Once the contour information is known, the bubbles can be assessed by the pixels inside it, as well as its shape. Thus by evaluating the shape of a contour it can be determined if a bubble is crossed out or not.
 \begin{figure}
   \centering
   \includegraphics[width=5cm]{Cross}\\
@@ -42,6 +42,7 @@ In this project additional contour detection is used to determine if an answer i
 \section{Optical character recognition}
 \nomenclature[A]{$OCR$}{Optical character recognition}
 \nomenclature[A]{$DCNN$}{Deep convolutional neural network}
+\nomenclature[A]{$MNIST$}{Modified national institute of standards and technology database}
 Optical Character Recognition (OCR) software is also needed and applied on the characters blocks present on the templates, to further increase the accuracy of the system. It is found that one preferred way of doing OCR is using TensorFlow. This method is described in \citet{Tensor}. TensorFlow is a Python library, but allows the building of instructions to be implemented in ef{f}icient C++ code. For this test grader, TensorFlow is used to construct a deep convolutional neural network (DCNN). Deep convolutional neural networks are powerful machine learning techniques generally used to process images. One effective application of a DCNN is that it is excellent at processing an image containing a digit and estimating that digit.
 
 \subsection{Probabilistic approach}
