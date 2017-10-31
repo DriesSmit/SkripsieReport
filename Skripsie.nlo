@@ -3,7 +3,6 @@
 \nomenclatureentry{A$NN$@[{$NN$}]\begingroup Neural network\nomeqref {0}|nompageref}{iii}
 \nomenclatureentry{A$OCR$@[{$OCR$}]\begingroup Optical character recognition\nomeqref {2.0}|nompageref}{9}
 \nomenclatureentry{A$DCNN$@[{$DCNN$}]\begingroup Deep convolutional neural network\nomeqref {2.0}|nompageref}{9}
-\nomenclatureentry{A$MNIST$@[{$MNIST$}]\begingroup Modified national institute of standards and technology\nomeqref {2.0}|nompageref}{9}
 \nomenclatureentry{S$G(r,\theta)$@[{$G(r,\theta)$}]\begingroup Radon transform defined over $r$ and $\theta$\nomeqref {3.0}|nompageref}{14}
 \nomenclatureentry{S$f(x, y)$@[{$f(x, y)$}]\begingroup Two dimensional function that a Radon transform is applied over\nomeqref {3.0}|nompageref}{14}
 \nomenclatureentry{S$x$@[{$x$}]\begingroup Horizontal coordinate value in two dimensional plane\nomeqref {3.0}|nompageref}{14}
